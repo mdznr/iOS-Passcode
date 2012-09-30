@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIApplication+FrontWindow.h"
 
 @class PCViewController;
 
 @interface PCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) PCViewController *viewController;
 
 @end

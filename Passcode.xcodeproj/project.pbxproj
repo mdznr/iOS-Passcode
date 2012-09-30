@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90264471601398A0075960E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90264461601398A0075960E /* Default-568h@2x.png */; };
+		C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
+		C915429415D316C9000EE537 /* inputBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C915429215D316C9000EE537 /* inputBackground.png */; };
+		C915429515D316C9000EE537 /* inputBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C915429315D316C9000EE537 /* inputBackground@2x.png */; };
+		C91542AE15D61001000EE537 /* buttonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A215D61001000EE537 /* buttonActive.png */; };
+		C91542AF15D61001000EE537 /* buttonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A315D61001000EE537 /* buttonActive@2x.png */; };
+		C91542B015D61001000EE537 /* buttonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A415D61001000EE537 /* buttonDisabled.png */; };
+		C91542B115D61001000EE537 /* buttonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A515D61001000EE537 /* buttonDisabled@2x.png */; };
+		C91542B215D61001000EE537 /* buttonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A615D61001000EE537 /* buttonEnabled.png */; };
+		C91542B315D61001000EE537 /* buttonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A715D61001000EE537 /* buttonEnabled@2x.png */; };
+		C91542B415D61001000EE537 /* buttonSmoothActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A815D61001000EE537 /* buttonSmoothActive.png */; };
+		C91542B515D61001000EE537 /* buttonSmoothActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */; };
+		C91542B615D61001000EE537 /* buttonSmoothDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */; };
+		C91542B715D61001000EE537 /* buttonSmoothDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */; };
+		C91542B815D61001000EE537 /* buttonSmoothEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */; };
+		C91542B915D61001000EE537 /* buttonSmoothEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */; };
+		C91542BF15D9C4F7000EE537 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91542BD15D9C4F6000EE537 /* AboutViewController.m */; };
+		C91542C015D9C4F7000EE537 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91542BE15D9C4F6000EE537 /* AboutViewController.xib */; };
+		C91542C615DA0496000EE537 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C215DA0494000EE537 /* clipboard.png */; };
+		C91542C715DA0496000EE537 /* clipboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C315DA0494000EE537 /* clipboard@2x.png */; };
+		C91542C815DA0496000EE537 /* domain.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C415DA0495000EE537 /* domain.png */; };
+		C91542C915DA0496000EE537 /* domain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C515DA0495000EE537 /* domain@2x.png */; };
+		C91542CC15DA049B000EE537 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CA15DA049B000EE537 /* password.png */; };
+		C91542CD15DA049B000EE537 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CB15DA049B000EE537 /* password@2x.png */; };
+		C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91542CF15DA06E6000EE537 /* WelcomeViewController.m */; };
+		C91542D215DA06E6000EE537 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91542D015DA06E6000EE537 /* WelcomeViewController.xib */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
@@ -15,9 +41,47 @@
 		C95FDEF415D232D5006FE035 /* PCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCAppDelegate.m */; };
 		C95FDEF715D232D5006FE035 /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCViewController.m */; };
 		C95FDEFA15D232D5006FE035 /* PCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEF815D232D5006FE035 /* PCViewController.xib */; };
+		C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* AppearView.m */; };
+		C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
+		C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FB15DB180100E16FBB /* Icon.png */; };
+		C9BBC1FF15DB36BE00E16FBB /* copied.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FD15DB36BE00E16FBB /* copied.png */; };
+		C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */; };
+		C9BBC20215DC1A9C00E16FBB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20115DC1A9B00E16FBB /* Default.png */; };
+		C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20315DC1A9F00E16FBB /* Default@2x.png */; };
+		C9BBC20715DDC5C400E16FBB /* UIApplication+FrontWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */; };
+		C9BBC20F15DEE52700E16FBB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20D15DEE52600E16FBB /* Icon-Small.png */; };
+		C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */; };
+		C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		C915429215D316C9000EE537 /* inputBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inputBackground.png; sourceTree = "<group>"; };
+		C915429315D316C9000EE537 /* inputBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inputBackground@2x.png"; sourceTree = "<group>"; };
+		C91542A215D61001000EE537 /* buttonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonActive.png; sourceTree = "<group>"; };
+		C91542A315D61001000EE537 /* buttonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonActive@2x.png"; sourceTree = "<group>"; };
+		C91542A415D61001000EE537 /* buttonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonDisabled.png; sourceTree = "<group>"; };
+		C91542A515D61001000EE537 /* buttonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonDisabled@2x.png"; sourceTree = "<group>"; };
+		C91542A615D61001000EE537 /* buttonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonEnabled.png; sourceTree = "<group>"; };
+		C91542A715D61001000EE537 /* buttonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonEnabled@2x.png"; sourceTree = "<group>"; };
+		C91542A815D61001000EE537 /* buttonSmoothActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothActive.png; sourceTree = "<group>"; };
+		C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothActive@2x.png"; sourceTree = "<group>"; };
+		C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothDisabled.png; sourceTree = "<group>"; };
+		C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothDisabled@2x.png"; sourceTree = "<group>"; };
+		C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothEnabled.png; sourceTree = "<group>"; };
+		C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothEnabled@2x.png"; sourceTree = "<group>"; };
+		C91542BC15D9C4F6000EE537 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		C91542BD15D9C4F6000EE537 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		C91542BE15D9C4F6000EE537 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		C91542C215DA0494000EE537 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
+		C91542C315DA0494000EE537 /* clipboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard@2x.png"; sourceTree = "<group>"; };
+		C91542C415DA0495000EE537 /* domain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = domain.png; sourceTree = "<group>"; };
+		C91542C515DA0495000EE537 /* domain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "domain@2x.png"; sourceTree = "<group>"; };
+		C91542CA15DA049B000EE537 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		C91542CB15DA049B000EE537 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
+		C91542CE15DA06E6000EE537 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		C91542CF15DA06E6000EE537 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		C91542D015DA06E6000EE537 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		C95FDEDF15D232D5006FE035 /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,6 +95,20 @@
 		C95FDEF515D232D5006FE035 /* PCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCViewController.h; sourceTree = "<group>"; };
 		C95FDEF615D232D5006FE035 /* PCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCViewController.m; sourceTree = "<group>"; };
 		C95FDEF915D232D5006FE035 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PCViewController.xib; sourceTree = "<group>"; };
+		C95FDF0015D23302006FE035 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		C9BBC1F315DA10B600E16FBB /* AppearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearView.h; path = Passcode/AppearView.h; sourceTree = "<group>"; };
+		C9BBC1F415DA10B600E16FBB /* AppearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearView.m; path = Passcode/AppearView.m; sourceTree = "<group>"; };
+		C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9BBC1FB15DB180100E16FBB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		C9BBC1FD15DB36BE00E16FBB /* copied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copied.png; sourceTree = "<group>"; };
+		C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "copied@2x.png"; sourceTree = "<group>"; };
+		C9BBC20115DC1A9B00E16FBB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		C9BBC20315DC1A9F00E16FBB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		C9BBC20515DDC5C400E16FBB /* UIApplication+FrontWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FrontWindow.h"; sourceTree = "<group>"; };
+		C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FrontWindow.m"; sourceTree = "<group>"; };
+		C9BBC20D15DEE52600E16FBB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */,
 				C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */,
 				C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */,
 				C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */,
@@ -47,6 +126,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C915425715D237BF000EE537 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C91542A215D61001000EE537 /* buttonActive.png */,
+				C91542A315D61001000EE537 /* buttonActive@2x.png */,
+				C91542A415D61001000EE537 /* buttonDisabled.png */,
+				C91542A515D61001000EE537 /* buttonDisabled@2x.png */,
+				C91542A615D61001000EE537 /* buttonEnabled.png */,
+				C91542A715D61001000EE537 /* buttonEnabled@2x.png */,
+				C91542A815D61001000EE537 /* buttonSmoothActive.png */,
+				C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */,
+				C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */,
+				C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */,
+				C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */,
+				C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */,
+				C91542C215DA0494000EE537 /* clipboard.png */,
+				C91542C315DA0494000EE537 /* clipboard@2x.png */,
+				C9BBC1FD15DB36BE00E16FBB /* copied.png */,
+				C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */,
+				C9BBC20115DC1A9B00E16FBB /* Default.png */,
+				C90264461601398A0075960E /* Default-568h@2x.png */,
+				C9BBC20315DC1A9F00E16FBB /* Default@2x.png */,
+				C91542C415DA0495000EE537 /* domain.png */,
+				C91542C515DA0495000EE537 /* domain@2x.png */,
+				C9BBC20D15DEE52600E16FBB /* Icon-Small.png */,
+				C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */,
+				C9BBC1FB15DB180100E16FBB /* Icon.png */,
+				C95FDF0015D23302006FE035 /* Icon@2x.png */,
+				C915429215D316C9000EE537 /* inputBackground.png */,
+				C915429315D316C9000EE537 /* inputBackground@2x.png */,
+				C91542CA15DA049B000EE537 /* password.png */,
+				C91542CB15DA049B000EE537 /* password@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C91542C115D9C535000EE537 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				C91542BC15D9C4F6000EE537 /* AboutViewController.h */,
+				C91542BD15D9C4F6000EE537 /* AboutViewController.m */,
+				C91542BE15D9C4F6000EE537 /* AboutViewController.xib */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		C91542D315DA06E9000EE537 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				C91542CE15DA06E6000EE537 /* WelcomeViewController.h */,
+				C91542CF15DA06E6000EE537 /* WelcomeViewController.m */,
+				C91542D015DA06E6000EE537 /* WelcomeViewController.xib */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 		C95FDED415D232D5006FE035 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +202,7 @@
 		C95FDEE215D232D5006FE035 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */,
 				C95FDEE315D232D5006FE035 /* UIKit.framework */,
 				C95FDEE515D232D5006FE035 /* Foundation.framework */,
 				C95FDEE715D232D5006FE035 /* CoreGraphics.framework */,
@@ -82,6 +218,11 @@
 				C95FDEF515D232D5006FE035 /* PCViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCViewController.m */,
 				C95FDEF815D232D5006FE035 /* PCViewController.xib */,
+				C9BBC20815DDC5C800E16FBB /* Front Window */,
+				C9BBC1F615DA10B900E16FBB /* Appear View */,
+				C91542C115D9C535000EE537 /* About */,
+				C91542D315DA06E9000EE537 /* Welcome */,
+				C915425715D237BF000EE537 /* Resources */,
 				C95FDEEA15D232D5006FE035 /* Supporting Files */,
 			);
 			path = Passcode;
@@ -91,11 +232,31 @@
 			isa = PBXGroup;
 			children = (
 				C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */,
+				C9BBC21115DEE81C00E16FBB /* Settings.bundle */,
 				C95FDEEC15D232D5006FE035 /* InfoPlist.strings */,
 				C95FDEEF15D232D5006FE035 /* main.m */,
 				C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9BBC1F615DA10B900E16FBB /* Appear View */ = {
+			isa = PBXGroup;
+			children = (
+				C9BBC1F315DA10B600E16FBB /* AppearView.h */,
+				C9BBC1F415DA10B600E16FBB /* AppearView.m */,
+			);
+			name = "Appear View";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C9BBC20815DDC5C800E16FBB /* Front Window */ = {
+			isa = PBXGroup;
+			children = (
+				C9BBC20515DDC5C400E16FBB /* UIApplication+FrontWindow.h */,
+				C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */,
+			);
+			name = "Front Window";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +313,38 @@
 			files = (
 				C95FDEEE15D232D5006FE035 /* InfoPlist.strings in Resources */,
 				C95FDEFA15D232D5006FE035 /* PCViewController.xib in Resources */,
+				C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */,
+				C915429415D316C9000EE537 /* inputBackground.png in Resources */,
+				C915429515D316C9000EE537 /* inputBackground@2x.png in Resources */,
+				C91542AE15D61001000EE537 /* buttonActive.png in Resources */,
+				C91542AF15D61001000EE537 /* buttonActive@2x.png in Resources */,
+				C91542B015D61001000EE537 /* buttonDisabled.png in Resources */,
+				C91542B115D61001000EE537 /* buttonDisabled@2x.png in Resources */,
+				C91542B215D61001000EE537 /* buttonEnabled.png in Resources */,
+				C91542B315D61001000EE537 /* buttonEnabled@2x.png in Resources */,
+				C91542B415D61001000EE537 /* buttonSmoothActive.png in Resources */,
+				C91542B515D61001000EE537 /* buttonSmoothActive@2x.png in Resources */,
+				C91542B615D61001000EE537 /* buttonSmoothDisabled.png in Resources */,
+				C91542B715D61001000EE537 /* buttonSmoothDisabled@2x.png in Resources */,
+				C91542B815D61001000EE537 /* buttonSmoothEnabled.png in Resources */,
+				C91542B915D61001000EE537 /* buttonSmoothEnabled@2x.png in Resources */,
+				C91542C015D9C4F7000EE537 /* AboutViewController.xib in Resources */,
+				C91542C615DA0496000EE537 /* clipboard.png in Resources */,
+				C91542C715DA0496000EE537 /* clipboard@2x.png in Resources */,
+				C91542C815DA0496000EE537 /* domain.png in Resources */,
+				C91542C915DA0496000EE537 /* domain@2x.png in Resources */,
+				C91542CC15DA049B000EE537 /* password.png in Resources */,
+				C91542CD15DA049B000EE537 /* password@2x.png in Resources */,
+				C91542D215DA06E6000EE537 /* WelcomeViewController.xib in Resources */,
+				C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */,
+				C9BBC1FF15DB36BE00E16FBB /* copied.png in Resources */,
+				C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */,
+				C9BBC20215DC1A9C00E16FBB /* Default.png in Resources */,
+				C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */,
+				C9BBC20F15DEE52700E16FBB /* Icon-Small.png in Resources */,
+				C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */,
+				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
+				C90264471601398A0075960E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +358,10 @@
 				C95FDEF015D232D5006FE035 /* main.m in Sources */,
 				C95FDEF415D232D5006FE035 /* PCAppDelegate.m in Sources */,
 				C95FDEF715D232D5006FE035 /* PCViewController.m in Sources */,
+				C91542BF15D9C4F7000EE537 /* AboutViewController.m in Sources */,
+				C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */,
+				C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */,
+				C9BBC20715DDC5C400E16FBB /* UIApplication+FrontWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +408,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -224,14 +421,16 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Zanchelli (TH77NKHW5N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "E74C1706-5850-45B6-99B0-93ADDD385D04";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -243,7 +442,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -254,7 +456,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -278,6 +483,7 @@
 				C95FDEFF15D232D5006FE035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
