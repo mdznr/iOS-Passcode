@@ -26,10 +26,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
     // Do any additional setup after loading the view from its nib.
+	
+	_scrollView.contentSize = CGSizeMake(320,
+										 _howTo.frame.size.height
+										 +_tips.frame.size.height);
+	
+	[_passcodeURL setTitleColor:[UIColor colorWithRed:14.0f/255.0f
+												green:50.0f/255.0f
+												 blue:110.0f/255.0f
+												alpha:1]
+					   forState:UIControlStateHighlighted];
+	
+	// Change tips text depending on current setting.
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] )
 	{
-		// change about text for saving password.
+		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills out the domain field.\n\nYou can prevent Passcode from remembering your master password in Settings.";
+	}
+	else
+	{
+		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills out the domain field.\n\nYou can allow Passcode to remember your master password in Settings.";
 	}
 }
 
@@ -44,4 +61,11 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)viewDidUnload {
+	[self setHowTo:nil];
+	[self setTips:nil];
+	[self setPasscodeURL:nil];
+	[self setScrollView:nil];
+	[super viewDidUnload];
+}
 @end

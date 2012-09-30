@@ -16,7 +16,7 @@
 			<key>Key</key>
 			<string>save_password</string>
 			<key>Title</key>
-			<string>Save Password</string>
+			<string>Save Master Password</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 		</dict>
