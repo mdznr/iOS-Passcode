@@ -45,14 +45,12 @@
 	[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	if (smooth) [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateNormal];
 	else [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateNormal];
-//	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, -1);	// Now handeled elsewhere in the code
 	
 	if (smooth) [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonSmoothActive"] forState:UIControlStateHighlighted];
 	else [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonActive"] forState:UIControlStateHighlighted];
 	[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 	if (smooth) [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateHighlighted];
 	else [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateHighlighted];
-//	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, -1);	// Now handeled elsewhere in the code
 	
 }
 

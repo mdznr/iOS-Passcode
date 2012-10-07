@@ -41,6 +41,11 @@
 		C95FDEF415D232D5006FE035 /* PCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCAppDelegate.m */; };
 		C95FDEF715D232D5006FE035 /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCViewController.m */; };
 		C95FDEFA15D232D5006FE035 /* PCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEF815D232D5006FE035 /* PCViewController.xib */; };
+		C9B56AE416220E70001FD931 /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE016220E70001FD931 /* whiteButton.png */; };
+		C9B56AE516220E70001FD931 /* whiteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE116220E70001FD931 /* whiteButton@2x.png */; };
+		C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE216220E70001FD931 /* whiteButtonActive.png */; };
+		C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */; };
+		C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B56AEA16220FD2001FD931 /* PCButton.m */; };
 		C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* AppearView.m */; };
 		C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
 		C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FB15DB180100E16FBB /* Icon.png */; };
@@ -96,6 +101,12 @@
 		C95FDEF615D232D5006FE035 /* PCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCViewController.m; sourceTree = "<group>"; };
 		C95FDEF915D232D5006FE035 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PCViewController.xib; sourceTree = "<group>"; };
 		C95FDF0015D23302006FE035 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		C9B56AE016220E70001FD931 /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
+		C9B56AE116220E70001FD931 /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
+		C9B56AE216220E70001FD931 /* whiteButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonActive.png; sourceTree = "<group>"; };
+		C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonActive@2x.png"; sourceTree = "<group>"; };
+		C9B56AE916220FD2001FD931 /* PCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCButton.h; sourceTree = "<group>"; };
+		C9B56AEA16220FD2001FD931 /* PCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCButton.m; sourceTree = "<group>"; };
 		C9BBC1F315DA10B600E16FBB /* AppearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearView.h; path = Passcode/AppearView.h; sourceTree = "<group>"; };
 		C9BBC1F415DA10B600E16FBB /* AppearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearView.m; path = Passcode/AppearView.m; sourceTree = "<group>"; };
 		C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -158,6 +169,10 @@
 				C915429315D316C9000EE537 /* inputBackground@2x.png */,
 				C91542CA15DA049B000EE537 /* password.png */,
 				C91542CB15DA049B000EE537 /* password@2x.png */,
+				C9B56AE016220E70001FD931 /* whiteButton.png */,
+				C9B56AE116220E70001FD931 /* whiteButton@2x.png */,
+				C9B56AE216220E70001FD931 /* whiteButtonActive.png */,
+				C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -218,6 +233,8 @@
 				C95FDEF515D232D5006FE035 /* PCViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCViewController.m */,
 				C95FDEF815D232D5006FE035 /* PCViewController.xib */,
+				C9B56AE916220FD2001FD931 /* PCButton.h */,
+				C9B56AEA16220FD2001FD931 /* PCButton.m */,
 				C9BBC20815DDC5C800E16FBB /* Front Window */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C91542C115D9C535000EE537 /* About */,
@@ -345,6 +362,10 @@
 				C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */,
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C90264471601398A0075960E /* Default-568h@2x.png in Resources */,
+				C9B56AE416220E70001FD931 /* whiteButton.png in Resources */,
+				C9B56AE516220E70001FD931 /* whiteButton@2x.png in Resources */,
+				C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */,
+				C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +383,7 @@
 				C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */,
 				C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */,
 				C9BBC20715DDC5C400E16FBB /* UIApplication+FrontWindow.m in Sources */,
+				C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

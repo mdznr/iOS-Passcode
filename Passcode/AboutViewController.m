@@ -31,7 +31,7 @@
 	
 	_scrollView.contentSize = CGSizeMake(320,
 										 _howTo.frame.size.height
-										 +_tips.frame.size.height);
+										 +200+_tips.frame.size.height);
 	
 	[_passcodeURL setTitleColor:[UIColor colorWithRed:14.0f/255.0f
 												green:50.0f/255.0f
@@ -42,11 +42,11 @@
 	// Change tips text depending on current setting.
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] )
 	{
-		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills out the domain field.\n\nYou can prevent Passcode from remembering your master password in Settings.";
+		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at mdznr.com/passcode\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills in the domain field.\n\nYou can prevent Passcode from remembering your master password in Settings.\n\n\nApp designed and built by Matt Zanchelli.\n\nSpecial thanks to:\nNick Pitt\nMoorthy\nPeter Hajas\nSean O'Sullivan\nRCOS";
 	}
 	else
 	{
-		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills out the domain field.\n\nYou can allow Passcode to remember your master password in Settings.";
+		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at mdznr.com/passcode\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills in the domain field.\n\nYou can allow Passcode to remember your master password in Settings.\n\n\nApp designed and built by Matt Zanchelli.\n\nSpecial thanks to:\nNick Pitt\nMoorthy\nPeter Hajas\nSean O'Sullivan\nRCOS";
 	}
 }
 
