@@ -53,7 +53,6 @@
 		C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */; };
 		C9BBC20215DC1A9C00E16FBB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20115DC1A9B00E16FBB /* Default.png */; };
 		C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20315DC1A9F00E16FBB /* Default@2x.png */; };
-		C9BBC20715DDC5C400E16FBB /* UIApplication+FrontWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */; };
 		C9BBC20F15DEE52700E16FBB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20D15DEE52600E16FBB /* Icon-Small.png */; };
 		C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */; };
 		C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
@@ -115,8 +114,6 @@
 		C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "copied@2x.png"; sourceTree = "<group>"; };
 		C9BBC20115DC1A9B00E16FBB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		C9BBC20315DC1A9F00E16FBB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		C9BBC20515DDC5C400E16FBB /* UIApplication+FrontWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FrontWindow.h"; sourceTree = "<group>"; };
-		C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FrontWindow.m"; sourceTree = "<group>"; };
 		C9BBC20D15DEE52600E16FBB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = SOURCE_ROOT; };
 		C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
 		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -233,9 +230,7 @@
 				C95FDEF515D232D5006FE035 /* PCViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCViewController.m */,
 				C95FDEF815D232D5006FE035 /* PCViewController.xib */,
-				C9B56AE916220FD2001FD931 /* PCButton.h */,
-				C9B56AEA16220FD2001FD931 /* PCButton.m */,
-				C9BBC20815DDC5C800E16FBB /* Front Window */,
+				C9B56AEC16221A93001FD931 /* Button */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C91542C115D9C535000EE537 /* About */,
 				C91542D315DA06E9000EE537 /* Welcome */,
@@ -257,6 +252,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9B56AEC16221A93001FD931 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C9B56AE916220FD2001FD931 /* PCButton.h */,
+				C9B56AEA16220FD2001FD931 /* PCButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		C9BBC1F615DA10B900E16FBB /* Appear View */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,15 +269,6 @@
 			);
 			name = "Appear View";
 			path = ..;
-			sourceTree = "<group>";
-		};
-		C9BBC20815DDC5C800E16FBB /* Front Window */ = {
-			isa = PBXGroup;
-			children = (
-				C9BBC20515DDC5C400E16FBB /* UIApplication+FrontWindow.h */,
-				C9BBC20615DDC5C400E16FBB /* UIApplication+FrontWindow.m */,
-			);
-			name = "Front Window";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +377,6 @@
 				C91542BF15D9C4F7000EE537 /* AboutViewController.m in Sources */,
 				C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */,
 				C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */,
-				C9BBC20715DDC5C400E16FBB /* UIApplication+FrontWindow.m in Sources */,
 				C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

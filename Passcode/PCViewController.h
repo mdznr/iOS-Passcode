@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AboutViewController.h"
 #import "AppearView.h"
-#import "UIApplication+FrontWindow.h"
 
 @interface PCViewController : UIViewController
 

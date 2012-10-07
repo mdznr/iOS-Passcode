@@ -28,26 +28,6 @@
     [super viewDidLoad];
 	
     // Do any additional setup after loading the view from its nib.
-	
-	_scrollView.contentSize = CGSizeMake(320,
-										 _howTo.frame.size.height
-										 +200+_tips.frame.size.height);
-	
-	[_passcodeURL setTitleColor:[UIColor colorWithRed:14.0f/255.0f
-												green:50.0f/255.0f
-												 blue:110.0f/255.0f
-												alpha:1]
-					   forState:UIControlStateHighlighted];
-	
-	// Change tips text depending on current setting.
-	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] )
-	{
-		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at mdznr.com/passcode\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills in the domain field.\n\nYou can prevent Passcode from remembering your master password in Settings.\n\n\nApp designed and built by Matt Zanchelli.\n\nSpecial thanks to:\nNick Pitt\nMoorthy\nPeter Hajas\nSean O'Sullivan\nRCOS";
-	}
-	else
-	{
-		_tips.text = @"No data is ever sent to or from this device from the internet.\n\nPasscode is also available for Safari and via the web at mdznr.com/passcode\n\nTips:\n\nOpen the app with a URL in your clipboard, and Passcode automatically fills in the domain field.\n\nYou can allow Passcode to remember your master password in Settings.\n\n\nApp designed and built by Matt Zanchelli.\n\nSpecial thanks to:\nNick Pitt\nMoorthy\nPeter Hajas\nSean O'Sullivan\nRCOS";
-	}
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,11 +41,24 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)viewDidUnload {
+- (IBAction)howToUse
+{
+	
+}
+
+- (IBAction)faq
+{
+	
+}
+
+- (IBAction)showSupport
+{
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode"]];
+}
+
+- (void)viewDidUnload
+{
 	[self setHowTo:nil];
-	[self setTips:nil];
-	[self setPasscodeURL:nil];
-	[self setScrollView:nil];
 	[super viewDidUnload];
 }
 @end

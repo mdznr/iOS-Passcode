@@ -10,11 +10,11 @@
 
 @interface AboutViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UILabel *howTo;
-@property (strong, nonatomic) IBOutlet UILabel *tips;
-@property (strong, nonatomic) IBOutlet UIButton *passcodeURL;
 
 - (IBAction)done:(id)sender;
+- (IBAction)howToUse;
+- (IBAction)faq;
+- (IBAction)showSupport;
 
 @end
