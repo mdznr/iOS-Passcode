@@ -46,6 +46,10 @@
 		C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE216220E70001FD931 /* whiteButtonActive.png */; };
 		C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */; };
 		C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B56AEA16220FD2001FD931 /* PCButton.m */; };
+		C9B56AF116238AB7001FD931 /* whiteButtonGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */; };
+		C9B56AF216238AB7001FD931 /* whiteButtonGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */; };
+		C9B56AF316238AB7001FD931 /* whiteButtonGlossyActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */; };
+		C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */; };
 		C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* AppearView.m */; };
 		C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
 		C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FB15DB180100E16FBB /* Icon.png */; };
@@ -106,6 +110,10 @@
 		C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonActive@2x.png"; sourceTree = "<group>"; };
 		C9B56AE916220FD2001FD931 /* PCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCButton.h; sourceTree = "<group>"; };
 		C9B56AEA16220FD2001FD931 /* PCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCButton.m; sourceTree = "<group>"; };
+		C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonGlossy.png; sourceTree = "<group>"; };
+		C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonGlossy@2x.png"; sourceTree = "<group>"; };
+		C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonGlossyActive.png; sourceTree = "<group>"; };
+		C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonGlossyActive@2x.png"; sourceTree = "<group>"; };
 		C9BBC1F315DA10B600E16FBB /* AppearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearView.h; path = Passcode/AppearView.h; sourceTree = "<group>"; };
 		C9BBC1F415DA10B600E16FBB /* AppearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearView.m; path = Passcode/AppearView.m; sourceTree = "<group>"; };
 		C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -170,6 +178,10 @@
 				C9B56AE116220E70001FD931 /* whiteButton@2x.png */,
 				C9B56AE216220E70001FD931 /* whiteButtonActive.png */,
 				C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */,
+				C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */,
+				C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */,
+				C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */,
+				C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -361,6 +373,10 @@
 				C9B56AE516220E70001FD931 /* whiteButton@2x.png in Resources */,
 				C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */,
 				C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */,
+				C9B56AF116238AB7001FD931 /* whiteButtonGlossy.png in Resources */,
+				C9B56AF216238AB7001FD931 /* whiteButtonGlossy@2x.png in Resources */,
+				C9B56AF316238AB7001FD931 /* whiteButtonGlossyActive.png in Resources */,
+				C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
