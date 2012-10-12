@@ -30,7 +30,7 @@
 		BOOL smooth = NO;
 		NSString *reqSysVer = @"6.0";
 		NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
-		if ([ currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending ) smooth = YES;
+		if ( [currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending ) smooth = YES;
 		 
 		// Set up Generate Button
 		

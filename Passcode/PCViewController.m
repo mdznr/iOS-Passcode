@@ -109,7 +109,7 @@
 
 - (IBAction)viewAbout:(id)sender
 {
-	AboutViewController *about = [[AboutViewController alloc] init];
+	AboutNavigationController *about = [[AboutNavigationController alloc] init];
 	[self presentModalViewController:about animated:YES];
 }
 

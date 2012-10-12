@@ -1,18 +1,18 @@
 //
-//  AboutViewController.m
+//  AboutNavigationController.m
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "AboutNavigationController.h"
 
-@interface AboutViewController ()
+@interface AboutNavigationController ()
 
 @end
 
-@implementation AboutViewController
+@implementation AboutNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -48,7 +47,9 @@
 
 - (IBAction)faq
 {
-	
+	NSLog(@"FAQ REQUESTED");
+	FAQ *faq = [[FAQ alloc] init];
+	[self presentModalViewController:faq animated:YES];
 }
 
 - (IBAction)showSupport
@@ -58,7 +59,7 @@
 
 - (void)viewDidUnload
 {
-	[self setHowTo:nil];
+	[self setNavigationBar:nil];
 	[super viewDidUnload];
 }
 @end
