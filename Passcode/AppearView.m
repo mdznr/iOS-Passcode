@@ -30,7 +30,10 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 0);
     CGContextSetStrokeColorWithColor(context, [UIColor clearColor].CGColor);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithHue:0.0f saturation:0.0f brightness:0.0f alpha:0.5f].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithHue:0.0f
+													   saturation:0.0f
+													   brightness:0.0f
+															alpha:0.5f].CGColor);
     
     CGRect rrect = self.bounds;
     
@@ -45,9 +48,11 @@
     CGFloat minx = CGRectGetMinX(rrect);
     CGFloat midx = CGRectGetMidX(rrect);
     CGFloat maxx = CGRectGetMaxX(rrect);
+	
     CGFloat miny = CGRectGetMinY(rrect);
     CGFloat midy = CGRectGetMidY(rrect);
     CGFloat maxy = CGRectGetMaxY(rrect);
+	
     CGContextMoveToPoint(context, minx, midy);
     CGContextAddArcToPoint(context, minx, miny, midx, miny, radius);
     CGContextAddArcToPoint(context, maxx, miny, maxx, midy, radius);
@@ -65,7 +70,10 @@
 	imageView.image = image;
 	[self addSubview:imageView];
 	
-	UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2 + 8, self.frame.size.width, self.frame.size.height/2)];
+	UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(0,
+															  self.frame.size.height/2 + 8,
+															  self.frame.size.width,
+															  self.frame.size.height/2)];
 	[text setText:_text];
 	text.backgroundColor = [UIColor clearColor];
 	text.textColor = [UIColor whiteColor];
@@ -79,9 +87,10 @@
 
 - (void)display
 {
-	[self setAlpha:1.0f];
+	[[self layer] removeAllAnimations];
 	[[self class] cancelPreviousPerformRequestsWithTarget:self];
-	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:2.0f];
+	[self setAlpha:1.0f];
+	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.5f];
 }
 
 - (void)fadeOut
