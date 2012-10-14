@@ -69,7 +69,7 @@
 	[text setText:_text];
 	text.backgroundColor = [UIColor clearColor];
 	text.textColor = [UIColor whiteColor];
-	text.textAlignment = UITextAlignmentCenter;
+	text.textAlignment = NSTextAlignmentCenter;
 	text.shadowColor = [UIColor blackColor];
 	text.shadowOffset = CGSizeMake(1, 1);
 	[text setFont:[UIFont boldSystemFontOfSize:16.0]];

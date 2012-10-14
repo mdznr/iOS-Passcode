@@ -110,7 +110,7 @@
 - (IBAction)viewAbout:(id)sender
 {
 	AboutViewController *about = [[AboutViewController alloc] init];
-	[self presentModalViewController:about animated:YES];
+	[self presentViewController:about animated:YES completion:NULL];
 }
 
 - (IBAction)textDidChange:(id)sender

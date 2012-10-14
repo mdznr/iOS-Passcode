@@ -37,7 +37,7 @@
 
 - (IBAction)done:(id)sender
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (IBAction)howToUse
