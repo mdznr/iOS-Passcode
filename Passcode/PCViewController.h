@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AboutNavigationController.h"
+#import "AboutViewController.h"
 #import "AppearView.h"
 
 @interface PCViewController : UIViewController

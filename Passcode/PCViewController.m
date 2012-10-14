@@ -60,7 +60,7 @@
 	{
 		NSURL *url = [[NSURL alloc] initWithString:[[UIPasteboard generalPasteboard] string]];
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
-		_domainField.text = [components objectAtIndex:[components count]-2];
+		_domainField.text = components[[components count]-2];
 		[self textDidChange:nil];
 	}
 }
@@ -109,7 +109,7 @@
 
 - (IBAction)viewAbout:(id)sender
 {
-	AboutNavigationController *about = [[AboutNavigationController alloc] init];
+	AboutViewController *about = [[AboutViewController alloc] init];
 	[self presentModalViewController:about animated:YES];
 }
 

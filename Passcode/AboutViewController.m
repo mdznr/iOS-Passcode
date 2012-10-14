@@ -1,18 +1,18 @@
 //
-//  AboutNavigationController.m
+//  AboutViewController.m
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "AboutNavigationController.h"
+#import "AboutViewController.h"
 
-@interface AboutNavigationController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation AboutNavigationController
+@implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,19 +42,17 @@
 
 - (IBAction)howToUse
 {
-	
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/howto"]];
 }
 
 - (IBAction)faq
 {
-	NSLog(@"FAQ REQUESTED");
-	FAQ *faq = [[FAQ alloc] init];
-	[self presentModalViewController:faq animated:YES];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/faq"]];
 }
 
 - (IBAction)showSupport
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode"]];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
 }
 
 - (void)viewDidUnload

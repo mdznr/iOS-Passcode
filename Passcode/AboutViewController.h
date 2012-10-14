@@ -1,5 +1,5 @@
 //
-//  AboutNavigationController.h
+//  AboutViewController.h
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FAQ.h"
 
-@interface AboutNavigationController : UIViewController
+@interface AboutViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 

@@ -7,7 +7,6 @@
 //
 
 #import "PCAppDelegate.h"
-
 #import "PCViewController.h"
 
 @implementation PCAppDelegate
@@ -16,7 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	    self.viewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
+	} else {
+	    self.viewController = [[PCViewController alloc] initWithNibName:@"PCViewController_iPad" bundle:nil];
+	}
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 	

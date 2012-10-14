@@ -87,8 +87,8 @@
 - (void)fadeOut
 {
 	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	[fadeOut setFromValue:[NSNumber numberWithFloat:1.0f]];
-	[fadeOut setToValue:[NSNumber numberWithFloat:0.0f]];
+	[fadeOut setFromValue:@1.0f];
+	[fadeOut setToValue:@0.0f];
 	[fadeOut setDuration:1.0f];
 	[[self layer] addAnimation:fadeOut forKey:@"alpha"];
 	[self setAlpha:0.0f];

@@ -86,13 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Passcode/AboutViewController.m"
-         timestampString = "371754339.506219"
+         timestampString = "371758492.961861"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
-         landmarkName = "-faq"
-         landmarkType = "5">
+         startingLineNumber = "76"
+         endingLineNumber = "76">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
