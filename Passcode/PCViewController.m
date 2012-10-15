@@ -109,7 +109,7 @@
 
 - (IBAction)viewAbout:(id)sender
 {
-	AboutViewController *about = [[AboutViewController alloc] init];
+	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
 	[self presentViewController:about animated:YES completion:NULL];
 }
 

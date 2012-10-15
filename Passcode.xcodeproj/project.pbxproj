@@ -29,12 +29,10 @@
 		C91542C915DA0496000EE537 /* domain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C515DA0495000EE537 /* domain@2x.png */; };
 		C91542CC15DA049B000EE537 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CA15DA049B000EE537 /* password.png */; };
 		C91542CD15DA049B000EE537 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CB15DA049B000EE537 /* password@2x.png */; };
-		C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91542CF15DA06E6000EE537 /* WelcomeViewController.m */; };
-		C91542D215DA06E6000EE537 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91542D015DA06E6000EE537 /* WelcomeViewController.xib */; };
 		C94DFC5B16288D0B002AD5CD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* AboutViewController.m */; };
-		C94DFC5C16288D0B002AD5CD /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC5A16288D0B002AD5CD /* AboutViewController.xib */; };
 		C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
+		C94DFD38162BBC1D002AD5CD /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD3A162BBC1D002AD5CD /* AboutViewController.xib */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
@@ -86,12 +84,8 @@
 		C91542C515DA0495000EE537 /* domain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "domain@2x.png"; sourceTree = "<group>"; };
 		C91542CA15DA049B000EE537 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		C91542CB15DA049B000EE537 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
-		C91542CE15DA06E6000EE537 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		C91542CF15DA06E6000EE537 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		C91542D015DA06E6000EE537 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		C94DFC5816288D0B002AD5CD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		C94DFC5A16288D0B002AD5CD /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCViewController_iPad.xib; sourceTree = "<group>"; };
 		C94DFD28162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/PCViewController.xib; sourceTree = "<group>"; };
 		C94DFD29162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -100,6 +94,9 @@
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C94DFD36162BAC5E002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C94DFD37162BAC5E002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C94DFD39162BBC1D002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutViewController.xib; sourceTree = "<group>"; };
+		C94DFD3B162BBC23002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/AboutViewController.xib; sourceTree = "<group>"; };
+		C94DFD3C162BBC25002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AboutViewController.xib; sourceTree = "<group>"; };
 		C95FDEDF15D232D5006FE035 /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -201,19 +198,9 @@
 			children = (
 				C94DFC5816288D0B002AD5CD /* AboutViewController.h */,
 				C94DFC5916288D0B002AD5CD /* AboutViewController.m */,
-				C94DFC5A16288D0B002AD5CD /* AboutViewController.xib */,
+				C94DFD3A162BBC1D002AD5CD /* AboutViewController.xib */,
 			);
 			name = About;
-			sourceTree = "<group>";
-		};
-		C91542D315DA06E9000EE537 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				C91542CE15DA06E6000EE537 /* WelcomeViewController.h */,
-				C91542CF15DA06E6000EE537 /* WelcomeViewController.m */,
-				C91542D015DA06E6000EE537 /* WelcomeViewController.xib */,
-			);
-			name = Welcome;
 			sourceTree = "<group>";
 		};
 		C95FDED415D232D5006FE035 = {
@@ -256,7 +243,6 @@
 				C9B56AEC16221A93001FD931 /* Button */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C91542C115D9C535000EE537 /* About */,
-				C91542D315DA06E9000EE537 /* Welcome */,
 				C915425715D237BF000EE537 /* Resources */,
 				C95FDEEA15D232D5006FE035 /* Supporting Files */,
 			);
@@ -372,7 +358,6 @@
 				C91542C915DA0496000EE537 /* domain@2x.png in Resources */,
 				C91542CC15DA049B000EE537 /* password.png in Resources */,
 				C91542CD15DA049B000EE537 /* password@2x.png in Resources */,
-				C91542D215DA06E6000EE537 /* WelcomeViewController.xib in Resources */,
 				C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */,
 				C9BBC1FF15DB36BE00E16FBB /* copied.png in Resources */,
 				C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */,
@@ -390,7 +375,7 @@
 				C9B56AF216238AB7001FD931 /* whiteButtonGlossy@2x.png in Resources */,
 				C9B56AF316238AB7001FD931 /* whiteButtonGlossyActive.png in Resources */,
 				C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */,
-				C94DFC5C16288D0B002AD5CD /* AboutViewController.xib in Resources */,
+				C94DFD38162BBC1D002AD5CD /* AboutViewController.xib in Resources */,
 				C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
 			);
@@ -406,7 +391,6 @@
 				C95FDEF015D232D5006FE035 /* main.m in Sources */,
 				C95FDEF415D232D5006FE035 /* PCAppDelegate.m in Sources */,
 				C95FDEF715D232D5006FE035 /* PCViewController.m in Sources */,
-				C91542D115DA06E6000EE537 /* WelcomeViewController.m in Sources */,
 				C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */,
 				C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */,
 				C94DFC5B16288D0B002AD5CD /* AboutViewController.m in Sources */,
@@ -424,6 +408,16 @@
 				C94DFD37162BAC5E002AD5CD /* fr */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C94DFD3A162BBC1D002AD5CD /* AboutViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94DFD39162BBC1D002AD5CD /* en */,
+				C94DFD3B162BBC23002AD5CD /* es */,
+				C94DFD3C162BBC25002AD5CD /* fr */,
+			);
+			name = AboutViewController.xib;
 			sourceTree = "<group>";
 		};
 		C95FDEEC15D232D5006FE035 /* InfoPlist.strings */ = {

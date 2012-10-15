@@ -52,10 +52,10 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4wOTgwMzkyMTU2OSAwLjIwMzkyMTU2ODYgMC42MDM5MjE1Njg2AA</bytes>
 						</object>
-						<array class="NSMutableArray" key="IBUIItems">
+						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="477897527">
 								<reference key="IBUINavigationBar" ref="506302335"/>
-								<string key="IBUITitle">About</string>
+								<string key="IBUITitle">Info</string>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="210294802">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
@@ -69,7 +69,7 @@
 					<object class="IBUILabel" id="561556634">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{20, 64}, {280, 76}}</string>
+						<string key="NSFrame">{{20, 62}, {280, 76}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="469097266"/>
@@ -79,7 +79,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Passcode makes it easy to keep all your online accounts safe. Passcode is also available as a Safari extension and in your web browser.</string>
+						<string key="IBUIText">Passcode hace que sea fácil de mantener todas sus cuentas en línea seguro. Passcode también está disponible como una extensión de Safari y el navegador.</string>
 						<object class="NSColor" key="IBUITextColor" id="408678621">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
@@ -115,7 +115,7 @@
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<bool key="IBUIAdjustsImageWhenDisabled">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
-						<string key="IBUINormalTitle">How To Use</string>
+						<string key="IBUINormalTitle">Cómo Utilizar</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="1029787157">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -147,7 +147,7 @@
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<bool key="IBUIAdjustsImageWhenDisabled">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
-						<string key="IBUINormalTitle">Frequently Asked Questions</string>
+						<string key="IBUINormalTitle">Preguntas más Frecuentes</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1029787157"/>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
@@ -169,7 +169,7 @@
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<bool key="IBUIAdjustsImageWhenDisabled">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
-						<string key="IBUINormalTitle">Support</string>
+						<string key="IBUINormalTitle">Soporte</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1029787157"/>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
@@ -182,16 +182,15 @@
 						<string key="NSFrame">{{20, 365}, {280, 75}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">QXBwIGRlc2lnbiBhbmQgZGV2ZWxvcG1lbnQgYnkgTWF0dCBaYW5jaGVsbGkKClRoYW5rIHlvdSBOaWNr
-IFBpdHQsIFBldGVyIEhhamFzLCBNb29ydGh5LCBTZWFuIE8nU3VsbGl2YW4sIFJlbnNzZWxhZXIgQ2Vu
-dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
+						<string type="base64-UTF8" key="IBUIText">QXBsaWNhY2nDs24gZGUgZGlzZcOxbyB5IGRlc2Fycm9sbG8gcG9yIE1hdHQgWmFuY2hlbGxpCgpHcmFj
+aWFzIGEgTmljayBQaXR0LCBQZXRlciBIYWphcywgTW9vcnRoeSwgU2VhbiBPJ1N1bGxpdmFuLCBSZW5z
+c2VsYWVyIENlbnRlciBmb3IgT3BlbiBTb3VyY2U</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
@@ -321,10 +320,10 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 						<array class="NSMutableArray" key="children">
 							<reference ref="259511169"/>
 							<reference ref="506302335"/>
-							<reference ref="561556634"/>
 							<reference ref="469097266"/>
 							<reference ref="9519971"/>
 							<reference ref="558640706"/>
+							<reference ref="561556634"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

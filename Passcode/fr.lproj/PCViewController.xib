@@ -272,7 +272,6 @@
 								<string key="NSFrame">{{0, 80}, {128, 128}}</string>
 								<reference key="NSSuperview" ref="727784997"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="695576083">
 									<int key="NSColorSpace">3</int>
@@ -567,16 +566,11 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="generateAndCopy:">id</string>
-						<string key="textDidChange:">id</string>
 						<string key="viewAbout:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="generateAndCopy:">
 							<string key="name">generateAndCopy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="textDidChange:">
-							<string key="name">textDidChange:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="viewAbout:">
