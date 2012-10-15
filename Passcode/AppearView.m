@@ -74,7 +74,7 @@
 															  self.frame.size.height/2 + 8,
 															  self.frame.size.width,
 															  self.frame.size.height/2)];
-	[text setText:_text];
+	[text setText:NSLocalizedString(_text, nil)];
 	text.backgroundColor = [UIColor clearColor];
 	text.textColor = [UIColor whiteColor];
 	text.textAlignment = NSTextAlignmentCenter;

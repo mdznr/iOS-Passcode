@@ -48,6 +48,7 @@
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="344889547"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSColor" key="IBUITintColor">
@@ -59,7 +60,7 @@
 								<reference key="IBUINavigationBar" ref="956195959"/>
 								<string key="IBUITitle">Passcode</string>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="803432706">
-									<string key="IBUITitle">About</string>
+									<string key="IBUITitle">Info</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="102578705"/>
@@ -96,7 +97,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Domain</string>
+						<string key="IBUIText">Dominio</string>
 						<object class="NSColor" key="IBUITextColor" id="360246930">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xMjU0OTAxOTYxIDAuMjkwMTk2MDc4NCAwLjY3MDU4ODIzNTMAA</bytes>
@@ -130,7 +131,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
-						<string key="IBUIPlaceholder">ex: apple</string>
+						<string key="IBUIPlaceholder">p.ej: apple</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -170,7 +171,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Password</string>
+						<string key="IBUIText">Contraseña</string>
 						<reference key="IBUITextColor" ref="360246930"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -194,7 +195,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
-						<string key="IBUIPlaceholder">password</string>
+						<string key="IBUIPlaceholder">contraseña</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -229,7 +230,7 @@
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<bool key="IBUIAdjustsImageWhenDisabled">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
-						<string key="IBUINormalTitle">Generate Passcode &amp; Copy</string>
+						<string key="IBUINormalTitle">Generar Contraseña y Copia</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="909284210">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -256,6 +257,7 @@
 								<string key="NSFrame">{{0, 80}, {128, 128}}</string>
 								<reference key="NSSuperview" ref="727784997"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="695576083">
 									<int key="NSColorSpace">3</int>
@@ -550,16 +552,11 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="generateAndCopy:">id</string>
-						<string key="textDidChange:">id</string>
 						<string key="viewAbout:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="generateAndCopy:">
 							<string key="name">generateAndCopy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="textDidChange:">
-							<string key="name">textDidChange:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="viewAbout:">
@@ -605,7 +602,7 @@
 			<real value="4500" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<int key="IBDocument.defaultPropertyAccessControl">1</int>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="buttonSmoothDisabled.png">{280, 49}</string>
 			<string key="inputBackground.png">{280, 97}</string>

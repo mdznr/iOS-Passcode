@@ -34,6 +34,7 @@
 		C94DFC5B16288D0B002AD5CD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* AboutViewController.m */; };
 		C94DFC5C16288D0B002AD5CD /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC5A16288D0B002AD5CD /* AboutViewController.xib */; };
 		C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */; };
+		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
@@ -92,6 +93,13 @@
 		C94DFC5916288D0B002AD5CD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		C94DFC5A16288D0B002AD5CD /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCViewController_iPad.xib; sourceTree = "<group>"; };
+		C94DFD28162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/PCViewController.xib; sourceTree = "<group>"; };
+		C94DFD29162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C94DFD2A162BAB87002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PCViewController.xib; sourceTree = "<group>"; };
+		C94DFD2B162BAB88002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C94DFD36162BAC5E002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C94DFD37162BAC5E002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C95FDEDF15D232D5006FE035 /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -261,6 +269,7 @@
 				C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */,
 				C9BBC21115DEE81C00E16FBB /* Settings.bundle */,
 				C95FDEEC15D232D5006FE035 /* InfoPlist.strings */,
+				C94DFD33162BAC59002AD5CD /* Localizable.strings */,
 				C95FDEEF15D232D5006FE035 /* main.m */,
 				C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */,
 			);
@@ -322,6 +331,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				fr,
 			);
 			mainGroup = C95FDED415D232D5006FE035;
 			productRefGroup = C95FDEE015D232D5006FE035 /* Products */;
@@ -381,6 +392,7 @@
 				C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */,
 				C94DFC5C16288D0B002AD5CD /* AboutViewController.xib in Resources */,
 				C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */,
+				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,10 +416,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C94DFD33162BAC59002AD5CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94DFD34162BAC59002AD5CD /* en */,
+				C94DFD36162BAC5E002AD5CD /* es */,
+				C94DFD37162BAC5E002AD5CD /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C95FDEEC15D232D5006FE035 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C95FDEED15D232D5006FE035 /* en */,
+				C94DFD29162BAB80002AD5CD /* es */,
+				C94DFD2B162BAB88002AD5CD /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -416,6 +440,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C95FDEF915D232D5006FE035 /* en */,
+				C94DFD28162BAB80002AD5CD /* es */,
+				C94DFD2A162BAB87002AD5CD /* fr */,
 			);
 			name = PCViewController.xib;
 			sourceTree = "<group>";
