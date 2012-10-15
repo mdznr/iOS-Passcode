@@ -6,17 +6,4 @@
   Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 */
 
-"Domain" = "Dominio";
-"ex: apple" = "p.ej: apple";
-"Password" = "Contraseña";
-"Generate Passcode and Copy" = "Generar Contraseña y Copia";
-
-"About" = "Info";
-"How to Use" = "Cómo Utilizar";
-"Frequently Asked Questions" = "Preguntas Frecuentes";
-"Support" = "Soporte";
-
 "Copied" = "Copiado";
-
-"Security" = "Seguridad";
-"Save Master Password" = "Mantener Contraseña Maestra";
