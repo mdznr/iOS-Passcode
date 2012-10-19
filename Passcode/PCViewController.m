@@ -8,6 +8,7 @@
 
 #import "PCViewController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "PDKeychainBindings.h"
 
 #define CC_SHA256_DIGEST_LENGTH	32	/* digest length in bytes */
 
@@ -67,14 +68,16 @@
 
 - (void)checkSecuritySetting
 {
+	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"]  )
 	{
-		_passwordField.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"password"];
+		if ( [bindings objectForKey:@"passwordString"] )
+			[_passwordField setText:[bindings objectForKey:@"passwordString"]];
 	}
 	else
 	{
-		[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"password"];
-		_passwordField.text = @"";
+		[bindings setObject:[_passwordField text] forKey:@"passwordString"];
+		[_passwordField setText:@""];
 	}
 }
 
@@ -94,8 +97,9 @@
 
 - (IBAction)generateAndCopy:(id)sender
 {
-	// Store the password in standardUserDefaults
-	[[NSUserDefaults standardUserDefaults] setValue:[_passwordField text] forKey:@"password"];
+	// Store the password in keychain
+	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
 	// Create the hash
 	NSString *password = [self sha256HashFor:[[_domainField text] stringByAppendingString:[_passwordField text]]];
