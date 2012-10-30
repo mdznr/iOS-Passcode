@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface PDKeychainBindings : NSObject {
-@private
-    
-}
+@interface PDKeychainBindings : NSObject {}
 
 + (PDKeychainBindings *)sharedKeychainBindings;
 

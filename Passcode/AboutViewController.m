@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +54,11 @@
 - (IBAction)showSupport
 {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
+}
+
+- (IBAction)writeAReview
+{
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"]];
 }
 
 - (void)viewDidUnload

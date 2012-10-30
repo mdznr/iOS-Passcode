@@ -9,26 +9,6 @@
 /* Begin PBXBuildFile section */
 		C90264471601398A0075960E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90264461601398A0075960E /* Default-568h@2x.png */; };
 		C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
-		C915429415D316C9000EE537 /* inputBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C915429215D316C9000EE537 /* inputBackground.png */; };
-		C915429515D316C9000EE537 /* inputBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C915429315D316C9000EE537 /* inputBackground@2x.png */; };
-		C91542AE15D61001000EE537 /* buttonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A215D61001000EE537 /* buttonActive.png */; };
-		C91542AF15D61001000EE537 /* buttonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A315D61001000EE537 /* buttonActive@2x.png */; };
-		C91542B015D61001000EE537 /* buttonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A415D61001000EE537 /* buttonDisabled.png */; };
-		C91542B115D61001000EE537 /* buttonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A515D61001000EE537 /* buttonDisabled@2x.png */; };
-		C91542B215D61001000EE537 /* buttonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A615D61001000EE537 /* buttonEnabled.png */; };
-		C91542B315D61001000EE537 /* buttonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A715D61001000EE537 /* buttonEnabled@2x.png */; };
-		C91542B415D61001000EE537 /* buttonSmoothActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A815D61001000EE537 /* buttonSmoothActive.png */; };
-		C91542B515D61001000EE537 /* buttonSmoothActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */; };
-		C91542B615D61001000EE537 /* buttonSmoothDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */; };
-		C91542B715D61001000EE537 /* buttonSmoothDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */; };
-		C91542B815D61001000EE537 /* buttonSmoothEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */; };
-		C91542B915D61001000EE537 /* buttonSmoothEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */; };
-		C91542C615DA0496000EE537 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C215DA0494000EE537 /* clipboard.png */; };
-		C91542C715DA0496000EE537 /* clipboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C315DA0494000EE537 /* clipboard@2x.png */; };
-		C91542C815DA0496000EE537 /* domain.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C415DA0495000EE537 /* domain.png */; };
-		C91542C915DA0496000EE537 /* domain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542C515DA0495000EE537 /* domain@2x.png */; };
-		C91542CC15DA049B000EE537 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CA15DA049B000EE537 /* password.png */; };
-		C91542CD15DA049B000EE537 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91542CB15DA049B000EE537 /* password@2x.png */; };
 		C94DFC5B16288D0B002AD5CD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* AboutViewController.m */; };
 		C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
@@ -44,49 +24,65 @@
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
-		C9B56AE416220E70001FD931 /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE016220E70001FD931 /* whiteButton.png */; };
-		C9B56AE516220E70001FD931 /* whiteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE116220E70001FD931 /* whiteButton@2x.png */; };
-		C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE216220E70001FD931 /* whiteButtonActive.png */; };
-		C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */; };
 		C9B56AEB16220FD2001FD931 /* PCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B56AEA16220FD2001FD931 /* PCButton.m */; };
-		C9B56AF116238AB7001FD931 /* whiteButtonGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */; };
-		C9B56AF216238AB7001FD931 /* whiteButtonGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */; };
-		C9B56AF316238AB7001FD931 /* whiteButtonGlossyActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */; };
-		C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */; };
 		C9BBC1F515DA10B600E16FBB /* AppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* AppearView.m */; };
 		C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
 		C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FB15DB180100E16FBB /* Icon.png */; };
-		C9BBC1FF15DB36BE00E16FBB /* copied.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FD15DB36BE00E16FBB /* copied.png */; };
-		C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */; };
 		C9BBC20215DC1A9C00E16FBB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20115DC1A9B00E16FBB /* Default.png */; };
 		C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20315DC1A9F00E16FBB /* Default@2x.png */; };
 		C9BBC20F15DEE52700E16FBB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20D15DEE52600E16FBB /* Icon-Small.png */; };
 		C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */; };
 		C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
+		C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */; };
+		C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */; };
+		C9DB2DC9164086FF007B417B /* iPadButtonActiveGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */; };
+		C9DB2DCA164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */; };
+		C9DB2DCB164086FF007B417B /* iPadButtonDisabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */; };
+		C9DB2DCC164086FF007B417B /* iPadButtonDisabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */; };
+		C9DB2DCD164086FF007B417B /* iPadButtonEnabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */; };
+		C9DB2DCE164086FF007B417B /* iPadButtonEnabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */; };
+		C9DB2DCF164086FF007B417B /* iPadButtonEnabledGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */; };
+		C9DB2DD0164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */; };
+		C9DB2DD316408705007B417B /* iPadInput.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD116408705007B417B /* iPadInput.png */; };
+		C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD216408705007B417B /* iPadInput@2x.png */; };
+		C9DB2DDF1640870E007B417B /* iPadButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD51640870E007B417B /* iPadButtonActive.png */; };
+		C9DB2DE01640870E007B417B /* iPadButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */; };
+		C9DB2DE11640870E007B417B /* iPadButtonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */; };
+		C9DB2DE21640870E007B417B /* iPadButtonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */; };
+		C9DB2DE31640870E007B417B /* iPadButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */; };
+		C9DB2DE41640870E007B417B /* iPadButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */; };
+		C9DB2DE51640870E007B417B /* iPadButtonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */; };
+		C9DB2DE61640870E007B417B /* iPadButtonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */; };
+		C9DB2DE71640870E007B417B /* iPadButtonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */; };
+		C9DB2DE81640870E007B417B /* iPadButtonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */; };
+		C9DB2DEB1640871D007B417B /* copied.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DE91640871D007B417B /* copied.png */; };
+		C9DB2DEC1640871D007B417B /* copied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DEA1640871D007B417B /* copied@2x.png */; };
+		C9DB2DF716408727007B417B /* buttonActive@2xGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DED16408727007B417B /* buttonActive@2xGlossy.png */; };
+		C9DB2DF816408727007B417B /* buttonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DEE16408727007B417B /* buttonActiveGlossy.png */; };
+		C9DB2DF916408727007B417B /* buttonActiveGreen@2xGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DEF16408727007B417B /* buttonActiveGreen@2xGlossy.png */; };
+		C9DB2DFA16408727007B417B /* buttonActiveGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF016408727007B417B /* buttonActiveGreenGlossy.png */; };
+		C9DB2DFB16408727007B417B /* buttonDisabled@2xGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF116408727007B417B /* buttonDisabled@2xGlossy.png */; };
+		C9DB2DFC16408727007B417B /* buttonDisabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF216408727007B417B /* buttonDisabledGlossy.png */; };
+		C9DB2DFD16408727007B417B /* buttonEnabled@2xGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF316408727007B417B /* buttonEnabled@2xGlossy.png */; };
+		C9DB2DFE16408727007B417B /* buttonEnabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF416408727007B417B /* buttonEnabledGlossy.png */; };
+		C9DB2DFF16408727007B417B /* buttonEnabledGreen@2xGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF516408727007B417B /* buttonEnabledGreen@2xGlossy.png */; };
+		C9DB2E0016408727007B417B /* buttonEnabledGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DF616408727007B417B /* buttonEnabledGreenGlossy.png */; };
+		C9DB2E031640872D007B417B /* input.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E011640872D007B417B /* input.png */; };
+		C9DB2E041640872D007B417B /* input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E021640872D007B417B /* input@2x.png */; };
+		C9DB2E0F16408738007B417B /* buttonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0516408738007B417B /* buttonActive.png */; };
+		C9DB2E1016408738007B417B /* buttonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0616408738007B417B /* buttonActive@2x.png */; };
+		C9DB2E1116408738007B417B /* buttonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0716408738007B417B /* buttonActiveGreen.png */; };
+		C9DB2E1216408738007B417B /* buttonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0816408738007B417B /* buttonActiveGreen@2x.png */; };
+		C9DB2E1316408738007B417B /* buttonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0916408738007B417B /* buttonDisabled.png */; };
+		C9DB2E1416408738007B417B /* buttonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0A16408738007B417B /* buttonDisabled@2x.png */; };
+		C9DB2E1516408738007B417B /* buttonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0B16408738007B417B /* buttonEnabled.png */; };
+		C9DB2E1616408738007B417B /* buttonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0C16408738007B417B /* buttonEnabled@2x.png */; };
+		C9DB2E1716408738007B417B /* buttonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0D16408738007B417B /* buttonEnabledGreen.png */; };
+		C9DB2E1816408738007B417B /* buttonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2E0E16408738007B417B /* buttonEnabledGreen@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		C915429215D316C9000EE537 /* inputBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inputBackground.png; sourceTree = "<group>"; };
-		C915429315D316C9000EE537 /* inputBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inputBackground@2x.png"; sourceTree = "<group>"; };
-		C91542A215D61001000EE537 /* buttonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonActive.png; sourceTree = "<group>"; };
-		C91542A315D61001000EE537 /* buttonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonActive@2x.png"; sourceTree = "<group>"; };
-		C91542A415D61001000EE537 /* buttonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonDisabled.png; sourceTree = "<group>"; };
-		C91542A515D61001000EE537 /* buttonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonDisabled@2x.png"; sourceTree = "<group>"; };
-		C91542A615D61001000EE537 /* buttonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonEnabled.png; sourceTree = "<group>"; };
-		C91542A715D61001000EE537 /* buttonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonEnabled@2x.png"; sourceTree = "<group>"; };
-		C91542A815D61001000EE537 /* buttonSmoothActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothActive.png; sourceTree = "<group>"; };
-		C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothActive@2x.png"; sourceTree = "<group>"; };
-		C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothDisabled.png; sourceTree = "<group>"; };
-		C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothDisabled@2x.png"; sourceTree = "<group>"; };
-		C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSmoothEnabled.png; sourceTree = "<group>"; };
-		C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSmoothEnabled@2x.png"; sourceTree = "<group>"; };
-		C91542C215DA0494000EE537 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
-		C91542C315DA0494000EE537 /* clipboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard@2x.png"; sourceTree = "<group>"; };
-		C91542C415DA0495000EE537 /* domain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = domain.png; sourceTree = "<group>"; };
-		C91542C515DA0495000EE537 /* domain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "domain@2x.png"; sourceTree = "<group>"; };
-		C91542CA15DA049B000EE537 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
-		C91542CB15DA049B000EE537 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
 		C94DFC5816288D0B002AD5CD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCViewController_iPad.xib; sourceTree = "<group>"; };
@@ -119,27 +115,63 @@
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
 		C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
 		C9AC9A46163109BF00EFFD43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C9B56AE016220E70001FD931 /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
-		C9B56AE116220E70001FD931 /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
-		C9B56AE216220E70001FD931 /* whiteButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonActive.png; sourceTree = "<group>"; };
-		C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonActive@2x.png"; sourceTree = "<group>"; };
 		C9B56AE916220FD2001FD931 /* PCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCButton.h; sourceTree = "<group>"; };
 		C9B56AEA16220FD2001FD931 /* PCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCButton.m; sourceTree = "<group>"; };
-		C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonGlossy.png; sourceTree = "<group>"; };
-		C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonGlossy@2x.png"; sourceTree = "<group>"; };
-		C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonGlossyActive.png; sourceTree = "<group>"; };
-		C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonGlossyActive@2x.png"; sourceTree = "<group>"; };
 		C9BBC1F315DA10B600E16FBB /* AppearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearView.h; path = Passcode/AppearView.h; sourceTree = "<group>"; };
 		C9BBC1F415DA10B600E16FBB /* AppearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearView.m; path = Passcode/AppearView.m; sourceTree = "<group>"; };
 		C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9BBC1FB15DB180100E16FBB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		C9BBC1FD15DB36BE00E16FBB /* copied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copied.png; sourceTree = "<group>"; };
-		C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "copied@2x.png"; sourceTree = "<group>"; };
 		C9BBC20115DC1A9B00E16FBB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		C9BBC20315DC1A9F00E16FBB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		C9BBC20D15DEE52600E16FBB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = SOURCE_ROOT; };
 		C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
 		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonActiveGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGlossy.png; sourceTree = "<group>"; };
+		C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonActiveGlossy@2.png"; path = "resources/iPad/glossy/iPadButtonActiveGlossy@2.png"; sourceTree = "<group>"; };
+		C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonActiveGreenGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGreenGlossy.png; sourceTree = "<group>"; };
+		C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonActiveGreenGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonActiveGreenGlossy@2x.png"; sourceTree = "<group>"; };
+		C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonDisabledGlossy.png; path = resources/iPad/glossy/iPadButtonDisabledGlossy.png; sourceTree = "<group>"; };
+		C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonDisabledGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonDisabledGlossy@2x.png"; sourceTree = "<group>"; };
+		C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonEnabledGlossy.png; path = resources/iPad/glossy/iPadButtonEnabledGlossy.png; sourceTree = "<group>"; };
+		C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonEnabledGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonEnabledGlossy@2x.png"; sourceTree = "<group>"; };
+		C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonEnabledGreenGlossy.png; path = resources/iPad/glossy/iPadButtonEnabledGreenGlossy.png; sourceTree = "<group>"; };
+		C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonEnabledGreenGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonEnabledGreenGlossy@2x.png"; sourceTree = "<group>"; };
+		C9DB2DD116408705007B417B /* iPadInput.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadInput.png; path = resources/iPad/iPadInput.png; sourceTree = "<group>"; };
+		C9DB2DD216408705007B417B /* iPadInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadInput@2x.png"; path = "resources/iPad/iPadInput@2x.png"; sourceTree = "<group>"; };
+		C9DB2DD51640870E007B417B /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonActive.png; path = resources/iPad/smooth/iPadButtonActive.png; sourceTree = "<group>"; };
+		C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonActive@2x.png"; path = "resources/iPad/smooth/iPadButtonActive@2x.png"; sourceTree = "<group>"; };
+		C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonActiveGreen.png; path = resources/iPad/smooth/iPadButtonActiveGreen.png; sourceTree = "<group>"; };
+		C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonActiveGreen@2x.png"; path = "resources/iPad/smooth/iPadButtonActiveGreen@2x.png"; sourceTree = "<group>"; };
+		C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonDisabled.png; path = resources/iPad/smooth/iPadButtonDisabled.png; sourceTree = "<group>"; };
+		C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonDisabled@2x.png"; path = "resources/iPad/smooth/iPadButtonDisabled@2x.png"; sourceTree = "<group>"; };
+		C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonEnabled.png; path = resources/iPad/smooth/iPadButtonEnabled.png; sourceTree = "<group>"; };
+		C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonEnabled@2x.png"; path = "resources/iPad/smooth/iPadButtonEnabled@2x.png"; sourceTree = "<group>"; };
+		C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadButtonEnabledGreen.png; path = resources/iPad/smooth/iPadButtonEnabledGreen.png; sourceTree = "<group>"; };
+		C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iPadButtonEnabledGreen@2x.png"; path = "resources/iPad/smooth/iPadButtonEnabledGreen@2x.png"; sourceTree = "<group>"; };
+		C9DB2DE91640871D007B417B /* copied.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = copied.png; path = resources/iPhone/copied.png; sourceTree = "<group>"; };
+		C9DB2DEA1640871D007B417B /* copied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "copied@2x.png"; path = "resources/iPhone/copied@2x.png"; sourceTree = "<group>"; };
+		C9DB2DED16408727007B417B /* buttonActive@2xGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonActive@2xGlossy.png"; path = "resources/iPhone/glossy/buttonActive@2xGlossy.png"; sourceTree = "<group>"; };
+		C9DB2DEE16408727007B417B /* buttonActiveGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonActiveGlossy.png; path = resources/iPhone/glossy/buttonActiveGlossy.png; sourceTree = "<group>"; };
+		C9DB2DEF16408727007B417B /* buttonActiveGreen@2xGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonActiveGreen@2xGlossy.png"; path = "resources/iPhone/glossy/buttonActiveGreen@2xGlossy.png"; sourceTree = "<group>"; };
+		C9DB2DF016408727007B417B /* buttonActiveGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonActiveGreenGlossy.png; path = resources/iPhone/glossy/buttonActiveGreenGlossy.png; sourceTree = "<group>"; };
+		C9DB2DF116408727007B417B /* buttonDisabled@2xGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonDisabled@2xGlossy.png"; path = "resources/iPhone/glossy/buttonDisabled@2xGlossy.png"; sourceTree = "<group>"; };
+		C9DB2DF216408727007B417B /* buttonDisabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonDisabledGlossy.png; path = resources/iPhone/glossy/buttonDisabledGlossy.png; sourceTree = "<group>"; };
+		C9DB2DF316408727007B417B /* buttonEnabled@2xGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonEnabled@2xGlossy.png"; path = "resources/iPhone/glossy/buttonEnabled@2xGlossy.png"; sourceTree = "<group>"; };
+		C9DB2DF416408727007B417B /* buttonEnabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonEnabledGlossy.png; path = resources/iPhone/glossy/buttonEnabledGlossy.png; sourceTree = "<group>"; };
+		C9DB2DF516408727007B417B /* buttonEnabledGreen@2xGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonEnabledGreen@2xGlossy.png"; path = "resources/iPhone/glossy/buttonEnabledGreen@2xGlossy.png"; sourceTree = "<group>"; };
+		C9DB2DF616408727007B417B /* buttonEnabledGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonEnabledGreenGlossy.png; path = resources/iPhone/glossy/buttonEnabledGreenGlossy.png; sourceTree = "<group>"; };
+		C9DB2E011640872D007B417B /* input.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = input.png; path = resources/iPhone/input.png; sourceTree = "<group>"; };
+		C9DB2E021640872D007B417B /* input@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "input@2x.png"; path = "resources/iPhone/input@2x.png"; sourceTree = "<group>"; };
+		C9DB2E0516408738007B417B /* buttonActive.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonActive.png; path = resources/iPhone/smooth/buttonActive.png; sourceTree = "<group>"; };
+		C9DB2E0616408738007B417B /* buttonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonActive@2x.png"; path = "resources/iPhone/smooth/buttonActive@2x.png"; sourceTree = "<group>"; };
+		C9DB2E0716408738007B417B /* buttonActiveGreen.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonActiveGreen.png; path = resources/iPhone/smooth/buttonActiveGreen.png; sourceTree = "<group>"; };
+		C9DB2E0816408738007B417B /* buttonActiveGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonActiveGreen@2x.png"; path = "resources/iPhone/smooth/buttonActiveGreen@2x.png"; sourceTree = "<group>"; };
+		C9DB2E0916408738007B417B /* buttonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonDisabled.png; path = resources/iPhone/smooth/buttonDisabled.png; sourceTree = "<group>"; };
+		C9DB2E0A16408738007B417B /* buttonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonDisabled@2x.png"; path = "resources/iPhone/smooth/buttonDisabled@2x.png"; sourceTree = "<group>"; };
+		C9DB2E0B16408738007B417B /* buttonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonEnabled.png; path = resources/iPhone/smooth/buttonEnabled.png; sourceTree = "<group>"; };
+		C9DB2E0C16408738007B417B /* buttonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonEnabled@2x.png"; path = "resources/iPhone/smooth/buttonEnabled@2x.png"; sourceTree = "<group>"; };
+		C9DB2E0D16408738007B417B /* buttonEnabledGreen.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = buttonEnabledGreen.png; path = resources/iPhone/smooth/buttonEnabledGreen.png; sourceTree = "<group>"; };
+		C9DB2E0E16408738007B417B /* buttonEnabledGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "buttonEnabledGreen@2x.png"; path = "resources/iPhone/smooth/buttonEnabledGreen@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,43 +193,59 @@
 		C915425715D237BF000EE537 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C91542A215D61001000EE537 /* buttonActive.png */,
-				C91542A315D61001000EE537 /* buttonActive@2x.png */,
-				C91542A415D61001000EE537 /* buttonDisabled.png */,
-				C91542A515D61001000EE537 /* buttonDisabled@2x.png */,
-				C91542A615D61001000EE537 /* buttonEnabled.png */,
-				C91542A715D61001000EE537 /* buttonEnabled@2x.png */,
-				C91542A815D61001000EE537 /* buttonSmoothActive.png */,
-				C91542A915D61001000EE537 /* buttonSmoothActive@2x.png */,
-				C91542AA15D61001000EE537 /* buttonSmoothDisabled.png */,
-				C91542AB15D61001000EE537 /* buttonSmoothDisabled@2x.png */,
-				C91542AC15D61001000EE537 /* buttonSmoothEnabled.png */,
-				C91542AD15D61001000EE537 /* buttonSmoothEnabled@2x.png */,
-				C91542C215DA0494000EE537 /* clipboard.png */,
-				C91542C315DA0494000EE537 /* clipboard@2x.png */,
-				C9BBC1FD15DB36BE00E16FBB /* copied.png */,
-				C9BBC1FE15DB36BE00E16FBB /* copied@2x.png */,
 				C9BBC20115DC1A9B00E16FBB /* Default.png */,
 				C90264461601398A0075960E /* Default-568h@2x.png */,
 				C9BBC20315DC1A9F00E16FBB /* Default@2x.png */,
-				C91542C415DA0495000EE537 /* domain.png */,
-				C91542C515DA0495000EE537 /* domain@2x.png */,
 				C9BBC20D15DEE52600E16FBB /* Icon-Small.png */,
 				C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */,
 				C9BBC1FB15DB180100E16FBB /* Icon.png */,
 				C95FDF0015D23302006FE035 /* Icon@2x.png */,
-				C915429215D316C9000EE537 /* inputBackground.png */,
-				C915429315D316C9000EE537 /* inputBackground@2x.png */,
-				C91542CA15DA049B000EE537 /* password.png */,
-				C91542CB15DA049B000EE537 /* password@2x.png */,
-				C9B56AE016220E70001FD931 /* whiteButton.png */,
-				C9B56AE116220E70001FD931 /* whiteButton@2x.png */,
-				C9B56AE216220E70001FD931 /* whiteButtonActive.png */,
-				C9B56AE316220E70001FD931 /* whiteButtonActive@2x.png */,
-				C9B56AED16238AB7001FD931 /* whiteButtonGlossy.png */,
-				C9B56AEE16238AB7001FD931 /* whiteButtonGlossy@2x.png */,
-				C9B56AEF16238AB7001FD931 /* whiteButtonGlossyActive.png */,
-				C9B56AF016238AB7001FD931 /* whiteButtonGlossyActive@2x.png */,
+				C9DB2DE91640871D007B417B /* copied.png */,
+				C9DB2DEA1640871D007B417B /* copied@2x.png */,
+				C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */,
+				C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */,
+				C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */,
+				C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */,
+				C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */,
+				C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */,
+				C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */,
+				C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */,
+				C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */,
+				C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */,
+				C9DB2DD116408705007B417B /* iPadInput.png */,
+				C9DB2DD216408705007B417B /* iPadInput@2x.png */,
+				C9DB2DD51640870E007B417B /* iPadButtonActive.png */,
+				C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */,
+				C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */,
+				C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */,
+				C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */,
+				C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */,
+				C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */,
+				C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */,
+				C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */,
+				C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */,
+				C9DB2DED16408727007B417B /* buttonActive@2xGlossy.png */,
+				C9DB2DEE16408727007B417B /* buttonActiveGlossy.png */,
+				C9DB2DEF16408727007B417B /* buttonActiveGreen@2xGlossy.png */,
+				C9DB2DF016408727007B417B /* buttonActiveGreenGlossy.png */,
+				C9DB2DF116408727007B417B /* buttonDisabled@2xGlossy.png */,
+				C9DB2DF216408727007B417B /* buttonDisabledGlossy.png */,
+				C9DB2DF316408727007B417B /* buttonEnabled@2xGlossy.png */,
+				C9DB2DF416408727007B417B /* buttonEnabledGlossy.png */,
+				C9DB2DF516408727007B417B /* buttonEnabledGreen@2xGlossy.png */,
+				C9DB2DF616408727007B417B /* buttonEnabledGreenGlossy.png */,
+				C9DB2E011640872D007B417B /* input.png */,
+				C9DB2E021640872D007B417B /* input@2x.png */,
+				C9DB2E0516408738007B417B /* buttonActive.png */,
+				C9DB2E0616408738007B417B /* buttonActive@2x.png */,
+				C9DB2E0716408738007B417B /* buttonActiveGreen.png */,
+				C9DB2E0816408738007B417B /* buttonActiveGreen@2x.png */,
+				C9DB2E0916408738007B417B /* buttonDisabled.png */,
+				C9DB2E0A16408738007B417B /* buttonDisabled@2x.png */,
+				C9DB2E0B16408738007B417B /* buttonEnabled.png */,
+				C9DB2E0C16408738007B417B /* buttonEnabled@2x.png */,
+				C9DB2E0D16408738007B417B /* buttonEnabledGreen.png */,
+				C9DB2E0E16408738007B417B /* buttonEnabledGreen@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -250,13 +298,10 @@
 				C95FDEF615D232D5006FE035 /* PCViewController.m */,
 				C95FDEF815D232D5006FE035 /* PCViewController.xib */,
 				C94DFC6B1628C78D002AD5CD /* PCViewController_iPad.xib */,
-				C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */,
-				C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */,
-				C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */,
-				C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */,
-				C9B56AEC16221A93001FD931 /* Button */,
-				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C91542C115D9C535000EE537 /* About */,
+				C9BBC1F615DA10B900E16FBB /* Appear View */,
+				C9B56AEC16221A93001FD931 /* Button */,
+				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
 				C915425715D237BF000EE537 /* Resources */,
 				C95FDEEA15D232D5006FE035 /* Supporting Files */,
 			);
@@ -274,6 +319,17 @@
 				C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */ = {
+			isa = PBXGroup;
+			children = (
+				C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */,
+				C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */,
+				C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */,
+				C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */,
+			);
+			name = PDKeychainBindingsController;
 			sourceTree = "<group>";
 		};
 		C9B56AEC16221A93001FD931 /* Button */ = {
@@ -352,46 +408,62 @@
 				C95FDEEE15D232D5006FE035 /* InfoPlist.strings in Resources */,
 				C95FDEFA15D232D5006FE035 /* PCViewController.xib in Resources */,
 				C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */,
-				C915429415D316C9000EE537 /* inputBackground.png in Resources */,
-				C915429515D316C9000EE537 /* inputBackground@2x.png in Resources */,
-				C91542AE15D61001000EE537 /* buttonActive.png in Resources */,
-				C91542AF15D61001000EE537 /* buttonActive@2x.png in Resources */,
-				C91542B015D61001000EE537 /* buttonDisabled.png in Resources */,
-				C91542B115D61001000EE537 /* buttonDisabled@2x.png in Resources */,
-				C91542B215D61001000EE537 /* buttonEnabled.png in Resources */,
-				C91542B315D61001000EE537 /* buttonEnabled@2x.png in Resources */,
-				C91542B415D61001000EE537 /* buttonSmoothActive.png in Resources */,
-				C91542B515D61001000EE537 /* buttonSmoothActive@2x.png in Resources */,
-				C91542B615D61001000EE537 /* buttonSmoothDisabled.png in Resources */,
-				C91542B715D61001000EE537 /* buttonSmoothDisabled@2x.png in Resources */,
-				C91542B815D61001000EE537 /* buttonSmoothEnabled.png in Resources */,
-				C91542B915D61001000EE537 /* buttonSmoothEnabled@2x.png in Resources */,
-				C91542C615DA0496000EE537 /* clipboard.png in Resources */,
-				C91542C715DA0496000EE537 /* clipboard@2x.png in Resources */,
-				C91542C815DA0496000EE537 /* domain.png in Resources */,
-				C91542C915DA0496000EE537 /* domain@2x.png in Resources */,
-				C91542CC15DA049B000EE537 /* password.png in Resources */,
-				C91542CD15DA049B000EE537 /* password@2x.png in Resources */,
 				C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */,
-				C9BBC1FF15DB36BE00E16FBB /* copied.png in Resources */,
-				C9BBC20015DB36BE00E16FBB /* copied@2x.png in Resources */,
 				C9BBC20215DC1A9C00E16FBB /* Default.png in Resources */,
 				C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */,
 				C9BBC20F15DEE52700E16FBB /* Icon-Small.png in Resources */,
 				C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */,
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C90264471601398A0075960E /* Default-568h@2x.png in Resources */,
-				C9B56AE416220E70001FD931 /* whiteButton.png in Resources */,
-				C9B56AE516220E70001FD931 /* whiteButton@2x.png in Resources */,
-				C9B56AE616220E70001FD931 /* whiteButtonActive.png in Resources */,
-				C9B56AE716220E70001FD931 /* whiteButtonActive@2x.png in Resources */,
-				C9B56AF116238AB7001FD931 /* whiteButtonGlossy.png in Resources */,
-				C9B56AF216238AB7001FD931 /* whiteButtonGlossy@2x.png in Resources */,
-				C9B56AF316238AB7001FD931 /* whiteButtonGlossyActive.png in Resources */,
-				C9B56AF416238AB7001FD931 /* whiteButtonGlossyActive@2x.png in Resources */,
 				C94DFD38162BBC1D002AD5CD /* AboutViewController.xib in Resources */,
 				C94DFC6C1628C78D002AD5CD /* PCViewController_iPad.xib in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
+				C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */,
+				C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */,
+				C9DB2DC9164086FF007B417B /* iPadButtonActiveGreenGlossy.png in Resources */,
+				C9DB2DCA164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png in Resources */,
+				C9DB2DCB164086FF007B417B /* iPadButtonDisabledGlossy.png in Resources */,
+				C9DB2DCC164086FF007B417B /* iPadButtonDisabledGlossy@2x.png in Resources */,
+				C9DB2DCD164086FF007B417B /* iPadButtonEnabledGlossy.png in Resources */,
+				C9DB2DCE164086FF007B417B /* iPadButtonEnabledGlossy@2x.png in Resources */,
+				C9DB2DCF164086FF007B417B /* iPadButtonEnabledGreenGlossy.png in Resources */,
+				C9DB2DD0164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png in Resources */,
+				C9DB2DD316408705007B417B /* iPadInput.png in Resources */,
+				C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */,
+				C9DB2DDF1640870E007B417B /* iPadButtonActive.png in Resources */,
+				C9DB2DE01640870E007B417B /* iPadButtonActive@2x.png in Resources */,
+				C9DB2DE11640870E007B417B /* iPadButtonActiveGreen.png in Resources */,
+				C9DB2DE21640870E007B417B /* iPadButtonActiveGreen@2x.png in Resources */,
+				C9DB2DE31640870E007B417B /* iPadButtonDisabled.png in Resources */,
+				C9DB2DE41640870E007B417B /* iPadButtonDisabled@2x.png in Resources */,
+				C9DB2DE51640870E007B417B /* iPadButtonEnabled.png in Resources */,
+				C9DB2DE61640870E007B417B /* iPadButtonEnabled@2x.png in Resources */,
+				C9DB2DE71640870E007B417B /* iPadButtonEnabledGreen.png in Resources */,
+				C9DB2DE81640870E007B417B /* iPadButtonEnabledGreen@2x.png in Resources */,
+				C9DB2DEB1640871D007B417B /* copied.png in Resources */,
+				C9DB2DEC1640871D007B417B /* copied@2x.png in Resources */,
+				C9DB2DF716408727007B417B /* buttonActive@2xGlossy.png in Resources */,
+				C9DB2DF816408727007B417B /* buttonActiveGlossy.png in Resources */,
+				C9DB2DF916408727007B417B /* buttonActiveGreen@2xGlossy.png in Resources */,
+				C9DB2DFA16408727007B417B /* buttonActiveGreenGlossy.png in Resources */,
+				C9DB2DFB16408727007B417B /* buttonDisabled@2xGlossy.png in Resources */,
+				C9DB2DFC16408727007B417B /* buttonDisabledGlossy.png in Resources */,
+				C9DB2DFD16408727007B417B /* buttonEnabled@2xGlossy.png in Resources */,
+				C9DB2DFE16408727007B417B /* buttonEnabledGlossy.png in Resources */,
+				C9DB2DFF16408727007B417B /* buttonEnabledGreen@2xGlossy.png in Resources */,
+				C9DB2E0016408727007B417B /* buttonEnabledGreenGlossy.png in Resources */,
+				C9DB2E031640872D007B417B /* input.png in Resources */,
+				C9DB2E041640872D007B417B /* input@2x.png in Resources */,
+				C9DB2E0F16408738007B417B /* buttonActive.png in Resources */,
+				C9DB2E1016408738007B417B /* buttonActive@2x.png in Resources */,
+				C9DB2E1116408738007B417B /* buttonActiveGreen.png in Resources */,
+				C9DB2E1216408738007B417B /* buttonActiveGreen@2x.png in Resources */,
+				C9DB2E1316408738007B417B /* buttonDisabled.png in Resources */,
+				C9DB2E1416408738007B417B /* buttonDisabled@2x.png in Resources */,
+				C9DB2E1516408738007B417B /* buttonEnabled.png in Resources */,
+				C9DB2E1616408738007B417B /* buttonEnabled@2x.png in Resources */,
+				C9DB2E1716408738007B417B /* buttonEnabledGreen.png in Resources */,
+				C9DB2E1816408738007B417B /* buttonEnabledGreen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

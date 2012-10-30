@@ -33,25 +33,66 @@
 	NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
 	if ([ currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending ) smooth = YES;
 	
-	// Set up Generate Button
-	if (smooth) [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonSmoothDisabled"] forState:UIControlStateDisabled];
-	else [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"] forState:UIControlStateDisabled];
-	[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-	if (smooth) [_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
-	else [_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
-	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);			// Should only be for disabled state
-	
-	if (smooth) [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonSmoothEnabled"] forState:UIControlStateNormal];
-	else [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonEnabled"] forState:UIControlStateNormal];
-	[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-	if (smooth) [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateNormal];
-	else [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateNormal];
-	
-	if (smooth) [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonSmoothActive"] forState:UIControlStateHighlighted];
-	else [_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonActive"] forState:UIControlStateHighlighted];
-	[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-	if (smooth) [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateHighlighted];
-	else [_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateHighlighted];
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
+	{
+		// Set up Generate Button
+		if (smooth)
+		{
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"] forState:UIControlStateDisabled];
+			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonEnabledGreen"] forState:UIControlStateNormal];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateNormal];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonActiveGreen"] forState:UIControlStateHighlighted];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateHighlighted];
+		}
+		else
+		{
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabledGlossy"] forState:UIControlStateDisabled];
+			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonEnabledGreenGlossy"] forState:UIControlStateNormal];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateNormal];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonActiveGreenGlossy"] forState:UIControlStateHighlighted];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateHighlighted];
+		}
+		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);			// Should only be for disabled state
+	}
+	else
+	{
+		// Set up Generate Button
+		if (smooth)
+		{
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreen"] forState:UIControlStateNormal];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateNormal];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonActiveGreen"] forState:UIControlStateHighlighted];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:1.0f] forState:UIControlStateHighlighted];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"] forState:UIControlStateDisabled];
+			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
+		}
+		else
+		{	
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreenGlossy"] forState:UIControlStateNormal];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateNormal];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonActiveGreenGlossy"] forState:UIControlStateHighlighted];
+			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateHighlighted];
+			
+			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"] forState:UIControlStateDisabled];
+			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
+		}
+		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);	// Should only be for disabled state
+	}
 	
 }
 

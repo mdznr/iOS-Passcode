@@ -16,5 +16,6 @@
 - (IBAction)howToUse;
 - (IBAction)faq;
 - (IBAction)showSupport;
+- (IBAction)writeAReview;
 
 @end
