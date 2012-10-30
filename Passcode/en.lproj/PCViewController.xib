@@ -84,7 +84,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">inputBackground.png</string>
+							<string key="NSResourceName">input.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="900394392">
@@ -262,7 +262,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="909284210"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">buttonSmoothDisabled.png</string>
+							<string key="NSResourceName">buttonDisabled.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="144705125"/>
 						<reference key="IBUIFont" ref="518632292"/>
@@ -277,6 +277,7 @@
 								<string key="NSFrame">{{0, 80}, {128, 128}}</string>
 								<reference key="NSSuperview" ref="727784997"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="695576083">
 									<int key="NSColorSpace">3</int>
@@ -571,16 +572,11 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="generateAndCopy:">id</string>
-						<string key="textDidChange:">id</string>
 						<string key="viewAbout:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="generateAndCopy:">
 							<string key="name">generateAndCopy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="textDidChange:">
-							<string key="name">textDidChange:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="viewAbout:">
@@ -628,8 +624,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="buttonSmoothDisabled.png">{16, 16}</string>
-			<string key="inputBackground.png">{16, 16}</string>
+			<string key="buttonDisabled.png">{280, 49}</string>
+			<string key="input.png">{280, 97}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1926</string>
 	</data>
