@@ -8,7 +8,7 @@
 
 #import "AppearView.h"
 
-#define CORNER_RADIUS 8
+#define DEFAULT_CORNER_RADIUS 8
 
 @implementation AppearView
 
@@ -33,11 +33,11 @@
     CGContextSetFillColorWithColor(context, [UIColor colorWithHue:0.0f
 													   saturation:0.0f
 													   brightness:0.0f
-															alpha:0.5f].CGColor);
+															alpha:0.7f].CGColor);
     
     CGRect rrect = self.bounds;
     
-    CGFloat radius = CORNER_RADIUS;
+    CGFloat radius = DEFAULT_CORNER_RADIUS;
     CGFloat width = CGRectGetWidth(rrect);
     CGFloat height = CGRectGetHeight(rrect);
     
@@ -64,14 +64,14 @@
 	UIImage *image = [UIImage imageNamed:_imageName];
 	UIImageView *imageView = [[UIImageView alloc] initWithFrame:
 							  CGRectMake(floorf((self.frame.size.width - image.size.width)/2),
-										 floorf((self.frame.size.height - image.size.height)/2) - 12,
+										 floorf((self.frame.size.height - image.size.height)/2) - 14,
 										 image.size.width,
 										 image.size.height)];
 	imageView.image = image;
 	[self addSubview:imageView];
 	
 	UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(0,
-															  self.frame.size.height/2 + 8,
+															  self.frame.size.height/2 + 9,
 															  self.frame.size.width,
 															  self.frame.size.height/2)];
 	[text setText:NSLocalizedString(_text, nil)];
@@ -79,8 +79,8 @@
 	text.textColor = [UIColor whiteColor];
 	text.textAlignment = NSTextAlignmentCenter;
 	text.shadowColor = [UIColor blackColor];
-	text.shadowOffset = CGSizeMake(1, 1);
-	[text setFont:[UIFont boldSystemFontOfSize:16.0]];
+	text.shadowOffset = CGSizeMake(0, 1);
+	[text setFont:[UIFont boldSystemFontOfSize:_textSize]];
 	[self addSubview:text];
 	
 }
@@ -90,7 +90,7 @@
 	[[self layer] removeAllAnimations];
 	[[self class] cancelPreviousPerformRequestsWithTarget:self];
 	[self setAlpha:1.0f];
-	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.5f];
+	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.0f];
 }
 
 - (void)fadeOut
@@ -98,7 +98,7 @@
 	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
 	[fadeOut setFromValue:@1.0f];
 	[fadeOut setToValue:@0.0f];
-	[fadeOut setDuration:1.0f];
+	[fadeOut setDuration:.75f];
 	[[self layer] addAnimation:fadeOut forKey:@"alpha"];
 	[self setAlpha:0.0f];
 }

@@ -13,6 +13,7 @@
 
 @property NSString *imageName;
 @property NSString *text;
+@property CGFloat textSize;
 
 - (void)display;
 
