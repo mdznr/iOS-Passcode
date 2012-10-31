@@ -18,13 +18,13 @@
 
 @implementation PCViewController
 
+@synthesize scrollView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	
+	[self registerForKeyboardNotifications];
 	[_domainField becomeFirstResponder];
-	
 	[self checkSecuritySetting];
 	
 	// If running iOS 6.0 or higher, use smooth button resources, else glossy.
@@ -58,6 +58,7 @@
 			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonActiveGreenGlossy"] forState:UIControlStateHighlighted];
 			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateHighlighted];
 		}
+		
 		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
@@ -78,7 +79,7 @@
 			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
 		}
 		else
-		{	
+		{
 			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreenGlossy"] forState:UIControlStateNormal];
 			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f green:61.0f/255.0f blue:39.0f/255.0f alpha:0.5f] forState:UIControlStateNormal];
 			
@@ -88,6 +89,7 @@
 			[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"] forState:UIControlStateDisabled];
 			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f alpha:1.0f] forState:UIControlStateDisabled];
 		}
+		
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
@@ -206,11 +208,60 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Handle Keyboard Notifications
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWasShown:)
+												 name:UIKeyboardDidShowNotification object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillBeHidden:)
+												 name:UIKeyboardWillHideNotification object:nil];
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+	
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, kbSize.height);
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+	
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your application might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+	CGPoint scrollPoint;
+	if ( UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) )
+		scrollPoint = CGPointMake(0.0, -(aRect.size.height - _container.frame.size.height)/2 );
+	else
+		scrollPoint = CGPointMake(0.0, _container.frame.origin.y-(aRect.size.height - _container.frame.size.height)/2 );
+	
+	[scrollView setContentOffset:scrollPoint animated:YES];
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+//	Do nothing or try animating the size back to normal?
+
+//	UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+//	scrollView.contentInset = contentInsets;
+//	scrollView.scrollIndicatorInsets = contentInsets;
+}
+
 - (void)viewDidUnload
 {
 	[self setPasswordField:nil];
 	[self setGenerateButton:nil];
 	[self setCopiedView:nil];
+    [self setScrollView:nil];
+	[self setContainer:nil];
 	[super viewDidUnload];
 }
 @end

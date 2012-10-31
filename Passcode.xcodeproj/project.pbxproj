@@ -200,52 +200,8 @@
 				C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */,
 				C9BBC1FB15DB180100E16FBB /* Icon.png */,
 				C95FDF0015D23302006FE035 /* Icon@2x.png */,
-				C9DB2DE91640871D007B417B /* copied.png */,
-				C9DB2DEA1640871D007B417B /* copied@2x.png */,
-				C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */,
-				C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */,
-				C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */,
-				C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */,
-				C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */,
-				C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */,
-				C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */,
-				C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */,
-				C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */,
-				C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */,
-				C9DB2DD116408705007B417B /* iPadInput.png */,
-				C9DB2DD216408705007B417B /* iPadInput@2x.png */,
-				C9DB2DD51640870E007B417B /* iPadButtonActive.png */,
-				C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */,
-				C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */,
-				C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */,
-				C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */,
-				C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */,
-				C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */,
-				C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */,
-				C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */,
-				C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */,
-				C9DB2DED16408727007B417B /* buttonActive@2xGlossy.png */,
-				C9DB2DEE16408727007B417B /* buttonActiveGlossy.png */,
-				C9DB2DEF16408727007B417B /* buttonActiveGreen@2xGlossy.png */,
-				C9DB2DF016408727007B417B /* buttonActiveGreenGlossy.png */,
-				C9DB2DF116408727007B417B /* buttonDisabled@2xGlossy.png */,
-				C9DB2DF216408727007B417B /* buttonDisabledGlossy.png */,
-				C9DB2DF316408727007B417B /* buttonEnabled@2xGlossy.png */,
-				C9DB2DF416408727007B417B /* buttonEnabledGlossy.png */,
-				C9DB2DF516408727007B417B /* buttonEnabledGreen@2xGlossy.png */,
-				C9DB2DF616408727007B417B /* buttonEnabledGreenGlossy.png */,
-				C9DB2E011640872D007B417B /* input.png */,
-				C9DB2E021640872D007B417B /* input@2x.png */,
-				C9DB2E0516408738007B417B /* buttonActive.png */,
-				C9DB2E0616408738007B417B /* buttonActive@2x.png */,
-				C9DB2E0716408738007B417B /* buttonActiveGreen.png */,
-				C9DB2E0816408738007B417B /* buttonActiveGreen@2x.png */,
-				C9DB2E0916408738007B417B /* buttonDisabled.png */,
-				C9DB2E0A16408738007B417B /* buttonDisabled@2x.png */,
-				C9DB2E0B16408738007B417B /* buttonEnabled.png */,
-				C9DB2E0C16408738007B417B /* buttonEnabled@2x.png */,
-				C9DB2E0D16408738007B417B /* buttonEnabledGreen.png */,
-				C9DB2E0E16408738007B417B /* buttonEnabledGreen@2x.png */,
+				C9DB2E1916408816007B417B /* iPad */,
+				C9DB2E1A16408820007B417B /* iPhone */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -349,6 +305,98 @@
 			);
 			name = "Appear View";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C9DB2E1916408816007B417B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2DD116408705007B417B /* iPadInput.png */,
+				C9DB2DD216408705007B417B /* iPadInput@2x.png */,
+				C9DB2E1D1640885B007B417B /* Buttons (Glossy) */,
+				C9DB2E1E16408865007B417B /* Buttons (Smooth) */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		C9DB2E1A16408820007B417B /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2DE91640871D007B417B /* copied.png */,
+				C9DB2DEA1640871D007B417B /* copied@2x.png */,
+				C9DB2E011640872D007B417B /* input.png */,
+				C9DB2E021640872D007B417B /* input@2x.png */,
+				C9DB2E1C16408839007B417B /* Buttons (Smooth) */,
+				C9DB2E1B1640882E007B417B /* Buttons (Glossy) */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		C9DB2E1B1640882E007B417B /* Buttons (Glossy) */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2DED16408727007B417B /* buttonActive@2xGlossy.png */,
+				C9DB2DEE16408727007B417B /* buttonActiveGlossy.png */,
+				C9DB2DEF16408727007B417B /* buttonActiveGreen@2xGlossy.png */,
+				C9DB2DF016408727007B417B /* buttonActiveGreenGlossy.png */,
+				C9DB2DF116408727007B417B /* buttonDisabled@2xGlossy.png */,
+				C9DB2DF216408727007B417B /* buttonDisabledGlossy.png */,
+				C9DB2DF316408727007B417B /* buttonEnabled@2xGlossy.png */,
+				C9DB2DF416408727007B417B /* buttonEnabledGlossy.png */,
+				C9DB2DF516408727007B417B /* buttonEnabledGreen@2xGlossy.png */,
+				C9DB2DF616408727007B417B /* buttonEnabledGreenGlossy.png */,
+			);
+			name = "Buttons (Glossy)";
+			sourceTree = "<group>";
+		};
+		C9DB2E1C16408839007B417B /* Buttons (Smooth) */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2E0516408738007B417B /* buttonActive.png */,
+				C9DB2E0616408738007B417B /* buttonActive@2x.png */,
+				C9DB2E0716408738007B417B /* buttonActiveGreen.png */,
+				C9DB2E0816408738007B417B /* buttonActiveGreen@2x.png */,
+				C9DB2E0916408738007B417B /* buttonDisabled.png */,
+				C9DB2E0A16408738007B417B /* buttonDisabled@2x.png */,
+				C9DB2E0B16408738007B417B /* buttonEnabled.png */,
+				C9DB2E0C16408738007B417B /* buttonEnabled@2x.png */,
+				C9DB2E0D16408738007B417B /* buttonEnabledGreen.png */,
+				C9DB2E0E16408738007B417B /* buttonEnabledGreen@2x.png */,
+			);
+			name = "Buttons (Smooth)";
+			sourceTree = "<group>";
+		};
+		C9DB2E1D1640885B007B417B /* Buttons (Glossy) */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */,
+				C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */,
+				C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */,
+				C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */,
+				C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */,
+				C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */,
+				C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */,
+				C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */,
+				C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */,
+				C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */,
+			);
+			name = "Buttons (Glossy)";
+			sourceTree = "<group>";
+		};
+		C9DB2E1E16408865007B417B /* Buttons (Smooth) */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB2DD51640870E007B417B /* iPadButtonActive.png */,
+				C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */,
+				C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */,
+				C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */,
+				C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */,
+				C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */,
+				C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */,
+				C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */,
+				C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */,
+				C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */,
+			);
+			name = "Buttons (Smooth)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
