@@ -36,13 +36,13 @@
 		
 		if ( smooth )	// iOS 6: smooth assets
 		{
-			[self setBackgroundImage:[UIImage imageNamed:@"whiteButton"] forState:UIControlStateNormal];
-			[self setBackgroundImage:[UIImage imageNamed:@"whiteButtonActive"] forState:UIControlStateHighlighted];
+			[self setBackgroundImage:[UIImage imageNamed:@"buttonEnabled"] forState:UIControlStateNormal];
+			[self setBackgroundImage:[UIImage imageNamed:@"buttonActive"] forState:UIControlStateHighlighted];
 		}
 		else	// Less than iOS 6: glossy assets
 		{
-			[self setBackgroundImage:[UIImage imageNamed:@"whiteButtonGlossy"] forState:UIControlStateNormal];
-			[self setBackgroundImage:[UIImage imageNamed:@"whiteButtonGlossyActive"] forState:UIControlStateHighlighted];
+			[self setBackgroundImage:[UIImage imageNamed:@"buttonEnabledGlossy"] forState:UIControlStateNormal];
+			[self setBackgroundImage:[UIImage imageNamed:@"buttonActiveGlossy"] forState:UIControlStateHighlighted];
 		}
 		
 		[self setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];

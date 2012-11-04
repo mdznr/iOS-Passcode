@@ -18,8 +18,6 @@
 
 @implementation PCViewController
 
-@synthesize scrollView;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -225,34 +223,13 @@
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
-    NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-	
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, kbSize.height);
-    scrollView.contentInset = contentInsets;
-    scrollView.scrollIndicatorInsets = contentInsets;
-	
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your application might not need or want this behavior.
-    CGRect aRect = self.view.frame;
-    aRect.size.height -= kbSize.height;
-	CGPoint scrollPoint;
-	if ( UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) )
-		scrollPoint = CGPointMake(0.0, -(aRect.size.height - _container.frame.size.height)/2 );
-	else
-		scrollPoint = CGPointMake(0.0, _container.frame.origin.y-(aRect.size.height - _container.frame.size.height)/2 );
-	
-	[scrollView setContentOffset:scrollPoint animated:YES];
+
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
-//	Do nothing or try animating the size back to normal?
 
-//	UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-//	scrollView.contentInset = contentInsets;
-//	scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)viewDidUnload
@@ -260,7 +237,6 @@
 	[self setPasswordField:nil];
 	[self setGenerateButton:nil];
 	[self setCopiedView:nil];
-    [self setScrollView:nil];
 	[self setContainer:nil];
 	[super viewDidUnload];
 }

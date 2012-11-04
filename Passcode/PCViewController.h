@@ -12,7 +12,6 @@
 
 @interface PCViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet UITextField *domainField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
