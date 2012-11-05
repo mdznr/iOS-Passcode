@@ -110,7 +110,12 @@
 - (void)checkSecuritySetting
 {
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"]  )
+	
+	// If the save_password has yet to be set (Should be YES by default, but isn't working?)
+	if ( (void *) [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == nil )
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"save_password"];
+	
+	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == YES )
 	{
 		if ( [bindings objectForKey:@"passwordString"] )
 			[_passwordField setText:[bindings objectForKey:@"passwordString"]];
