@@ -272,7 +272,6 @@
 										<int key="NSvFlags">301</int>
 										<string key="NSFrame">{{33, 34}, {192, 192}}</string>
 										<reference key="NSSuperview" ref="233899332"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<object class="NSColor" key="IBUIBackgroundColor" id="378532309">
 											<int key="NSColorSpace">3</int>
@@ -280,7 +279,9 @@
 										</object>
 										<float key="IBUIAlpha">0.0</float>
 										<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-											<integer value="256" key="IBUIAccessibilityTraits"/>
+											<string key="IBUIAccessibilityLabel">Passcode Copied</string>
+											<integer value="384" key="IBUIAccessibilityTraits"/>
+											<boolean value="YES" key="IBUIIsAccessibilityElement"/>
 										</object>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 									</object>
