@@ -12,11 +12,14 @@
 
 @interface PCViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet UITextField *domainField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet AppearView *copiedView;
+@property CGSize kbSize;
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;

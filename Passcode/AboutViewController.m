@@ -58,29 +58,17 @@
 	if ([MFMailComposeViewController canSendMail])
     {
         MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
-		
         mailer.mailComposeDelegate = self;
 		
-        [mailer setSubject:@"Passcode Support"];
         NSArray *toRecipients = [NSArray arrayWithObjects:@"passcode@mdznr.com", nil];
         [mailer setToRecipients:toRecipients];
+        [mailer setSubject:@"Passcode Support"];
 		
-		// Is there a way to hide the Cc/Bcc lines?
-		[mailer setBccRecipients:nil];
-		[mailer setCcRecipients:nil];
-		
-//        NSString *emailBody = @"";
-//        [mailer setMessageBody:emailBody isHTML:NO];
+//		[[self navigationController] pushViewController:mailer animated:YES];	// Perhaps eventually do something like this instead?
         [self presentModalViewController:mailer animated:YES];
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                        message:@"Your device doesn't support the composer sheet"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
     }
 }

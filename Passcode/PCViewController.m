@@ -92,8 +92,20 @@
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
 		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);	// Should only be for disabled state
+		
+		[self registerForKeyboardNotifications];
 	}
 	
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+	
+	/*
+	// The beginnings of a cleaner, less distracting navigation bar
+	[_navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+											[UIColor colorWithRed:60.0f/255.0f green:67.0f/255.0f blue:69.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
+											[UIColor whiteColor], UITextAttributeTextShadowColor,
+											[NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset,
+											nil]];
+	*/
 }
 
 - (void)checkPasteboard
@@ -160,7 +172,8 @@
 - (IBAction)viewAbout:(id)sender
 {
 	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-	[self presentViewController:about animated:YES completion:NULL];
+//	about.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[self presentViewController:about animated:YES completion:nil];
 }
 
 - (IBAction)textDidChange:(id)sender
@@ -218,7 +231,7 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardWasShown:)
-												 name:UIKeyboardDidShowNotification object:nil];
+												 name:UIKeyboardWillChangeFrameNotification object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardWillBeHidden:)
@@ -228,7 +241,17 @@
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
-
+	/*
+	NSDictionary* info = [aNotification userInfo];
+	_kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+	
+	NSLog(@"keyboardWasShown");
+	
+	[_container setFrame:CGRectMake( (self.view.frame.size.width - _container.frame.size.width )/2 + self.view.frame.origin.x,
+									 (self.view.superview.frame.size.height - _kbSize.height - _container.frame.size.height )/2 + self.view.frame.origin.y,
+									_container.frame.size.width,
+									_container.frame.size.height)];
+	 */
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -237,12 +260,40 @@
 
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	CGFloat width = _container.frame.size.width;
+	CGFloat height = _container.frame.size.height;
+	
+	if ( UIInterfaceOrientationIsPortrait(toInterfaceOrientation) )
+	{
+		[_container setFrame:CGRectMake((768 - width )/2,
+										(1024 - 44 - 264 - height )/2 + 44,
+										width,
+										height)];
+	}
+	else
+	{
+		[_container setFrame:CGRectMake((1024 - width )/2,
+										(768 - 44 - 352 - height )/2 + 44,
+										width,
+										height)];
+	}
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	
+}
+
 - (void)viewDidUnload
 {
 	[self setPasswordField:nil];
 	[self setGenerateButton:nil];
 	[self setCopiedView:nil];
 	[self setContainer:nil];
+	[self setNavigationBar:nil];
+	[self setView:nil];
 	[super viewDidUnload];
 }
 @end
