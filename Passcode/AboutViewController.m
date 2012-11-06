@@ -51,10 +51,64 @@
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/faq"]];
 }
 
+#pragma mark Support Email
+
 - (IBAction)showSupport
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
+	if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
+		
+        mailer.mailComposeDelegate = self;
+		
+        [mailer setSubject:@"Passcode Support"];
+        NSArray *toRecipients = [NSArray arrayWithObjects:@"passcode@mdznr.com", nil];
+        [mailer setToRecipients:toRecipients];
+		
+		// Is there a way to hide the Cc/Bcc lines?
+		[mailer setBccRecipients:nil];
+		[mailer setCcRecipients:nil];
+		
+//        NSString *emailBody = @"";
+//        [mailer setMessageBody:emailBody isHTML:NO];
+        [self presentModalViewController:mailer animated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support the composer sheet"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
+    }
 }
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	switch ( result )
+	{
+		case MFMailComposeResultCancelled:
+			NSLog(@"Support Email Cancelled");
+			break;
+		case MFMailComposeResultFailed:
+			NSLog(@"Support Email Failed");
+			break;
+		case MFMailComposeResultSaved:
+			NSLog(@"Support Email Saved");
+			break;
+		case MFMailComposeResultSent:
+			NSLog(@"Support Email Sent");
+			break;
+		default:
+			break;
+	}
+	
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark Writing a Review
 
 - (IBAction)writeAReview
 {

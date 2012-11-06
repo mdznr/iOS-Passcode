@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+#import "MailComposeDelegate.h"
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
