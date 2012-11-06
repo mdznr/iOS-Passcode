@@ -19,6 +19,6 @@
 // Step Collections
 
 // Assumes the application was reset and sitting at the welcome screen
-+ (NSArray *)stepsToGoToPage;
++ (NSArray *)stepsToClearFields;
 
 @end

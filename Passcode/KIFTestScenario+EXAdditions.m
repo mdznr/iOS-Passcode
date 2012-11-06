@@ -13,16 +13,20 @@
 
 @implementation KIFTestScenario (EXAdditions)
 
-+ (id)scenarioToLogin;
++ (id)scenarioToGeneratePasscode;
 {
     KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Test that a user can successfully generate a password."];
-    [scenario addStep:[KIFTestStep stepToReset]];
+	
+	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Domain" traits:nil]];
     [scenario addStep:[KIFTestStep stepToEnterText:@"apple" intoViewWithAccessibilityLabel:@"Domain"]];
+	
+	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
     [scenario addStep:[KIFTestStep stepToEnterText:@"thisismypassword" intoViewWithAccessibilityLabel:@"Master Password"]];
-    [scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Generate Passcode and Copy"]];
+    
+	[scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Generate Passcode and Copy"]];
     
     // Verify that the generation succeeded
-	[scenario addStep:[KIFTestStep stepToWaitForViewWithAccessibilityLabel:@"Copied"]];
+	[scenario addStep:[KIFTestStep stepToWaitForViewWithAccessibilityLabel:@"Passcode Copied"]];
     
     return scenario;
 }

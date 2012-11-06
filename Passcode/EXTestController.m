@@ -18,6 +18,8 @@
     // you'll want to override this method and add them manually.
 //    [self addScenario:[KIFTestScenario scenarioToLogin]];
 //    [self addScenario:[KIFTestScenario scenarioToSelectDifferentColors]];
+	
+	[self addScenario:[KIFTestScenario scenarioToGeneratePasscode]];
     
     // If you're not, 
     [super initializeScenarios];

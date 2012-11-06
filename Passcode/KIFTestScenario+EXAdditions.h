@@ -12,6 +12,6 @@
 
 @interface KIFTestScenario (EXAdditions)
 
-+ (id)scenarioToLogin;
++ (id)scenarioToGeneratePasscode;
 
 @end

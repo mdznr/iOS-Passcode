@@ -19,6 +19,7 @@
         BOOL successfulReset = YES;
         
         // Do the actual reset for your app. Set successfulReset = NO if it fails.
+		[self stepsToClearFields];
         
         KIFTestCondition(successfulReset, error, @"Failed to reset some part of the application.");
         
@@ -28,11 +29,12 @@
 
 #pragma mark - Step Collections
 
-+ (NSArray *)stepsToGoToPage;
++ (NSArray *)stepsToClearFields;
 {
     NSMutableArray *steps = [NSMutableArray array];
 
-//    [steps addObject:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"About"]];
+	[steps addObject:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Domain" traits:nil]];
+	[steps addObject:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
     
     return steps;
 }
