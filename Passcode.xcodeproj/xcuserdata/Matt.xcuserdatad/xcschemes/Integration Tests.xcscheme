@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C95FDEDE15D232D5006FE035"
-               BuildableName = "Passcode.app"
-               BlueprintName = "Passcode"
+               BlueprintIdentifier = "C9C269061649896D00B35DFA"
+               BuildableName = "Passcode copy.app"
+               BlueprintName = "Integration Tests"
                ReferencedContainer = "container:Passcode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95FDEDE15D232D5006FE035"
-            BuildableName = "Passcode.app"
-            BlueprintName = "Passcode"
+            BlueprintIdentifier = "C9C269061649896D00B35DFA"
+            BuildableName = "Passcode copy.app"
+            BlueprintName = "Integration Tests"
             ReferencedContainer = "container:Passcode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95FDEDE15D232D5006FE035"
-            BuildableName = "Passcode.app"
-            BlueprintName = "Passcode"
+            BlueprintIdentifier = "C9C269061649896D00B35DFA"
+            BuildableName = "Passcode copy.app"
+            BlueprintName = "Integration Tests"
             ReferencedContainer = "container:Passcode.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95FDEDE15D232D5006FE035"
-            BuildableName = "Passcode.app"
-            BlueprintName = "Passcode"
+            BlueprintIdentifier = "C9C269061649896D00B35DFA"
+            BuildableName = "Passcode copy.app"
+            BlueprintName = "Integration Tests"
             ReferencedContainer = "container:Passcode.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

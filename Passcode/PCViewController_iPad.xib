@@ -133,7 +133,7 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-									<string key="IBUIAccessibilityLabel">example: apple</string>
+									<string key="IBUIAccessibilityLabel">Domain</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<bool key="IBUISelected">YES</bool>
@@ -202,7 +202,7 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-									<string key="IBUIAccessibilityLabel">password</string>
+									<string key="IBUIAccessibilityLabel">Master Password</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<bool key="IBUISelected">YES</bool>
@@ -237,7 +237,7 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-									<string key="IBUIAccessibilityLabel">generate passcode and copy</string>
+									<string key="IBUIAccessibilityLabel">Generate Passcode and Copy</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<bool key="IBUIEnabled">NO</bool>

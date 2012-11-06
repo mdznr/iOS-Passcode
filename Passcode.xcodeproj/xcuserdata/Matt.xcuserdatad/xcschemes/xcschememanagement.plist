@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Integration Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Passcode.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C95FDEDE15D232D5006FE035</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9C269061649896D00B35DFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

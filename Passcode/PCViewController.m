@@ -91,7 +91,7 @@
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[_generateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 		[_generateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);	// Should only be for disabled state
+		[_generateButton titleLabel].shadowOffset = CGSizeMake(0,1);	// Should only be for disabled state
 		
 		[self registerForKeyboardNotifications];
 	}
@@ -261,6 +261,11 @@
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{	
+	[self adjustToInterfaceOrientation:toInterfaceOrientation];
+}
+
+- (void)adjustToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
 	CGFloat width = _container.frame.size.width;
 	CGFloat height = _container.frame.size.height;

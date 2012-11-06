@@ -9,6 +9,10 @@
 #import "PCAppDelegate.h"
 #import "PCViewController.h"
 
+#if RUN_KIF_TESTS
+#import "EXTestController.h"
+#endif
+
 @implementation PCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -22,6 +26,13 @@
 	}
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	
+#if RUN_KIF_TESTS
+    [[EXTestController sharedInstance] startTestingWithCompletionBlock:^{
+        // Exit after the tests complete so that CI knows we're done
+        exit([[EXTestController sharedInstance] failureCount]);
+    }];
+#endif
 	
     return YES;
 }
