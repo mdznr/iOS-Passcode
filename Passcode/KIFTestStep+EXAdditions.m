@@ -33,8 +33,7 @@
 {
     NSMutableArray *steps = [NSMutableArray array];
 
-	[steps addObject:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Domain" traits:nil]];
-	[steps addObject:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
+//	[steps addObject:[KIFTestStep stepToSetTextToNilInViewWithAccessibilityLabel:@"Domain" traits:nil]];
     
     return steps;
 }

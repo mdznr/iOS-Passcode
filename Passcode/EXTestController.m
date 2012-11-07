@@ -16,10 +16,11 @@
 {
     // If your app is doing anything interesting with parameterized scenarios,
     // you'll want to override this method and add them manually.
-//    [self addScenario:[KIFTestScenario scenarioToLogin]];
-//    [self addScenario:[KIFTestScenario scenarioToSelectDifferentColors]];
 	
 	[self addScenario:[KIFTestScenario scenarioToGeneratePasscode]];
+	
+	[self addScenario:[KIFTestScenario scenarioToGeneratePasscodeWithDomain:@"abcdefghijklmnopqrstuvwxyz"
+														  andMasterPassword:@"this is my master password 1234567890"]];
     
     // If you're not, 
     [super initializeScenarios];

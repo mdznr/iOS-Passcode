@@ -13,5 +13,6 @@
 @interface KIFTestScenario (EXAdditions)
 
 + (id)scenarioToGeneratePasscode;
++ (id)scenarioToGeneratePasscodeWithDomain:(NSString *)domain andMasterPassword:(NSString *)password;
 
 @end

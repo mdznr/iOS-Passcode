@@ -17,11 +17,31 @@
 {
     KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Test that a user can successfully generate a password."];
 	
+//	[scenario addStep:[KIFTestStep stepToSetTextToNilInViewWithAccessibilityLabel:@"Domain" traits:nil]];
 	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Domain" traits:nil]];
     [scenario addStep:[KIFTestStep stepToEnterText:@"apple" intoViewWithAccessibilityLabel:@"Domain"]];
 	
+//	[scenario addStep:[KIFTestStep stepToSetTextToNilInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
 	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
-    [scenario addStep:[KIFTestStep stepToEnterText:@"thisismypassword" intoViewWithAccessibilityLabel:@"Master Password"]];
+	[scenario addStep:[KIFTestStep stepToEnterText:@"thisismypassword" intoViewWithAccessibilityLabel:@"Master Password"]];
+    
+	[scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Generate Passcode and Copy"]];
+    
+    // Verify that the generation succeeded
+	[scenario addStep:[KIFTestStep stepToWaitForViewWithAccessibilityLabel:@"Passcode Copied"]];
+    
+    return scenario;
+}
+
++ (id)scenarioToGeneratePasscodeWithDomain:(NSString *)domain andMasterPassword:(NSString *)password
+{
+	KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Test that a user can successfully generate a password."];
+	
+	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Domain" traits:nil]];
+    [scenario addStep:[KIFTestStep stepToEnterText:domain intoViewWithAccessibilityLabel:@"Domain"]];
+	
+	[scenario addStep:[KIFTestStep stepToDeleteTextInViewWithAccessibilityLabel:@"Master Password" traits:nil]];
+	[scenario addStep:[KIFTestStep stepToEnterText:password intoViewWithAccessibilityLabel:@"Master Password"]];
     
 	[scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Generate Passcode and Copy"]];
     
