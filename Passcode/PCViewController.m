@@ -173,6 +173,7 @@
 {
 	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
 //	about.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+#warning crash on iOS 5
 	[self presentViewController:about animated:YES completion:nil];
 }
 
@@ -272,15 +273,15 @@
 	
 	if ( UIInterfaceOrientationIsPortrait(toInterfaceOrientation) )
 	{
-		[_container setFrame:CGRectMake((768 - width )/2,
-										(1024 - 44 - 264 - height )/2 + 44,
+		[_container setFrame:CGRectMake(floorl((768 - width )/2),
+										floorl((1024 - 44 - 264 - height )/2) + 44,
 										width,
 										height)];
 	}
 	else
 	{
-		[_container setFrame:CGRectMake((1024 - width )/2,
-										(768 - 44 - 352 - height )/2 + 44,
+		[_container setFrame:CGRectMake(floorl((1024 - width )/2),
+										floorl((768 - 44 - 352 - height )/2) + 44,
 										width,
 										height)];
 	}
@@ -299,6 +300,7 @@
 	[self setContainer:nil];
 	[self setNavigationBar:nil];
 	[self setView:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[super viewDidUnload];
 }
 @end
