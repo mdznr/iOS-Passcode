@@ -21,6 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	[self adjustToInterfaceOrientation:UIDevice.currentDevice.orientation];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
 	[self registerForKeyboardNotifications];
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
@@ -96,8 +98,6 @@
 		[self registerForKeyboardNotifications];
 	}
 	
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
-	
 	/*
 	// The beginnings of a cleaner, less distracting navigation bar
 	[_navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -123,18 +123,14 @@
 {
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	
-	// If the save_password has yet to be set (Should be YES by default, but isn't working?)
-	if ( (void *) [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == nil )
-		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"save_password"];
-	
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == YES )
 	{
 		if ( [bindings objectForKey:@"passwordString"] )
 			[_passwordField setText:[bindings objectForKey:@"passwordString"]];
 	}
-	else
+	else if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == NO )
 	{
-		[bindings setObject:[_passwordField text] forKey:@"passwordString"];
+		[bindings setObject:@"" forKey:@"passwordString"];
 		[_passwordField setText:@""];
 	}
 }
@@ -273,15 +269,15 @@
 	
 	if ( UIInterfaceOrientationIsPortrait(toInterfaceOrientation) )
 	{
-		[_container setFrame:CGRectMake(floorl((768 - width )/2),
-										floorl((1024 - 44 - 264 - height )/2) + 44,
+		[_container setFrame:CGRectMake(floorl((768 - width)/2),
+										floorl((1024 - 44 - 264 - height)/2) + 44,
 										width,
 										height)];
 	}
 	else
 	{
-		[_container setFrame:CGRectMake(floorl((1024 - width )/2),
-										floorl((768 - 44 - 352 - height )/2) + 44,
+		[_container setFrame:CGRectMake(floorl((1024 - width)/2),
+										floorl((768 - 44 - 352 - height)/2) + 44,
 										width,
 										height)];
 	}
