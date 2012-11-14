@@ -64,6 +64,8 @@
         [mailer setToRecipients:toRecipients];
         [mailer setSubject:@"Passcode Support"];
 		
+		[mailer.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
+		
 //		[[self navigationController] pushViewController:mailer animated:YES];	// Perhaps eventually do something like this instead?
         [self presentModalViewController:mailer animated:YES];
     }
