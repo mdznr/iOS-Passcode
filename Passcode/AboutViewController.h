@@ -12,12 +12,10 @@
 
 @interface AboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-
 - (IBAction)done:(id)sender;
-- (IBAction)howToUse;
-- (IBAction)faq;
-- (IBAction)showSupport;
-- (IBAction)writeAReview;
+- (IBAction)howToUsePressed:(id)sender;
+- (IBAction)faqPressed:(id)sender;
+- (IBAction)supportPressed:(id)sender;
+- (IBAction)writeAReviewPressed:(id)sender;
 
 @end

@@ -17,7 +17,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if ( self ) {
         // Custom initialization
     }
     return self;
@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-	
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,19 +40,19 @@
 	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (IBAction)howToUse
+- (IBAction)howToUsePressed:(id)sender
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/howto"]];
+	
 }
 
-- (IBAction)faq
+- (IBAction)faqPressed:(id)sender
 {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/faq"]];
 }
 
 #pragma mark Support Email
 
-- (IBAction)showSupport
+- (IBAction)supportPressed:(id)sender
 {
 	if ([MFMailComposeViewController canSendMail])
     {
@@ -66,7 +65,7 @@
 		
 		[mailer.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
 		
-//		[[self navigationController] pushViewController:mailer animated:YES];	// Perhaps eventually do something like this instead?
+		//		[[self navigationController] pushViewController:mailer animated:YES];	// Perhaps eventually do something like this instead?
         [self presentModalViewController:mailer animated:YES];
     }
     else
@@ -98,16 +97,13 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-#pragma mark Writing a Review
-
-- (IBAction)writeAReview
+- (IBAction)writeAReviewPressed:(id)sender
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"]];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"]];
 }
 
 - (void)viewDidUnload
 {
-	[self setNavigationBar:nil];
 	[super viewDidUnload];
 }
 @end
