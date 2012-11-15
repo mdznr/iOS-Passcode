@@ -6,6 +6,20 @@
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
+//	Copyright (c) 2012, individual contributors
+//
+//	Permission to use, copy, modify, and/or distribute this software for any
+//	purpose with or without fee is hereby granted, provided that the above
+//	copyright notice and this permission notice appear in all copies.
+//
+//	THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+//	WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+//	MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+//	ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+//	WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+//	ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+//	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
 #import "PCViewController.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "PDKeychainBindings.h"
@@ -21,9 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self adjustToInterfaceOrientation:UIDevice.currentDevice.orientation];
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
-	[self registerForKeyboardNotifications];
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
@@ -168,7 +180,6 @@
 - (IBAction)viewAbout:(id)sender
 {
 	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-//	about.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 #warning crash on iOS 5
 	[self presentViewController:about animated:YES completion:nil];
 }
@@ -223,69 +234,50 @@
 
 #pragma mark Handle Keyboard Notifications
 
-// Call this method somewhere in your view controller setup code.
+- (void)keyboardChanged:(id)object
+{
+	// Based on implentation in Genensis.
+	// See License: https://raw.github.com/peterhajas/Genesis/master/License
+	
+    // Grab the dictionary out of the object
+    NSDictionary* keyboardGeometry = [object userInfo];
+    
+    // Get the end frame rectangle of the keyboard
+    NSValue* endFrameValue = [keyboardGeometry valueForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect endFrame = [endFrameValue CGRectValue];
+    
+    // Convert the rect into view coordinates from the window, this accounts for rotation
+    UIWindow* appWindow = [[[UIApplication sharedApplication] delegate] window];
+    CGRect keyboardFrame = [[self view] convertRect:endFrame fromView:appWindow];
+    
+	// Our new frame will be centered within the width of the keyboard
+	// and a height that is centered between the navBarHeight and the top of the keyboard (it's y origin)
+	CGFloat keyboardWidth  = keyboardFrame.size.width;
+	CGFloat keyboardHeight = keyboardFrame.origin.y;
+	CGFloat width  = _container.frame.size.width;
+	CGFloat height = _container.frame.size.height;
+	CGFloat navBarHeight = self.navigationBar.frame.origin.y + self.navigationBar.frame.size.height;
+	
+	CGRect newFrame = CGRectMake(floorl((keyboardWidth - width)/2),
+										floorl((keyboardHeight - navBarHeight - height)/2) + navBarHeight,
+										width,
+										height);
+    
+    [_container setFrame:newFrame];
+}
+
+// Subscribe to keyboard notifications
 - (void)registerForKeyboardNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardWasShown:)
-												 name:UIKeyboardWillChangeFrameNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardChanged:)
+												 name:UIKeyboardWillHideNotification
+											   object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardWillBeHidden:)
-												 name:UIKeyboardWillHideNotification object:nil];
-}
-
-// Called when the UIKeyboardDidShowNotification is sent.
-- (void)keyboardWasShown:(NSNotification*)aNotification
-{
-	/*
-	NSDictionary* info = [aNotification userInfo];
-	_kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-	
-	NSLog(@"keyboardWasShown");
-	
-	[_container setFrame:CGRectMake( (self.view.frame.size.width - _container.frame.size.width )/2 + self.view.frame.origin.x,
-									 (self.view.superview.frame.size.height - _kbSize.height - _container.frame.size.height )/2 + self.view.frame.origin.y,
-									_container.frame.size.width,
-									_container.frame.size.height)];
-	 */
-}
-
-// Called when the UIKeyboardWillHideNotification is sent
-- (void)keyboardWillBeHidden:(NSNotification*)aNotification
-{
-
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{	
-	[self adjustToInterfaceOrientation:toInterfaceOrientation];
-}
-
-- (void)adjustToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-	CGFloat width = _container.frame.size.width;
-	CGFloat height = _container.frame.size.height;
-	
-	if ( UIInterfaceOrientationIsPortrait(toInterfaceOrientation) )
-	{
-		[_container setFrame:CGRectMake(floorl((768 - width)/2),
-										floorl((1024 - 44 - 264 - height)/2) + 44,
-										width,
-										height)];
-	}
-	else
-	{
-		[_container setFrame:CGRectMake(floorl((1024 - width)/2),
-										floorl((768 - 44 - 352 - height)/2) + 44,
-										width,
-										height)];
-	}
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-	
+											 selector:@selector(keyboardChanged:)
+												 name:UIKeyboardWillShowNotification
+											   object:nil];
 }
 
 - (void)viewDidUnload
