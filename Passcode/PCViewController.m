@@ -180,7 +180,6 @@
 - (IBAction)viewAbout:(id)sender
 {
 	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-#warning crash on iOS 5
 	[self presentViewController:about animated:YES completion:nil];
 }
 
@@ -254,30 +253,38 @@
 	// and a height that is centered between the navBarHeight and the top of the keyboard (it's y origin)
 	CGFloat keyboardWidth  = keyboardFrame.size.width;
 	CGFloat keyboardHeight = keyboardFrame.origin.y;
+	
 	CGFloat width  = _container.frame.size.width;
 	CGFloat height = _container.frame.size.height;
 	CGFloat navBarHeight = self.navigationBar.frame.origin.y + self.navigationBar.frame.size.height;
 	
-	CGRect newFrame = CGRectMake(floorl((keyboardWidth - width)/2),
-										floorl((keyboardHeight - navBarHeight - height)/2) + navBarHeight,
-										width,
-										height);
-    
-    [_container setFrame:newFrame];
+	NSLog(@"%f by %f", keyboardWidth, keyboardHeight);
+	
+	CGRect newFrame = CGRectMake(floorl(ABS(keyboardWidth - width)/2),
+								 floorl(ABS(keyboardHeight - navBarHeight - height)/2) + navBarHeight,
+								 width,
+								 height);
+	
+	[_container setFrame:newFrame];
 }
 
 // Subscribe to keyboard notifications
 - (void)registerForKeyboardNotifications
 {
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardChanged:)
-												 name:UIKeyboardWillHideNotification
-											   object:nil];
+//	[[NSNotificationCenter defaultCenter] addObserver:self
+//											 selector:@selector(keyboardChanged:)
+//												 name:UIKeyboardWillHideNotification
+//											   object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardChanged:)
 												 name:UIKeyboardWillShowNotification
 											   object:nil];
+	
+//	[[NSNotificationCenter defaultCenter] addObserver:self
+//											 selector:@selector(keyboardChanged:)
+//												 name:UIKeyboardDidShowNotification
+//											   object:nil];
 }
 
 - (void)viewDidUnload

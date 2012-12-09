@@ -235,7 +235,7 @@
 		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passcode (Integration Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C269621649896D00B35DFA /* Passcode copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Passcode copy-Info.plist"; path = "/Users/Matt/Dropbox/github/iOS-Passcode/Passcode/Passcode copy-Info.plist"; sourceTree = "<absolute>"; };
-		C9C26963164989CB00B35DFA /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKIF.a; path = "Frameworks/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
+		C9C26963164989CB00B35DFA /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Frameworks/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		C9C2696516498D5100B35DFA /* EXTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTestController.h; sourceTree = "<group>"; };
 		C9C2696616498D5100B35DFA /* EXTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTestController.m; sourceTree = "<group>"; };
 		C9C2696716498D5100B35DFA /* KIFTestScenario+EXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+EXAdditions.h"; sourceTree = "<group>"; };

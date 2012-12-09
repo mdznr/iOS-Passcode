@@ -18,7 +18,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Register the preference defaults early.
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"save_password"];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithBool:YES],
+																	  [NSNumber numberWithBool:NO]]
+															forKeys:@[@"save_password",
+								 									  @"hasLaunchedAppBefore"]];
+	
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -30,6 +34,14 @@
 	}
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	
+	// Display About if app hasn't been launched before
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] )
+	{
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
+		AboutViewController* about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+		[self.viewController presentModalViewController:about animated:YES];
+	}
 	
 #if RUN_KIF_TESTS
     [[EXTestController sharedInstance] startTestingWithCompletionBlock:^{
