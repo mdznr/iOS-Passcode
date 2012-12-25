@@ -73,8 +73,17 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	UITextField* domainField = _viewController.domainField;
+	
 	[_viewController checkPasteboard];
 	[_viewController checkSecuritySetting];
+	[domainField becomeFirstResponder];
+	
+	UITextPosition *beginning = domainField.beginningOfDocument;
+    UITextPosition *start = [domainField positionFromPosition:beginning offset:0];
+	UITextPosition *end = [domainField positionFromPosition:start offset:domainField.text.length];
+    UITextRange *textRange = [domainField textRangeFromPosition:start toPosition:end];
+	[domainField setSelectedTextRange:textRange];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
