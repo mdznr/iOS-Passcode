@@ -79,6 +79,7 @@
 	[_viewController checkSecuritySetting];
 	[domainField becomeFirstResponder];
 	
+	// Select domainField text
 	UITextPosition *beginning = domainField.beginningOfDocument;
     UITextPosition *start = [domainField positionFromPosition:beginning offset:0];
 	UITextPosition *end = [domainField positionFromPosition:start offset:domainField.text.length];
