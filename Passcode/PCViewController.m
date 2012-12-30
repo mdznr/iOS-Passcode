@@ -36,6 +36,14 @@
 {
     [super viewDidLoad];
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+	
+	self.title = @"Passcode";
+	
+	UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(viewAbout:)];
+	self.navigationItem.leftBarButtonItem = aboutButton;
+	
+	[self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
+	
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
@@ -244,6 +252,8 @@
     // Get the end frame rectangle of the keyboard
     NSValue* endFrameValue = [keyboardGeometry valueForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect endFrame = [endFrameValue CGRectValue];
+	
+	NSLog(@"endFrame.origin.x:%f \tendFrame.origin.y: %f", endFrame.origin.x, endFrame.origin.y);
     
     // Convert the rect into view coordinates from the window, this accounts for rotation
     UIWindow* appWindow = [[[UIApplication sharedApplication] delegate] window];
@@ -256,9 +266,9 @@
 	
 	CGFloat width  = _container.frame.size.width;
 	CGFloat height = _container.frame.size.height;
-	CGFloat navBarHeight = self.navigationBar.frame.origin.y + self.navigationBar.frame.size.height;
+	CGFloat navBarHeight = self.navigationController.navigationBar.frame.origin.y + self.navigationController.navigationBar.frame.size.height;
 	
-	NSLog(@"%f by %f", keyboardWidth, keyboardHeight);
+	NSLog(@"keyboardWidth: %f \tkeyboardHeight: %f", keyboardWidth, keyboardHeight);
 	
 	CGRect newFrame = CGRectMake(floorl(ABS(keyboardWidth - width)/2),
 								 floorl(ABS(keyboardHeight - navBarHeight - height)/2) + navBarHeight,
@@ -293,7 +303,6 @@
 	[self setGenerateButton:nil];
 	[self setCopiedView:nil];
 	[self setContainer:nil];
-	[self setNavigationBar:nil];
 	[self setView:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[super viewDidUnload];

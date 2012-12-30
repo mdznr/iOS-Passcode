@@ -11,6 +11,8 @@
 		C910315E1641E5FA00A59FCA /* iPadCopied.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315C1641E5FA00A59FCA /* iPadCopied.png */; };
 		C910315F1641E5FA00A59FCA /* iPadCopied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */; };
 		C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
+		C929BDD5168FAA0E0025A512 /* WalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C929BDD3168FAA0E0025A512 /* WalkthroughViewController.m */; };
+		C929BDD6168FAA0E0025A512 /* WalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929BDD4168FAA0E0025A512 /* WalkthroughViewController.xib */; };
 		C93EF74716434F6000C317BB /* Icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74216434F6000C317BB /* Icon-48.png */; };
 		C93EF74816434F6000C317BB /* Icon-48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74316434F6000C317BB /* Icon-48@2x.png */; };
 		C93EF74916434F6000C317BB /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74416434F6000C317BB /* iTunesArtwork.png */; };
@@ -185,6 +187,9 @@
 		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C910315C1641E5FA00A59FCA /* iPadCopied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadCopied.png; path = resources/iPad/iPadCopied.png; sourceTree = "<group>"; };
 		C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadCopied@2x.png"; path = "resources/iPad/iPadCopied@2x.png"; sourceTree = "<group>"; };
+		C929BDD2168FAA0E0025A512 /* WalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughViewController.h; sourceTree = "<group>"; };
+		C929BDD3168FAA0E0025A512 /* WalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughViewController.m; sourceTree = "<group>"; };
+		C929BDD4168FAA0E0025A512 /* WalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalkthroughViewController.xib; sourceTree = "<group>"; };
 		C93EF74216434F6000C317BB /* Icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-48.png"; sourceTree = "<group>"; };
 		C93EF74316434F6000C317BB /* Icon-48@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-48@2x.png"; sourceTree = "<group>"; };
 		C93EF74416434F6000C317BB /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
@@ -341,8 +346,19 @@
 				C94DFC5816288D0B002AD5CD /* AboutViewController.h */,
 				C94DFC5916288D0B002AD5CD /* AboutViewController.m */,
 				C94DFD3A162BBC1D002AD5CD /* AboutViewController.xib */,
+				C929BDD7168FAA130025A512 /* Walkthrough */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		C929BDD7168FAA130025A512 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				C929BDD2168FAA0E0025A512 /* WalkthroughViewController.h */,
+				C929BDD3168FAA0E0025A512 /* WalkthroughViewController.m */,
+				C929BDD4168FAA0E0025A512 /* WalkthroughViewController.xib */,
+			);
+			name = Walkthrough;
 			sourceTree = "<group>";
 		};
 		C93EF74C16434F7600C317BB /* iPhone */ = {
@@ -738,6 +754,7 @@
 				C9D1BA8A16435140009A5DBA /* Default-Portrait~ipad.png in Resources */,
 				C9D1BA8C16435142009A5DBA /* Default-Portrait@2x~ipad.png in Resources */,
 				C9D1BA8E16435151009A5DBA /* Default-Landscape~ipad.png in Resources */,
+				C929BDD6168FAA0E0025A512 /* WalkthroughViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +850,7 @@
 				C94DFC5B16288D0B002AD5CD /* AboutViewController.m in Sources */,
 				C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */,
 				C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */,
+				C929BDD5168FAA0E0025A512 /* WalkthroughViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,8 @@
 
 - (IBAction)howToUsePressed:(id)sender
 {
-	
+	UIViewController *walkthrough = [[UIViewController alloc] initWithNibName:@"WalkthroughViewController" bundle:nil];
+	[self.navigationController pushViewController:walkthrough animated:YES];
 }
 
 - (IBAction)faqPressed:(id)sender

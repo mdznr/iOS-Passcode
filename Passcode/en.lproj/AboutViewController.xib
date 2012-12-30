@@ -56,7 +56,7 @@
 							<object class="IBUINavigationItem" id="477897527">
 								<reference key="IBUINavigationBar" ref="506302335"/>
 								<string key="IBUITitle">About</string>
-								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="210294802">
+								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="210294802">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="477897527"/>
@@ -207,6 +207,7 @@
 						<string key="NSFrame">{{20, 376}, {280, 65}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
