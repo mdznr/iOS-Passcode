@@ -22,6 +22,7 @@
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;
+- (void)selectDomainFieldText;
 - (IBAction)generateAndCopy:(id)sender;
 - (IBAction)viewAbout:(id)sender;
 

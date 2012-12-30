@@ -155,6 +155,16 @@
 	}
 }
 
+- (void)selectDomainFieldText
+{
+	[_domainField becomeFirstResponder];
+	UITextPosition *beginning = _domainField.beginningOfDocument;
+    UITextPosition *start = [_domainField positionFromPosition:beginning offset:0];
+	UITextPosition *end = [_domainField positionFromPosition:start offset:_domainField.text.length];
+    UITextRange *textRange = [_domainField textRangeFromPosition:start toPosition:end];
+	[_domainField setSelectedTextRange:textRange];
+}
+
 -(NSString*)sha256HashFor:(NSString*)input
 {
     const char* str = [input UTF8String];
