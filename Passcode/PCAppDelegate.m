@@ -28,14 +28,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	
+	PCViewController *mainViewController;
+	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    self.viewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
+	    mainViewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
 	} else {
-	    self.viewController = [[PCViewController alloc] initWithNibName:@"PCViewController_iPad" bundle:nil];
+	    mainViewController = [[PCViewController alloc] initWithNibName:@"PCViewController_iPad" bundle:nil];
 	}
 	
-	PCViewController *viewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
-	self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	self.navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
 	self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 	

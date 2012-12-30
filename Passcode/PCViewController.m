@@ -266,12 +266,11 @@
 	
 	CGFloat width  = _container.frame.size.width;
 	CGFloat height = _container.frame.size.height;
-	CGFloat navBarHeight = self.navigationController.navigationBar.frame.origin.y + self.navigationController.navigationBar.frame.size.height;
 	
 	NSLog(@"keyboardWidth: %f \tkeyboardHeight: %f", keyboardWidth, keyboardHeight);
 	
 	CGRect newFrame = CGRectMake(floorl(ABS(keyboardWidth - width)/2),
-								 floorl(ABS(keyboardHeight - navBarHeight - height)/2) + navBarHeight,
+								 floorl(ABS(keyboardHeight - height)/2),
 								 width,
 								 height);
 	
