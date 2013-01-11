@@ -1,5 +1,5 @@
 //
-//  PCViewController.h
+//  PCDViewController.h
 //  Passcode
 //
 //  Created by Matt on 8/7/12.
@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AboutViewController.h"
-#import "AppearView.h"
+#import "PCDAboutViewController.h"
+#import "MTZAppearView.h"
 
-@interface PCViewController : UIViewController
+@interface PCDViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet UITextField *domainField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
-@property (strong, nonatomic) IBOutlet AppearView *copiedView;
+@property (strong, nonatomic) IBOutlet MTZAppearView *copiedView;
 @property CGSize kbSize;
 
 - (void)checkPasteboard;

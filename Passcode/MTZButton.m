@@ -1,14 +1,14 @@
 //
-//  PCButton.m
+//  MTZButton.m
 //  Passcode
 //
 //  Created by Matt on 10/7/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "PCButton.h"
+#import "MTZButton.h"
 
-@implementation PCButton
+@implementation MTZButton
 
 - (id)initWithFrame:(CGRect)frame
 {

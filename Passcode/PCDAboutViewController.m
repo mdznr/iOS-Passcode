@@ -1,18 +1,18 @@
 //
-//  AboutViewController.m
+//  PCDAboutViewController.m
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "PCDAboutViewController.h"
 
-@interface AboutViewController ()
+@interface PCDAboutViewController ()
 
 @end
 
-@implementation AboutViewController
+@implementation PCDAboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,7 +47,7 @@
 
 - (IBAction)howToUsePressed:(id)sender
 {
-	WalkthroughViewController *walkthrough = [[WalkthroughViewController alloc] initWithNibName:@"WalkthroughViewController" bundle:nil];
+	PCDWalkthroughViewController *walkthrough = [[PCDWalkthroughViewController alloc] initWithNibName:@"PCDWalkthroughViewController" bundle:nil];
 	[self.navigationController pushViewController:walkthrough animated:YES];
 }
 

@@ -1,18 +1,18 @@
 //
-//  WalkthroughViewController.m
+//  PCDWalkthroughViewController.m
 //  Passcode
 //
 //  Created by Matt on 12/29/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "WalkthroughViewController.h"
+#import "PCDWalkthroughViewController.h"
 
-@interface WalkthroughViewController ()
+@interface PCDWalkthroughViewController ()
 
 @end
 
-@implementation WalkthroughViewController
+@implementation PCDWalkthroughViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -1,19 +1,19 @@
 //
-//  PCAppDelegate.m
+//  PCDAppDelegate.m
 //  Passcode
 //
 //  Created by Matt on 8/7/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "PCAppDelegate.h"
-#import "PCViewController.h"
+#import "PCDAppDelegate.h"
+#import "PCDViewController.h"
 
 #if RUN_KIF_TESTS
 #import "EXTestController.h"
 #endif
 
-@implementation PCAppDelegate
+@implementation PCDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -28,12 +28,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	
-	PCViewController *mainViewController;
+	PCDViewController *mainViewController;
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    mainViewController = [[PCViewController alloc] initWithNibName:@"PCViewController" bundle:nil];
+	    mainViewController = [[PCDViewController alloc] initWithNibName:@"PCDViewController" bundle:nil];
 	} else {
-	    mainViewController = [[PCViewController alloc] initWithNibName:@"PCViewController_iPad" bundle:nil];
+	    mainViewController = [[PCDViewController alloc] initWithNibName:@"PCDViewController_iPad" bundle:nil];
 	}
 	
 	self.viewController = mainViewController;
@@ -45,8 +45,7 @@
 	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] )
 	{
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
-		AboutViewController* about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-		[self.viewController presentModalViewController:about animated:YES];
+		[self.viewController viewAbout:self];
 	}
 	
 #if RUN_KIF_TESTS

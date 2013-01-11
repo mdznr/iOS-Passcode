@@ -1,5 +1,5 @@
 //
-//  PCButton.h
+//  MTZButton.h
 //  Passcode
 //
 //  Created by Matt on 10/7/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCButton : UIButton
+@interface MTZButton : UIButton
 
 @end

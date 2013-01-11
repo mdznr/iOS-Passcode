@@ -1,16 +1,16 @@
 //
-//  AppearView.m
+//  MTZAppearView.m
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
-#import "AppearView.h"
+#import "MTZAppearView.h"
 
 #define DEFAULT_CORNER_RADIUS 8
 
-@implementation AppearView
+@implementation MTZAppearView
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -1,5 +1,5 @@
 //
-//  AboutViewController.h
+//  PCDAboutViewController.h
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
@@ -10,9 +10,9 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-#import "WalkthroughViewController.h"
+#import "PCDWalkthroughViewController.h"
 
-@interface AboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface PCDAboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 - (IBAction)done:(id)sender;
 - (IBAction)howToUsePressed:(id)sender;

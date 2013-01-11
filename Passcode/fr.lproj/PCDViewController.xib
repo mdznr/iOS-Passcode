@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1536</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.SystemVersion">12D44</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3079</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1926</string>
+			<string key="NS.object.0">2077</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -97,10 +97,10 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Dominio</string>
+							<string key="IBUIAccessibilityLabel">Domaine</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Dominio</string>
+						<string key="IBUIText">Domaine</string>
 						<object class="NSColor" key="IBUITextColor" id="360246930">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xMjU0OTAxOTYxIDAuMjkwMTk2MDc4NCAwLjY3MDU4ODIzNTMAA</bytes>
@@ -130,14 +130,14 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">por ejemplo: apple</string>
+							<string key="IBUIAccessibilityLabel">exemple: apple</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUISelected">YES</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
-						<string key="IBUIPlaceholder">p.ej: apple</string>
+						<string key="IBUIPlaceholder">ex: apple</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -177,10 +177,10 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Contraseña</string>
+							<string key="IBUIAccessibilityLabel">mot de passe</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Contraseña</string>
+						<string key="IBUIText">Mot de Passe</string>
 						<reference key="IBUITextColor" ref="360246930"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -200,14 +200,14 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">contraseña</string>
+							<string key="IBUIAccessibilityLabel">mot de passe</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUISelected">YES</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
-						<string key="IBUIPlaceholder">contraseña</string>
+						<string key="IBUIPlaceholder">mot de passe</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -236,7 +236,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Generar Contraseña y Copia</string>
+							<string key="IBUIAccessibilityLabel">générer et copier</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIEnabled">NO</bool>
@@ -245,7 +245,7 @@
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<bool key="IBUIAdjustsImageWhenDisabled">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
-						<string key="IBUINormalTitle">Generar Contraseña y Copia</string>
+						<string key="IBUINormalTitle">Générer et Copier</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="909284210">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -272,6 +272,7 @@
 								<string key="NSFrame">{{0, 80}, {128, 128}}</string>
 								<reference key="NSSuperview" ref="727784997"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="695576083">
 									<int key="NSColorSpace">3</int>
@@ -434,9 +435,9 @@
 							<reference ref="344889547"/>
 							<reference ref="332942198"/>
 							<reference ref="1069805248"/>
+							<reference ref="900394392"/>
 							<reference ref="956195959"/>
 							<reference ref="727784997"/>
-							<reference ref="900394392"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -508,7 +509,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">PCViewController</string>
+				<string key="-1.CustomClassName">PCDViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -562,20 +563,15 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">PCViewController</string>
+					<string key="className">PCDViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="generateAndCopy:">id</string>
-						<string key="textDidChange:">id</string>
 						<string key="viewAbout:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="generateAndCopy:">
 							<string key="name">generateAndCopy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="textDidChange:">
-							<string key="name">textDidChange:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="viewAbout:">
@@ -584,12 +580,18 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="container">UIView</string>
 						<string key="copiedView">AppearView</string>
 						<string key="domainField">UITextField</string>
 						<string key="generateButton">UIButton</string>
 						<string key="passwordField">UITextField</string>
+						<string key="view">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="container">
+							<string key="name">container</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="copiedView">
 							<string key="name">copiedView</string>
 							<string key="candidateClassName">AppearView</string>
@@ -606,10 +608,14 @@
 							<string key="name">passwordField</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="view">
+							<string key="name">view</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PCViewController.h</string>
+						<string key="minorKey">./Classes/PCDViewController.h</string>
 					</object>
 				</object>
 			</array>
@@ -626,6 +632,6 @@
 			<string key="buttonSmoothDisabled.png">{280, 49}</string>
 			<string key="inputBackground.png">{280, 97}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">1926</string>
+		<string key="IBCocoaTouchPluginVersion">2077</string>
 	</data>
 </archive>

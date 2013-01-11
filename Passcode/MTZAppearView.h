@@ -1,5 +1,5 @@
 //
-//  AppearView.h
+//  MTZAppearView.h
 //  Passcode
 //
 //  Created by Matt on 8/13/12.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface AppearView : UIView
+@interface MTZAppearView : UIView
 
 @property NSString *imageName;
 @property NSString *text;

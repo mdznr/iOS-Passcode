@@ -1,5 +1,5 @@
 //
-//  WalkthroughViewController.h
+//  PCDWalkthroughViewController.h
 //  Passcode
 //
 //  Created by Matt on 12/29/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WalkthroughViewController : UIViewController
+@interface PCDWalkthroughViewController : UIViewController
 
 @end

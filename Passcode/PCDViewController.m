@@ -1,5 +1,5 @@
 //
-//  PCViewController.m
+//  PCDViewController.m
 //  Passcode
 //
 //  Created by Matt on 8/7/12.
@@ -20,17 +20,17 @@
 //	ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#import "PCViewController.h"
+#import "PCDViewController.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "PDKeychainBindings.h"
 
 #define CC_SHA256_DIGEST_LENGTH	32	/* digest length in bytes */
 
-@interface PCViewController ()
+@interface PCDViewController ()
 
 @end
 
-@implementation PCViewController
+@implementation PCDViewController
 
 - (void)viewDidLoad
 {
@@ -197,7 +197,7 @@
 
 - (IBAction)viewAbout:(id)sender
 {
-	AboutViewController *about = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+	PCDAboutViewController *about = [[PCDAboutViewController alloc] initWithNibName:@"PCDAboutViewController" bundle:nil];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
 	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
 	[self presentViewController:navigationController animated:YES completion:nil];

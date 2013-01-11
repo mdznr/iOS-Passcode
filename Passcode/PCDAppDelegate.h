@@ -1,5 +1,5 @@
 //
-//  PCAppDelegate.h
+//  PCDAppDelegate.h
 //  Passcode
 //
 //  Created by Matt on 8/7/12.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class PCViewController;
+@class PCDViewController;
 
-@interface PCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PCDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) PCViewController *viewController;
+@property (strong, nonatomic) PCDViewController *viewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @end
