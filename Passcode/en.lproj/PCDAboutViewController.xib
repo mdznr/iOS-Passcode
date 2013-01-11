@@ -39,7 +39,7 @@
 					<object class="IBUILabel" id="561556634">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{20, 64}, {280, 76}}</string>
+						<string key="NSFrame">{{20, 20}, {280, 76}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="469097266"/>
@@ -73,7 +73,7 @@
 					<object class="IBUIButton" id="469097266">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{20, 148}, {280, 49}}</string>
+						<string key="NSFrame">{{20, 104}, {280, 49}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="9519971"/>
@@ -105,7 +105,7 @@
 					<object class="IBUIButton" id="9519971">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{20, 205}, {280, 49}}</string>
+						<string key="NSFrame">{{20, 161}, {280, 49}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="558640706"/>
@@ -127,7 +127,7 @@
 					<object class="IBUIButton" id="558640706">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{20, 262}, {280, 49}}</string>
+						<string key="NSFrame">{{20, 218}, {280, 49}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="580421873"/>
@@ -149,7 +149,7 @@
 					<object class="IBUIButton" id="580421873">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{20, 319}, {280, 49}}</string>
+						<string key="NSFrame">{{20, 275}, {280, 49}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="259511169"/>
@@ -174,7 +174,7 @@
 					<object class="IBUILabel" id="259511169">
 						<reference key="NSNextResponder" ref="503011220"/>
 						<int key="NSvFlags">269</int>
-						<string key="NSFrame">{{20, 376}, {280, 65}}</string>
+						<string key="NSFrame">{{20, 332}, {280, 65}}</string>
 						<reference key="NSSuperview" ref="503011220"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -208,7 +208,7 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 						<double key="preferredMaxLayoutWidth">280</double>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
+				<string key="NSFrame">{{0, 20}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="561556634"/>
@@ -217,22 +217,9 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 					<bytes key="NSWhite">MC45MwA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
-					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
-					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<array key="dict.sortedKeys">
-							<integer value="1"/>
-							<integer value="3"/>
-						</array>
-						<array key="dict.values">
-							<string>{320, 480}</string>
-							<string>{480, 320}</string>
-						</array>
-					</object>
-					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
-					<string key="IBUIDisplayName">Retina 3.5 Full Screen</string>
-					<int key="IBUIType">0</int>
+				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
+					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
+					<string key="IBUIDisplayName">Freeform</string>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -310,9 +297,9 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 							<reference ref="259511169"/>
 							<reference ref="561556634"/>
 							<reference ref="469097266"/>
+							<reference ref="9519971"/>
 							<reference ref="558640706"/>
 							<reference ref="580421873"/>
-							<reference ref="9519971"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
