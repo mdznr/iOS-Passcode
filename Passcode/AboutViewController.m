@@ -27,6 +27,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	self.title = @"About";
+	
+	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(done:)];
+	self.navigationItem.leftBarButtonItem = doneButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +47,7 @@
 
 - (IBAction)howToUsePressed:(id)sender
 {
-	UIViewController *walkthrough = [[UIViewController alloc] initWithNibName:@"WalkthroughViewController" bundle:nil];
+	WalkthroughViewController *walkthrough = [[WalkthroughViewController alloc] initWithNibName:@"WalkthroughViewController" bundle:nil];
 	[self.navigationController pushViewController:walkthrough animated:YES];
 }
 

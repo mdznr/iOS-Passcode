@@ -10,6 +10,8 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
+#import "WalkthroughViewController.h"
+
 @interface AboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 - (IBAction)done:(id)sender;

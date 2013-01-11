@@ -302,7 +302,6 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC45MwA</bytes>
@@ -592,7 +591,6 @@
 						<string key="copiedView">AppearView</string>
 						<string key="domainField">UITextField</string>
 						<string key="generateButton">UIButton</string>
-						<string key="navigationBar">UINavigationBar</string>
 						<string key="passwordField">UITextField</string>
 						<string key="view">UIView</string>
 					</dictionary>
@@ -612,10 +610,6 @@
 						<object class="IBToOneOutletInfo" key="generateButton">
 							<string key="name">generateButton</string>
 							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="navigationBar">
-							<string key="name">navigationBar</string>
-							<string key="candidateClassName">UINavigationBar</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="passwordField">
 							<string key="name">passwordField</string>
