@@ -8,6 +8,7 @@
 
 #import "PCDAppDelegate.h"
 #import "PCDViewController.h"
+#import "UITextField+Selections.h"
 
 #if RUN_KIF_TESTS
 #import "EXTestController.h"
@@ -65,13 +66,14 @@
 	if ( [[url absoluteString] hasPrefix:@"passcode://"] )
 	{
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
-		self.viewController.domainField.text = components[[components count]-2];
+		[self.viewController.domainField setText:components[[components count]-2]];
 		[self.viewController textDidChange:self];
+		[self.viewController.domainField moveCursorToEnd];
+		
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"comingFromURLScheme"];
 		
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
-		
-		// Selection of all text in domainField occurs. Fix that here.
 		
 		return YES;
 		
@@ -105,7 +107,14 @@
 	
 	[_viewController checkPasteboard];
 	[_viewController checkSecuritySetting];
-	[_viewController selectDomainFieldText];
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"comingFromURLScheme"] )
+	{
+		[_viewController selectDomainFieldText];
+	}
+	else
+	{
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"comingFromURLScheme"];
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

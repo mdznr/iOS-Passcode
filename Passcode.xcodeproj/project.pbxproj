@@ -36,6 +36,7 @@
 		C95FDEFA15D232D5006FE035 /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEF815D232D5006FE035 /* PCDViewController.xib */; };
 		C96165AC169FA04900532B61 /* PCDWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929BDD4168FAA0E0025A512 /* PCDWalkthroughViewController.xib */; };
 		C96165AD169FA04D00532B61 /* PCDWalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C929BDD3168FAA0E0025A512 /* PCDWalkthroughViewController.m */; };
+		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
@@ -229,6 +230,8 @@
 		C95FDEF615D232D5006FE035 /* PCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDViewController.m; sourceTree = "<group>"; };
 		C95FDEF915D232D5006FE035 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PCDViewController.xib; sourceTree = "<group>"; };
 		C95FDF0015D23302006FE035 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		C96165AE16A1298600532B61 /* UITextField+Selections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Selections.h"; sourceTree = "<group>"; };
+		C96165AF16A1298600532B61 /* UITextField+Selections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Selections.m"; sourceTree = "<group>"; };
 		C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
 		C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C95FDEF815D232D5006FE035 /* PCDViewController.xib */,
 				C94DFC6B1628C78D002AD5CD /* PCDViewController_iPad.xib */,
+				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
+				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
 				C9C2696E16498D5500B35DFA /* Testing */,
 				C91542C115D9C535000EE537 /* About */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
@@ -862,6 +867,7 @@
 				C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */,
 				C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */,
 				C929BDD5168FAA0E0025A512 /* PCDWalkthroughViewController.m in Sources */,
+				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
