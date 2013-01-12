@@ -153,16 +153,6 @@
 	}
 }
 
-- (void)selectDomainFieldText
-{
-	[_domainField becomeFirstResponder];
-	UITextPosition *beginning = _domainField.beginningOfDocument;
-    UITextPosition *start = [_domainField positionFromPosition:beginning offset:0];
-	UITextPosition *end = [_domainField positionFromPosition:start offset:_domainField.text.length];
-    UITextRange *textRange = [_domainField textRangeFromPosition:start toPosition:end];
-	[_domainField setSelectedTextRange:textRange];
-}
-
 - (IBAction)generateAndCopy:(id)sender
 {
 	// Store the password in keychain
@@ -248,8 +238,6 @@
     // Get the end frame rectangle of the keyboard
     NSValue* endFrameValue = [keyboardGeometry valueForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect endFrame = [endFrameValue CGRectValue];
-	
-	NSLog(@"endFrame.origin.x:%f \tendFrame.origin.y: %f", endFrame.origin.x, endFrame.origin.y);
     
     // Convert the rect into view coordinates from the window, this accounts for rotation
     UIWindow* appWindow = [[[UIApplication sharedApplication] delegate] window];
@@ -263,8 +251,6 @@
 	CGFloat width  = _container.frame.size.width;
 	CGFloat height = _container.frame.size.height;
 	
-	NSLog(@"keyboardWidth: %f \tkeyboardHeight: %f", keyboardWidth, keyboardHeight);
-	
 	CGRect newFrame = CGRectMake(floorl(ABS(keyboardWidth - width)/2),
 								 floorl(ABS(keyboardHeight - height)/2),
 								 width,
@@ -276,20 +262,12 @@
 // Subscribe to keyboard notifications
 - (void)registerForKeyboardNotifications
 {
-//	[[NSNotificationCenter defaultCenter] addObserver:self
-//											 selector:@selector(keyboardChanged:)
-//												 name:UIKeyboardWillHideNotification
-//											   object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardChanged:)
 												 name:UIKeyboardWillShowNotification
 											   object:nil];
 	
-//	[[NSNotificationCenter defaultCenter] addObserver:self
-//											 selector:@selector(keyboardChanged:)
-//												 name:UIKeyboardDidShowNotification
-//											   object:nil];
 }
 
 - (void)viewDidUnload

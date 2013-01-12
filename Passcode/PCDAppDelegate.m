@@ -109,7 +109,8 @@
 	[_viewController checkSecuritySetting];
 	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"comingFromURLScheme"] )
 	{
-		[_viewController selectDomainFieldText];
+		[_viewController.domainField becomeFirstResponder];
+		[_viewController.domainField selectAll:nil];
 	}
 	else
 	{

@@ -18,11 +18,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZAppearView *copiedView;
-@property CGSize kbSize;
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;
-- (void)selectDomainFieldText;
 - (IBAction)generateAndCopy:(id)sender;
 - (IBAction)viewAbout:(id)sender;
 - (IBAction)textDidChange:(id)sender;
