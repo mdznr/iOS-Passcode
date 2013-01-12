@@ -21,10 +21,8 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 #import "PCDViewController.h"
-#import <CommonCrypto/CommonDigest.h>
 #import "PDKeychainBindings.h"
-
-#define CC_SHA256_DIGEST_LENGTH	32	/* digest length in bytes */
+#import "NSString+sha256.h"
 
 @interface PCDViewController ()
 
@@ -165,20 +163,6 @@
 	[_domainField setSelectedTextRange:textRange];
 }
 
--(NSString*)sha256HashFor:(NSString*)input
-{
-    const char* str = [input UTF8String];
-    unsigned char result[CC_SHA256_DIGEST_LENGTH];
-    CC_SHA256(str, strlen(str), result);
-	
-    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_SHA256_DIGEST_LENGTH*2];
-    for(int i = 0; i<CC_SHA256_DIGEST_LENGTH; i++)
-    {
-        [ret appendFormat:@"%02x",result[i]];
-    }
-    return ret;
-}
-
 - (IBAction)generateAndCopy:(id)sender
 {
 	// Store the password in keychain
@@ -186,7 +170,7 @@
 	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
 	// Create the hash
-	NSString *password = [self sha256HashFor:[[_domainField text] stringByAppendingString:[_passwordField text]]];
+	NSString *password = [[_domainField.text stringByAppendingString:_passwordField.text] sha256];
 	
 	// Copy it to pasteboard
 	[[UIPasteboard generalPasteboard] setString:[password substringToIndex:16]];
