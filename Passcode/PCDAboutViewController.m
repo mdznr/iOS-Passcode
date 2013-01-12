@@ -53,7 +53,7 @@
 
 - (IBAction)faqPressed:(id)sender
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/faq"]];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"passcode://faq"]];
 }
 
 #pragma mark Support Email

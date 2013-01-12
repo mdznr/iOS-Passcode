@@ -135,7 +135,7 @@
 		NSURL *url = [[NSURL alloc] initWithString:[[UIPasteboard generalPasteboard] string]];
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
 		_domainField.text = components[[components count]-2];
-		[self textDidChange:nil];
+		[self textDidChange:self];
 	}
 }
 

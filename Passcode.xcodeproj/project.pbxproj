@@ -246,7 +246,6 @@
 		C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
 		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passcode (Integration Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9C269621649896D00B35DFA /* Passcode copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Passcode copy-Info.plist"; path = "/Users/Matt/Dropbox/github/iOS-Passcode/Passcode/Passcode copy-Info.plist"; sourceTree = "<absolute>"; };
 		C9C26963164989CB00B35DFA /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Frameworks/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		C9C2696516498D5100B35DFA /* EXTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTestController.h; sourceTree = "<group>"; };
 		C9C2696616498D5100B35DFA /* EXTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTestController.m; sourceTree = "<group>"; };
@@ -411,7 +410,6 @@
 				C95FDEE915D232D5006FE035 /* Passcode */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
-				C9C269621649896D00B35DFA /* Passcode copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -953,6 +951,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
@@ -973,6 +972,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "E74C1706-5850-45B6-99B0-93ADDD385D04";

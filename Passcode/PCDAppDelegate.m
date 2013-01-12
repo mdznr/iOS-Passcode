@@ -58,6 +58,30 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+	NSLog(@"%@", [url absoluteString]);
+
+	if ( [[url absoluteString] hasPrefix:@"passcode://"] )
+	{
+		NSArray *components = [[url host] componentsSeparatedByString:@"."];
+		self.viewController.domainField.text = components[[components count]-2];
+		[self.viewController textDidChange:self];
+		
+		//	Automatically copy to clipboard and return to Safari?
+		//	Perhaps this can be done in Safari javascript anyways?
+		
+		// Selection of all text in domainField occurs. Fix that here.
+		
+		return YES;
+		
+	}
+	else
+	{
+		return NO;
+	}
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
