@@ -10,6 +10,10 @@
 
 @implementation UITextField (Selections)
 
+/*
+	Written by user Jbryson on Stack Overflow
+	http://stackoverflow.com/a/13703769
+ */
 - (NSRange)selectedRange
 {
     UITextPosition* beginning = self.beginningOfDocument;
@@ -24,6 +28,10 @@
     return NSMakeRange(location, length);
 }
 
+/*
+	Written by user Jbryson on Stack Overflow
+	http://stackoverflow.com/a/13703769
+ */
 - (void)setSelectedRange:(NSRange)range
 {
     UITextPosition* beginning = self.beginningOfDocument;
