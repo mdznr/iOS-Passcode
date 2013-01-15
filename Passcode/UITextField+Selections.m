@@ -11,8 +11,8 @@
 @implementation UITextField (Selections)
 
 /*
-	Written by user Jbryson on Stack Overflow
-	http://stackoverflow.com/a/13703769
+ Written by user Jbryson on Stack Overflow
+ http://stackoverflow.com/a/13703769
  */
 - (NSRange)selectedRange
 {
@@ -29,8 +29,8 @@
 }
 
 /*
-	Written by user Jbryson on Stack Overflow
-	http://stackoverflow.com/a/13703769
+ Written by user Jbryson on Stack Overflow
+ http://stackoverflow.com/a/13703769
  */
 - (void)setSelectedRange:(NSRange)range
 {
@@ -44,7 +44,7 @@
 }
 
 - (void)moveCursorToEnd
-{	
+{
 	[self setSelectedRange:NSMakeRange(self.text.length, 0)];
 }
 
