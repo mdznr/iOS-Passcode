@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTZWalkthroughPagesView : UIScrollView <UIScrollViewDelegate>
+@interface MTZWalkthroughPagesView : UIScrollView<UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIPageControl *pageControl;
 
@@ -17,5 +17,12 @@
 - (void)addPage:(UIView *)view;
 - (void)addPage:(UIView *)view atIndex:(int)index;
 - (void)addPages:(NSArray *)pages;
+
+- (void)performSelector:(SEL)aSelector
+			 withObject:(id)object
+ whenStoppedOnPageIndex:(int)index;
+- (void)scrollToPageIndex:(int)index;
+- (void)scrollToPreviousPage;
+- (void)scrollToNextPage;
 
 @end

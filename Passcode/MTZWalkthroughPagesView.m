@@ -65,6 +65,10 @@
 	_pageControl = pageControl;
 	[_pageControl setNumberOfPages:allPages.count];
 	[_pageControl setCurrentPage:currentPageIndex];
+	
+	[_pageControl addTarget:self
+					 action:@selector(scrollToPageControlCurrentPageIndex)
+		   forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)addPage:(UIView *)page
@@ -100,11 +104,46 @@
 	[_pageControl setNumberOfPages:numberOfPages];
 }
 
+#warning add ability to perform selector when page is stopped on
+- (void)performSelector:(SEL)aSelector
+			 withObject:(id)object
+ whenStoppedOnPageIndex:(int)index
+{
+	
+}
+
+- (void)scrollToPageIndex:(int)index
+{	
+    CGRect pageFrame = CGRectMake(self.frame.size.width * index,
+								  0,
+								  self.frame.size.width,
+								  self.frame.size.height);
+	
+    [self scrollRectToVisible:pageFrame animated:YES];
+	
+	currentPageIndex = index;
+}
+
+- (void)scrollToPreviousPage
+{
+	[self scrollToPageIndex:currentPageIndex-1];
+}
+
+- (void)scrollToNextPage
+{
+	[self scrollToPageIndex:currentPageIndex+1];
+}
+
+- (void)scrollToPageControlCurrentPageIndex
+{
+	[self scrollToPageIndex:_pageControl.currentPage];
+}
+
 #pragma mark UIScrollViewDelegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-	currentPageIndex = (int) ( ( scrollView.contentOffset.x / scrollView.frame.size.width ) + .5 );
+	currentPageIndex = (int) ( scrollView.contentOffset.x / scrollView.frame.size.width + .5 );
 	[_pageControl setCurrentPage:currentPageIndex];
 }
 
