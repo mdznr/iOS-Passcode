@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MTZWalkthroughPagesView.h"
+
 @interface PCDWalkthroughViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet MTZWalkthroughPagesView *pagesView;
 
 @property (strong, nonatomic) IBOutlet UIView *page1, *page2, *page3, *page4;
 
