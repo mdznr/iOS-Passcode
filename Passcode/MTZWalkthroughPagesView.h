@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIPageControl *pageControl;
 
+- (id)initWithPages:(NSArray *)pages;
+
 - (void)addPage:(UIView *)view;
 - (void)addPage:(UIView *)view atIndex:(int)index;
 - (void)addPages:(NSArray *)pages;

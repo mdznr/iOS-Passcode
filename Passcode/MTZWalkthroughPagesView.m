@@ -24,6 +24,16 @@
 	return self;
 }
 
+- (id)initWithPages:(NSArray *)pages
+{
+	self = [super init];
+	if ( self ) {
+		[self setup];
+		[self addPages:pages];
+	}
+	return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
