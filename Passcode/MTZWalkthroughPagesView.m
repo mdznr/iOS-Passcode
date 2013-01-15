@@ -11,7 +11,7 @@
 @implementation MTZWalkthroughPagesView
 {
 	NSMutableArray *allPages;
-	NSNumber *currentPageIndex;
+	int currentPageIndex;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -36,6 +36,8 @@
 
 - (void)setup
 {
+	[self setDelegate:self];
+	
 	[self setPagingEnabled:YES];
 	[self setScrollsToTop:NO];
 	[self setShowsHorizontalScrollIndicator:NO];
@@ -78,15 +80,15 @@
 		[allPages[i] setFrame:CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height)];
 	}
 	[self setContentSize:CGSizeMake(self.frame.size.width * numberOfPages, self.frame.size.height)];
+	[_pageControl setNumberOfPages:numberOfPages];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+#pragma mark UIScrollViewDelegate methods
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    // Drawing code
+	currentPageIndex = (int) ( scrollView.contentOffset.x / scrollView.frame.size.width );
+	[_pageControl setCurrentPage:currentPageIndex];
 }
-*/
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTZWalkthroughPagesView : UIScrollView
+@interface MTZWalkthroughPagesView : UIScrollView <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIPageControl *pageControl;
 

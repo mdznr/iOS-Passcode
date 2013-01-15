@@ -36,7 +36,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIView" id="624697349">
+					<object class="IBUIView" id="987386614">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 416}</string>
@@ -77,7 +77,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="624697349"/>
+				<reference key="NSNextKeyView" ref="987386614"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MC45Mjk0MTE3NjQ3IDAuOTI5NDExNzY0NyAwLjkyOTQxMTc2NDcAA</bytes>
@@ -294,9 +294,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">pagesView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="624697349"/>
+						<reference key="destination" ref="987386614"/>
 					</object>
 					<int key="connectionID">60</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pageControl</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="222759834"/>
+					</object>
+					<int key="connectionID">61</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -312,7 +320,7 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="222759834"/>
-							<reference ref="624697349"/>
+							<reference ref="987386614"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -390,7 +398,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">59</int>
-						<reference key="object" ref="624697349"/>
+						<reference key="object" ref="987386614"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -417,7 +425,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">60</int>
+			<int key="maxID">61</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -437,6 +445,7 @@
 						<string key="page2">UIView</string>
 						<string key="page3">UIView</string>
 						<string key="page4">UIView</string>
+						<string key="pageControl">UIPageControl</string>
 						<string key="pagesView">MTZWalkthroughPagesView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -455,6 +464,10 @@
 						<object class="IBToOneOutletInfo" key="page4">
 							<string key="name">page4</string>
 							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pageControl">
+							<string key="name">pageControl</string>
+							<string key="candidateClassName">UIPageControl</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pagesView">
 							<string key="name">pagesView</string>

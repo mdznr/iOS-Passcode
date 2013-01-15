@@ -21,6 +21,7 @@
 	self.title = @"How To Use";
 	
 	[_pagesView addPages:@[_page1, _page2, _page3, _page4]];
+	[_pagesView setPageControl:_pageControl];
 }
 
 - (void)didReceiveMemoryWarning
