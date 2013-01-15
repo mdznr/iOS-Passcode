@@ -10,4 +10,6 @@
 
 @interface PCDWalkthroughViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @end

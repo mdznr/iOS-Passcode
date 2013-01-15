@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "PDKeychainBindings.h"
 
-
 @interface PDKeychainBindingsController : NSObject {
 @private
     PDKeychainBindings *_keychainBindings;
