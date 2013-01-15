@@ -50,6 +50,13 @@
 	currentPageIndex = 0;
 }
 
+- (void)setPageControl:(UIPageControl *)pageControl
+{
+	_pageControl = pageControl;
+	[_pageControl setNumberOfPages:allPages.count];
+	[_pageControl setCurrentPage:currentPageIndex];
+}
+
 - (void)addPage:(UIView *)page
 {
 	[self addSubview:page];
