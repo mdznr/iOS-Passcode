@@ -85,9 +85,9 @@
 
 #pragma mark UIScrollViewDelegate methods
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-	currentPageIndex = (int) ( scrollView.contentOffset.x / scrollView.frame.size.width );
+	currentPageIndex = (int) ( ( scrollView.contentOffset.x / scrollView.frame.size.width ) + .5 );
 	[_pageControl setCurrentPage:currentPageIndex];
 }
 
