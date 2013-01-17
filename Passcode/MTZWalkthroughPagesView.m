@@ -136,7 +136,9 @@
 
 - (void)scrollToPageControlCurrentPageIndex
 {
-	[self scrollToPageIndex:_pageControl.currentPage];
+	NSInteger toPage = _pageControl.currentPage;
+	_pageControl.currentPage = currentPageIndex;
+	[self scrollToPageIndex:toPage];
 }
 
 #pragma mark UIScrollViewDelegate methods
