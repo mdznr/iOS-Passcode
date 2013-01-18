@@ -7,13 +7,13 @@
 */
 
 // Main View
+"Copied" = "Copied";
 "About" = "About";
 "Domain" = "Domain";
 "e.g. apple" = "e.g. apple";
 "Password" = "Password";
 "master password" = "master password";
 "Generate Passcode & Copy" = "Generate Passcode & Copy";
-"Copied" = "Copied";
 
 // About View
 "Done" = "Done";

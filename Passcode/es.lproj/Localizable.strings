@@ -6,4 +6,33 @@
   Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 */
 
+// Main View
+"About" = "Acerca De";
+"Domain" = "Dominio";
+"e.g. apple" = "ejemplo: apple";
+"Password" = "Contraseña";
+"master password" = "contraseña maestra";
+"Generate Passcode & Copy" = "Generar Código de Acceso y Copia";
 "Copied" = "Copiado";
+
+// About View
+"Done" = "OK";
+"Description" = "Passcode hace que sea fácil de mantener todas sus cuentas en línea seguro. Passcode también está disponible como una extensión de Safari y el navegador web.";
+"How To Use" = "Cómo Utilizar";
+"Frequently Asked Questions" = "Preguntas Más Frecuentes";
+"Support" = "Manutención";
+"Write a Review" = "Escriba su Opinión";
+"Credits" = "App diseño y desarrollo por Matt Zanchelli\n\nGracias Nick Pitt, Peter Hajas, Moorthy, Sean O'Sullivan, Rensselaer Center for Open Source";
+
+// How To Use
+"How To Use: Page 1" = "Comience por crear una contraseña maestra secreta. Esta se utiliza como la base para la generación de códigos de acceso";
+"How To Use: Page 2" = "A continuación, escriba en el dominio para un servicio que necesita una contraseña.";
+"How To Use: Page 3" = "Genera! Su código de acceso seguro se copia en el portapapeles.";
+"How To Use: Page 4" = "Basta con hacer esto cada vez que necesita para conectarse a un servicio. Esta aplicación generará siempre la misma salida, cuando se les da la misma entrada.";
+
+// Frequently Asked Questions
+
+// Support
+"Passcode Support" = "Passcode Manutención";
+"Cancel" = "Cancelar";
+"Send" = "Transmitir";

@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Passcode
+
+  Created by Matt on 10/14/12.
+  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
+*/
+
+// Main View
+"About" = "Über";
+"Domain" = "Domain";
+"e.g. apple" = "z.B. apple";
+"Password" = "Passwort";
+"master password" = "master-passwort";
+"Generate Passcode & Copy" = "Generieren Passcode & Copy";
+"Copied" = "Kopiert";
+
+// About View
+"Done" = "erledigt";
+"Description" = "Passcode macht es einfach zu halten alle Ihre Online-Konten sicher. Passcode ist auch als Safari Extension und in Ihrem Web-Browser zur Verfügung.";
+"How To Use" = "So verwenden";
+"Frequently Asked Questions" = "Häufig gestellte Fragen";
+"Support" = "Unterstützung";
+"Write a Review" = "Bewertung schreiben";
+"Credits" = "App Design und Entwicklung von Matt Zanchelli\n\nDanke Nick Pitt, Peter Hajas, Moorthy, Sean O'Sullivan, Rensselaer Center for Open Source";
+
+// How To Use
+"How To Use: Page 1" = "Erstellen Sie zunächst eine geheime Master-Passwort. Dies wird als der Basis zum Generieren Paßzahlen verwendet werden";
+"How To Use: Page 2" = "Dann in der Domäne geben für einen Dienst benötigen Sie ein Passwort für.";
+"How To Use: Page 3" = "Zu generieren! Ihre sichere Passcode wird in die Zwischenablage kopiert.";
+"How To Use: Page 4" = "Einfach tun dies jedes Mal, wenn Sie sich bei einem Dienst. Diese App wird die immer gleiche Leistung, wenn sie die gleichen Eingang.";
+
+// Frequently Asked Questions
+
+// Support
+"Passcode Support" = "Passcode Unterstützung";
+"Cancel" = "Abbrechen";
+"Send" = "Senden";

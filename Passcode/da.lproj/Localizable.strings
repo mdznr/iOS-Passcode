@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Passcode
+
+  Created by Matt on 10/14/12.
+  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
+*/
+
+// Main View
+"About" = "Om";
+"Domain" = "Domæne";
+"e.g. apple" = "fx apple";
+"Password" = "Dgangskode";
+"master password" = "hemmelige kodeord";
+"Generate Passcode & Copy" = "Generer Adgangskode & Kopi";
+"Copied" = "Copied";
+
+// About View
+"Done" = "Udført";
+"Description" = "Passcode gør det nemt at holde alle dine online-konti sikkert. Passcode er også tilgængelig som en Safari udvidelse og i din webbrowser.";
+"How To Use" = "Sådan bruges";
+"Frequently Asked Questions" = "Ofte Stillede Spørgsmål";
+"Support" = "Hjælp";
+"Write a Review" = "Skriv en Anmeldelse";
+"Credits" = "App design og udvikling af Matt Zanchelli\n\nTak Nick Pitt, Peter Hajas, Moorthy, Sean O'Sullivan, Rensselaer Center for Open Source";
+
+// How To Use
+"How To Use: Page 1" = "Start med at oprette en hemmelig hovedadgangskode. Dette vil blive anvendt som grundlag for generering af adgangskoder";
+"How To Use: Page 2" = "Skriv derefter i domænet for en service, du har brug for en adgangskode til.";
+"How To Use: Page 3" = "Generer! Dit sikker adgangskode er kopieret til din udklipsholder.";
+"How To Use: Page 4" = "Du skal blot gøre dette hver gang du skal logge ind på en tjeneste. Denne app vil altid generere det samme output, når de gives samme input.";
+
+// Frequently Asked Questions
+
+// Support
+"Passcode Support" = "Passcode Hjælp";
+"Cancel" = "Annuller";
+"Send" = "Send";

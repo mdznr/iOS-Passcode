@@ -6,4 +6,33 @@
   Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 */
 
+// Main View
+"About" = "À propos de";
+"Domain" = "Domaine";
+"e.g. apple" = "exemple: apple";
+"Password" = "Mot de Passe";
+"master password" = "mot de passe principal";
+"Generate Passcode & Copy" = "Générer et Copier";
 "Copied" = "Copié";
+
+// About View
+"Done" = "OK";
+"Description" = "Passcode, il est facile de garder tous vos comptes en ligne en toute sécurité. Passcode est également disponible en tant qu'extension Safari et dans votre navigateur.";
+"How To Use" = "Comment Faire Pour Utiliser";
+"Frequently Asked Questions" = "Foire aux Questions";
+"Support" = "Secours";
+"Write a Review" = "Rédiger un Avis";
+"Credits" = "La conception et le développement d'application Matt Zanchelli\n\nMerci Nick Pitt, Peter Hajas, Moorthy, Sean O'Sullivan, Rensselaer Center for Open Source";
+
+// How To Use
+"How To Use: Page 1" = "Commencez par créer un mot de passe maître secret. Il sera utilisé comme base pour générer des codes d'authentification.";
+"How To Use: Page 2" = "Ensuite, tapez dans le domaine pour un service que vous avez besoin d'un mot de passe.";
+"How To Use: Page 3" = "Générer! Votre mot de passe sécurisé est copié dans votre presse-papiers.";
+"How To Use: Page 4" = "Pour ce faire, chaque fois que vous devez vous connecter à un service. Passcode génère toujours la même sortie, lorsqu'il est administré la même entrée.";
+
+// Frequently Asked Questions
+
+// Support
+"Passcode Support" = "Passcode Secours";
+"Cancel" = "Annuler";
+"Send" = "Envoyer";

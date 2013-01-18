@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Passcode
+
+  Created by Matt on 10/14/12.
+  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
+*/
+
+// Main View
+"About" = "Informazioni su";
+"Domain" = "Domain";
+"e.g. apple" = "ad esempio apple";
+"Password" = "Password";
+"master password" = "master password";
+"Generate Passcode & Copy" = "Generare Codice di Accesso e Copia";
+"Copied" = "Copiato";
+
+// About View
+"Done" = "Fine";
+"Description" = "Passcode rende facile mantenere tutti i vostri conti on-line sicuro. Codice di accesso è disponibile anche come estensione Safari e nel tuo web browser.";
+"How To Use" = "Come Utilizzare";
+"Frequently Asked Questions" = "Domande Frequenti";
+"Support" = "Supporto";
+"Write a Review" = "Scrivi una Recensione";
+"Credits" = "App progettazione e sviluppo di Matt Zanchelli\n\nGrazie Nick Pitt, Peter Hajas, Moorthy, Sean O'Sullivan, Rensselaer Center for Open Source";
+
+// How To Use
+"How To Use: Page 1" = "Inizio con la creazione di una password master segreto. Questo verrà utilizzato come base per generare codici di accesso";
+"How To Use: Page 2" = "Poi digitare il dominio per un servizio è necessario una password per.";
+"How To Use: Page 3" = "Genera! Il tuo codice di accesso sicuro viene copiato negli Appunti.";
+"How To Use: Page 4" = "Basta fare questo ogni volta che avete bisogno di accedere a un servizio. Questa applicazione genera sempre la stessa uscita, se somministrato lo stesso ingresso.";
+
+// Frequently Asked Questions
+
+// Support
+"Passcode Support" = "Passcode Supporto";
+"Cancel" = "Annulla";
+"Send" = "Invia";
