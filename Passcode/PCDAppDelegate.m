@@ -31,7 +31,7 @@
 	
 	PCDViewController *mainViewController;
 	
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
 	    mainViewController = [[PCDViewController alloc] initWithNibName:@"PCDViewController" bundle:nil];
 	} else {
 	    mainViewController = [[PCDViewController alloc] initWithNibName:@"PCDViewController_iPad" bundle:nil];
@@ -107,10 +107,10 @@
 	
 	[_viewController checkPasteboard];
 	[_viewController checkSecuritySetting];
-	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"comingFromURLScheme"] )
+	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"comingFromURLScheme"] == YES )
 	{
 		[_viewController.domainField becomeFirstResponder];
-		[_viewController.domainField selectAll:nil];
+		[_viewController.domainField selectAll:self];
 	}
 	else
 	{

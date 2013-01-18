@@ -28,9 +28,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	self.title = @"About";
+	self.title = NSLocalizedString(@"About", nil);
 	
-	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(done:)];
+	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
+																   style:UIBarButtonItemStyleDone
+																  target:self
+																  action:@selector(done:)];
 	self.navigationItem.leftBarButtonItem = doneButton;
 }
 
@@ -42,7 +45,12 @@
 
 - (IBAction)done:(id)sender
 {
-	[self dismissViewControllerAnimated:YES completion:NULL];
+	if ( self.delegate ) {
+		[self.delegate dismissingModalViewController:self];
+	} else {
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}
+	
 }
 
 - (IBAction)howToUsePressed:(id)sender
@@ -53,7 +61,9 @@
 
 - (IBAction)faqPressed:(id)sender
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"passcode://faq"]];
+	UIViewController *faq = [[UIViewController alloc] init];
+	faq.title = @"FAQ";
+	[self.navigationController pushViewController:faq animated:YES];
 }
 
 #pragma mark Support Email
@@ -67,11 +77,11 @@
 		
         NSArray *toRecipients = [NSArray arrayWithObjects:@"passcode@mdznr.com", nil];
         [mailer setToRecipients:toRecipients];
-        [mailer setSubject:@"Passcode Support"];
+        [mailer setSubject:NSLocalizedString(@"Passcode Support", nil)];
 		
 		[mailer.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
 		
-		//		[[self navigationController] pushViewController:mailer animated:YES];	// Perhaps eventually do something like this instead?
+		[mailer setModalPresentationStyle:UIModalPresentationPageSheet];
         [self presentModalViewController:mailer animated:YES];
     }
     else
@@ -112,4 +122,5 @@
 {
 	[super viewDidUnload];
 }
+
 @end

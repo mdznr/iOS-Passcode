@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PCDAboutViewController.h"
-#import "MTZAppearView.h"
 
-@interface PCDViewController : UIViewController
+#import "MTZAppearView.h"
+#import "PCDModalViewControllerDelegate.h"
+
+@interface PCDViewController : UIViewController <PCDModalViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
