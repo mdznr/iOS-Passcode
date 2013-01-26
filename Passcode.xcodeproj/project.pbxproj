@@ -12,7 +12,6 @@
 		C910315F1641E5FA00A59FCA /* iPadCopied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */; };
 		C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
 		C929BDD5168FAA0E0025A512 /* PCDWalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C929BDD3168FAA0E0025A512 /* PCDWalkthroughViewController.m */; };
-		C929BDD6168FAA0E0025A512 /* PCDWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929BDD4168FAA0E0025A512 /* PCDWalkthroughViewController.xib */; };
 		C929BE7B16938A7B0025A512 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C929BE7A16938A7B0025A512 /* Default-Portrait@2x~ipad.png */; };
 		C92D941716938D260020466C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8D16435151009A5DBA /* Default-Landscape~ipad.png */; };
 		C92D941816938D280020466C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8916435140009A5DBA /* Default-Portrait~ipad.png */; };
@@ -23,23 +22,28 @@
 		C93EF74A16434F6000C317BB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74516434F6000C317BB /* Icon-72.png */; };
 		C93EF74B16434F6000C317BB /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74616434F6000C317BB /* Icon-72@2x.png */; };
 		C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */; };
-		C94DFC6C1628C78D002AD5CD /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC6B1628C78D002AD5CD /* PCDViewController_iPad.xib */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
-		C94DFD38162BBC1D002AD5CD /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD3A162BBC1D002AD5CD /* PCDAboutViewController.xib */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
-		C95FDEEE15D232D5006FE035 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEEC15D232D5006FE035 /* InfoPlist.strings */; };
 		C95FDEF015D232D5006FE035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEEF15D232D5006FE035 /* main.m */; };
 		C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */; };
 		C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCDViewController.m */; };
-		C95FDEFA15D232D5006FE035 /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEF815D232D5006FE035 /* PCDViewController.xib */; };
-		C96165AC169FA04900532B61 /* PCDWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929BDD4168FAA0E0025A512 /* PCDWalkthroughViewController.xib */; };
 		C96165AD169FA04D00532B61 /* PCDWalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C929BDD3168FAA0E0025A512 /* PCDWalkthroughViewController.m */; };
 		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C96165B316A169F200532B61 /* NSString+sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165B216A169F100532B61 /* NSString+sha256.m */; };
 		C96165F316A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165F216A5130600532B61 /* MTZWalkthroughPagesView.m */; };
 		C96165F416A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165F216A5130600532B61 /* MTZWalkthroughPagesView.m */; };
+		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
+		C96BB5A916A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
+		C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */; };
+		C96BB61F16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */; };
+		C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
+		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
+		C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
+		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
+		C96BB62716A904F000E5EEEC /* PCDWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62616A904F000E5EEEC /* PCDWalkthroughViewController.xib */; };
+		C96BB62816A904F000E5EEEC /* PCDWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62616A904F000E5EEEC /* PCDWalkthroughViewController.xib */; };
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
@@ -65,8 +69,6 @@
 		C9C269141649896D00B35DFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C9C269151649896D00B35DFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C9C269161649896D00B35DFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
-		C9C269181649896D00B35DFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEEC15D232D5006FE035 /* InfoPlist.strings */; };
-		C9C269191649896D00B35DFA /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95FDEF815D232D5006FE035 /* PCDViewController.xib */; };
 		C9C2691A1649896D00B35DFA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
 		C9C2691B1649896D00B35DFA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC1FB15DB180100E16FBB /* Icon.png */; };
 		C9C2691C1649896D00B35DFA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20115DC1A9B00E16FBB /* Default.png */; };
@@ -75,8 +77,6 @@
 		C9C2691F1649896D00B35DFA /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */; };
 		C9C269201649896D00B35DFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
 		C9C269211649896D00B35DFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90264461601398A0075960E /* Default-568h@2x.png */; };
-		C9C269221649896D00B35DFA /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD3A162BBC1D002AD5CD /* PCDAboutViewController.xib */; };
-		C9C269231649896D00B35DFA /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94DFC6B1628C78D002AD5CD /* PCDViewController_iPad.xib */; };
 		C9C269241649896D00B35DFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
 		C9C269251649896D00B35DFA /* iPadButtonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */; };
 		C9C269261649896D00B35DFA /* iPadButtonActiveGlossy@2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */; };
@@ -141,6 +141,10 @@
 		C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */; };
 		C9D1BA8616435137009A5DBA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8516435137009A5DBA /* Default-Landscape@2x~ipad.png */; };
 		C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
+		C9D971A816B39BF1003DAD40 /* cardBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A616B39BF1003DAD40 /* cardBackground.png */; };
+		C9D971A916B39BF1003DAD40 /* cardBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A616B39BF1003DAD40 /* cardBackground.png */; };
+		C9D971AA16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
+		C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
 		C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */; };
 		C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */; };
 		C9DB2DC9164086FF007B417B /* iPadButtonActiveGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */; };
@@ -195,7 +199,6 @@
 		C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadCopied@2x.png"; path = "resources/iPad/iPadCopied@2x.png"; sourceTree = "<group>"; };
 		C929BDD2168FAA0E0025A512 /* PCDWalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDWalkthroughViewController.h; sourceTree = "<group>"; };
 		C929BDD3168FAA0E0025A512 /* PCDWalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDWalkthroughViewController.m; sourceTree = "<group>"; };
-		C929BDD4168FAA0E0025A512 /* PCDWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDWalkthroughViewController.xib; sourceTree = "<group>"; };
 		C929BE6F16937CDB0025A512 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		C929BE7116937F3B0025A512 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
 		C929BE75169380980025A512 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
@@ -208,30 +211,19 @@
 		C93EF74616434F6000C317BB /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		C94DFC5816288D0B002AD5CD /* PCDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDAboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDAboutViewController.m; sourceTree = "<group>"; };
-		C94DFC6B1628C78D002AD5CD /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
-		C94DFD28162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/PCDViewController.xib; sourceTree = "<group>"; };
-		C94DFD29162BAB80002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C94DFD2A162BAB87002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PCDViewController.xib; sourceTree = "<group>"; };
-		C94DFD2B162BAB88002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C94DFD36162BAC5E002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C94DFD37162BAC5E002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C94DFD39162BBC1D002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PCDAboutViewController.xib; sourceTree = "<group>"; };
-		C94DFD3B162BBC23002AD5CD /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/PCDAboutViewController.xib; sourceTree = "<group>"; };
-		C94DFD3C162BBC25002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PCDAboutViewController.xib; sourceTree = "<group>"; };
 		C95FDEDF15D232D5006FE035 /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C95FDEE715D232D5006FE035 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
-		C95FDEED15D232D5006FE035 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C95FDEEF15D232D5006FE035 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passcode-Prefix.pch"; sourceTree = "<group>"; };
 		C95FDEF215D232D5006FE035 /* PCDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDAppDelegate.h; sourceTree = "<group>"; };
 		C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDAppDelegate.m; sourceTree = "<group>"; };
 		C95FDEF515D232D5006FE035 /* PCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDViewController.h; sourceTree = "<group>"; };
 		C95FDEF615D232D5006FE035 /* PCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDViewController.m; sourceTree = "<group>"; };
-		C95FDEF915D232D5006FE035 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PCDViewController.xib; sourceTree = "<group>"; };
 		C95FDF0015D23302006FE035 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		C96165AE16A1298600532B61 /* UITextField+Selections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Selections.h"; sourceTree = "<group>"; };
 		C96165AF16A1298600532B61 /* UITextField+Selections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Selections.m"; sourceTree = "<group>"; };
@@ -239,6 +231,20 @@
 		C96165B216A169F100532B61 /* NSString+sha256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sha256.m"; sourceTree = "<group>"; };
 		C96165F116A5130600532B61 /* MTZWalkthroughPagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZWalkthroughPagesView.h; sourceTree = "<group>"; };
 		C96165F216A5130600532B61 /* MTZWalkthroughPagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZWalkthroughPagesView.m; sourceTree = "<group>"; };
+		C96BB5A016A7CA5600E5EEEC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		C96BB5AA16A7CB6100E5EEEC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5AB16A7CB6500E5EEEC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5AC16A7CB6A00E5EEEC /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5AD16A7CB6F00E5EEEC /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5AE16A7CB8000E5EEEC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5AF16A7CB8300E5EEEC /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB5B016A7CB8C00E5EEEC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C96BB61C16A8F7AE00E5EEEC /* PCDModalViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDModalViewControllerDelegate.h; sourceTree = "<group>"; };
+		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
+		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
+		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
+		C96BB62616A904F000E5EEEC /* PCDWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDWalkthroughViewController.xib; sourceTree = "<group>"; };
 		C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
 		C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 		C9D1BA8B16435142009A5DBA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		C9D1BA8D16435151009A5DBA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		C9D1BA8F164885B9009A5DBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C9D971A616B39BF1003DAD40 /* cardBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackground.png; sourceTree = "<group>"; };
+		C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardBackground@2x.png"; sourceTree = "<group>"; };
 		C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGlossy.png; sourceTree = "<group>"; };
 		C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActiveGlossy@2.png"; path = "resources/iPad/glossy/iPadButtonActiveGlossy@2.png"; sourceTree = "<group>"; };
 		C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGreenGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGreenGlossy.png; sourceTree = "<group>"; };
@@ -355,6 +363,8 @@
 				C929BE75169380980025A512 /* Default-Portrait~ipad.png */,
 				C929BE7116937F3B0025A512 /* Default-Landscape@2x~ipad.png */,
 				C929BE6F16937CDB0025A512 /* Default-568h@2x.png */,
+				C9D971A616B39BF1003DAD40 /* cardBackground.png */,
+				C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */,
 				C9DB2E1916408816007B417B /* iPad */,
 				C9DB2E1A16408820007B417B /* iPhone */,
 			);
@@ -366,8 +376,7 @@
 			children = (
 				C94DFC5816288D0B002AD5CD /* PCDAboutViewController.h */,
 				C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */,
-				C94DFD3A162BBC1D002AD5CD /* PCDAboutViewController.xib */,
-				C929BDD7168FAA130025A512 /* Walkthrough */,
+				C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -377,9 +386,7 @@
 			children = (
 				C929BDD2168FAA0E0025A512 /* PCDWalkthroughViewController.h */,
 				C929BDD3168FAA0E0025A512 /* PCDWalkthroughViewController.m */,
-				C96165F116A5130600532B61 /* MTZWalkthroughPagesView.h */,
-				C96165F216A5130600532B61 /* MTZWalkthroughPagesView.m */,
-				C929BDD4168FAA0E0025A512 /* PCDWalkthroughViewController.xib */,
+				C96BB62616A904F000E5EEEC /* PCDWalkthroughViewController.xib */,
 			);
 			name = Walkthrough;
 			sourceTree = "<group>";
@@ -455,17 +462,20 @@
 				C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */,
 				C95FDEF515D232D5006FE035 /* PCDViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
-				C95FDEF815D232D5006FE035 /* PCDViewController.xib */,
-				C94DFC6B1628C78D002AD5CD /* PCDViewController_iPad.xib */,
+				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
+				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
+				C96BB61C16A8F7AE00E5EEEC /* PCDModalViewControllerDelegate.h */,
 				C96165B116A169F100532B61 /* NSString+sha256.h */,
 				C96165B216A169F100532B61 /* NSString+sha256.m */,
 				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
-				C9C2696E16498D5500B35DFA /* Testing */,
+				C961662416A5280D00532B61 /* Walkthrough Pages View */,
 				C91542C115D9C535000EE537 /* About */,
+				C929BDD7168FAA130025A512 /* Walkthrough */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C9B56AEC16221A93001FD931 /* Button */,
 				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
+				C9C2696E16498D5500B35DFA /* Testing */,
 				C9D1BA7416434FC1009A5DBA /* Splash */,
 				C93EF74E16434F9200C317BB /* Icons */,
 				C915425715D237BF000EE537 /* Resources */,
@@ -479,12 +489,21 @@
 			children = (
 				C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */,
 				C9BBC21115DEE81C00E16FBB /* Settings.bundle */,
-				C95FDEEC15D232D5006FE035 /* InfoPlist.strings */,
+				C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */,
 				C94DFD33162BAC59002AD5CD /* Localizable.strings */,
 				C95FDEEF15D232D5006FE035 /* main.m */,
 				C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C961662416A5280D00532B61 /* Walkthrough Pages View */ = {
+			isa = PBXGroup;
+			children = (
+				C96165F116A5130600532B61 /* MTZWalkthroughPagesView.h */,
+				C96165F216A5130600532B61 /* MTZWalkthroughPagesView.m */,
+			);
+			name = "Walkthrough Pages View";
 			sourceTree = "<group>";
 		};
 		C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */ = {
@@ -693,6 +712,13 @@
 				en,
 				es,
 				fr,
+				de,
+				it,
+				da,
+				nl,
+				sv,
+				pt,
+				pl,
 			);
 			mainGroup = C95FDED415D232D5006FE035;
 			productRefGroup = C95FDEE015D232D5006FE035 /* Products */;
@@ -710,8 +736,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95FDEEE15D232D5006FE035 /* InfoPlist.strings in Resources */,
-				C95FDEFA15D232D5006FE035 /* PCDViewController.xib in Resources */,
 				C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */,
 				C9BBC1FC15DB180100E16FBB /* Icon.png in Resources */,
 				C9BBC20415DC1A9F00E16FBB /* Default@2x.png in Resources */,
@@ -719,8 +743,6 @@
 				C9BBC21015DEE52700E16FBB /* Icon-Small@2x.png in Resources */,
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C90264471601398A0075960E /* Default-568h@2x.png in Resources */,
-				C94DFD38162BBC1D002AD5CD /* PCDAboutViewController.xib in Resources */,
-				C94DFC6C1628C78D002AD5CD /* PCDViewController_iPad.xib in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
 				C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */,
 				C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */,
@@ -776,11 +798,17 @@
 				C93EF74A16434F6000C317BB /* Icon-72.png in Resources */,
 				C93EF74B16434F6000C317BB /* Icon-72@2x.png in Resources */,
 				C9D1BA8616435137009A5DBA /* Default-Landscape@2x~ipad.png in Resources */,
-				C929BDD6168FAA0E0025A512 /* PCDWalkthroughViewController.xib in Resources */,
 				C929BE7B16938A7B0025A512 /* Default-Portrait@2x~ipad.png in Resources */,
 				C92D941716938D260020466C /* Default-Landscape~ipad.png in Resources */,
 				C92D941816938D280020466C /* Default-Portrait~ipad.png in Resources */,
 				C92D941C16938E2A0020466C /* Default.png in Resources */,
+				C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
+				C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
+				C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */,
+				C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */,
+				C96BB62716A904F000E5EEEC /* PCDWalkthroughViewController.xib in Resources */,
+				C9D971A816B39BF1003DAD40 /* cardBackground.png in Resources */,
+				C9D971AA16B39BF1003DAD40 /* cardBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,8 +816,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C269181649896D00B35DFA /* InfoPlist.strings in Resources */,
-				C9C269191649896D00B35DFA /* PCDViewController.xib in Resources */,
 				C9C2691A1649896D00B35DFA /* Icon@2x.png in Resources */,
 				C9C2691B1649896D00B35DFA /* Icon.png in Resources */,
 				C9C2691C1649896D00B35DFA /* Default.png in Resources */,
@@ -798,8 +824,6 @@
 				C9C2691F1649896D00B35DFA /* Icon-Small@2x.png in Resources */,
 				C9C269201649896D00B35DFA /* Settings.bundle in Resources */,
 				C9C269211649896D00B35DFA /* Default-568h@2x.png in Resources */,
-				C9C269221649896D00B35DFA /* PCDAboutViewController.xib in Resources */,
-				C9C269231649896D00B35DFA /* PCDViewController_iPad.xib in Resources */,
 				C9C269241649896D00B35DFA /* Localizable.strings in Resources */,
 				C9C269251649896D00B35DFA /* iPadButtonActiveGlossy.png in Resources */,
 				C9C269261649896D00B35DFA /* iPadButtonActiveGlossy@2.png in Resources */,
@@ -858,7 +882,13 @@
 				C9C2695B1649896D00B35DFA /* Default-Portrait~ipad.png in Resources */,
 				C9C2695C1649896D00B35DFA /* Default-Portrait@2x~ipad.png in Resources */,
 				C9C2695D1649896D00B35DFA /* Default-Landscape~ipad.png in Resources */,
-				C96165AC169FA04900532B61 /* PCDWalkthroughViewController.xib in Resources */,
+				C96BB5A916A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
+				C96BB61F16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
+				C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */,
+				C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */,
+				C96BB62816A904F000E5EEEC /* PCDWalkthroughViewController.xib in Resources */,
+				C9D971A916B39BF1003DAD40 /* cardBackground.png in Resources */,
+				C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,40 +941,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				C94DFD34162BAC59002AD5CD /* en */,
-				C94DFD36162BAC5E002AD5CD /* es */,
 				C94DFD37162BAC5E002AD5CD /* fr */,
+				C96BB5A016A7CA5600E5EEEC /* de */,
+				C96BB5AA16A7CB6100E5EEEC /* es */,
+				C96BB5AB16A7CB6500E5EEEC /* it */,
+				C96BB5AC16A7CB6A00E5EEEC /* da */,
+				C96BB5AD16A7CB6F00E5EEEC /* nl */,
+				C96BB5AE16A7CB8000E5EEEC /* sv */,
+				C96BB5AF16A7CB8300E5EEEC /* pt */,
+				C96BB5B016A7CB8C00E5EEEC /* pl */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		C94DFD3A162BBC1D002AD5CD /* PCDAboutViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C94DFD39162BBC1D002AD5CD /* en */,
-				C94DFD3B162BBC23002AD5CD /* es */,
-				C94DFD3C162BBC25002AD5CD /* fr */,
-			);
-			name = PCDAboutViewController.xib;
-			sourceTree = "<group>";
-		};
-		C95FDEEC15D232D5006FE035 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C95FDEED15D232D5006FE035 /* en */,
-				C94DFD29162BAB80002AD5CD /* es */,
-				C94DFD2B162BAB88002AD5CD /* fr */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C95FDEF815D232D5006FE035 /* PCDViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C95FDEF915D232D5006FE035 /* en */,
-				C94DFD28162BAB80002AD5CD /* es */,
-				C94DFD2A162BAB87002AD5CD /* fr */,
-			);
-			name = PCDViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
