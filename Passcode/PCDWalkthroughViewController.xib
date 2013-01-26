@@ -55,7 +55,7 @@
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">1290</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{0, 374}, {320, 36}}</string>
+						<string key="NSFrame">{{0, 375}, {320, 36}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -102,7 +102,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="470146210">
+						<object class="NSColor" key="IBUIBackgroundColor" id="467232809">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
@@ -120,11 +120,11 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">4</int>
 						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="884188176">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="652564378">
 							<int key="type">1</int>
 							<double key="pointSize">16</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="971624376">
+						<object class="NSFont" key="IBUIFont" id="493261713">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">16</double>
 							<int key="NSfFlags">16</int>
@@ -138,7 +138,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="173782063"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="470146210"/>
+				<reference key="IBUIBackgroundColor" ref="467232809"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<reference key="IBUISimulatedDestinationMetrics" ref="176936565"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -160,14 +160,14 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Then type in the domain for a service you need a password for.</string>
+						<string key="IBUIText">Then type in the domain of the service you need a password for.</string>
 						<reference key="IBUITextColor" ref="290368350"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">4</int>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="884188176"/>
-						<reference key="IBUIFont" ref="971624376"/>
+						<reference key="IBUIFontDescription" ref="652564378"/>
+						<reference key="IBUIFont" ref="493261713"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<double key="preferredMaxLayoutWidth">240</double>
 					</object>
@@ -177,7 +177,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="521493255"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="470146210"/>
+				<reference key="IBUIBackgroundColor" ref="467232809"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<reference key="IBUISimulatedDestinationMetrics" ref="176936565"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -199,7 +199,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Generate! Your new, secure passcode is copied to your clipboard.</string>
+						<string type="base64-UTF8" key="IBUIText">R2VuZXJhdGUhCllvdXIgbmV3LCBzZWN1cmUgcGFzc2NvZGUgaXMgY29waWVkIHRvIHlvdXIgY2xpcGJv
+YXJkLg</string>
 						<reference key="IBUITextColor" ref="290368350"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -223,7 +224,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="121599253"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="470146210"/>
+				<reference key="IBUIBackgroundColor" ref="467232809"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<reference key="IBUISimulatedDestinationMetrics" ref="176936565"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -251,8 +252,8 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">4</int>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="884188176"/>
-						<reference key="IBUIFont" ref="971624376"/>
+						<reference key="IBUIFontDescription" ref="652564378"/>
+						<reference key="IBUIFont" ref="493261713"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<double key="preferredMaxLayoutWidth">240</double>
 					</object>
@@ -262,7 +263,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="839838694"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="470146210"/>
+				<reference key="IBUIBackgroundColor" ref="467232809"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<reference key="IBUISimulatedDestinationMetrics" ref="176936565"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
