@@ -100,7 +100,7 @@
 	for ( NSInteger i=0; i < numberOfPages; ++i ) {
 		[allPages[i] setFrame:CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height)];
 	}
-	[self setContentSize:CGSizeMake(self.frame.size.width * numberOfPages, self.frame.size.height)];
+	[self setContentSize:CGSizeMake(self.frame.size.width * numberOfPages, 0)];
 	[_pageControl setNumberOfPages:numberOfPages];
 }
 

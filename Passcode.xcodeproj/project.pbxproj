@@ -240,7 +240,7 @@
 		C96BB5AE16A7CB8000E5EEEC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C96BB5AF16A7CB8300E5EEEC /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C96BB5B016A7CB8C00E5EEEC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C96BB61C16A8F7AE00E5EEEC /* PCDModalViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDModalViewControllerDelegate.h; sourceTree = "<group>"; };
+		C96BB61C16A8F7AE00E5EEEC /* PCDAboutViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDAboutViewControllerDelegate.h; sourceTree = "<group>"; };
 		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
@@ -464,7 +464,7 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
-				C96BB61C16A8F7AE00E5EEEC /* PCDModalViewControllerDelegate.h */,
+				C96BB61C16A8F7AE00E5EEEC /* PCDAboutViewControllerDelegate.h */,
 				C96165B116A169F100532B61 /* NSString+sha256.h */,
 				C96165B216A169F100532B61 /* NSString+sha256.m */,
 				C96165AE16A1298600532B61 /* UITextField+Selections.h */,

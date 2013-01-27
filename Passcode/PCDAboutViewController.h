@@ -10,12 +10,12 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-#import "PCDModalViewControllerDelegate.h"
+#import "PCDAboutViewControllerDelegate.h"
 #import "PCDWalkthroughViewController.h"
 
 @interface PCDAboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
-@property (strong, nonatomic) id<PCDModalViewControllerDelegate> delegate;
+@property (strong, nonatomic) id<PCDAboutViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
 - (IBAction)howToUsePressed:(id)sender;

@@ -55,8 +55,11 @@
 
 - (IBAction)howToUsePressed:(id)sender
 {
-	PCDWalkthroughViewController *walkthrough = [[PCDWalkthroughViewController alloc] initWithNibName:@"PCDWalkthroughViewController" bundle:nil];
-	[self.navigationController pushViewController:walkthrough animated:YES];
+	if ( self.delegate ) {
+		[self.delegate startWalkthrough:self];
+	} else {
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}
 }
 
 - (IBAction)faqPressed:(id)sender

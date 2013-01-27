@@ -10,9 +10,10 @@
 #import "PCDAboutViewController.h"
 
 #import "MTZAppearView.h"
-#import "PCDModalViewControllerDelegate.h"
+#import "MTZWalkthroughPagesView.h"
+#import "PCDAboutViewControllerDelegate.h"
 
-@interface PCDViewController : UIViewController <PCDModalViewControllerDelegate>
+@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
@@ -20,6 +21,11 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZAppearView *copiedView;
+
+// Walthrough
+@property (strong, nonatomic) IBOutlet MTZWalkthroughPagesView *pagesView;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) IBOutlet UIView *page1, *page2, *page3, *page4;
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;
