@@ -193,6 +193,7 @@
 		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C910315C1641E5FA00A59FCA /* iPadCopied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadCopied.png; path = resources/iPad/iPadCopied.png; sourceTree = "<group>"; };
 		C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadCopied@2x.png"; path = "resources/iPad/iPadCopied@2x.png"; sourceTree = "<group>"; };
+		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
 		C929BE6F16937CDB0025A512 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		C929BE7116937F3B0025A512 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
 		C929BE75169380980025A512 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
@@ -211,7 +212,6 @@
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C95FDEE715D232D5006FE035 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
 		C95FDEEF15D232D5006FE035 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C95FDEF115D232D5006FE035 /* Passcode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passcode-Prefix.pch"; sourceTree = "<group>"; };
 		C95FDEF215D232D5006FE035 /* PCDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDAppDelegate.h; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 		C95FDEEA15D232D5006FE035 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C95FDEEB15D232D5006FE035 /* Passcode-Info.plist */,
+				C9286B0E16B6E552008E6652 /* Passcode-Info.plist */,
 				C9BBC21115DEE81C00E16FBB /* Settings.bundle */,
 				C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */,
 				C94DFD33162BAC59002AD5CD /* Localizable.strings */,
@@ -956,7 +956,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Passcode-Info.plist";
+				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
@@ -977,7 +977,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Passcode-Info.plist";
+				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "E74C1706-5850-45B6-99B0-93ADDD385D04";
@@ -991,7 +991,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
-				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
+				INFOPLIST_FILE = "Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1005,7 +1005,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
-				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
+				INFOPLIST_FILE = "Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1027,7 +1027,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks/KIF/**",
 				);
-				INFOPLIST_FILE = "Passcode copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1054,7 +1053,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks/KIF/**",
 				);
-				INFOPLIST_FILE = "Passcode copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

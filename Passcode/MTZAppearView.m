@@ -98,7 +98,7 @@
 	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
 	[fadeOut setFromValue:@1.0f];
 	[fadeOut setToValue:@0.0f];
-	[fadeOut setDuration:.75f];
+	[fadeOut setDuration:0.75f];
 	[[self layer] addAnimation:fadeOut forKey:@"alpha"];
 	[self setAlpha:0.0f];
 }
