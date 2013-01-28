@@ -50,6 +50,10 @@
 	[_pagesView addPages:@[_page1, _page2, _page3, _page4]];
 	[_pagesView setPageControl:_pageControl];
 	
+	[_pagesView performSelector:@selector(animateForMasterPassword) withObject:self whenStoppedOnPageIndex:0];
+	[_pagesView performSelector:@selector(animateForDomain) withObject:self whenStoppedOnPageIndex:1];
+	[_pagesView performSelector:@selector(animateForGenerate) withObject:self whenStoppedOnPageIndex:2];
+	
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
@@ -254,6 +258,8 @@
 	[_domainField becomeFirstResponder];
 }
 
+#pragma mark Walkthrough
+
 - (void)startWalkthrough:(id)sender
 {
 	[sender dismissViewControllerAnimated:YES completion:nil];
@@ -262,6 +268,23 @@
 	[_pagesView setHidden:NO];
 	[_pageControl setHidden:NO];
 }
+
+- (void)animateForMasterPassword
+{
+	NSLog(@"animateForMasterPassword");
+}
+
+- (void)animateForDomain
+{
+	NSLog(@"animateForDomain");
+}
+
+- (void)animateForGenerate
+{
+	NSLog(@"animateForGenerate");
+}
+
+#pragma mark Text Field Delegate Methods
 
 - (IBAction)textDidChange:(id)sender
 {

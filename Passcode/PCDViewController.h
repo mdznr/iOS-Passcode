@@ -33,4 +33,8 @@
 - (IBAction)viewAbout:(id)sender;
 - (IBAction)textDidChange:(id)sender;
 
+- (void)animateForMasterPassword;
+- (void)animateForDomain;
+- (void)animateForGenerate;
+
 @end

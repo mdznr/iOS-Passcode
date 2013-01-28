@@ -11,7 +11,6 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 #import "PCDAboutViewControllerDelegate.h"
-#import "PCDWalkthroughViewController.h"
 
 @interface PCDAboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
