@@ -193,7 +193,7 @@
 		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C910315C1641E5FA00A59FCA /* iPadCopied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadCopied.png; path = resources/iPad/iPadCopied.png; sourceTree = "<group>"; };
 		C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadCopied@2x.png"; path = "resources/iPad/iPadCopied@2x.png"; sourceTree = "<group>"; };
-		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
+		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
 		C929BE6F16937CDB0025A512 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		C929BE7116937F3B0025A512 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
 		C929BE75169380980025A512 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
