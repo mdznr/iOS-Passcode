@@ -12,6 +12,8 @@
 {
 	NSMutableArray *allPages;
 	int currentPageIndex;
+	NSMutableArray *selectorsForPages;
+	NSMutableArray *objectsForPages;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -55,6 +57,9 @@
 	
 	// Most walkthroughs should have at least three items.
 	allPages = [[NSMutableArray alloc] initWithCapacity:3];
+	
+	selectorsForPages = [[NSMutableArray alloc] initWithCapacity:3];
+	objectsForPages = [[NSMutableArray alloc] initWithCapacity:3];
 	
 	// Start off the walkthrough on the first page
 	currentPageIndex = 0;
@@ -109,7 +114,8 @@
 			 withObject:(id)object
  whenStoppedOnPageIndex:(int)index
 {
-	
+	[selectorsForPages insertObject:NSStringFromSelector(aSelector) atIndex:index];
+	[objectsForPages insertObject:object atIndex:index];
 }
 
 - (void)scrollToPageIndex:(int)index
@@ -143,8 +149,35 @@
 
 #pragma mark UIScrollViewDelegate methods
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+	// Check if selector is set for page index
+	id object;
+	SEL selector;
+	
+	// Ensure currentPageIndex is included in objectsForPages
+	if ( [objectsForPages count] > currentPageIndex ) {
+		object = [objectsForPages objectAtIndex:currentPageIndex];
+	} else {
+		return;
+	}
+	
+	// Ensure currentPageIndex is included in selectorsForPages
+	if ( [selectorsForPages count] > currentPageIndex ) {
+		selector = NSSelectorFromString([selectorsForPages objectAtIndex:currentPageIndex]);
+	} else {
+		return;
+	}
+	
+	// Perform selector
+//	if ( object && selector && [object respondsToSelector:selector] ) {
+		[object performSelector:selector];
+//	}
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+	// Calculate the current page index and set it
 	currentPageIndex = (int) ( scrollView.contentOffset.x / scrollView.frame.size.width + .5 );
 	[_pageControl setCurrentPage:currentPageIndex];
 }
