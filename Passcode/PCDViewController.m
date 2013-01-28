@@ -24,8 +24,9 @@
 #import "PDKeychainBindings.h"
 #import "NSString+sha256.h"
 
-@interface PCDViewController ()
-
+@interface PCDViewController () {
+	BOOL isPresentingWalkthrough;
+}
 @end
 
 @implementation PCDViewController
@@ -264,9 +265,32 @@
 {
 	[sender dismissViewControllerAnimated:YES completion:nil];
 	[_domainField resignFirstResponder];
+	[_passwordField resignFirstResponder];
 	
 	[_pagesView setHidden:NO];
 	[_pageControl setHidden:NO];
+	
+	isPresentingWalkthrough = YES;
+}
+
+- (void)endWalkthrough
+{
+	CFTimeInterval duration = 0.3f;
+	
+	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
+	[fadeOut setFromValue:@1.0f];
+	[fadeOut setToValue:@0.0f];
+	[fadeOut setDuration:duration];
+	
+	[[_pagesView layer] addAnimation:fadeOut forKey:@"alpha"];
+	[_pagesView performSelector:@selector(setHidden:) withObject:@YES afterDelay:duration];
+	[_pagesView setAlpha:1.0f];
+	
+	[[_pageControl layer] addAnimation:fadeOut forKey:@"alpha"];
+	[_pageControl performSelector:@selector(setHidden:) withObject:@YES afterDelay:duration];
+	[_pageControl setAlpha:1.0f];
+	
+	isPresentingWalkthrough = NO;
 }
 
 - (void)animateForMasterPassword
@@ -307,6 +331,12 @@
 	{
 		[_domainField setReturnKeyType:UIReturnKeyNext];
 	}
+	
+	// End walkthrough if previously presenting it
+	if ( isPresentingWalkthrough ) {
+		[self endWalkthrough];
+	}
+	
 	return YES;		// What does the return value do?
 }
 
@@ -365,12 +395,10 @@
 // Subscribe to keyboard notifications
 - (void)registerForKeyboardNotifications
 {
-	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardChanged:)
 												 name:UIKeyboardWillShowNotification
 											   object:nil];
-	
 }
 
 - (void)viewDidUnload
@@ -383,4 +411,5 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[super viewDidUnload];
 }
+
 @end
