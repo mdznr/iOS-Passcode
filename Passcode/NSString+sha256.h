@@ -10,6 +10,9 @@
 
 @interface NSString (sha256)
 
++ (NSString *)base64StringFromData:(NSData *)theData;
+
+- (NSData *)sha256Data;
 - (NSString*)sha256;
 
 @end
