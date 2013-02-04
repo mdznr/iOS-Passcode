@@ -51,8 +51,7 @@
     const char *str = [self UTF8String];
     unsigned char result[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(str, strlen(str), result);
-	NSData* data = [NSData dataWithBytes:(const void *)result length:sizeof(unsigned char)*CC_SHA256_DIGEST_LENGTH];
-	return data;
+	return [NSData dataWithBytes:(const void *)result length:sizeof(unsigned char)*CC_SHA256_DIGEST_LENGTH];
 }
 
 // Returns a NSString with hex data from sha256
