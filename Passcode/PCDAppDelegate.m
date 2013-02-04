@@ -43,8 +43,7 @@
     [self.window makeKeyAndVisible];
 	
 	// Display About if app hasn't been launched before
-	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] )
-	{
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
 		[self.viewController viewAbout:self];
 	}
@@ -61,25 +60,17 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-	NSLog(@"%@", [url absoluteString]);
-
-	if ( [[url absoluteString] hasPrefix:@"passcode://"] )
-	{
+	if ( [[url absoluteString] hasPrefix:@"passcode://"] ) {
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
 		[self.viewController.domainField setText:components[[components count]-2]];
 		[self.viewController textDidChange:self];
 		[self.viewController.domainField moveCursorToEnd];
 		
-		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"comingFromURLScheme"];
-		
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
 		
 		return YES;
-		
-	}
-	else
-	{
+	} else {
 		return NO;
 	}
 }
@@ -107,15 +98,8 @@
 	
 	[_viewController checkPasteboard];
 	[_viewController checkSecuritySetting];
-	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"comingFromURLScheme"] == YES )
-	{
-		[_viewController.domainField becomeFirstResponder];
-		[_viewController.domainField selectAll:self];
-	}
-	else
-	{
-		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"comingFromURLScheme"];
-	}
+	[_viewController.domainField becomeFirstResponder];
+	[_viewController.domainField selectAll:self];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
