@@ -23,6 +23,7 @@
 #import "PCDViewController.h"
 #import "PDKeychainBindings.h"
 #import "NSString+sha256.h"
+#import "NSString+characterSwaps.h"
 
 @interface PCDViewController () {
 	BOOL isPresentingWalkthrough;
@@ -230,8 +231,8 @@
 	NSString *password = [NSString base64StringFromData:passwordData];
 	
 	// Now replace + and / with ! and # to improve password compatibility
-	password = [password stringByReplacingOccurrencesOfString:@"+" withString:@"!"];
-	password = [password stringByReplacingOccurrencesOfString:@"/" withString:@"#"];
+	password = [password stringByReplacingOccurrencesOfCharacter:'+' withCharacter:'!'];
+	password = [password stringByReplacingOccurrencesOfCharacter:'/' withCharacter:'#'];
 	
 	// Copy it to pasteboard
 	[[UIPasteboard generalPasteboard] setString:[password substringToIndex:16]];
