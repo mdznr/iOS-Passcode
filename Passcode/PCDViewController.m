@@ -225,7 +225,9 @@
 	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
 	// Create the hash
-	NSString *password = [[_domainField.text stringByAppendingString:_passwordField.text] sha256];
+	NSString *concatination = [_domainField.text stringByAppendingString:_passwordField.text];
+	NSData *passwordData = [concatination sha256Data];
+	NSString *password = [NSString base64StringFromData:passwordData];
 	
 	// Copy it to pasteboard
 	[[UIPasteboard generalPasteboard] setString:[password substringToIndex:16]];
@@ -257,6 +259,11 @@
 {
 	[sender dismissViewControllerAnimated:YES completion:nil];
 	[_domainField becomeFirstResponder];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	[_pagesView viewDidResize];
 }
 
 #pragma mark Walkthrough
