@@ -229,6 +229,10 @@
 	NSData *passwordData = [concatination sha256Data];
 	NSString *password = [NSString base64StringFromData:passwordData];
 	
+	// Now replace + and / with ! and # to improve password compatibility
+	password = [password stringByReplacingOccurrencesOfString:@"+" withString:@"!"];
+	password = [password stringByReplacingOccurrencesOfString:@"/" withString:@"#"];
+	
 	// Copy it to pasteboard
 	[[UIPasteboard generalPasteboard] setString:[password substringToIndex:16]];
 	

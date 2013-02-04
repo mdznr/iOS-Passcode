@@ -21,9 +21,7 @@
     const uint8_t *input = (const uint8_t *)[theData bytes];
     NSInteger length = [theData length];
 	
-//	static char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-// Modified table for Passcode (will eventually just mode replace + and / to ! and # elsewhere
-	static char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#=";
+	static char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 	
 	NSMutableData *data = [NSMutableData dataWithLength:((length + 2) / 3) * 4];
 	uint8_t *output = (uint8_t *)data.mutableBytes;
