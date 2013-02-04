@@ -226,7 +226,7 @@
 	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
 	// Create the hash
-	NSString *concatination = [_domainField.text stringByAppendingString:_passwordField.text];
+	NSString *concatination = [[_domainField.text lowercaseString] stringByAppendingString:_passwordField.text];
 	NSData *passwordData = [concatination sha256Data];
 	NSString *password = [NSString base64StringFromData:passwordData];
 	
