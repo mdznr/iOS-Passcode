@@ -25,7 +25,7 @@
 // Walthrough
 @property (strong, nonatomic) IBOutlet MTZWalkthroughPagesView *pagesView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (strong, nonatomic) IBOutlet UIView *page1, *page2, *page3, *page4;
+@property (strong, nonatomic) IBOutlet UIView *page1, *page2, *page3, *page4, *page5;
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;

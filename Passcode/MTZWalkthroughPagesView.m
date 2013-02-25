@@ -99,6 +99,12 @@
 	[self updateSizingAndPositioning];
 }
 
+- (void)viewDidResize
+{
+	[self updateSizingAndPositioning];
+	[self scrollToPageIndex:currentPageIndex];
+}
+
 - (void)updateSizingAndPositioning
 {
 	NSInteger numberOfPages = allPages.count;
@@ -109,7 +115,6 @@
 	[_pageControl setNumberOfPages:numberOfPages];
 }
 
-#warning add ability to perform selector when page is stopped on
 - (void)performSelector:(SEL)aSelector
 			 withObject:(id)object
  whenStoppedOnPageIndex:(int)index
@@ -123,7 +128,7 @@
     CGRect pageFrame = CGRectMake(self.frame.size.width * index,
 								  0,
 								  self.frame.size.width,
-								  self.frame.size.height);
+								  0);
 	
     [self scrollRectToVisible:pageFrame animated:YES];
 	

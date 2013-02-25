@@ -25,4 +25,6 @@
 - (void)scrollToPreviousPage;
 - (void)scrollToNextPage;
 
+- (void)viewDidResize;
+
 @end

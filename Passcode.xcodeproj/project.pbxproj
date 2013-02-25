@@ -20,6 +20,8 @@
 		C93EF74916434F6000C317BB /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74416434F6000C317BB /* iTunesArtwork.png */; };
 		C93EF74A16434F6000C317BB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74516434F6000C317BB /* Icon-72.png */; };
 		C93EF74B16434F6000C317BB /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74616434F6000C317BB /* Icon-72@2x.png */; };
+		C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */; };
+		C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */; };
 		C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
@@ -204,6 +206,8 @@
 		C93EF74416434F6000C317BB /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		C93EF74516434F6000C317BB /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		C93EF74616434F6000C317BB /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+characterSwaps.h"; sourceTree = "<group>"; };
+		C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+characterSwaps.m"; sourceTree = "<group>"; };
 		C94DFC5816288D0B002AD5CD /* PCDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDAboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDAboutViewController.m; sourceTree = "<group>"; };
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 				C96BB61C16A8F7AE00E5EEEC /* PCDAboutViewControllerDelegate.h */,
 				C96165B116A169F100532B61 /* NSString+sha256.h */,
 				C96165B216A169F100532B61 /* NSString+sha256.m */,
+				C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */,
+				C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */,
 				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
 				C961662416A5280D00532B61 /* Walkthrough Pages View */,
@@ -890,6 +896,7 @@
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C96165F316A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */,
+				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +916,7 @@
 				C9C2696C16498D5100B35DFA /* KIFTestScenario+EXAdditions.m in Sources */,
 				C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */,
 				C96165F416A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */,
+				C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

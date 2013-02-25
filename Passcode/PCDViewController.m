@@ -49,7 +49,7 @@
 																		  green:52.0f/255.0f
 																		   blue:154.0f/255.0f
 																		  alpha:1.0f]];
-	[_pagesView addPages:@[_page1, _page2, _page3, _page4]];
+	[_pagesView addPages:@[_page1, _page2, _page3, _page4, _page5]];
 	[_pagesView setPageControl:_pageControl];
 	
 	[_pagesView performSelector:@selector(animateForMasterPassword) withObject:self whenStoppedOnPageIndex:0];
