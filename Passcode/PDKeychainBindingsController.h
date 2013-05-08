@@ -18,10 +18,11 @@
 + (PDKeychainBindingsController *)sharedKeychainBindingsController;
 - (PDKeychainBindings *) keychainBindings;
 
-- (id)values;    // accessor object for PDKeychainBindings values. This property is observable using key-value observing.
+// accessor object for PDKeychainBindings values. This property is observable using key-value observing.
+- (id)values;
 
-- (NSString*)stringForKey:(NSString*)key;
-- (BOOL)storeString:(NSString*)string forKey:(NSString*)key;
+- (NSString *)stringForKey:(NSString *)key;
+- (BOOL)storeString:(NSString *)string forKey:(NSString *)key;
 
 @end
 

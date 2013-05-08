@@ -99,7 +99,9 @@
 	[_viewController checkPasteboard];
 	[_viewController checkSecuritySetting];
 	[_viewController.domainField becomeFirstResponder];
-	[_viewController.domainField selectAll:self];
+	if ( _viewController.domainField.text.length > 0 ) {
+		[_viewController.domainField selectAll:self];
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

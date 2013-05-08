@@ -18,9 +18,6 @@
 - (void)addPage:(UIView *)view atIndex:(int)index;
 - (void)addPages:(NSArray *)pages;
 
-- (void)performSelector:(SEL)aSelector
-			 withObject:(id)object
- whenStoppedOnPageIndex:(int)index;
 - (void)scrollToPageIndex:(int)index;
 - (void)scrollToPreviousPage;
 - (void)scrollToNextPage;

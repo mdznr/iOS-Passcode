@@ -10,16 +10,20 @@
 #import "PCDAboutViewController.h"
 
 #import "MTZAppearView.h"
+#import "MTZSlideToReveal.h"
 #import "MTZWalkthroughPagesView.h"
 #import "PCDAboutViewControllerDelegate.h"
 
-@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate>
+@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate, UITableViewDataSource>
+
+#pragma mark Domain
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet UITextField *domainField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
+@property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) IBOutlet MTZAppearView *copiedView;
 
 // Walthrough
@@ -36,5 +40,9 @@
 - (void)animateForMasterPassword;
 - (void)animateForDomain;
 - (void)animateForGenerate;
+
+#pragma mark Restrictions
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "PCDAboutViewController.h"
+#import <StoreKit/StoreKit.h>
 
-@interface PCDAboutViewController ()
+@interface PCDAboutViewController () <SKStoreProductViewControllerDelegate>
 
 @end
 
@@ -73,8 +74,7 @@
 
 - (IBAction)supportPressed:(id)sender
 {
-	if ([MFMailComposeViewController canSendMail])
-    {
+	if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
 		
@@ -86,17 +86,14 @@
 		
 		[mailer setModalPresentationStyle:UIModalPresentationPageSheet];
         [self presentModalViewController:mailer animated:YES];
-    }
-    else
-    {
-		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://mdznr.com/passcode/support"]];
+    } else {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://passcod.es/support"]];
     }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-	switch ( result )
-	{
+	switch ( result ) {
 		case MFMailComposeResultCancelled:
 			NSLog(@"Support Email Cancelled");
 			break;
@@ -118,12 +115,40 @@
 
 - (IBAction)writeAReviewPressed:(id)sender
 {
-		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"]];
+	// Check if SKStoreProductViewController is available (iOS 6 and later)
+	if ( [SKStoreProductViewController class] ) {
+		SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
+        storeViewController.delegate = self;
+		
+        NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier:[NSNumber numberWithInteger:554389206]};
+		
+        [storeViewController loadProductWithParameters:parameters
+									   completionBlock:^(BOOL result, NSError *error) {
+										   if ( result ) {
+//											   [self presentViewController:storeViewController
+//																  animated:YES
+//																completion:nil];
+										   }
+									   }];
+		[self presentViewController:storeViewController animated:YES completion:nil];
+
+	} else {
+		NSURL *appStoreURL = [NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"];
+		[[UIApplication sharedApplication] openURL:appStoreURL];
+	}
 }
 
 - (void)viewDidUnload
 {
 	[super viewDidUnload];
+}
+
+#pragma mark -
+#pragma mark SKStoreProductViewControllerDelegate
+
+-(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+{
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
