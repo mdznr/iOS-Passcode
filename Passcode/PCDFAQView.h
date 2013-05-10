@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MTZFrequentlyAskedQuestion.h"
 
 @interface PCDFAQView : UIView
 
 - (void)setQuestionText:(NSString *)questionText andAnswerText:(NSString *)answerText;
-- (void)setFAQ:(MTZFrequentlyAskedQuestion *)faq;
 
 @end

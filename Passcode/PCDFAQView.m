@@ -106,9 +106,4 @@
 	[self setFrame:CGRectMake(r.origin.x, r.origin.y, 304, _backgroundMain.frame.origin.y + _backgroundMain.frame.size.height)];
 }
 
-- (void)setFAQ:(MTZFrequentlyAskedQuestion *)faq
-{
-	[self setQuestionText:faq.question andAnswerText:faq.answer];
-}
-
 @end

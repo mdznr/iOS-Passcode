@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Question</key>
+		<string>Are passwords being sent to a server?</string>
+		<key>Answer</key>
+		<string>No. No data is ever sent to or from Passcode. All passwords are generated using code within the app itself. Password and other usage data are never sent outside of the app.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Is Passcode available on other platforms?</string>
+		<key>Answer</key>
+		<string>Yes! Passcode is available on several other platforms. Information on where to get these apps is available on *http://passcod.es*.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>After generating a passcode, how can it be retrieved again?</string>
+		<key>Answer</key>
+		<string>Simply generate it again. Using the same domain and master password, this app will always generate the same output.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Can the master password be found from the generated passcode?</string>
+		<key>Answer</key>
+		<string>No. Passcode uses an algorithm that cannot be reversed. Generated passcodes can be used without the possibility of someone figuring out the master password.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>How is this different than 1Password?</string>
+		<key>Answer</key>
+		<string>The 1Password app randomly generates passwords and stores them in a database. That&apos;s data that can be lost or stolen. If the database file is lost or becomes corrupted, access to all accounts can be gone forever. Or even worse, if that database is compromised, someone else may have access to your accounts.
+Passcode generates passcodes on the fly every time they&apos;re needed and are not stored. Passcode also works offline and doesn&apos;t require syncing between platforms.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>Is there a faster way to enter the domain field?</string>
+		<key>Answer</key>
+		<string>Opening the app with a proper URL in the clipboard will automatically fill the domain field. A bookmarklet can also be added to your web browser to open Passcode with the domain of the current page. [Include information on how to install javascript bookmarklet].</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>How is this app free?</string>
+		<key>Answer</key>
+		<string>Passcode is developed by *students* as part of a research program at *Rensselaer Polytechnic Institute*. The source code is *open-souce*. Students gain knowledge and experience, and users get free software. Everyone wins.</string>
+	</dict>
+	<dict>
+		<key>Question</key>
+		<string>How can I thank you?</string>
+		<key>Answer</key>
+		<string>You can help by kindly donating. Or, if you have software development experience, you can help by contributing to the development of this project (mainly for other platforms). Visit http://passcod.es for more information.</string>
+	</dict>
+</array>
+</plist>
