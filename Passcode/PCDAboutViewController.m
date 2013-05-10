@@ -7,6 +7,7 @@
 //
 
 #import "PCDAboutViewController.h"
+#import "PCDFAQViewController.h"
 #import <StoreKit/StoreKit.h>
 
 @interface PCDAboutViewController () <SKStoreProductViewControllerDelegate>
@@ -65,7 +66,7 @@
 
 - (IBAction)faqPressed:(id)sender
 {
-	UIViewController *faq = [[UIViewController alloc] init];
+	PCDFAQViewController *faq = [[PCDFAQViewController alloc] init];
 	faq.title = @"FAQ";
 	[self.navigationController pushViewController:faq animated:YES];
 }
@@ -116,22 +117,14 @@
 - (IBAction)writeAReviewPressed:(id)sender
 {
 	// Check if SKStoreProductViewController is available (iOS 6 and later)
-	if ( [SKStoreProductViewController class] ) {
+	if ( NSStringFromClass([SKStoreProductViewController class]) != nil ) {
 		SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
         storeViewController.delegate = self;
 		
-        NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier:[NSNumber numberWithInteger:554389206]};
+        NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier:@554389206};
 		
-        [storeViewController loadProductWithParameters:parameters
-									   completionBlock:^(BOOL result, NSError *error) {
-										   if ( result ) {
-//											   [self presentViewController:storeViewController
-//																  animated:YES
-//																completion:nil];
-										   }
-									   }];
+        [storeViewController loadProductWithParameters:parameters completionBlock:nil];
 		[self presentViewController:storeViewController animated:YES completion:nil];
-
 	} else {
 		NSURL *appStoreURL = [NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=554389206"];
 		[[UIApplication sharedApplication] openURL:appStoreURL];
