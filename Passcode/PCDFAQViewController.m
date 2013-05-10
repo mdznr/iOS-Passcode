@@ -52,9 +52,42 @@
 {
 	[self setTitle:@"FAQs"];
 	
-	// Path to the plist (in the application bundle)
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"FAQs" ofType:@"plist"];
+//	NSURL *url = [NSURL URLWithString:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
+	NSURL *url = [NSURL URLWithString:@"http://mdznr.com/FAQs.plist"];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f];
+	[NSURLConnection sendAsynchronousRequest:request
+									   queue:[NSOperationQueue new]
+						   completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+							   NSLog(@"%@", response.suggestedFilename);
+							   
+							   // Get the documents directory:
+							   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+							   NSString *documents = [paths objectAtIndex:0];
+							   
+							   // File name to write data to
+							   NSString *path = [NSString stringWithFormat:@"%@/FAQs.plist", documents];
+							   
+							   // Save content to the documents directory
+							   [data writeToFile:path atomically:NO];
+							   
+							   [self reloadTableView];
+						   }];
 	
+	// Get the documents directory:
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+	// Path to FAQs plist
+	NSString *path = [NSString stringWithFormat:@"%@/FAQs.plist", documentsDirectory];
+	
+	BOOL fileExistsInDocuments = [[NSFileManager defaultManager] fileExistsAtPath:path];
+	if ( !fileExistsInDocuments ) {
+		// Copy file from app bundle to documents
+		NSString *p = [[NSBundle mainBundle] pathForResource:@"FAQs" ofType:@"plist"];
+		[[NSFileManager defaultManager] copyItemAtPath:p toPath:path error:nil];
+	}
+	
+	// Inititalise array with plist
 	_questionsAndAnswers = [[NSMutableArray alloc] initWithContentsOfFile:path];
 	
 	_tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -110,6 +143,35 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	
+}
+
+- (void)reloadTableView
+{
+	// Get the documents directory:
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+	// Path to FAQs plist
+	NSString *path = [NSString stringWithFormat:@"%@/FAQs.plist", documentsDirectory];
+		
+	dispatch_async(dispatch_get_main_queue(), ^{
+		NSUInteger oldCount = [_questionsAndAnswers count];
+		_questionsAndAnswers = [[NSMutableArray alloc] initWithContentsOfFile:path];
+		NSUInteger newCount = [_questionsAndAnswers count];
+		
+		[self.tableView beginUpdates];
+		for (NSUInteger i = 0; i < oldCount; i++) {
+			[self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
+								  withRowAnimation:UITableViewRowAnimationFade];
+		}
+		for (NSUInteger i = 0; i < newCount; i++) {
+			[self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
+								  withRowAnimation:UITableViewRowAnimationFade];
+		}
+		[self.tableView endUpdates];
+		
+	});
 	
 }
 
