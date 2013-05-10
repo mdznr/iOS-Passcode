@@ -52,6 +52,8 @@
 
 - (void)setup
 {
+	[self setTitle:@"FAQs"];
+	
 	_questionsAndAnswers = [[NSMutableArray alloc] initWithCapacity:4];
 	[_questionsAndAnswers addObject:[MTZFrequentlyAskedQuestion faqWithQuestion:@"Are passwords being sent to a server?"
 																	  andAnswer:@"No. No data is ever sent to or from Passcode. All passwords are generated using code within the app itself. Password and other usage data are never sent outside of the app."]];
@@ -113,7 +115,7 @@
 					constrainedToSize:CGSizeMake(280.0f, FLT_MAX)
 						lineBreakMode:NSLineBreakByWordWrapping];
 	
-	CGFloat totalHeight = q.height + a.height + 33; // 33 is for paddings
+	CGFloat totalHeight = q.height + a.height + 34; // 34 is for paddings
 	
 	return totalHeight;
 }
@@ -138,6 +140,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *c = [[UITableViewCell alloc] init];
+	[c setSelectionStyle:UITableViewCellSelectionStyleNone];
 	PCDFAQView *faqView = [[PCDFAQView alloc] initWithFrame:CGRectMake(8, 5, 304, 118)];
 	[faqView setFAQ:_questionsAndAnswers[indexPath.row]];
 	[c.contentView addSubview:faqView];

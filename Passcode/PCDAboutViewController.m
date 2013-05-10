@@ -67,7 +67,6 @@
 - (IBAction)faqPressed:(id)sender
 {
 	PCDFAQViewController *faq = [[PCDFAQViewController alloc] init];
-	faq.title = @"FAQ";
 	[self.navigationController pushViewController:faq animated:YES];
 }
 
@@ -96,16 +95,16 @@
 {
 	switch ( result ) {
 		case MFMailComposeResultCancelled:
-			NSLog(@"Support Email Cancelled");
+//			NSLog(@"Support Email Cancelled");
 			break;
 		case MFMailComposeResultFailed:
-			NSLog(@"Support Email Failed");
+//			NSLog(@"Support Email Failed");
 			break;
 		case MFMailComposeResultSaved:
-			NSLog(@"Support Email Saved");
+//			NSLog(@"Support Email Saved");
 			break;
 		case MFMailComposeResultSent:
-			NSLog(@"Support Email Sent");
+//			NSLog(@"Support Email Sent");
 			break;
 		default:
 			break;
