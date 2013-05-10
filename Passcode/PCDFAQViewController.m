@@ -23,7 +23,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		[self setup];
     }
     return self;
 }
@@ -33,7 +32,6 @@
 	self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-		[self setup];
     }
     return self;
 }
@@ -43,35 +41,16 @@
     self = [super init];
     if (self) {
         // Custom initialization
-		[self setup];
     }
     return self;
 }
 
-- (void)setup
+- (void)viewDidLoad
 {
-	[self setTitle:@"FAQs"];
+	[super viewDidLoad];
+	// Do any additional setup after loading the view.
 	
-//	NSURL *url = [NSURL URLWithString:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
-	NSURL *url = [NSURL URLWithString:@"http://mdznr.com/FAQs.plist"];
-	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f];
-	[NSURLConnection sendAsynchronousRequest:request
-									   queue:[NSOperationQueue new]
-						   completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-							   NSLog(@"%@", response.suggestedFilename);
-							   
-							   // Get the documents directory:
-							   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-							   NSString *documents = [paths objectAtIndex:0];
-							   
-							   // File name to write data to
-							   NSString *path = [NSString stringWithFormat:@"%@/FAQs.plist", documents];
-							   
-							   // Save content to the documents directory
-							   [data writeToFile:path atomically:NO];
-							   
-							   [self reloadTableView];
-						   }];
+	[self setTitle:@"FAQs"];
 	
 	// Get the documents directory:
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -90,6 +69,31 @@
 	// Inititalise array with plist
 	_questionsAndAnswers = [[NSMutableArray alloc] initWithContentsOfFile:path];
 	
+//	NSURL *url = [NSURL URLWithString:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
+	NSURL *url = [NSURL URLWithString:@"http://mdznr.com/FAQs.plist"];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f];
+	[NSURLConnection sendAsynchronousRequest:request
+									   queue:[NSOperationQueue new]
+						   completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+							   NSLog(@"%@", response.suggestedFilename);
+							   
+							   // Get the documents directory:
+							   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+							   NSString *documents = [paths objectAtIndex:0];
+							   
+							   // File name to write data to
+							   NSString *path = [NSString stringWithFormat:@"%@/FAQs.plist", documents];
+							   
+							   if ( [data isEqualToData:[[NSData alloc] initWithContentsOfFile:path]] ) {
+								   NSLog(@"SAME");
+							   } else {
+								   NSLog(@"NOT SAME");
+								   // Save content to the documents directory
+								   [data writeToFile:path atomically:NO];
+								   [self reloadTableView];
+							   }
+						   }];
+	
 	_tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 	[_tableView setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth)];
 	[_tableView setDelegate:self];
@@ -99,12 +103,6 @@
 	[_tableView setBackgroundColor:[UIColor colorWithWhite:0.93f alpha:1.0f]];
 	
 	[self.view addSubview:_tableView];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -161,16 +159,15 @@
 		NSUInteger newCount = [_questionsAndAnswers count];
 		
 		[self.tableView beginUpdates];
-		for (NSUInteger i = 0; i < oldCount; i++) {
+		for ( NSUInteger i=0; i<oldCount; ++i ) {
 			[self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
 								  withRowAnimation:UITableViewRowAnimationFade];
 		}
-		for (NSUInteger i = 0; i < newCount; i++) {
+		for ( NSUInteger i=0; i<newCount; ++i ) {
 			[self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
 								  withRowAnimation:UITableViewRowAnimationFade];
 		}
 		[self.tableView endUpdates];
-		
 	});
 	
 }
