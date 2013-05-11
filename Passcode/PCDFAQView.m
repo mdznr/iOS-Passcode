@@ -51,7 +51,8 @@
 
 - (void)setup
 {
-	[self setOpaque:NO];
+	[self setBackgroundColor:[UIColor colorWithWhite:0.93f alpha:1.0f]];
+	[self setOpaque:YES];
 	
 	_backgroundMain = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 304, 170)];
 	UIImage *main = [UIImage imageNamed:@"FAQBackgroundMain"];
