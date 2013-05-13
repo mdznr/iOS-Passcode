@@ -26,24 +26,9 @@
 	self = [super initWithCoder:aDecoder];
     if ( self )
 	{
-		// If running iOS 6.0 or higher, use smooth button resources, else glossy.
-		BOOL smooth = NO;
-		NSString *reqSysVer = @"6.0";
-		NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
-		if ( [currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending ) smooth = YES;
-		 
 		// Set up Generate Button
-		
-		if ( smooth )	// iOS 6: smooth assets
-		{
-			[self setBackgroundImage:[UIImage imageNamed:@"buttonEnabled"] forState:UIControlStateNormal];
-			[self setBackgroundImage:[UIImage imageNamed:@"buttonActive"] forState:UIControlStateHighlighted];
-		}
-		else	// Less than iOS 6: glossy assets
-		{
-			[self setBackgroundImage:[UIImage imageNamed:@"buttonEnabledGlossy"] forState:UIControlStateNormal];
-			[self setBackgroundImage:[UIImage imageNamed:@"buttonActiveGlossy"] forState:UIControlStateHighlighted];
-		}
+		[self setBackgroundImage:[UIImage imageNamed:@"buttonEnabled"] forState:UIControlStateNormal];
+		[self setBackgroundImage:[UIImage imageNamed:@"buttonActive"] forState:UIControlStateHighlighted];
 		
 		[self setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		[self setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -92,10 +92,6 @@
 						</object>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="923692979">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">buttonEnabled.png</string>
-						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="616726734">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
@@ -125,7 +121,6 @@
 						<reference key="IBUIHighlightedTitleColor" ref="1029787157"/>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
-						<reference key="IBUINormalBackgroundImage" ref="923692979"/>
 						<reference key="IBUIFontDescription" ref="616726734"/>
 						<reference key="IBUIFont" ref="796374905"/>
 					</object>
@@ -148,7 +143,6 @@
 						<reference key="IBUIHighlightedTitleColor" ref="1029787157"/>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
-						<reference key="IBUINormalBackgroundImage" ref="923692979"/>
 						<reference key="IBUIFontDescription" ref="616726734"/>
 						<reference key="IBUIFont" ref="796374905"/>
 					</object>
@@ -174,7 +168,6 @@
 						<reference key="IBUIHighlightedTitleColor" ref="1029787157"/>
 						<reference key="IBUINormalTitleColor" ref="408678621"/>
 						<reference key="IBUINormalTitleShadowColor" ref="1029787157"/>
-						<reference key="IBUINormalBackgroundImage" ref="923692979"/>
 						<reference key="IBUIFontDescription" ref="616726734"/>
 						<reference key="IBUIFont" ref="796374905"/>
 					</object>
@@ -350,12 +343,16 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.CustomClassName">MTZButton</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="5.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="6.CustomClassName">MTZButton</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="6.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="64.CustomClassName">MTZButton</string>
 				<string key="64.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="64.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.CustomClassName">MTZButton</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="7.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -385,10 +382,6 @@ dGVyIGZvciBPcGVuIFNvdXJjZQ</string>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">buttonEnabled.png</string>
-			<string key="NS.object.0">{280, 49}</string>
-		</object>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
 </archive>
