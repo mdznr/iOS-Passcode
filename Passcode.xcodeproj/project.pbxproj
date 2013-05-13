@@ -22,10 +22,6 @@
 		C93EF74B16434F6000C317BB /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74616434F6000C317BB /* Icon-72@2x.png */; };
 		C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
 		C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
-		C94C7C9B172D7DA500A3D19E /* Field.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C97172D7DA500A3D19E /* Field.png */; };
-		C94C7C9C172D7DA500A3D19E /* Field.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C97172D7DA500A3D19E /* Field.png */; };
-		C94C7C9D172D7DA500A3D19E /* Field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C98172D7DA500A3D19E /* Field@2x.png */; };
-		C94C7C9E172D7DA500A3D19E /* Field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C98172D7DA500A3D19E /* Field@2x.png */; };
 		C94C7C9F172D7DA500A3D19E /* Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C99172D7DA500A3D19E /* Slider.png */; };
 		C94C7CA0172D7DA500A3D19E /* Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C99172D7DA500A3D19E /* Slider.png */; };
 		C94C7CA1172D7DA500A3D19E /* Slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C7C9A172D7DA500A3D19E /* Slider@2x.png */; };
@@ -84,6 +80,30 @@
 		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
 		C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
 		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
+		C98D263C17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
+		C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
+		C98D263E17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
+		C98D263F17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
+		C98D264A17417CCA00ECBEF7 /* iPadButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */; };
+		C98D264B17417CCA00ECBEF7 /* iPadButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */; };
+		C98D264C17417CCA00ECBEF7 /* iPadButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264117417CCA00ECBEF7 /* iPadButtonActive@2x.png */; };
+		C98D264D17417CCA00ECBEF7 /* iPadButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264117417CCA00ECBEF7 /* iPadButtonActive@2x.png */; };
+		C98D264E17417CCA00ECBEF7 /* iPadButtonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264217417CCA00ECBEF7 /* iPadButtonActiveGreen.png */; };
+		C98D264F17417CCA00ECBEF7 /* iPadButtonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264217417CCA00ECBEF7 /* iPadButtonActiveGreen.png */; };
+		C98D265017417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264317417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png */; };
+		C98D265117417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264317417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png */; };
+		C98D265217417CCA00ECBEF7 /* iPadButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264417417CCA00ECBEF7 /* iPadButtonDisabled.png */; };
+		C98D265317417CCA00ECBEF7 /* iPadButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264417417CCA00ECBEF7 /* iPadButtonDisabled.png */; };
+		C98D265417417CCA00ECBEF7 /* iPadButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png */; };
+		C98D265517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png */; };
+		C98D265617417CCA00ECBEF7 /* iPadButtonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264617417CCA00ECBEF7 /* iPadButtonEnabled.png */; };
+		C98D265717417CCA00ECBEF7 /* iPadButtonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264617417CCA00ECBEF7 /* iPadButtonEnabled.png */; };
+		C98D265817417CCA00ECBEF7 /* iPadButtonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264717417CCA00ECBEF7 /* iPadButtonEnabled@2x.png */; };
+		C98D265917417CCA00ECBEF7 /* iPadButtonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264717417CCA00ECBEF7 /* iPadButtonEnabled@2x.png */; };
+		C98D265A17417CCA00ECBEF7 /* iPadButtonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264817417CCA00ECBEF7 /* iPadButtonEnabledGreen.png */; };
+		C98D265B17417CCA00ECBEF7 /* iPadButtonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264817417CCA00ECBEF7 /* iPadButtonEnabledGreen.png */; };
+		C98D265C17417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264917417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png */; };
+		C98D265D17417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D264917417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png */; };
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
@@ -118,28 +138,8 @@
 		C9C269201649896D00B35DFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
 		C9C269211649896D00B35DFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90264461601398A0075960E /* Default-568h@2x.png */; };
 		C9C269241649896D00B35DFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
-		C9C269251649896D00B35DFA /* iPadButtonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */; };
-		C9C269261649896D00B35DFA /* iPadButtonActiveGlossy@2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */; };
-		C9C269271649896D00B35DFA /* iPadButtonActiveGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */; };
-		C9C269281649896D00B35DFA /* iPadButtonActiveGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */; };
-		C9C269291649896D00B35DFA /* iPadButtonDisabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */; };
-		C9C2692A1649896D00B35DFA /* iPadButtonDisabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */; };
-		C9C2692B1649896D00B35DFA /* iPadButtonEnabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */; };
-		C9C2692C1649896D00B35DFA /* iPadButtonEnabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */; };
-		C9C2692D1649896D00B35DFA /* iPadButtonEnabledGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */; };
-		C9C2692E1649896D00B35DFA /* iPadButtonEnabledGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */; };
 		C9C2692F1649896D00B35DFA /* iPadInput.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD116408705007B417B /* iPadInput.png */; };
 		C9C269301649896D00B35DFA /* iPadInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD216408705007B417B /* iPadInput@2x.png */; };
-		C9C269311649896D00B35DFA /* iPadButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD51640870E007B417B /* iPadButtonActive.png */; };
-		C9C269321649896D00B35DFA /* iPadButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */; };
-		C9C269331649896D00B35DFA /* iPadButtonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */; };
-		C9C269341649896D00B35DFA /* iPadButtonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */; };
-		C9C269351649896D00B35DFA /* iPadButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */; };
-		C9C269361649896D00B35DFA /* iPadButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */; };
-		C9C269371649896D00B35DFA /* iPadButtonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */; };
-		C9C269381649896D00B35DFA /* iPadButtonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */; };
-		C9C269391649896D00B35DFA /* iPadButtonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */; };
-		C9C2693A1649896D00B35DFA /* iPadButtonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */; };
 		C9C269531649896D00B35DFA /* iPadCopied.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315C1641E5FA00A59FCA /* iPadCopied.png */; };
 		C9C269541649896D00B35DFA /* iPadCopied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */; };
 		C9C269551649896D00B35DFA /* Icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = C93EF74216434F6000C317BB /* Icon-48.png */; };
@@ -158,39 +158,20 @@
 		C9D0F4A91739CA1800AC055D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D0F4A81739CA1800AC055D /* StoreKit.framework */; };
 		C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */; };
 		C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */; };
-		C9D0F4CB173C1A2400AC055D /* MTZFrequentlyAskedQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4CA173C1A2400AC055D /* MTZFrequentlyAskedQuestion.m */; };
 		C9D0F4D0173C693D00AC055D /* FAQBackgroundMain.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F4CC173C693D00AC055D /* FAQBackgroundMain.png */; };
 		C9D0F4D1173C693D00AC055D /* FAQBackgroundMain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F4CD173C693D00AC055D /* FAQBackgroundMain@2x.png */; };
 		C9D0F4D2173C693D00AC055D /* FAQBackgroundQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F4CE173C693D00AC055D /* FAQBackgroundQuestion.png */; };
 		C9D0F4D3173C693D00AC055D /* FAQBackgroundQuestion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F4CF173C693D00AC055D /* FAQBackgroundQuestion@2x.png */; };
+		C9D0F504173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
+		C9D0F505173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D1BA8616435137009A5DBA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8516435137009A5DBA /* Default-Landscape@2x~ipad.png */; };
 		C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
 		C9D971A816B39BF1003DAD40 /* cardBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A616B39BF1003DAD40 /* cardBackground.png */; };
 		C9D971A916B39BF1003DAD40 /* cardBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A616B39BF1003DAD40 /* cardBackground.png */; };
 		C9D971AA16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
 		C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
-		C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */; };
-		C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */; };
-		C9DB2DC9164086FF007B417B /* iPadButtonActiveGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */; };
-		C9DB2DCA164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */; };
-		C9DB2DCB164086FF007B417B /* iPadButtonDisabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */; };
-		C9DB2DCC164086FF007B417B /* iPadButtonDisabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */; };
-		C9DB2DCD164086FF007B417B /* iPadButtonEnabledGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */; };
-		C9DB2DCE164086FF007B417B /* iPadButtonEnabledGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */; };
-		C9DB2DCF164086FF007B417B /* iPadButtonEnabledGreenGlossy.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */; };
-		C9DB2DD0164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */; };
 		C9DB2DD316408705007B417B /* iPadInput.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD116408705007B417B /* iPadInput.png */; };
 		C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD216408705007B417B /* iPadInput@2x.png */; };
-		C9DB2DDF1640870E007B417B /* iPadButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD51640870E007B417B /* iPadButtonActive.png */; };
-		C9DB2DE01640870E007B417B /* iPadButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */; };
-		C9DB2DE11640870E007B417B /* iPadButtonActiveGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */; };
-		C9DB2DE21640870E007B417B /* iPadButtonActiveGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */; };
-		C9DB2DE31640870E007B417B /* iPadButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */; };
-		C9DB2DE41640870E007B417B /* iPadButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */; };
-		C9DB2DE51640870E007B417B /* iPadButtonEnabled.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */; };
-		C9DB2DE61640870E007B417B /* iPadButtonEnabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */; };
-		C9DB2DE71640870E007B417B /* iPadButtonEnabledGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */; };
-		C9DB2DE81640870E007B417B /* iPadButtonEnabledGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */; };
 		C9FE1FB917131D50008D4D61 /* NYPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB617131D50008D4D61 /* NYPopover.m */; };
 		C9FE1FBA17131D50008D4D61 /* NYPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB617131D50008D4D61 /* NYPopover.m */; };
 		C9FE1FBB17131D50008D4D61 /* NYSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB817131D50008D4D61 /* NYSliderPopover.m */; };
@@ -214,8 +195,6 @@
 		C93EF74616434F6000C317BB /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlideToReveal.h; sourceTree = "<group>"; };
 		C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlideToReveal.m; sourceTree = "<group>"; };
-		C94C7C97172D7DA500A3D19E /* Field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Field.png; sourceTree = "<group>"; };
-		C94C7C98172D7DA500A3D19E /* Field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Field@2x.png"; sourceTree = "<group>"; };
 		C94C7C99172D7DA500A3D19E /* Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slider.png; sourceTree = "<group>"; };
 		C94C7C9A172D7DA500A3D19E /* Slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slider@2x.png"; sourceTree = "<group>"; };
 		C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Medium.ttf"; sourceTree = "<group>"; };
@@ -270,6 +249,18 @@
 		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
+		C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideToRevealBackground.png; path = resources/iPhone/SlideToRevealBackground.png; sourceTree = "<group>"; };
+		C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SlideToRevealBackground@2x.png"; path = "resources/iPhone/SlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
+		C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActive.png; path = resources/iPad/iPadButtonActive.png; sourceTree = "<group>"; };
+		C98D264117417CCA00ECBEF7 /* iPadButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActive@2x.png"; path = "resources/iPad/iPadButtonActive@2x.png"; sourceTree = "<group>"; };
+		C98D264217417CCA00ECBEF7 /* iPadButtonActiveGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGreen.png; path = resources/iPad/iPadButtonActiveGreen.png; sourceTree = "<group>"; };
+		C98D264317417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActiveGreen@2x.png"; path = "resources/iPad/iPadButtonActiveGreen@2x.png"; sourceTree = "<group>"; };
+		C98D264417417CCA00ECBEF7 /* iPadButtonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonDisabled.png; path = resources/iPad/iPadButtonDisabled.png; sourceTree = "<group>"; };
+		C98D264517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonDisabled@2x.png"; path = "resources/iPad/iPadButtonDisabled@2x.png"; sourceTree = "<group>"; };
+		C98D264617417CCA00ECBEF7 /* iPadButtonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabled.png; path = resources/iPad/iPadButtonEnabled.png; sourceTree = "<group>"; };
+		C98D264717417CCA00ECBEF7 /* iPadButtonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabled@2x.png"; path = "resources/iPad/iPadButtonEnabled@2x.png"; sourceTree = "<group>"; };
+		C98D264817417CCA00ECBEF7 /* iPadButtonEnabledGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabledGreen.png; path = resources/iPad/iPadButtonEnabledGreen.png; sourceTree = "<group>"; };
+		C98D264917417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabledGreen@2x.png"; path = "resources/iPad/iPadButtonEnabledGreen@2x.png"; sourceTree = "<group>"; };
 		C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
 		C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
@@ -299,12 +290,11 @@
 		C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQViewController.m; sourceTree = "<group>"; };
 		C9D0F4C6173ACCAF00AC055D /* PCDFAQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQView.h; sourceTree = "<group>"; };
 		C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQView.m; sourceTree = "<group>"; };
-		C9D0F4C9173C1A2300AC055D /* MTZFrequentlyAskedQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZFrequentlyAskedQuestion.h; sourceTree = "<group>"; };
-		C9D0F4CA173C1A2400AC055D /* MTZFrequentlyAskedQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZFrequentlyAskedQuestion.m; sourceTree = "<group>"; };
 		C9D0F4CC173C693D00AC055D /* FAQBackgroundMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FAQBackgroundMain.png; path = resources/FAQBackgroundMain.png; sourceTree = "<group>"; };
 		C9D0F4CD173C693D00AC055D /* FAQBackgroundMain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FAQBackgroundMain@2x.png"; path = "resources/FAQBackgroundMain@2x.png"; sourceTree = "<group>"; };
 		C9D0F4CE173C693D00AC055D /* FAQBackgroundQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FAQBackgroundQuestion.png; path = resources/FAQBackgroundQuestion.png; sourceTree = "<group>"; };
 		C9D0F4CF173C693D00AC055D /* FAQBackgroundQuestion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FAQBackgroundQuestion@2x.png"; path = "resources/FAQBackgroundQuestion@2x.png"; sourceTree = "<group>"; };
+		C9D0F503173C886800AC055D /* FAQs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FAQs.plist; sourceTree = SOURCE_ROOT; };
 		C9D1BA8516435137009A5DBA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		C9D1BA8916435140009A5DBA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		C9D1BA8B16435142009A5DBA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
@@ -312,28 +302,8 @@
 		C9D1BA8F164885B9009A5DBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C9D971A616B39BF1003DAD40 /* cardBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBackground.png; sourceTree = "<group>"; };
 		C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardBackground@2x.png"; sourceTree = "<group>"; };
-		C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGlossy.png; sourceTree = "<group>"; };
-		C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActiveGlossy@2.png"; path = "resources/iPad/glossy/iPadButtonActiveGlossy@2.png"; sourceTree = "<group>"; };
-		C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGreenGlossy.png; path = resources/iPad/glossy/iPadButtonActiveGreenGlossy.png; sourceTree = "<group>"; };
-		C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActiveGreenGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonActiveGreenGlossy@2x.png"; sourceTree = "<group>"; };
-		C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonDisabledGlossy.png; path = resources/iPad/glossy/iPadButtonDisabledGlossy.png; sourceTree = "<group>"; };
-		C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonDisabledGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonDisabledGlossy@2x.png"; sourceTree = "<group>"; };
-		C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabledGlossy.png; path = resources/iPad/glossy/iPadButtonEnabledGlossy.png; sourceTree = "<group>"; };
-		C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabledGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonEnabledGlossy@2x.png"; sourceTree = "<group>"; };
-		C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabledGreenGlossy.png; path = resources/iPad/glossy/iPadButtonEnabledGreenGlossy.png; sourceTree = "<group>"; };
-		C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabledGreenGlossy@2x.png"; path = "resources/iPad/glossy/iPadButtonEnabledGreenGlossy@2x.png"; sourceTree = "<group>"; };
 		C9DB2DD116408705007B417B /* iPadInput.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadInput.png; path = resources/iPad/iPadInput.png; sourceTree = "<group>"; };
 		C9DB2DD216408705007B417B /* iPadInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadInput@2x.png"; path = "resources/iPad/iPadInput@2x.png"; sourceTree = "<group>"; };
-		C9DB2DD51640870E007B417B /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActive.png; path = resources/iPad/smooth/iPadButtonActive.png; sourceTree = "<group>"; };
-		C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActive@2x.png"; path = "resources/iPad/smooth/iPadButtonActive@2x.png"; sourceTree = "<group>"; };
-		C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActiveGreen.png; path = resources/iPad/smooth/iPadButtonActiveGreen.png; sourceTree = "<group>"; };
-		C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonActiveGreen@2x.png"; path = "resources/iPad/smooth/iPadButtonActiveGreen@2x.png"; sourceTree = "<group>"; };
-		C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonDisabled.png; path = resources/iPad/smooth/iPadButtonDisabled.png; sourceTree = "<group>"; };
-		C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonDisabled@2x.png"; path = "resources/iPad/smooth/iPadButtonDisabled@2x.png"; sourceTree = "<group>"; };
-		C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabled.png; path = resources/iPad/smooth/iPadButtonEnabled.png; sourceTree = "<group>"; };
-		C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabled@2x.png"; path = "resources/iPad/smooth/iPadButtonEnabled@2x.png"; sourceTree = "<group>"; };
-		C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabledGreen.png; path = resources/iPad/smooth/iPadButtonEnabledGreen.png; sourceTree = "<group>"; };
-		C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabledGreen@2x.png"; path = "resources/iPad/smooth/iPadButtonEnabledGreen@2x.png"; sourceTree = "<group>"; };
 		C9FE1FB517131D50008D4D61 /* NYPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYPopover.h; sourceTree = "<group>"; };
 		C9FE1FB617131D50008D4D61 /* NYPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYPopover.m; sourceTree = "<group>"; };
 		C9FE1FB717131D50008D4D61 /* NYSliderPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSliderPopover.h; sourceTree = "<group>"; };
@@ -439,8 +409,8 @@
 			children = (
 				C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */,
 				C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */,
-				C94C7C97172D7DA500A3D19E /* Field.png */,
-				C94C7C98172D7DA500A3D19E /* Field@2x.png */,
+				C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */,
+				C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */,
 				C94C7C99172D7DA500A3D19E /* Slider.png */,
 				C94C7C9A172D7DA500A3D19E /* Slider@2x.png */,
 				C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */,
@@ -583,12 +553,11 @@
 		C9D0F4C2173AC26600AC055D /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
+				C9D0F503173C886800AC055D /* FAQs.plist */,
 				C9D0F4BF173AC25C00AC055D /* PCDFAQViewController.h */,
 				C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */,
 				C9D0F4C6173ACCAF00AC055D /* PCDFAQView.h */,
 				C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */,
-				C9D0F4C9173C1A2300AC055D /* MTZFrequentlyAskedQuestion.h */,
-				C9D0F4CA173C1A2400AC055D /* MTZFrequentlyAskedQuestion.m */,
 			);
 			name = FAQ;
 			sourceTree = "<group>";
@@ -610,12 +579,20 @@
 		C9DB2E1916408816007B417B /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */,
+				C98D264117417CCA00ECBEF7 /* iPadButtonActive@2x.png */,
+				C98D264217417CCA00ECBEF7 /* iPadButtonActiveGreen.png */,
+				C98D264317417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png */,
+				C98D264417417CCA00ECBEF7 /* iPadButtonDisabled.png */,
+				C98D264517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png */,
+				C98D264617417CCA00ECBEF7 /* iPadButtonEnabled.png */,
+				C98D264717417CCA00ECBEF7 /* iPadButtonEnabled@2x.png */,
+				C98D264817417CCA00ECBEF7 /* iPadButtonEnabledGreen.png */,
+				C98D264917417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png */,
 				C910315C1641E5FA00A59FCA /* iPadCopied.png */,
 				C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */,
 				C9DB2DD116408705007B417B /* iPadInput.png */,
 				C9DB2DD216408705007B417B /* iPadInput@2x.png */,
-				C9DB2E1D1640885B007B417B /* Buttons (Glossy) */,
-				C9DB2E1E16408865007B417B /* Buttons (Smooth) */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -639,40 +616,6 @@
 				C94C7CB61730476A00A3D19E /* inputBackground@2x.png */,
 			);
 			name = iPhone;
-			sourceTree = "<group>";
-		};
-		C9DB2E1D1640885B007B417B /* Buttons (Glossy) */ = {
-			isa = PBXGroup;
-			children = (
-				C9DB2DBD164086FF007B417B /* iPadButtonActiveGlossy.png */,
-				C9DB2DBE164086FF007B417B /* iPadButtonActiveGlossy@2.png */,
-				C9DB2DBF164086FF007B417B /* iPadButtonActiveGreenGlossy.png */,
-				C9DB2DC0164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png */,
-				C9DB2DC1164086FF007B417B /* iPadButtonDisabledGlossy.png */,
-				C9DB2DC2164086FF007B417B /* iPadButtonDisabledGlossy@2x.png */,
-				C9DB2DC3164086FF007B417B /* iPadButtonEnabledGlossy.png */,
-				C9DB2DC4164086FF007B417B /* iPadButtonEnabledGlossy@2x.png */,
-				C9DB2DC5164086FF007B417B /* iPadButtonEnabledGreenGlossy.png */,
-				C9DB2DC6164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png */,
-			);
-			name = "Buttons (Glossy)";
-			sourceTree = "<group>";
-		};
-		C9DB2E1E16408865007B417B /* Buttons (Smooth) */ = {
-			isa = PBXGroup;
-			children = (
-				C9DB2DD51640870E007B417B /* iPadButtonActive.png */,
-				C9DB2DD61640870E007B417B /* iPadButtonActive@2x.png */,
-				C9DB2DD71640870E007B417B /* iPadButtonActiveGreen.png */,
-				C9DB2DD81640870E007B417B /* iPadButtonActiveGreen@2x.png */,
-				C9DB2DD91640870E007B417B /* iPadButtonDisabled.png */,
-				C9DB2DDA1640870E007B417B /* iPadButtonDisabled@2x.png */,
-				C9DB2DDB1640870E007B417B /* iPadButtonEnabled.png */,
-				C9DB2DDC1640870E007B417B /* iPadButtonEnabled@2x.png */,
-				C9DB2DDD1640870E007B417B /* iPadButtonEnabledGreen.png */,
-				C9DB2DDE1640870E007B417B /* iPadButtonEnabledGreen@2x.png */,
-			);
-			name = "Buttons (Smooth)";
 			sourceTree = "<group>";
 		};
 		C9FE1FBD171320AD008D4D61 /* NYSliderPopover */ = {
@@ -773,28 +716,8 @@
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C90264471601398A0075960E /* Default-568h@2x.png in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
-				C9DB2DC7164086FF007B417B /* iPadButtonActiveGlossy.png in Resources */,
-				C9DB2DC8164086FF007B417B /* iPadButtonActiveGlossy@2.png in Resources */,
-				C9DB2DC9164086FF007B417B /* iPadButtonActiveGreenGlossy.png in Resources */,
-				C9DB2DCA164086FF007B417B /* iPadButtonActiveGreenGlossy@2x.png in Resources */,
-				C9DB2DCB164086FF007B417B /* iPadButtonDisabledGlossy.png in Resources */,
-				C9DB2DCC164086FF007B417B /* iPadButtonDisabledGlossy@2x.png in Resources */,
-				C9DB2DCD164086FF007B417B /* iPadButtonEnabledGlossy.png in Resources */,
-				C9DB2DCE164086FF007B417B /* iPadButtonEnabledGlossy@2x.png in Resources */,
-				C9DB2DCF164086FF007B417B /* iPadButtonEnabledGreenGlossy.png in Resources */,
-				C9DB2DD0164086FF007B417B /* iPadButtonEnabledGreenGlossy@2x.png in Resources */,
 				C9DB2DD316408705007B417B /* iPadInput.png in Resources */,
 				C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */,
-				C9DB2DDF1640870E007B417B /* iPadButtonActive.png in Resources */,
-				C9DB2DE01640870E007B417B /* iPadButtonActive@2x.png in Resources */,
-				C9DB2DE11640870E007B417B /* iPadButtonActiveGreen.png in Resources */,
-				C9DB2DE21640870E007B417B /* iPadButtonActiveGreen@2x.png in Resources */,
-				C9DB2DE31640870E007B417B /* iPadButtonDisabled.png in Resources */,
-				C9DB2DE41640870E007B417B /* iPadButtonDisabled@2x.png in Resources */,
-				C9DB2DE51640870E007B417B /* iPadButtonEnabled.png in Resources */,
-				C9DB2DE61640870E007B417B /* iPadButtonEnabled@2x.png in Resources */,
-				C9DB2DE71640870E007B417B /* iPadButtonEnabledGreen.png in Resources */,
-				C9DB2DE81640870E007B417B /* iPadButtonEnabledGreen@2x.png in Resources */,
 				C910315E1641E5FA00A59FCA /* iPadCopied.png in Resources */,
 				C910315F1641E5FA00A59FCA /* iPadCopied@2x.png in Resources */,
 				C93EF74716434F6000C317BB /* Icon-48.png in Resources */,
@@ -813,8 +736,6 @@
 				C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */,
 				C9D971A816B39BF1003DAD40 /* cardBackground.png in Resources */,
 				C9D971AA16B39BF1003DAD40 /* cardBackground@2x.png in Resources */,
-				C94C7C9B172D7DA500A3D19E /* Field.png in Resources */,
-				C94C7C9D172D7DA500A3D19E /* Field@2x.png in Resources */,
 				C94C7C9F172D7DA500A3D19E /* Slider.png in Resources */,
 				C94C7CA1172D7DA500A3D19E /* Slider@2x.png in Resources */,
 				C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
@@ -837,6 +758,19 @@
 				C9D0F4D1173C693D00AC055D /* FAQBackgroundMain@2x.png in Resources */,
 				C9D0F4D2173C693D00AC055D /* FAQBackgroundQuestion.png in Resources */,
 				C9D0F4D3173C693D00AC055D /* FAQBackgroundQuestion@2x.png in Resources */,
+				C9D0F504173C886800AC055D /* FAQs.plist in Resources */,
+				C98D263C17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */,
+				C98D263E17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */,
+				C98D264A17417CCA00ECBEF7 /* iPadButtonActive.png in Resources */,
+				C98D264C17417CCA00ECBEF7 /* iPadButtonActive@2x.png in Resources */,
+				C98D264E17417CCA00ECBEF7 /* iPadButtonActiveGreen.png in Resources */,
+				C98D265017417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png in Resources */,
+				C98D265217417CCA00ECBEF7 /* iPadButtonDisabled.png in Resources */,
+				C98D265417417CCA00ECBEF7 /* iPadButtonDisabled@2x.png in Resources */,
+				C98D265617417CCA00ECBEF7 /* iPadButtonEnabled.png in Resources */,
+				C98D265817417CCA00ECBEF7 /* iPadButtonEnabled@2x.png in Resources */,
+				C98D265A17417CCA00ECBEF7 /* iPadButtonEnabledGreen.png in Resources */,
+				C98D265C17417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,28 +787,8 @@
 				C9C269201649896D00B35DFA /* Settings.bundle in Resources */,
 				C9C269211649896D00B35DFA /* Default-568h@2x.png in Resources */,
 				C9C269241649896D00B35DFA /* Localizable.strings in Resources */,
-				C9C269251649896D00B35DFA /* iPadButtonActiveGlossy.png in Resources */,
-				C9C269261649896D00B35DFA /* iPadButtonActiveGlossy@2.png in Resources */,
-				C9C269271649896D00B35DFA /* iPadButtonActiveGreenGlossy.png in Resources */,
-				C9C269281649896D00B35DFA /* iPadButtonActiveGreenGlossy@2x.png in Resources */,
-				C9C269291649896D00B35DFA /* iPadButtonDisabledGlossy.png in Resources */,
-				C9C2692A1649896D00B35DFA /* iPadButtonDisabledGlossy@2x.png in Resources */,
-				C9C2692B1649896D00B35DFA /* iPadButtonEnabledGlossy.png in Resources */,
-				C9C2692C1649896D00B35DFA /* iPadButtonEnabledGlossy@2x.png in Resources */,
-				C9C2692D1649896D00B35DFA /* iPadButtonEnabledGreenGlossy.png in Resources */,
-				C9C2692E1649896D00B35DFA /* iPadButtonEnabledGreenGlossy@2x.png in Resources */,
 				C9C2692F1649896D00B35DFA /* iPadInput.png in Resources */,
 				C9C269301649896D00B35DFA /* iPadInput@2x.png in Resources */,
-				C9C269311649896D00B35DFA /* iPadButtonActive.png in Resources */,
-				C9C269321649896D00B35DFA /* iPadButtonActive@2x.png in Resources */,
-				C9C269331649896D00B35DFA /* iPadButtonActiveGreen.png in Resources */,
-				C9C269341649896D00B35DFA /* iPadButtonActiveGreen@2x.png in Resources */,
-				C9C269351649896D00B35DFA /* iPadButtonDisabled.png in Resources */,
-				C9C269361649896D00B35DFA /* iPadButtonDisabled@2x.png in Resources */,
-				C9C269371649896D00B35DFA /* iPadButtonEnabled.png in Resources */,
-				C9C269381649896D00B35DFA /* iPadButtonEnabled@2x.png in Resources */,
-				C9C269391649896D00B35DFA /* iPadButtonEnabledGreen.png in Resources */,
-				C9C2693A1649896D00B35DFA /* iPadButtonEnabledGreen@2x.png in Resources */,
 				C9C269531649896D00B35DFA /* iPadCopied.png in Resources */,
 				C9C269541649896D00B35DFA /* iPadCopied@2x.png in Resources */,
 				C9C269551649896D00B35DFA /* Icon-48.png in Resources */,
@@ -892,8 +806,6 @@
 				C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */,
 				C9D971A916B39BF1003DAD40 /* cardBackground.png in Resources */,
 				C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */,
-				C94C7C9C172D7DA500A3D19E /* Field.png in Resources */,
-				C94C7C9E172D7DA500A3D19E /* Field@2x.png in Resources */,
 				C94C7CA0172D7DA500A3D19E /* Slider.png in Resources */,
 				C94C7CA2172D7DA500A3D19E /* Slider@2x.png in Resources */,
 				C94C7CA6172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
@@ -912,6 +824,19 @@
 				C94C7CCE1730476A00A3D19E /* copied@2x.png in Resources */,
 				C94C7CD01730476A00A3D19E /* inputBackground.png in Resources */,
 				C94C7CD21730476A00A3D19E /* inputBackground@2x.png in Resources */,
+				C9D0F505173C886800AC055D /* FAQs.plist in Resources */,
+				C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */,
+				C98D263F17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */,
+				C98D264B17417CCA00ECBEF7 /* iPadButtonActive.png in Resources */,
+				C98D264D17417CCA00ECBEF7 /* iPadButtonActive@2x.png in Resources */,
+				C98D264F17417CCA00ECBEF7 /* iPadButtonActiveGreen.png in Resources */,
+				C98D265117417CCA00ECBEF7 /* iPadButtonActiveGreen@2x.png in Resources */,
+				C98D265317417CCA00ECBEF7 /* iPadButtonDisabled.png in Resources */,
+				C98D265517417CCA00ECBEF7 /* iPadButtonDisabled@2x.png in Resources */,
+				C98D265717417CCA00ECBEF7 /* iPadButtonEnabled.png in Resources */,
+				C98D265917417CCA00ECBEF7 /* iPadButtonEnabled@2x.png in Resources */,
+				C98D265B17417CCA00ECBEF7 /* iPadButtonEnabledGreen.png in Resources */,
+				C98D265D17417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,7 +864,6 @@
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */,
 				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
-				C9D0F4CB173C1A2400AC055D /* MTZFrequentlyAskedQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

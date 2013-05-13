@@ -63,7 +63,7 @@ double squared(double x)
 	[self setOpaque:NO];
 	[self setBackgroundColor:[UIColor clearColor]];
 	
-	_background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Field"]];
+	_background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SlideToRevealBackground"]];
 	[self addSubview:_background];
 	
 	_dotsLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,self.bounds.size.width,self.bounds.size.height}];
