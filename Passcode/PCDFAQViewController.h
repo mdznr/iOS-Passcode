@@ -10,4 +10,12 @@
 
 @interface PCDFAQViewController : UIViewController
 
+// The location of the plist to check remotely
+// Include .plist, if necessary
+@property (strong, nonatomic) NSString *remoteURL;
+
+// The name of the file (do not include .plist extension)
+// Defaults to @"FAQs"
+@property (strong, nonatomic) NSString *fileName;
+
 @end

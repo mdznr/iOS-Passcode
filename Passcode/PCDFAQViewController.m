@@ -15,7 +15,6 @@
 @property (strong, nonatomic) NSMutableArray *questionsAndAnswers;
 
 @property (strong, nonatomic) NSString *localPath;
-@property BOOL toggle;
 
 @end
 
@@ -26,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		[self setup];
     }
     return self;
 }
@@ -35,6 +35,7 @@
 	self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
+		[self setup];
     }
     return self;
 }
@@ -44,8 +45,14 @@
     self = [super init];
     if (self) {
         // Custom initialization
+		[self setup];
     }
     return self;
+}
+
+- (void)setup
+{
+	
 }
 
 - (void)viewDidLoad
@@ -60,18 +67,17 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
 	// Path to FAQs plist
-	_localPath = [NSString stringWithFormat:@"%@/FAQs.plist", documentsDirectory];
+	_localPath = [NSString stringWithFormat:@"%@/%@.plist", documentsDirectory, _fileName];
 	
 	BOOL fileExistsInDocuments = [[NSFileManager defaultManager] fileExistsAtPath:_localPath];
 	if ( !fileExistsInDocuments ) {
 		// Copy file from app bundle to documents
-		NSString *p = [[NSBundle mainBundle] pathForResource:@"FAQs" ofType:@"plist"];
+		NSString *p = [[NSBundle mainBundle] pathForResource:_fileName ofType:@"plist"];
 		[[NSFileManager defaultManager] copyItemAtPath:p toPath:_localPath error:nil];
 	}
 	
 	// Inititalise array with plist
 	_questionsAndAnswers = [[NSMutableArray alloc] initWithContentsOfFile:_localPath];
-	
 	
 	[self checkForUpdates];
 	
@@ -84,35 +90,6 @@
 	[_tableView setBackgroundColor:[UIColor colorWithWhite:0.93f alpha:1.0f]];
 	
 	[self.view addSubview:_tableView];
-	
-	
-	// ***
-	UIBarButtonItem *toggle = [[UIBarButtonItem alloc] initWithTitle:@"Toggle"
-															   style:UIBarButtonItemStyleBordered
-															  target:self
-															  action:@selector(toggler)];
-	[self.navigationItem setRightBarButtonItem:toggle];
-}
-
-- (void)toggler
-{
-	NSLog(@"Toggle");
-	
-	// Get the documents directory:
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	
-	// set plist file
-	if ( _toggle ) {
-		_localPath = [NSString stringWithFormat:@"%@/FAQs.plist", documentsDirectory];
-	} else {
-		_localPath = [NSString stringWithFormat:@"%@/FAQs2.plist", documentsDirectory];
-	}
-	
-	_toggle = !_toggle;
-	
-	// reload
-	[self reloadTableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,10 +100,19 @@
 
 - (void)checkForUpdates
 {
-	//	NSURL *url = [NSURL URLWithString:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
-	NSURL *url = [NSURL URLWithString:@"http://mdznr.com/FAQs.plist"];
-	//  NSURLRequestUseProtocolCachePolicy
-	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0f];
+	
+	NSURL *url = [NSURL URLWithString:_remoteURL];
+	
+#if DEBUG
+	NSURLRequest *request = [NSURLRequest requestWithURL:url
+											 cachePolicy:NSURLRequestReloadIgnoringCacheData
+										 timeoutInterval:10.0f];
+#else
+	NSURLRequest *request = [NSURLRequest requestWithURL:url
+											 cachePolicy:NSURLRequestUseProtocolCachePolicy
+										 timeoutInterval:10.0f];
+#endif
+	
 	[NSURLConnection sendAsynchronousRequest:request
 									   queue:[NSOperationQueue new]
 						   completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -136,7 +122,6 @@
 								   NSLog(@"NOT SAME");
 								   // Save content to the documents directory
 								   [data writeToFile:_localPath atomically:NO];
-								   
 								   [self reloadTableView];
 							   }
 						   }];
@@ -145,8 +130,9 @@
 - (void)reloadTableView
 {	
 	dispatch_async(dispatch_get_main_queue(), ^{
-		
-		NSMutableArray *additions = [[NSMutableArray alloc] initWithContentsOfFile:_localPath];
+		/*
+		NSMutableArray *localCopy = [[NSMutableArray alloc] initWithContentsOfFile:_localPath];
+		NSMutableArray *additions = [[NSMutableArray alloc] initWithArray:localCopy];
 		NSMutableArray *deletions = [[NSMutableArray alloc] initWithArray:_questionsAndAnswers];
 		[deletions removeObjectsInArray:additions];
 		[additions removeObjectsInArray:_questionsAndAnswers];
@@ -164,7 +150,7 @@
 			}
 		}
 		
-		_questionsAndAnswers = [[NSMutableArray alloc] initWithContentsOfFile:_localPath];
+		_questionsAndAnswers = [[NSMutableArray alloc] initWithArray:localCopy];
 		NSUInteger newCount = [_questionsAndAnswers count];
 		
 		for ( NSUInteger i=0; i<newCount; ++i ) {
@@ -175,6 +161,7 @@
 			}
 		}
 		[self.tableView endUpdates];
+		 */
 	});
 	
 }

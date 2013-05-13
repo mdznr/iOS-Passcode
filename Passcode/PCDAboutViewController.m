@@ -67,6 +67,12 @@
 - (IBAction)faqPressed:(id)sender
 {
 	PCDFAQViewController *faq = [[PCDFAQViewController alloc] init];
+#if DEBUG
+	[faq setRemoteURL:@"http://mdznr.com/FAQs.plist"];
+#else
+	[faq setRemoteURL:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
+#endif
+	[faq setFileName:@"FAQs"];
 	[self.navigationController pushViewController:faq animated:YES];
 }
 
