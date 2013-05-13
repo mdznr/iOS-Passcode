@@ -8,6 +8,7 @@
 
 #import "PCDFAQViewController.h"
 #import "PCDFAQView.h"
+#import "NSMutableArray+MTZRemove.h"
 
 @interface PCDFAQViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -121,7 +122,7 @@
 							   } else {
 								   NSLog(@"NOT SAME");
 								   // Save content to the documents directory
-								   [data writeToFile:_localPath atomically:NO];
+								   [data writeToFile:_localPath atomically:YES];
 								   [self reloadTableView];
 							   }
 						   }];
@@ -130,20 +131,19 @@
 - (void)reloadTableView
 {	
 	dispatch_async(dispatch_get_main_queue(), ^{
-		/*
 		NSMutableArray *localCopy = [[NSMutableArray alloc] initWithContentsOfFile:_localPath];
 		NSMutableArray *additions = [[NSMutableArray alloc] initWithArray:localCopy];
 		NSMutableArray *deletions = [[NSMutableArray alloc] initWithArray:_questionsAndAnswers];
-		[deletions removeObjectsInArray:additions];
-		[additions removeObjectsInArray:_questionsAndAnswers];
+		[deletions removeFirstOfEachObjectInArray:additions];
+		[additions removeFirstOfEachObjectInArray:_questionsAndAnswers];
 		
-		NSLog(@"%lu %lu", (unsigned long)deletions.count, (unsigned long)additions.count);
-		
-		NSUInteger oldCount = [_questionsAndAnswers count];
+		NSLog(@"+%lu -%lu", (unsigned long)deletions.count, (unsigned long)additions.count);
 		
 		[self.tableView beginUpdates];
-		for ( NSUInteger i=0; i<oldCount; ++i ) {
-			if ( [deletions containsObject:_questionsAndAnswers[i]] ) {
+		for ( NSUInteger i=0; i<_questionsAndAnswers.count; ++i ) {
+			NSUInteger index = [deletions indexOfObject:_questionsAndAnswers[i]];
+			if ( index != NSNotFound ) {
+				[deletions removeObjectAtIndex:index];
 				[self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
 									  withRowAnimation:UITableViewRowAnimationFade];
 				NSLog(@"Fading out %lu", (unsigned long)i);
@@ -151,17 +151,17 @@
 		}
 		
 		_questionsAndAnswers = [[NSMutableArray alloc] initWithArray:localCopy];
-		NSUInteger newCount = [_questionsAndAnswers count];
 		
-		for ( NSUInteger i=0; i<newCount; ++i ) {
-			if ( [additions containsObject:_questionsAndAnswers[i]] ) {
+		for ( NSUInteger i=0; i<_questionsAndAnswers.count; ++i ) {
+			NSUInteger index = [additions indexOfObject:_questionsAndAnswers[i]];
+			if ( index != NSNotFound ) {
+				[additions removeObjectAtIndex:index];
 				[self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
 									  withRowAnimation:UITableViewRowAnimationTop];
 				NSLog(@"Fading in %lu", (unsigned long)i);
 			}
 		}
 		[self.tableView endUpdates];
-		 */
 	});
 	
 }
