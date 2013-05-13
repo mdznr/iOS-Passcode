@@ -221,6 +221,15 @@
 	 */
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	// Display About if app hasn't been launched before
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
+		[self viewAbout:self];
+	}
+}
+
 - (void)segmentedControlDidChange:(UISegmentedControl *)sender
 {
 	NSLog(@"Did change %d", [sender selectedSegmentIndex]);

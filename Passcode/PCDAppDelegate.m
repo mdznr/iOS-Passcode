@@ -42,12 +42,6 @@
 	self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 	
-	// Display About if app hasn't been launched before
-	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
-		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
-		[self.viewController viewAbout:self];
-	}
-	
 #if RUN_KIF_TESTS
     [[EXTestController sharedInstance] startTestingWithCompletionBlock:^{
         // Exit after the tests complete so that CI knows we're done
