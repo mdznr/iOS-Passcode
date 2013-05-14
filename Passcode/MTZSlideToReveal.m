@@ -162,7 +162,11 @@ double squared(double x)
 				break;
 			case UIGestureRecognizerStateEnded:
 				[self hidePopover:sender];
-				[self setPopoverCenter:(CGPoint){0,0}];
+				if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+					[self setPopoverCenter:(CGPoint){0,0}];
+				} else {
+					[self setPopoverCenter:(CGPoint){124,0}];
+				}
 				break;
 			case UIGestureRecognizerStateChanged:
 				[self setPopoverCenter:[sender locationOfTouch:0 inView:self]];
@@ -227,9 +231,14 @@ double squared(double x)
 	}
 //	NSLog(@"Percent: %f", p);
 	
-	CGFloat moveLeft = p * (_passwordLabel.bounds.size.width - self.bounds.size.width);
+	CGFloat moveLeft;
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		moveLeft = p * (_passwordLabel.bounds.size.width - self.bounds.size.width);
+	} else {
+		moveLeft = -7 + p * (_passwordLabel.bounds.size.width - self.bounds.size.width + 14);
+	}
 	[_passwordLabel setTransform:CGAffineTransformMakeTranslation(-moveLeft, 0)];
-	
+	NSLog(@"left: %f\tframe %f", moveLeft, _passwordLabel.frame.origin.x);
 	
 	CGRect rect = CGRectMake(moveLeft + _sliderView.frame.origin.x + 6,
 							 _sliderView.frame.origin.y + 6,
