@@ -145,7 +145,7 @@
 			if ( index != NSNotFound ) {
 				[deletions removeObjectAtIndex:index];
 				[self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
-									  withRowAnimation:UITableViewRowAnimationFade];
+									  withRowAnimation:UITableViewRowAnimationRight];
 				NSLog(@"Fading out %lu", (unsigned long)i);
 			}
 		}
@@ -157,7 +157,7 @@
 			if ( index != NSNotFound ) {
 				[additions removeObjectAtIndex:index];
 				[self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]
-									  withRowAnimation:UITableViewRowAnimationTop];
+									  withRowAnimation:UITableViewRowAnimationRight];
 				NSLog(@"Fading in %lu", (unsigned long)i);
 			}
 		}

@@ -63,11 +63,20 @@ double squared(double x)
 	[self setOpaque:NO];
 	[self setBackgroundColor:[UIColor clearColor]];
 	
-	_background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SlideToRevealBackground"]];
+	UIImage *backgroundImage = [UIImage imageNamed:@"SlideToRevealBackground"];
+	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 9, 8)];
+	_background = [[UIImageView alloc] initWithImage:backgroundImage];
+	[_background setFrame:self.bounds];
+	[_background setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[self addSubview:_background];
 	
 	_dotsLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,self.bounds.size.width,self.bounds.size.height}];
-	[_dotsLabel setFont:[UIFont systemFontOfSize:30.0f]];
+	[_dotsLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		[_dotsLabel setFont:[UIFont systemFontOfSize:30.0f]];
+	} else {
+		[_dotsLabel setFont:[UIFont systemFontOfSize:54.0f]];
+	}
 	[_dotsLabel setTextAlignment:NSTextAlignmentCenter];
 	[_dotsLabel setNumberOfLines:1];
 	[_dotsLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
@@ -79,8 +88,13 @@ double squared(double x)
 	[self addSubview:_dotsLabel];
 	
 	_passwordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	[_passwordLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[_passwordLabel setBounds:CGRectZero];
-	[_passwordLabel setFont:[UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f]];
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		[_passwordLabel setFont:[UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f]];
+	} else {
+		[_passwordLabel setFont:[UIFont fontWithName:@"SourceCodePro-Medium" size:42.0f]];
+	}
 	[_passwordLabel setTextAlignment:NSTextAlignmentCenter];
 	[_passwordLabel setNumberOfLines:1];
 	[_passwordLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
@@ -92,7 +106,12 @@ double squared(double x)
 	[_passwordLabel setAlpha:0.0f];
 	[self addSubview:_passwordLabel];
 	
-	_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Slider"]];
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Slider"]];
+	} else {
+		_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iPadSlider"]];
+	}
+	
 	[_sliderView setHidden:YES];
 	[_sliderView setAlpha:0.0f];
 	[self addSubview:_sliderView];
@@ -123,11 +142,10 @@ double squared(double x)
 	[_passwordLabel setText:newWord];
 	[_passwordLabel sizeToFit];
 	CGSize size = _passwordLabel.frame.size;
-	[_passwordLabel setFrame:CGRectMake(0, 0,
-										size.width+20, self.bounds.size.height)];
+	[_passwordLabel setFrame:CGRectMake(0, 0, size.width+20, self.bounds.size.height)];
 	
 	NSString *lotsOfDots = [[NSString alloc] init];
-	for ( NSUInteger i = 0; i<word.length; ++i ) {
+	for ( NSUInteger i=0; i<word.length; ++i ) {
 		lotsOfDots = [lotsOfDots stringByAppendingString:@"•"];
 	}
 	[_dotsLabel setText:lotsOfDots];

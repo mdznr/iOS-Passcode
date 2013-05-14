@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+	MTZSlideToRevealSizeiPhone,
+	MTZSlideToRevealSizeiPad
+} MTZSlideToRevealSize;
+
 @interface MTZSlideToReveal : UIView
 
+@property MTZSlideToRevealSize size;
 @property (nonatomic, assign) NSString *word;
 
 - (void)didGesture:(id)sender;

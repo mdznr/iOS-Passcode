@@ -262,8 +262,7 @@
 - (void)checkPasteboard
 {
 	if ( [[[UIPasteboard generalPasteboard] string] hasPrefix:@"http://"] ||
-		 [[[UIPasteboard generalPasteboard] string] hasPrefix:@"https://"] )
-	{
+		 [[[UIPasteboard generalPasteboard] string] hasPrefix:@"https://"] ) {
 		NSURL *url = [[NSURL alloc] initWithString:[[UIPasteboard generalPasteboard] string]];
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
 		_domainField.text = components[[components count]-2];
