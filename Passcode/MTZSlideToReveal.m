@@ -63,16 +63,14 @@ double squared(double x)
 	[self setOpaque:NO];
 	[self setBackgroundColor:[UIColor clearColor]];
 	
+	UIImage *backgroundImage;
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		UIImage *backgroundImage = [UIImage imageNamed:@"SlideToRevealBackground"];
-		backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 9, 8)];
-		_background = [[UIImageView alloc] initWithImage:backgroundImage];
-		
+		backgroundImage = [UIImage imageNamed:@"SlideToRevealBackground"];
 	} else {
-		UIImage *backgroundImage = [UIImage imageNamed:@"iPadSlideToRevealBackground"];
-		backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 9, 8)];
-		_background = [[UIImageView alloc] initWithImage:backgroundImage];
+		backgroundImage = [UIImage imageNamed:@"iPadSlideToRevealBackground"];
 	}
+	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 9, 8)];
+	_background = [[UIImageView alloc] initWithImage:backgroundImage];
 	[_background setFrame:self.bounds];
 	[_background setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[self addSubview:_background];
