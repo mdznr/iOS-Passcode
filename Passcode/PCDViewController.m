@@ -230,6 +230,24 @@
 	}
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		return UIInterfaceOrientationMaskPortrait;
+    } else {
+		return UIInterfaceOrientationMaskAll;
+    }
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		return toInterfaceOrientation == UIInterfaceOrientationPortrait;
+    } else {
+		return YES;
+    }
+}
+
 - (void)segmentedControlDidChange:(UISegmentedControl *)sender
 {
 	NSLog(@"Did change %d", [sender selectedSegmentIndex]);
