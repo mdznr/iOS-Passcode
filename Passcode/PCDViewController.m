@@ -327,16 +327,14 @@
 		switch ( [sender state] ) {
 			case UIGestureRecognizerStateBegan:
 				[self generateAndSetReveal:sender];
+			case UIGestureRecognizerStateChanged:
 				[_reveal setHidden:NO];
 				[_generateButton setHidden:YES];
 				break;
 			case UIGestureRecognizerStateEnded:
+			case UITouchPhaseCancelled:
 				[_reveal setHidden:YES];
 				[_generateButton setHidden:NO];
-				break;
-			case UIGestureRecognizerStateChanged:
-				[_reveal setHidden:NO];
-				[_generateButton setHidden:YES];
 				break;
 			default:
 				break;

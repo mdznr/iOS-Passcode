@@ -163,18 +163,17 @@ double squared(double x)
 		switch ( [sender state] ) {
 			case UIGestureRecognizerStateBegan:
 				[self showPopover:sender];
+			case UIGestureRecognizerStateChanged:
 				[self setPopoverCenter:[sender locationOfTouch:0 inView:self]];
 				break;
 			case UIGestureRecognizerStateEnded:
+			case UITouchPhaseCancelled:
 				[self hidePopover:sender];
 				if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
 					[self setPopoverCenter:(CGPoint){0,0}];
 				} else {
 					[self setPopoverCenter:(CGPoint){124,0}];
 				}
-				break;
-			case UIGestureRecognizerStateChanged:
-				[self setPopoverCenter:[sender locationOfTouch:0 inView:self]];
 				break;
 			default:
 				break;
