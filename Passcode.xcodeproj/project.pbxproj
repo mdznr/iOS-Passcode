@@ -76,6 +76,14 @@
 		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
 		C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
 		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
+		C96E7AD51751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */; };
+		C96E7AD61751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */; };
+		C96E7AD91751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */; };
+		C96E7ADA1751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */; };
+		C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
+		C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
+		C96E7AE01751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */; };
+		C96E7AE11751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */; };
 		C98D263C17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263E17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
@@ -257,6 +265,13 @@
 		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
+		C96E7AD31751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZNavigationBarSegmentedControlViewController.h; sourceTree = "<group>"; };
+		C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZNavigationBarSegmentedControlViewController.m; sourceTree = "<group>"; };
+		C96E7AD71751E14C00E65921 /* UISegmentedControl+setItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+setItems.h"; sourceTree = "<group>"; };
+		C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+setItems.m"; sourceTree = "<group>"; };
+		C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
+		C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
+		C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDRestrictionsViewController.xib; sourceTree = "<group>"; };
 		C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideToRevealBackground.png; path = resources/iPhone/SlideToRevealBackground.png; sourceTree = "<group>"; };
 		C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SlideToRevealBackground@2x.png"; path = "resources/iPhone/SlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
 		C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActive.png; path = resources/iPad/iPadButtonActive.png; sourceTree = "<group>"; };
@@ -269,8 +284,8 @@
 		C98D264717417CCA00ECBEF7 /* iPadButtonEnabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabled@2x.png"; path = "resources/iPad/iPadButtonEnabled@2x.png"; sourceTree = "<group>"; };
 		C98D264817417CCA00ECBEF7 /* iPadButtonEnabledGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonEnabledGreen.png; path = resources/iPad/iPadButtonEnabledGreen.png; sourceTree = "<group>"; };
 		C98D264917417CCA00ECBEF7 /* iPadButtonEnabledGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadButtonEnabledGreen@2x.png"; path = "resources/iPad/iPadButtonEnabledGreen@2x.png"; sourceTree = "<group>"; };
-		C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MTZRemove.h"; sourceTree = "<group>"; };
-		C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MTZRemove.m"; sourceTree = "<group>"; };
+		C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MTZRemove.h"; path = "../NSMutableArray+MTZRemove.h"; sourceTree = "<group>"; };
+		C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MTZRemove.m"; path = "../NSMutableArray+MTZRemove.m"; sourceTree = "<group>"; };
 		C98D26621741D0DB00ECBEF7 /* iPadSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadSlider.png; path = resources/iPad/iPadSlider.png; sourceTree = "<group>"; };
 		C98D26631741D0DB00ECBEF7 /* iPadSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadSlider@2x.png"; path = "resources/iPad/iPadSlider@2x.png"; sourceTree = "<group>"; };
 		C98D26681741E72F00ECBEF7 /* iPadSlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadSlideToRevealBackground.png; path = resources/iPad/iPadSlideToRevealBackground.png; sourceTree = "<group>"; };
@@ -442,8 +457,6 @@
 		C95FDED415D232D5006FE035 = {
 			isa = PBXGroup;
 			children = (
-				C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */,
-				C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */,
 				C95FDEE915D232D5006FE035 /* Passcode */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
@@ -483,6 +496,9 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
+				C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */,
+				C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */,
+				C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */,
 				C96BB61C16A8F7AE00E5EEEC /* PCDAboutViewControllerDelegate.h */,
 				C96165B116A169F100532B61 /* NSString+sha256.h */,
 				C96165B216A169F100532B61 /* NSString+sha256.m */,
@@ -490,6 +506,12 @@
 				C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */,
 				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
+				C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */,
+				C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */,
+				C96E7AD71751E14C00E65921 /* UISegmentedControl+setItems.h */,
+				C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */,
+				C96E7AD31751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.h */,
+				C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C9FE1FBD171320AD008D4D61 /* NYSliderPopover */,
 				C961662416A5280D00532B61 /* Walkthrough Pages View */,
@@ -797,6 +819,7 @@
 				C98D266C1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */,
 				C98D26701741E73B00ECBEF7 /* Slider.png in Resources */,
 				C98D26721741E73B00ECBEF7 /* Slider@2x.png in Resources */,
+				C96E7AE01751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +890,7 @@
 				C98D266D1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */,
 				C98D26711741E73B00ECBEF7 /* Slider.png in Resources */,
 				C98D26731741E73B00ECBEF7 /* Slider@2x.png in Resources */,
+				C96E7AE11751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +919,9 @@
 				C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */,
 				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
 				C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
+				C96E7AD51751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */,
+				C96E7AD91751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */,
+				C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +946,9 @@
 				C9FE1FBC17131D50008D4D61 /* NYSliderPopover.m in Sources */,
 				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C98D26611741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
+				C96E7AD61751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */,
+				C96E7ADA1751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */,
+				C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

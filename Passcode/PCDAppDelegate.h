@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class PCDViewController;
+#import "PCDViewController.h"
 
 @interface PCDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) PCDViewController *viewController;
+@property (strong, nonatomic) PCDViewController *mainViewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

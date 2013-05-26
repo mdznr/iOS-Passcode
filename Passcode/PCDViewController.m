@@ -36,6 +36,20 @@
 
 @implementation PCDViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		[self setup];
+	}
+	return self;
+}
+
+- (void)setup
+{
+	
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,6 +63,12 @@
 																   action:@selector(viewAbout:)];
 	self.navigationItem.leftBarButtonItem = aboutButton;
 	
+	UIBarButtonItem *restrictionsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restrictions", nil)
+																		   style:UIBarButtonItemStyleBordered
+																		  target:self
+																		  action:@selector(viewRestrictions:)];
+	self.navigationItem.rightBarButtonItem = restrictionsButton;
+	
 	[self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
 																		  green:52.0f/255.0f
 																		   blue:154.0f/255.0f
@@ -59,22 +79,8 @@
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
-	// Set up the UISegmentedControl for Domain|Restrictions
-	NSArray *items = @[NSLocalizedString(@"Domain", nil),
-					   NSLocalizedString(@"Restrictions", nil)];
-	UISegmentedControl *domainRestrictions = [[UISegmentedControl alloc] initWithItems:items];
-	[domainRestrictions addTarget:self action:@selector(segmentedControlDidChange:) forControlEvents:UIControlEventValueChanged];
-	[domainRestrictions setSegmentedControlStyle:UISegmentedControlStyleBar];
-	[domainRestrictions setSelectedSegmentIndex:0];
-	[domainRestrictions setAutoresizingMask:(UIViewAutoresizingFlexibleWidth |
-											 UIViewAutoresizingFlexibleLeftMargin |
-											 UIViewAutoresizingFlexibleRightMargin |
-											 UIViewAutoresizingFlexibleBottomMargin )];
-	
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
 	{
-		[domainRestrictions setFrame:CGRectMake(75, 7, 169, 30)];
-		
 		// Set up Generate Button
 			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"]
 									   forState:UIControlStateDisabled];
@@ -110,8 +116,6 @@
 	}
 	else
 	{
-		[domainRestrictions setFrame:CGRectMake(75, 7, 307, 30)];
-		
 		// Set up Generate Button
 		[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreen"]
 								   forState:UIControlStateNormal];
@@ -152,8 +156,6 @@
 	[_generateButton addGestureRecognizer:panGesture];
 	
 	[_reveal setHidden:YES];
-	
-	[self.navigationItem setTitleView:domainRestrictions];
 	
 	/*
 	// The beginnings of a cleaner, less distracting navigation bar
@@ -345,10 +347,31 @@
 
 - (IBAction)viewAbout:(id)sender
 {
-	PCDAboutViewController *about = [[PCDAboutViewController alloc] initWithNibName:@"PCDAboutViewController"
-																			 bundle:nil];
+	PCDAboutViewController *about;
+	about = [[PCDAboutViewController alloc] initWithNibName:@"PCDAboutViewController"
+													 bundle:nil];
 	[about setDelegate:self];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
+	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
+																	 green:52.0f/255.0f
+																	  blue:154.0f/255.0f
+																	 alpha:1.0f]];
+	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
+	[self presentViewController:navigationController animated:YES completion:nil];
+	
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
+		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 460);
+		navigationController.view.superview.center = self.view.center;
+	}
+}
+
+- (void)viewRestrictions:(id)sender
+{
+	PCDRestrictionsViewController *restrictions;
+	restrictions = [[PCDRestrictionsViewController alloc] initWithNibName:@"PCDRestrictionsViewController"
+																   bundle:nil];
+//	[restrictions setDelegate:self];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:restrictions];
 	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
 																	 green:52.0f/255.0f
 																	  blue:154.0f/255.0f

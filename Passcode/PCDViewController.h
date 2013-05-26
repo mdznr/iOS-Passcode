@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PCDAboutViewController.h"
+#import "PCDRestrictionsViewController.h"
 
 #import "MTZAppearView.h"
 #import "MTZSlideToReveal.h"
