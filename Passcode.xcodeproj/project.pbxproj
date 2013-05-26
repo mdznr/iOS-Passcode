@@ -76,10 +76,6 @@
 		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
 		C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
 		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
-		C96E7AD51751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */; };
-		C96E7AD61751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */; };
-		C96E7AD91751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */; };
-		C96E7ADA1751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */; };
 		C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
 		C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
 		C96E7AE01751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */; };
@@ -265,10 +261,6 @@
 		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
-		C96E7AD31751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZNavigationBarSegmentedControlViewController.h; sourceTree = "<group>"; };
-		C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZNavigationBarSegmentedControlViewController.m; sourceTree = "<group>"; };
-		C96E7AD71751E14C00E65921 /* UISegmentedControl+setItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+setItems.h"; sourceTree = "<group>"; };
-		C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+setItems.m"; sourceTree = "<group>"; };
 		C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
 		C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDRestrictionsViewController.xib; sourceTree = "<group>"; };
@@ -508,10 +500,6 @@
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
 				C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */,
 				C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */,
-				C96E7AD71751E14C00E65921 /* UISegmentedControl+setItems.h */,
-				C96E7AD81751E14C00E65921 /* UISegmentedControl+setItems.m */,
-				C96E7AD31751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.h */,
-				C96E7AD41751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C9FE1FBD171320AD008D4D61 /* NYSliderPopover */,
 				C961662416A5280D00532B61 /* Walkthrough Pages View */,
@@ -919,8 +907,6 @@
 				C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */,
 				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
 				C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
-				C96E7AD51751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */,
-				C96E7AD91751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */,
 				C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,8 +932,6 @@
 				C9FE1FBC17131D50008D4D61 /* NYSliderPopover.m in Sources */,
 				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C98D26611741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
-				C96E7AD61751E13500E65921 /* MTZNavigationBarSegmentedControlViewController.m in Sources */,
-				C96E7ADA1751E14C00E65921 /* UISegmentedControl+setItems.m in Sources */,
 				C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
