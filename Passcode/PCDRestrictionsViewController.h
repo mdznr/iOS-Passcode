@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCDRestrictionsViewController : UIViewController
+@interface PCDRestrictionsViewController : UIViewController <UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

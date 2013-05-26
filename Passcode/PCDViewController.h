@@ -15,7 +15,7 @@
 #import "MTZWalkthroughPagesView.h"
 #import "PCDAboutViewControllerDelegate.h"
 
-@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate, UITableViewDataSource>
+@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate>
 
 #pragma mark Domain
 
@@ -41,9 +41,5 @@
 - (void)animateForMasterPassword;
 - (void)animateForDomain;
 - (void)animateForGenerate;
-
-#pragma mark Restrictions
-
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -78,8 +78,6 @@
 		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
 		C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
 		C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
-		C96E7AE01751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */; };
-		C96E7AE11751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */; };
 		C98D263C17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263E17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
@@ -186,10 +184,6 @@
 		C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
 		C9DB2DD316408705007B417B /* iPadInput.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD116408705007B417B /* iPadInput.png */; };
 		C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD216408705007B417B /* iPadInput@2x.png */; };
-		C9FE1FB917131D50008D4D61 /* NYPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB617131D50008D4D61 /* NYPopover.m */; };
-		C9FE1FBA17131D50008D4D61 /* NYPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB617131D50008D4D61 /* NYPopover.m */; };
-		C9FE1FBB17131D50008D4D61 /* NYSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB817131D50008D4D61 /* NYSliderPopover.m */; };
-		C9FE1FBC17131D50008D4D61 /* NYSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1FB817131D50008D4D61 /* NYSliderPopover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -263,7 +257,6 @@
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
 		C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
-		C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDRestrictionsViewController.xib; sourceTree = "<group>"; };
 		C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideToRevealBackground.png; path = resources/iPhone/SlideToRevealBackground.png; sourceTree = "<group>"; };
 		C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SlideToRevealBackground@2x.png"; path = "resources/iPhone/SlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
 		C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActive.png; path = resources/iPad/iPadButtonActive.png; sourceTree = "<group>"; };
@@ -327,10 +320,6 @@
 		C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardBackground@2x.png"; sourceTree = "<group>"; };
 		C9DB2DD116408705007B417B /* iPadInput.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadInput.png; path = resources/iPad/iPadInput.png; sourceTree = "<group>"; };
 		C9DB2DD216408705007B417B /* iPadInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadInput@2x.png"; path = "resources/iPad/iPadInput@2x.png"; sourceTree = "<group>"; };
-		C9FE1FB517131D50008D4D61 /* NYPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYPopover.h; sourceTree = "<group>"; };
-		C9FE1FB617131D50008D4D61 /* NYPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYPopover.m; sourceTree = "<group>"; };
-		C9FE1FB717131D50008D4D61 /* NYSliderPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSliderPopover.h; sourceTree = "<group>"; };
-		C9FE1FB817131D50008D4D61 /* NYSliderPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSliderPopover.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,7 +479,6 @@
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
 				C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */,
 				C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */,
-				C96E7ADD1751E39700E65921 /* PCDRestrictionsViewController.xib */,
 				C96BB61C16A8F7AE00E5EEEC /* PCDAboutViewControllerDelegate.h */,
 				C96165B116A169F100532B61 /* NSString+sha256.h */,
 				C96165B216A169F100532B61 /* NSString+sha256.m */,
@@ -501,7 +489,6 @@
 				C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */,
 				C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
-				C9FE1FBD171320AD008D4D61 /* NYSliderPopover */,
 				C961662416A5280D00532B61 /* Walkthrough Pages View */,
 				C91542C115D9C535000EE537 /* About */,
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
@@ -650,17 +637,6 @@
 			name = iPhone;
 			sourceTree = "<group>";
 		};
-		C9FE1FBD171320AD008D4D61 /* NYSliderPopover */ = {
-			isa = PBXGroup;
-			children = (
-				C9FE1FB517131D50008D4D61 /* NYPopover.h */,
-				C9FE1FB617131D50008D4D61 /* NYPopover.m */,
-				C9FE1FB717131D50008D4D61 /* NYSliderPopover.h */,
-				C9FE1FB817131D50008D4D61 /* NYSliderPopover.m */,
-			);
-			name = NYSliderPopover;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -807,7 +783,6 @@
 				C98D266C1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */,
 				C98D26701741E73B00ECBEF7 /* Slider.png in Resources */,
 				C98D26721741E73B00ECBEF7 /* Slider@2x.png in Resources */,
-				C96E7AE01751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,7 +853,6 @@
 				C98D266D1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */,
 				C98D26711741E73B00ECBEF7 /* Slider.png in Resources */,
 				C98D26731741E73B00ECBEF7 /* Slider@2x.png in Resources */,
-				C96E7AE11751E39700E65921 /* PCDRestrictionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,8 +875,6 @@
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C96165F316A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
-				C9FE1FB917131D50008D4D61 /* NYPopover.m in Sources */,
-				C9FE1FBB17131D50008D4D61 /* NYSliderPopover.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */,
 				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
@@ -928,8 +900,6 @@
 				C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */,
 				C96165F416A5130600532B61 /* MTZWalkthroughPagesView.m in Sources */,
 				C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
-				C9FE1FBA17131D50008D4D61 /* NYPopover.m in Sources */,
-				C9FE1FBC17131D50008D4D61 /* NYSliderPopover.m in Sources */,
 				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C98D26611741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
 				C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
