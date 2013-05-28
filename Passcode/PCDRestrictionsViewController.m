@@ -15,6 +15,7 @@
 	UISlider *lengthSlider;
 	
 	UILabel *lengthLabel;
+	UILabel *lengthValueLabel;
 }
 
 @end
@@ -87,21 +88,30 @@
 	NSDictionary *lengthDict = [NSDictionary dictionaryWithObject:@[@""] forKey:@"Restrictions"];
 	[listOfItems addObject:lengthDict];
 	
-	lengthSlider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 280, 22)];
+	lengthSlider = [[UISlider alloc] initWithFrame:CGRectMake(20, 32, 280, 22)];
 	[lengthSlider setMinimumValue:4.0f];
 	[lengthSlider setMaximumValue:28.0f];
 	NSUInteger passcodeLength = [(PCDPasscodeGenerator *)[PCDPasscodeGenerator sharedInstance] length];
 	[lengthSlider setValue:passcodeLength];
 	[lengthSlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 	[lengthSlider addTarget:self action:@selector(sliderStarted:) forControlEvents:UIControlEventTouchDown];
-	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:UIControlEventTouchUpInside];
+//	[lengthSlider addTarget:self action:@selector(sliderStarted:) forControlEvents:UIControlEventEditingDidBegin];
+	NSUInteger touchEnd = UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel;
+	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:touchEnd];
+//	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:UIControlEventEditingDidEnd];
 	NSArray *lengthViewDict = [NSDictionary dictionaryWithObject:@[lengthSlider] forKey:@"Restrictions"];
 	[listOfAccessories addObject:lengthViewDict];
 	
 	[self.view addSubview:lengthSlider];
-	lengthLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 0, 40, 22)];
-	[lengthLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)passcodeLength]];
+	lengthLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 8, 250, 22)];
+	[lengthLabel setTextAlignment:NSTextAlignmentLeft];
+	[lengthLabel setText:NSLocalizedString(@"Length", nil)];
 	[self.view addSubview:lengthLabel];
+	
+	lengthValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 8, 30, 22)];
+	[lengthValueLabel setTextAlignment:NSTextAlignmentRight];
+	[lengthValueLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)passcodeLength]];
+	[self.view addSubview:lengthValueLabel];
 	
 	NSArray *restrictionTypes = @[@"Capitals", @"Numbers", @"Symbols", @"No Consecutives"];
 	NSDictionary *restrictionTypesDict = [NSDictionary dictionaryWithObject:restrictionTypes forKey:@"Restrictions"];
@@ -151,7 +161,7 @@
 {
 	NSUInteger value = round(sender.value);
 	NSString *valueText = [NSString stringWithFormat:@"%lu", (unsigned long)value];
-	[lengthLabel setText:valueText];
+	[lengthValueLabel setText:valueText];
 }
 
 - (void)sliderStarted:(UISlider *)sender
@@ -162,7 +172,7 @@
 //	[UIView setAnimationDuration:1.0f];
 	
 	// Set label to active color
-	[lengthLabel setTextColor:[UIColor blueColor]];
+	[lengthValueLabel setTextColor:[UIColor blueColor]];
 	
 //	[UIView commitAnimations];
 }
@@ -176,7 +186,7 @@
 	[[PCDPasscodeGenerator sharedInstance] setLength:lrintl(quantizedValue)];
 	
 	// Return label to original color
-	[lengthLabel setTextColor:[UIColor blackColor]];
+	[lengthValueLabel setTextColor:[UIColor blackColor]];
 }
 
 #pragma mark Table view methods
