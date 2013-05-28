@@ -242,7 +242,7 @@ double squared(double x)
 		moveLeft = -7 + p * (_passwordLabel.bounds.size.width - self.bounds.size.width + 14);
 	}
 	[_passwordLabel setTransform:CGAffineTransformMakeTranslation(-moveLeft, 0)];
-	NSLog(@"left: %f\tframe %f", moveLeft, _passwordLabel.frame.origin.x);
+//	NSLog(@"left: %f\tframe %f", moveLeft, _passwordLabel.frame.origin.x);
 	
 	CGRect rect = CGRectMake(moveLeft + _sliderView.frame.origin.x + 6,
 							 _sliderView.frame.origin.y + 6,

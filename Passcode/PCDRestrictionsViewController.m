@@ -7,11 +7,14 @@
 //
 
 #import "PCDRestrictionsViewController.h"
+#import "PCDPasscodeGenerator.h"
 
 @interface PCDRestrictionsViewController () {
 	NSMutableArray *listOfItems;
 	NSMutableArray *listOfAccessories;
 	UISlider *lengthSlider;
+	
+	UILabel *lengthLabel;
 }
 
 @end
@@ -62,15 +65,18 @@
 																		  action:@selector(done:)];
 	[self.navigationItem setLeftBarButtonItem:done];
 	
-	// Invisible right bar button to also dismiss view controller
-	UIButton *invisible = [UIButton buttonWithType:UIButtonTypeCustom];
-	[invisible setTitle:done.title forState:UIControlStateNormal];
-	// Would be nice not having to hard-code in width and height
-	[invisible setFrame:CGRectMake(0, 0, 55, 32)];
-	[invisible setShowsTouchWhenHighlighted:YES];
-	UIBarButtonItem *secretlyDone = [[UIBarButtonItem alloc] initWithCustomView:invisible];
-	[invisible addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
-	[self.navigationItem setRightBarButtonItem:secretlyDone];
+	// Only use on iPhone/iPod touch:
+	if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
+		// Invisible right bar button to also dismiss view controller
+		UIButton *invisible = [UIButton buttonWithType:UIButtonTypeCustom];
+		[invisible setTitle:done.title forState:UIControlStateNormal];
+		// Would be nice not having to hard-code in width and height
+		[invisible setFrame:CGRectMake(0, 0, 55, 32)];
+		[invisible setShowsTouchWhenHighlighted:YES];
+		UIBarButtonItem *secretlyDone = [[UIBarButtonItem alloc] initWithCustomView:invisible];
+		[invisible addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
+		[self.navigationItem setRightBarButtonItem:secretlyDone];
+	}
 	
 	[self.view setBackgroundColor:[UIColor colorWithWhite:0.93f alpha:1.0f]];
 	
@@ -84,10 +90,18 @@
 	lengthSlider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 280, 22)];
 	[lengthSlider setMinimumValue:4.0f];
 	[lengthSlider setMaximumValue:28.0f];
+	NSUInteger passcodeLength = [(PCDPasscodeGenerator *)[PCDPasscodeGenerator sharedInstance] length];
+	[lengthSlider setValue:passcodeLength];
 	[lengthSlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+	[lengthSlider addTarget:self action:@selector(sliderStarted:) forControlEvents:UIControlEventTouchDown];
 	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:UIControlEventTouchUpInside];
 	NSArray *lengthViewDict = [NSDictionary dictionaryWithObject:@[lengthSlider] forKey:@"Restrictions"];
 	[listOfAccessories addObject:lengthViewDict];
+	
+	[self.view addSubview:lengthSlider];
+	lengthLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 0, 40, 22)];
+	[lengthLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)passcodeLength]];
+	[self.view addSubview:lengthLabel];
 	
 	NSArray *restrictionTypes = @[@"Capitals", @"Numbers", @"Symbols", @"No Consecutives"];
 	NSDictionary *restrictionTypesDict = [NSDictionary dictionaryWithObject:restrictionTypes forKey:@"Restrictions"];
@@ -133,24 +147,36 @@
 
 #pragma mark Restrictions
 
-- (void)sliderValueChanged:(id)sender
+- (void)sliderValueChanged:(UISlider *)sender
 {
-    [self updateSliderPopoverText];
+	NSUInteger value = round(sender.value);
+	NSString *valueText = [NSString stringWithFormat:@"%lu", (unsigned long)value];
+	[lengthLabel setText:valueText];
 }
 
-- (void)updateSliderPopoverText
+- (void)sliderStarted:(UISlider *)sender
 {
-//    lengthSlider.popover.textLabel.text = [NSString stringWithFormat:@"%.0f", lengthSlider.value];
+	// Animate changes (well, I'll make that happen eventually)
+//	[UIView beginAnimations:nil context:nil];
+//	[UIView setAnimationBeginsFromCurrentState:YES];
+//	[UIView setAnimationDuration:1.0f];
+	
+	// Set label to active color
+	[lengthLabel setTextColor:[UIColor blueColor]];
+	
+//	[UIView commitAnimations];
 }
 
-- (void)sliderStopped:(id)sender
+- (void)sliderStopped:(UISlider *)sender
 {
 	// Set the value of the slider to the nearest whole number.
 	// Is this necessary? Perhaps just handle the rounding when making the passcode?
+	CGFloat quantizedValue = roundf(lengthSlider.value);
+	[lengthSlider setValue:quantizedValue animated:YES];
+	[[PCDPasscodeGenerator sharedInstance] setLength:lrintl(quantizedValue)];
 	
-	//	NSLog(@"%f", lengthSlider.value);
-	[lengthSlider setValue:roundf(lengthSlider.value) animated:YES];
-	//	NSLog(@"%f", lengthSlider.value);
+	// Return label to original color
+	[lengthLabel setTextColor:[UIColor blackColor]];
 }
 
 #pragma mark Table view methods

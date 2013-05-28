@@ -21,9 +21,9 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 #import "PCDViewController.h"
+#import "PCDPasscodeGenerator.h"
 #import "PDKeychainBindings.h"
-#import "NSString+sha256.h"
-#import "NSString+characterSwaps.h"
+#import "MTZFarPanGestureRecognizer.h"
 
 @interface PCDViewController () {
 	BOOL isPresentingWalkthrough;
@@ -167,7 +167,9 @@
 	
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
-	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
+	
+	MTZFarPanGestureRecognizer *panGesture = [[MTZFarPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
+	[panGesture setMinimumRequiredPanningDistance:200.0f];
 	[_generateButton addGestureRecognizer:panGesture];
 	
 	[_reveal setHidden:YES];
@@ -240,17 +242,11 @@
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
-	// Create the hash
-	NSString *concatination = [[_domainField.text lowercaseString] stringByAppendingString:_passwordField.text];
-	NSData *passwordData = [concatination sha256Data];
-	NSString *password = [NSString base64StringFromData:passwordData];
-	
-	// Now replace + and / with ! and # to improve password compatibility
-	password = [password stringByReplacingOccurrencesOfCharacter:'+' withCharacter:'!'];
-	password = [password stringByReplacingOccurrencesOfCharacter:'/' withCharacter:'#'];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
+																andMasterPassword:_passwordField.text];
 	
 	// Copy it to pasteboard
-	[[UIPasteboard generalPasteboard] setString:[password substringToIndex:16]];
+	[[UIPasteboard generalPasteboard] setString:password];
 	
 	// Animation to show password has been copied
 	[_copiedView display];
@@ -258,15 +254,8 @@
 
 - (void)generateAndSetReveal:(id)sender
 {
-	// Create the hash
-	NSString *concatination = [[_domainField.text lowercaseString] stringByAppendingString:_passwordField.text];
-	NSData *passwordData = [concatination sha256Data];
-	NSString *password = [NSString base64StringFromData:passwordData];
-	
-	// Now replace + and / with ! and # to improve password compatibility
-	password = [password stringByReplacingOccurrencesOfCharacter:'+' withCharacter:'!'];
-	password = [password stringByReplacingOccurrencesOfCharacter:'/' withCharacter:'#'];
-	password = [password substringToIndex:16];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
+																andMasterPassword:_passwordField.text];
 	
 	[_reveal setWord:password];
 }
@@ -277,9 +266,9 @@
 		switch ( [sender state] ) {
 			case UIGestureRecognizerStateBegan:
 				[self generateAndSetReveal:sender];
-			case UIGestureRecognizerStateChanged:
 				[_reveal setHidden:NO];
 				[_generateButton setHidden:YES];
+			case UIGestureRecognizerStateChanged:
 				break;
 			case UIGestureRecognizerStateEnded:
 			case UITouchPhaseCancelled:
@@ -308,7 +297,7 @@
 	[self presentViewController:navigationController animated:YES completion:nil];
 	
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
-		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 460);
+		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 480);
 		navigationController.view.superview.center = self.view.center;
 	}
 }
@@ -327,7 +316,7 @@
 	[self presentViewController:navigationController animated:YES completion:nil];
 	
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
-		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 460);
+		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 548);
 		navigationController.view.superview.center = self.view.center;
 	}
 }

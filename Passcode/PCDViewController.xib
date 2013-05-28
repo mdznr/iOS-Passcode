@@ -63,7 +63,6 @@
 						<string key="NSFrame">{{0, 374}, {320, 36}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -624,7 +623,6 @@
 						<string key="NSFrame">{{20, 259}, {280, 48}}</string>
 						<reference key="NSSuperview" ref="332249925"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -687,7 +685,6 @@ MiBBTQ</string>
 						<string key="NSFrame">{{40, 241}, {240, 100}}</string>
 						<reference key="NSSuperview" ref="730166928"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="695576083"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -749,7 +746,6 @@ MiBBTQ</string>
 						<string key="NSFrame">{{40, 241}, {240, 100}}</string>
 						<reference key="NSSuperview" ref="1037351464"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -800,7 +796,6 @@ MiBBTQ</string>
 						<string key="NSFrame">{{40, 241}, {240, 100}}</string>
 						<reference key="NSSuperview" ref="1045910878"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -859,7 +854,6 @@ YXJkLg</string>
 						<string key="NSFrame">{{40, 241}, {240, 100}}</string>
 						<reference key="NSSuperview" ref="288202495"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -1536,7 +1530,6 @@ YXJkLg</string>
 						<string key="pagesView">MTZWalkthroughPagesView</string>
 						<string key="passwordField">UITextField</string>
 						<string key="reveal">MTZSlideToReveal</string>
-						<string key="tableView">UITableView</string>
 						<string key="view">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -1591,10 +1584,6 @@ YXJkLg</string>
 						<object class="IBToOneOutletInfo" key="reveal">
 							<string key="name">reveal</string>
 							<string key="candidateClassName">MTZSlideToReveal</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tableView">
-							<string key="name">tableView</string>
-							<string key="candidateClassName">UITableView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="view">
 							<string key="name">view</string>

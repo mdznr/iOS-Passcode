@@ -78,6 +78,9 @@
 		C96BB62516A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */; };
 		C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
 		C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */; };
+		C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
+		C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
+		C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */; };
 		C98D263C17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
 		C98D263E17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
@@ -257,6 +260,10 @@
 		C96BB62316A904DE00E5EEEC /* PCDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDAboutViewController.xib; sourceTree = "<group>"; };
 		C96E7ADB1751E39600E65921 /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C96E7ADC1751E39700E65921 /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
+		C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZFarPanGestureRecognizer.h; sourceTree = "<group>"; };
+		C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZFarPanGestureRecognizer.m; sourceTree = "<group>"; };
+		C984F4E517542EA200172F9F /* PCDPasscodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDPasscodeGenerator.h; sourceTree = "<group>"; };
+		C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDPasscodeGenerator.m; sourceTree = "<group>"; };
 		C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideToRevealBackground.png; path = resources/iPhone/SlideToRevealBackground.png; sourceTree = "<group>"; };
 		C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SlideToRevealBackground@2x.png"; path = "resources/iPhone/SlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
 		C98D264017417CCA00ECBEF7 /* iPadButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadButtonActive.png; path = resources/iPad/iPadButtonActive.png; sourceTree = "<group>"; };
@@ -473,6 +480,8 @@
 			children = (
 				C95FDEF215D232D5006FE035 /* PCDAppDelegate.h */,
 				C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */,
+				C984F4E517542EA200172F9F /* PCDPasscodeGenerator.h */,
+				C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */,
 				C95FDEF515D232D5006FE035 /* PCDViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
@@ -488,6 +497,8 @@
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
 				C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */,
 				C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */,
+				C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */,
+				C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C961662416A5280D00532B61 /* Walkthrough Pages View */,
 				C91542C115D9C535000EE537 /* About */,
@@ -880,6 +891,8 @@
 				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
 				C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
 				C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
+				C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
+				C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,6 +916,7 @@
 				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C98D26611741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
 				C96E7ADF1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
+				C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
