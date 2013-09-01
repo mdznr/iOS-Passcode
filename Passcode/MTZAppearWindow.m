@@ -17,6 +17,10 @@
 
 @implementation MTZAppearWindow
 
+@synthesize imageName = _imageName;
+@synthesize text = _text;
+@synthesize textSize = _textSize;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -29,15 +33,31 @@
 
 - (void)setup
 {
+	self.windowLevel = UIWindowLevelAlert;
 	self.userInteractionEnabled = NO;
 	self.backgroundColor = [UIColor clearColor];
 	self.opaque = NO;
 	_mainView = [[MTZAppearView alloc] initWithFrame:self.bounds];
 	_mainView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	_mainView.imageName = @"copied";
-	_mainView.text = @"Copied";
-	_mainView.textSize = 16;
 	[self addSubview:_mainView];
+}
+
+- (void)setImageName:(NSString *)imageName
+{
+	_imageName = imageName;
+	_mainView.imageName = imageName;
+}
+
+- (void)setText:(NSString *)text
+{
+	_text = text;
+	_mainView.text = text;
+}
+
+- (void)setTextSize:(CGFloat)textSize
+{
+	_textSize = textSize;
+	_mainView.textSize = textSize;
 }
 
 - (void)display

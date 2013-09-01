@@ -101,7 +101,9 @@
 									| UIViewAutoresizingFlexibleBottomMargin
 									| UIViewAutoresizingFlexibleLeftMargin
 									| UIViewAutoresizingFlexibleRightMargin;
-	_copiedWindow.windowLevel = UIWindowLevelAlert;
+	_copiedWindow.imageName = @"copied";
+	_copiedWindow.text = @"Copied";
+	_copiedWindow.textSize = 16;
 	
 	[_pagesView addPages:@[_page1, _page2, _page3, _page4, _page5]];
 	[_pagesView setPageControl:_pageControl];

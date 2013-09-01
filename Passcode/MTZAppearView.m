@@ -99,13 +99,7 @@
 	CGContextDrawPath(context, kCGPathFillStroke);
 	UIGraphicsEndImageContext();
 	
-	self.backgroundColor = UIColor.blueColor;
-	
-	UILabel *test = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 128, 128)];
-	test.backgroundColor = UIColor.clearColor;
-	test.opaque = NO;
-	test.text = @"TESTING THIS";
-	[self addSubview:test];
+	self.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
 	
 	// Image
 	UIImage *image = [UIImage imageNamed:_imageName];
@@ -114,6 +108,10 @@
 							 floorf((self.frame.size.height - image.size.height)/2) - 14,
 							 image.size.width,
 							 image.size.height)];
+	_imageView.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
+								 | UIViewAutoresizingFlexibleBottomMargin
+								 | UIViewAutoresizingFlexibleLeftMargin
+								 | UIViewAutoresizingFlexibleRightMargin;
 	_imageView.image = image;
 	[self addSubview:_imageView];
 	
@@ -122,6 +120,10 @@
 														  self.frame.size.height/2 + 9,
 														  self.frame.size.width,
 														  self.frame.size.height/2)];
+	_textView.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
+								| UIViewAutoresizingFlexibleBottomMargin
+								| UIViewAutoresizingFlexibleWidth
+								| UIViewAutoresizingFlexibleHeight;
 	_textView.text = _text;
 	_textView.backgroundColor = [UIColor clearColor];
 	_textView.textColor = [UIColor whiteColor];
@@ -135,7 +137,12 @@
 - (void)setImageName:(NSString *)imageName
 {
 	_imageName = imageName;
-	_imageView.image = [UIImage imageNamed:imageName];
+	UIImage *image = [UIImage imageNamed:imageName];
+	_imageView.image = image;
+	_imageView.frame = CGRectMake(floorf((self.frame.size.width - image.size.width)/2),
+								  floorf((self.frame.size.height - image.size.height)/2) - 14,
+								  image.size.width,
+								  image.size.height);
 	_imageView.center = self.center;
 }
 
@@ -143,6 +150,10 @@
 {
 	_text = text;
 	_textView.text = text;
+	_textView.frame = CGRectMake(0,
+								 self.frame.size.height/2 + 9,
+								 self.frame.size.width,
+								 self.frame.size.height/2);
 }
 
 - (void)setTextSize:(CGFloat)textSize
