@@ -33,6 +33,7 @@
 	self.backgroundColor = [UIColor clearColor];
 	self.opaque = NO;
 	_mainView = [[MTZAppearView alloc] initWithFrame:self.bounds];
+	_mainView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	_mainView.imageName = @"copied";
 	_mainView.text = @"Copied";
 	_mainView.textSize = 16;
@@ -41,6 +42,9 @@
 
 - (void)display
 {
+	[[self class] cancelPreviousPerformRequestsWithTarget:self
+												 selector:@selector(hide)
+												   object:nil];
 	[self setHidden:NO];
 	
 	[_mainView display];

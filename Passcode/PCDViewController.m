@@ -25,6 +25,9 @@
 #import "PDKeychainBindings.h"
 #import "MTZFarPanGestureRecognizer.h"
 
+#warning remove this import
+#import "MTZAppearView.h"
+
 @interface PCDViewController () {
 	BOOL isPresentingWalkthrough;
 }
@@ -94,11 +97,11 @@
 	
 	// Set up popover
 	_copiedWindow = [[MTZAppearWindow alloc] init];
-	_copiedWindow.autoresizingMask =   UIViewAutoresizingFlexibleTopMargin
-									 | UIViewAutoresizingFlexibleBottomMargin
-									 | UIViewAutoresizingFlexibleLeftMargin
-									 | UIViewAutoresizingFlexibleRightMargin;
-	[self.view addSubview:_copiedWindow];
+	_copiedWindow.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
+									| UIViewAutoresizingFlexibleBottomMargin
+									| UIViewAutoresizingFlexibleLeftMargin
+									| UIViewAutoresizingFlexibleRightMargin;
+	_copiedWindow.windowLevel = UIWindowLevelAlert;
 	
 	[_pagesView addPages:@[_page1, _page2, _page3, _page4, _page5]];
 	[_pagesView setPageControl:_pageControl];
