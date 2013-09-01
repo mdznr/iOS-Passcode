@@ -10,7 +10,7 @@
 #import "PCDAboutViewController.h"
 #import "PCDRestrictionsViewController.h"
 
-#import "MTZAppearView.h"
+#import "MTZAppearWindow.h"
 #import "MTZSlideToReveal.h"
 #import "MTZWalkthroughPagesView.h"
 #import "PCDAboutViewControllerDelegate.h"
@@ -25,7 +25,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
-@property (strong, nonatomic) IBOutlet MTZAppearView *copiedView;
+@property (strong, nonatomic) MTZAppearWindow *copiedWindow;
 
 // Walthrough
 @property (strong, nonatomic) IBOutlet MTZWalkthroughPagesView *pagesView;

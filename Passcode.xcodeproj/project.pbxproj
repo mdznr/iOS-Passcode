@@ -11,6 +11,7 @@
 		C910315E1641E5FA00A59FCA /* iPadCopied.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315C1641E5FA00A59FCA /* iPadCopied.png */; };
 		C910315F1641E5FA00A59FCA /* iPadCopied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */; };
 		C915425A15D24FD0000EE537 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95FDF0015D23302006FE035 /* Icon@2x.png */; };
+		C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */; };
 		C929BE7B16938A7B0025A512 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C929BE7A16938A7B0025A512 /* Default-Portrait@2x~ipad.png */; };
 		C92D941716938D260020466C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8D16435151009A5DBA /* Default-Landscape~ipad.png */; };
 		C92D941816938D280020466C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D1BA8916435140009A5DBA /* Default-Portrait~ipad.png */; };
@@ -193,6 +194,8 @@
 		C90264461601398A0075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C910315C1641E5FA00A59FCA /* iPadCopied.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadCopied.png; path = resources/iPad/iPadCopied.png; sourceTree = "<group>"; };
 		C910315D1641E5FA00A59FCA /* iPadCopied@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadCopied@2x.png"; path = "resources/iPad/iPadCopied@2x.png"; sourceTree = "<group>"; };
+		C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppearWindow.h; path = Passcode/MTZAppearWindow.h; sourceTree = "<group>"; };
+		C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppearWindow.m; path = Passcode/MTZAppearWindow.m; sourceTree = "<group>"; };
 		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
 		C929BE6F16937CDB0025A512 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		C929BE7116937F3B0025A512 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
@@ -445,6 +448,8 @@
 		C95FDED415D232D5006FE035 = {
 			isa = PBXGroup;
 			children = (
+				C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */,
+				C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */,
 				C95FDEE915D232D5006FE035 /* Passcode */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
@@ -694,6 +699,11 @@
 				CLASSPREFIX = PC;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C95FDEDE15D232D5006FE035 = {
+						DevelopmentTeam = 3SZ7MS7NXC;
+					};
+				};
 			};
 			buildConfigurationList = C95FDED915D232D5006FE035 /* Build configuration list for PBXProject "Passcode" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -874,6 +884,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */,
 				C95FDEF015D232D5006FE035 /* main.m in Sources */,
 				C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */,
 				C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */,
@@ -995,11 +1006,14 @@
 		C95FDEFE15D232D5006FE035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1009,11 +1023,14 @@
 		C95FDEFF15D232D5006FE035 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

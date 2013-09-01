@@ -72,97 +72,44 @@
 	
 	self.title = @"Passcode";
 	
+	// About button
 	UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"About", nil)
 																	style:UIBarButtonItemStyleBordered
 																   target:self
 																   action:@selector(viewAbout:)];
 	self.navigationItem.leftBarButtonItem = aboutButton;
 	
+	// Restrictions button
 	UIBarButtonItem *restrictionsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restrictions", nil)
 																		   style:UIBarButtonItemStyleBordered
 																		  target:self
 																		  action:@selector(viewRestrictions:)];
 	self.navigationItem.rightBarButtonItem = restrictionsButton;
 	
+	// Set Navigation Bar tint color
 	[self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
 																		  green:52.0f/255.0f
 																		   blue:154.0f/255.0f
 																		  alpha:1.0f]];
+	
+	// Set up popover
+	_copiedWindow = [[MTZAppearWindow alloc] init];
+	_copiedWindow.autoresizingMask =   UIViewAutoresizingFlexibleTopMargin
+									 | UIViewAutoresizingFlexibleBottomMargin
+									 | UIViewAutoresizingFlexibleLeftMargin
+									 | UIViewAutoresizingFlexibleRightMargin;
+	[self.view addSubview:_copiedWindow];
+	
 	[_pagesView addPages:@[_page1, _page2, _page3, _page4, _page5]];
 	[_pagesView setPageControl:_pageControl];
 	
 	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
-	{
-		// Set up Generate Button
-			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"]
-									   forState:UIControlStateDisabled];
-			[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
-																   alpha:1.0f]
-										forState:UIControlStateDisabled];
-			
-			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenEnabled"]
-									   forState:UIControlStateNormal];
-			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-																 green:61.0f/255.0f
-																  blue:39.0f/255.0f
-																 alpha:1.0f]
-										forState:UIControlStateNormal];
-			
-			[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenActive"]
-									   forState:UIControlStateHighlighted];
-			[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-																 green:61.0f/255.0f
-																  blue:39.0f/255.0f
-																 alpha:1.0f]
-										forState:UIControlStateHighlighted];
-		
-		[_generateButton setTitleColor:[UIColor colorWithWhite:0.75f alpha:1.0f]
-							  forState:UIControlStateDisabled];
-		[_generateButton setTitleColor:[UIColor whiteColor]
-							  forState:UIControlStateNormal];
-		[_generateButton setTitleColor:[UIColor whiteColor]
-							  forState:UIControlStateHighlighted];
-		
-		// Should only be for disabled state
-		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);
-	}
-	else
-	{
-		// Set up Generate Button
-		[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreen"]
-								   forState:UIControlStateNormal];
-		[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-															 green:61.0f/255.0f
-															  blue:39.0f/255.0f
-															 alpha:1.0f]
-									forState:UIControlStateNormal];
-		
-		[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonActiveGreen"]
-								   forState:UIControlStateHighlighted];
-		[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-															 green:61.0f/255.0f
-															  blue:39.0f/255.0f
-															 alpha:1.0f]
-									forState:UIControlStateHighlighted];
-		
-		[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"]
-								   forState:UIControlStateDisabled];
-		[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
-															   alpha:1.0f]
-									forState:UIControlStateDisabled];
-		
-		[_generateButton setTitleColor:[UIColor whiteColor]
-							  forState:UIControlStateNormal];
-		[_generateButton setTitleColor:[UIColor whiteColor]
-							  forState:UIControlStateHighlighted];
-		[_generateButton setTitleColor:[UIColor lightGrayColor]
-							  forState:UIControlStateDisabled];
-		[_generateButton titleLabel].shadowOffset = CGSizeMake(0,1);	// Should only be for disabled state
-		
-		[self registerForKeyboardNotifications];
+	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+		[self loadViewForiPhone];
+	} else {
+		[self loadViewForiPad];
 	}
 	
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
@@ -182,6 +129,84 @@
 											[NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset,
 											nil]];
 	*/
+}
+
+- (void)loadViewForiPhone
+{
+	// Set up Generate Button
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"]
+							   forState:UIControlStateDisabled];
+	[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
+														   alpha:1.0f]
+								forState:UIControlStateDisabled];
+	
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenEnabled"]
+							   forState:UIControlStateNormal];
+	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
+														 green:61.0f/255.0f
+														  blue:39.0f/255.0f
+														 alpha:1.0f]
+								forState:UIControlStateNormal];
+	
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenActive"]
+							   forState:UIControlStateHighlighted];
+	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
+														 green:61.0f/255.0f
+														  blue:39.0f/255.0f
+														 alpha:1.0f]
+								forState:UIControlStateHighlighted];
+	
+	[_generateButton setTitleColor:[UIColor colorWithWhite:0.75f alpha:1.0f]
+						  forState:UIControlStateDisabled];
+	[_generateButton setTitleColor:[UIColor whiteColor]
+						  forState:UIControlStateNormal];
+	[_generateButton setTitleColor:[UIColor whiteColor]
+						  forState:UIControlStateHighlighted];
+	
+	// Should only be for disabled state
+	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);
+	
+	
+	_copiedWindow.frame = (CGRect){0,36,128,128};
+}
+
+- (void)loadViewForiPad
+{
+	// Set up Generate Button
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreen"]
+							   forState:UIControlStateNormal];
+	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
+														 green:61.0f/255.0f
+														  blue:39.0f/255.0f
+														 alpha:1.0f]
+								forState:UIControlStateNormal];
+	
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonActiveGreen"]
+							   forState:UIControlStateHighlighted];
+	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
+														 green:61.0f/255.0f
+														  blue:39.0f/255.0f
+														 alpha:1.0f]
+								forState:UIControlStateHighlighted];
+	
+	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"]
+							   forState:UIControlStateDisabled];
+	[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
+														   alpha:1.0f]
+								forState:UIControlStateDisabled];
+	
+	[_generateButton setTitleColor:[UIColor whiteColor]
+						  forState:UIControlStateNormal];
+	[_generateButton setTitleColor:[UIColor whiteColor]
+						  forState:UIControlStateHighlighted];
+	[_generateButton setTitleColor:[UIColor lightGrayColor]
+						  forState:UIControlStateDisabled];
+	[_generateButton titleLabel].shadowOffset = CGSizeMake(0,1);	// Should only be for disabled state
+	
+	
+	_copiedWindow.frame = (CGRect){33,34,192,192};
+	
+	[self registerForKeyboardNotifications];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -249,7 +274,7 @@
 	[[UIPasteboard generalPasteboard] setString:password];
 	
 	// Animation to show password has been copied
-	[_copiedView display];
+	[_copiedWindow display];
 }
 
 - (void)generateAndSetReveal:(id)sender
@@ -480,7 +505,7 @@
 {
 	[self setPasswordField:nil];
 	[self setGenerateButton:nil];
-	[self setCopiedView:nil];
+	[self setCopiedWindow:nil];
 	[self setContainer:nil];
 	[self setView:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];

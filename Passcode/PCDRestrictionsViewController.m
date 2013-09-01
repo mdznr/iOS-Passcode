@@ -99,7 +99,7 @@
 	NSUInteger touchEnd = UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel;
 	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:touchEnd];
 //	[lengthSlider addTarget:self action:@selector(sliderStopped:) forControlEvents:UIControlEventEditingDidEnd];
-	NSArray *lengthViewDict = [NSDictionary dictionaryWithObject:@[lengthSlider] forKey:@"Restrictions"];
+	NSDictionary *lengthViewDict = [NSDictionary dictionaryWithObject:@[lengthSlider] forKey:@"Restrictions"];
 	[listOfAccessories addObject:lengthViewDict];
 	
 	[self.view addSubview:lengthSlider];
@@ -183,7 +183,8 @@
 	// Is this necessary? Perhaps just handle the rounding when making the passcode?
 	CGFloat quantizedValue = roundf(lengthSlider.value);
 	[lengthSlider setValue:quantizedValue animated:YES];
-	[[PCDPasscodeGenerator sharedInstance] setLength:lrintl(quantizedValue)];
+#warning uncomment below and fix
+//	[[PCDPasscodeGenerator sharedInstance] setLength:lrintl(quantizedValue)];
 	
 	// Return label to original color
 	[lengthValueLabel setTextColor:[UIColor blackColor]];
