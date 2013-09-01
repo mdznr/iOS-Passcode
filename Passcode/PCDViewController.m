@@ -25,8 +25,8 @@
 #import "PDKeychainBindings.h"
 #import "MTZFarPanGestureRecognizer.h"
 
-#warning remove this import
-#import "MTZAppearView.h"
+#define STATUS_BAR_HEIGHT 20
+#define NAV_BAR_HEIGHT 44
 
 @interface PCDViewController () {
 	BOOL isPresentingWalkthrough;
@@ -117,6 +117,8 @@
 		[self loadViewForiPad];
 	}
 	
+	_copiedWindow.center = (CGPoint){_container.center.x,_container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
+	
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
 	
@@ -172,7 +174,7 @@
 	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);
 	
 	
-	_copiedWindow.frame = (CGRect){0,36,128,128};
+	_copiedWindow.frame = (CGRect){0,0,128,128};
 }
 
 - (void)loadViewForiPad
@@ -209,7 +211,7 @@
 	[_generateButton titleLabel].shadowOffset = CGSizeMake(0,1);	// Should only be for disabled state
 	
 	
-	_copiedWindow.frame = (CGRect){33,34,192,192};
+	_copiedWindow.frame = (CGRect){0,0,192,192};
 	
 	[self registerForKeyboardNotifications];
 }
