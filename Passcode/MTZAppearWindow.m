@@ -70,7 +70,7 @@
 	[_mainView display];
 	
 	// Hide window when done
-	[self performSelector:@selector(hide) withObject:nil afterDelay:1.75f];
+	[self performSelector:@selector(hide) withObject:nil afterDelay:2.0f];
 }
 
 - (void)hide
