@@ -31,8 +31,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self)
-	{
+    if ( self ) {
 		[self setup];
     }
     return self;
@@ -41,65 +40,13 @@
 - (id)init
 {
 	CGRect frame = CGRectMake(0, 0, 128, 128);
-	return self = [self initWithFrame:frame];
+	self = [self initWithFrame:frame];
+	return self;
 }
 
 - (void)setup
 {
-	//  Created by Jeff LaMarche on 11/13/08.
-	//	via http://iphonedevelopment.blogspot.com/2008/11/creating-transparent-uiviews-rounded.html
-	
-	// Roundrect
-	/*
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 0);
-    CGContextSetStrokeColorWithColor(context, [UIColor clearColor].CGColor);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithHue:0.0f
-													   saturation:0.0f
-													   brightness:0.0f
-															alpha:0.7f].CGColor);
-    
-    CGRect rrect = self.bounds;
-    
-    CGFloat radius = DEFAULT_CORNER_RADIUS;
-    CGFloat width = CGRectGetWidth(rrect);
-    CGFloat height = CGRectGetHeight(rrect);
-    
-    // Make sure corner radius isn't larger than half the shorter side
-    if (radius > width/2.0) radius = width/2.0;
-    if (radius > height/2.0) radius = height/2.0;
-    
-    CGFloat minx = CGRectGetMinX(rrect);
-    CGFloat midx = CGRectGetMidX(rrect);
-    CGFloat maxx = CGRectGetMaxX(rrect);
-	
-    CGFloat miny = CGRectGetMinY(rrect);
-    CGFloat midy = CGRectGetMidY(rrect);
-    CGFloat maxy = CGRectGetMaxY(rrect);
-	
-    CGContextMoveToPoint(context, minx, midy);
-    CGContextAddArcToPoint(context, minx, miny, midx, miny, radius);
-    CGContextAddArcToPoint(context, maxx, miny, maxx, midy, radius);
-    CGContextAddArcToPoint(context, maxx, maxy, midx, maxy, radius);
-    CGContextAddArcToPoint(context, minx, maxy, minx, midy, radius);
-    CGContextClosePath(context);
-    CGContextDrawPath(context, kCGPathFillStroke);
-	*/
-	
-	UIGraphicsBeginImageContext(self.bounds.size);
-	CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 0);
-    CGContextSetStrokeColorWithColor(context, [UIColor clearColor].CGColor);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithHue:0.0f
-													   saturation:0.0f
-													   brightness:0.0f
-															alpha:0.7f].CGColor);
-	UIBezierPath *roundRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-														 cornerRadius:DEFAULT_CORNER_RADIUS];
-	CGContextDrawPath(context, kCGPathFillStroke);
-	UIGraphicsEndImageContext();
-	
-	self.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
+	self.opaque = NO;
 	
 	// Image
 	UIImage *image = [UIImage imageNamed:_imageName];
@@ -160,6 +107,14 @@
 {
 	_textSize = textSize;
 	_textView.font = [UIFont boldSystemFontOfSize:textSize];
+}
+
+- (void)drawRect:(CGRect)rect
+{
+	UIBezierPath *bp = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+												  cornerRadius:DEFAULT_CORNER_RADIUS];
+	[[UIColor colorWithWhite:0.0f alpha:0.7f] setFill];
+	[bp fill];
 }
 
 - (void)display
