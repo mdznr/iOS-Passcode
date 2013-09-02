@@ -34,6 +34,18 @@
 - (void)setup
 {
 	self.windowLevel = UIWindowLevelAlert;
+	
+	// Motion effects
+	if ( NSClassFromString(@"UIInterpolatingMotionEffect") ) {
+		UIInterpolatingMotionEffect *horizontal = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+		horizontal.minimumRelativeValue = @-10.0f;
+		horizontal.maximumRelativeValue = @10.0f;
+		UIInterpolatingMotionEffect *vertical = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+		vertical.minimumRelativeValue = @-10.0f;
+		vertical.maximumRelativeValue = @10.0f;
+		self.motionEffects = @[horizontal,vertical];
+	}
+	
 	self.userInteractionEnabled = NO;
 	self.backgroundColor = [UIColor clearColor];
 	self.opaque = NO;
