@@ -51,29 +51,24 @@
 	// Image
 	UIImage *image = [UIImage imageNamed:_imageName];
 	_imageView = [[UIImageView alloc] initWithFrame:
-				  CGRectMake(floorf((self.frame.size.width - image.size.width)/2),
+				  CGRectMake(floorf((self.frame.size.width  - image.size.width )/2),
 							 floorf((self.frame.size.height - image.size.height)/2) - 14,
 							 image.size.width,
 							 image.size.height)];
-	_imageView.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
-								 | UIViewAutoresizingFlexibleBottomMargin
-								 | UIViewAutoresizingFlexibleLeftMargin
-								 | UIViewAutoresizingFlexibleRightMargin;
+	_imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin
+								| UIViewAutoresizingFlexibleBottomMargin
+								| UIViewAutoresizingFlexibleLeftMargin
+								| UIViewAutoresizingFlexibleRightMargin;
 	_imageView.image = image;
 	[self addSubview:_imageView];
 	
 	// Text
-	_textView = [[UILabel alloc] initWithFrame:CGRectMake(0,
-														  self.frame.size.height/2 + 9,
-														  self.frame.size.width,
-														  self.frame.size.height/2)];
-	_textView.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
-								| UIViewAutoresizingFlexibleBottomMargin
-								| UIViewAutoresizingFlexibleWidth
-								| UIViewAutoresizingFlexibleHeight;
+	_textView = [[UILabel alloc] init];
+	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_textView.text = _text;
 	_textView.backgroundColor = [UIColor clearColor];
 	_textView.textColor = [UIColor whiteColor];
+	_textView.numberOfLines = 1;
 	_textView.textAlignment = NSTextAlignmentCenter;
 	_textView.shadowColor = [UIColor blackColor];
 	_textView.shadowOffset = CGSizeMake(0, 1);
@@ -86,21 +81,17 @@
 	_imageName = imageName;
 	UIImage *image = [UIImage imageNamed:imageName];
 	_imageView.image = image;
-	_imageView.frame = CGRectMake(floorf((self.frame.size.width - image.size.width)/2),
-								  floorf((self.frame.size.height - image.size.height)/2) - 14,
+	_imageView.frame = CGRectMake(floorf((self.frame.size.width  - image.size.width )/2),
+								  floorf((self.frame.size.height - image.size.height)/2) + 14,
 								  image.size.width,
 								  image.size.height);
-	_imageView.center = self.center;
 }
 
 - (void)setText:(NSString *)text
 {
 	_text = text;
 	_textView.text = text;
-	_textView.frame = CGRectMake(0,
-								 self.frame.size.height/2 + 9,
-								 self.frame.size.width,
-								 self.frame.size.height/2);
+	_textView.frame = CGRectMake(0, 86, self.frame.size.width, 32);
 }
 
 - (void)setTextSize:(CGFloat)textSize

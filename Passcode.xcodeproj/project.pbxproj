@@ -448,8 +448,6 @@
 		C95FDED415D232D5006FE035 = {
 			isa = PBXGroup;
 			children = (
-				C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */,
-				C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */,
 				C95FDEE915D232D5006FE035 /* Passcode */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
@@ -567,6 +565,8 @@
 			children = (
 				C9BBC1F315DA10B600E16FBB /* MTZAppearView.h */,
 				C9BBC1F415DA10B600E16FBB /* MTZAppearView.m */,
+				C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */,
+				C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */,
 			);
 			name = "Appear View";
 			path = ..;
