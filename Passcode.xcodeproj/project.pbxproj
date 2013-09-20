@@ -188,6 +188,7 @@
 		C9D971AB16B39BF1003DAD40 /* cardBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */; };
 		C9DB2DD316408705007B417B /* iPadInput.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD116408705007B417B /* iPadInput.png */; };
 		C9DB2DD416408705007B417B /* iPadInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DB2DD216408705007B417B /* iPadInput@2x.png */; };
+		C9F0677F17EBD67F006E243F /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F0677E17EBD67F006E243F /* Icon-60@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -330,6 +331,7 @@
 		C9D971A716B39BF1003DAD40 /* cardBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardBackground@2x.png"; sourceTree = "<group>"; };
 		C9DB2DD116408705007B417B /* iPadInput.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadInput.png; path = resources/iPad/iPadInput.png; sourceTree = "<group>"; };
 		C9DB2DD216408705007B417B /* iPadInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadInput@2x.png"; path = "resources/iPad/iPadInput@2x.png"; sourceTree = "<group>"; };
+		C9F0677E17EBD67F006E243F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 				C9BBC20E15DEE52600E16FBB /* Icon-Small@2x.png */,
 				C9BBC1FB15DB180100E16FBB /* Icon.png */,
 				C95FDF0015D23302006FE035 /* Icon@2x.png */,
+				C9F0677E17EBD67F006E243F /* Icon-60@2x.png */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 				C94C7CCB1730476A00A3D19E /* copied.png in Resources */,
 				C94C7CCD1730476A00A3D19E /* copied@2x.png in Resources */,
 				C94C7CCF1730476A00A3D19E /* inputBackground.png in Resources */,
+				C9F0677F17EBD67F006E243F /* Icon-60@2x.png in Resources */,
 				C94C7CD11730476A00A3D19E /* inputBackground@2x.png in Resources */,
 				C9D0F4D0173C693D00AC055D /* FAQBackgroundMain.png in Resources */,
 				C9D0F4D1173C693D00AC055D /* FAQBackgroundMain@2x.png in Resources */,
