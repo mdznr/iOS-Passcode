@@ -10,6 +10,7 @@
 #import "MTZAppearView.h"
 
 #define MOTION_EFFECT_DIST 20.0f
+#define APPEARANCE_DURATION 2.0f
 
 @interface MTZAppearWindow ()
 
@@ -84,7 +85,7 @@
 	[_mainView display];
 	
 	// Hide window when done
-	[self performSelector:@selector(hide) withObject:nil afterDelay:2.0f];
+	[self performSelector:@selector(hide) withObject:nil afterDelay:APPEARANCE_DURATION];
 }
 
 - (void)hide
