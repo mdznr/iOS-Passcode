@@ -158,8 +158,7 @@ double squared(double x)
 - (void)didGesture:(id)sender
 {
 	if ( [sender isKindOfClass:[UIGestureRecognizer class]] ) {
-//		NSLog(@"%@", sender);
-		switch ( [sender state] ) {
+		switch ( ((UIGestureRecognizer *) sender).state ) {
 			case UIGestureRecognizerStateBegan:
 				[self showPopover:sender];
 			case UIGestureRecognizerStateChanged:
