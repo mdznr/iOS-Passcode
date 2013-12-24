@@ -265,7 +265,7 @@
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
 		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 480);
 		navigationController.view.superview.center = self.view.center;
-//		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
+		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
 	}
 }
 
@@ -280,7 +280,7 @@
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
 		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 548);
 		navigationController.view.superview.center = self.view.center;
-//		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
+		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
 	}
 }
 

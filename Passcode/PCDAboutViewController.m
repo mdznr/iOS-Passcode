@@ -52,7 +52,7 @@
 
 - (IBAction)howToUsePressed:(id)sender
 {
-
+#warning How to Use Passcode
 }
 
 - (IBAction)faqPressed:(id)sender

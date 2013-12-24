@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="13C32" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5037" systemVersion="13C32" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCDViewController">
@@ -20,29 +20,29 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view opaque="NO" autoresizesSubviews="NO" contentMode="scaleToFill" id="17" userLabel="Forms">
-                    <rect key="frame" x="146" y="202" width="476" height="259"/>
+                <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Forms">
+                    <rect key="frame" x="146" y="202" width="476" height="268"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iPadInput.png" id="11" userLabel="Forms Background">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Forms" id="11" userLabel="Forms Background">
                             <rect key="frame" x="0.0" y="0.0" width="476" height="165"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                             </accessibility>
                         </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Domain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14">
-                            <rect key="frame" x="0.0" y="26" width="140" height="42"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Domain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14">
+                            <rect key="frame" x="22" y="14" width="128" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Domain">
                                 <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
                             </accessibility>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <color key="textColor" red="0.12549019610000001" green="0.2901960784" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <color key="textColor" red="0.76339995861053467" green="0.77501338720321655" blue="0.80296868085861206" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" minimumFontSize="18" clearButtonMode="always" id="15">
-                            <rect key="frame" x="153" y="17" width="300" height="60"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="always" id="15">
+                            <rect key="frame" x="154" y="14" width="300" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Domain"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -52,18 +52,18 @@
                                 <outlet property="delegate" destination="-1" id="26"/>
                             </connections>
                         </textField>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
-                            <rect key="frame" x="0.0" y="100" width="140" height="42"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
+                            <rect key="frame" x="22" y="88" width="128" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="password">
                                 <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
                             </accessibility>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <color key="textColor" red="0.12549019610000001" green="0.2901960784" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <color key="textColor" red="0.76339995861053467" green="0.77501338720321655" blue="0.80296868085861206" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="password" minimumFontSize="18" clearButtonMode="whileEditing" id="13">
-                            <rect key="frame" x="153" y="91" width="300" height="60"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="password" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="whileEditing" id="13">
+                            <rect key="frame" x="154" y="88" width="300" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Master Password"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -74,23 +74,23 @@
                             </connections>
                         </textField>
                         <view opaque="NO" contentMode="scaleToFill" id="72" userLabel="Reveal View" customClass="MTZSlideToReveal">
-                            <rect key="frame" x="0.0" y="177" width="476" height="82"/>
+                            <rect key="frame" x="0.0" y="185" width="476" height="82"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="12">
-                            <rect key="frame" x="0.0" y="177" width="476" height="82"/>
+                            <rect key="frame" x="0.0" y="185" width="476" height="82"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Generate Passcode and Copy"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                            <state key="normal" title="Generate Passcode &amp; Copy" backgroundImage="iPadButtonDisabled.png">
-                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Generate &amp; Copy Passcode" backgroundImage="Button">
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="disabled" backgroundImage="ButtonDisabled">
+                                <color key="titleColor" red="0.69725722074508667" green="0.69723641872406006" blue="0.69724822044372559" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <state key="highlighted" backgroundImage="ButtonHighlight"/>
                             <connections>
                                 <action selector="generateAndCopy:" destination="-1" eventType="touchUpInside" id="21"/>
                             </connections>
@@ -98,13 +98,37 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ae4-7M-4cf" userLabel="Info Button">
+                    <rect key="frame" x="16" y="32" width="49" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="Info">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="gVK-hz-M5j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lM4-np-lsR" userLabel="Restrictions Button">
+                    <rect key="frame" x="703" y="32" width="49" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="Restrictions">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewRestrictions:" destination="-1" eventType="touchUpInside" id="fXp-H8-FmT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.93000000000000005" alpha="1" colorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="iPadButtonDisabled.png" width="476" height="83"/>
-        <image name="iPadInput.png" width="476" height="165"/>
+        <image name="Button" width="476" height="82"/>
+        <image name="ButtonDisabled" width="476" height="82"/>
+        <image name="ButtonHighlight" width="476" height="82"/>
+        <image name="Forms" width="476" height="162"/>
+        <image name="Info" width="49" height="49"/>
+        <image name="Restrictions" width="49" height="49"/>
     </resources>
 </document>
