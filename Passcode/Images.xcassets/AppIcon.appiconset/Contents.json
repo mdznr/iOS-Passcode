@@ -61,14 +61,15 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "50pt-1.png",
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "50pt.png",
+      "filename" : "50pt@2x.png",
       "scale" : "2x"
     },
     {
