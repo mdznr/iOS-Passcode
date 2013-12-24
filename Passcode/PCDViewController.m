@@ -126,9 +126,17 @@
 {
 	[super viewWillAppear:animated];
 	
-#warning This won't work if _domainField was previously firstResponder before view did disappear
-	// Domain text field should be first responder
-	[_domainField becomeFirstResponder];
+	// This is such a hack, but it was the only way to get it to work properly
+	[self performSelector:@selector(makeDomainFieldBecomeFirstResponder)
+			   withObject:nil
+			   afterDelay:DBL_MIN];
+}
+
+- (void)makeDomainFieldBecomeFirstResponder
+{
+	if ( !_domainField.isFirstResponder ) {
+		[_domainField becomeFirstResponder];
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -140,6 +148,8 @@
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
 		[self viewAbout:self];
 	}
+	
+	//[_domainField becomeFirstResponder];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -248,6 +258,7 @@
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
 		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 480);
 		navigationController.view.superview.center = self.view.center;
+//		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
 	}
 }
 
