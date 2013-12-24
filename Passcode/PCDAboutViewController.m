@@ -79,8 +79,6 @@
         [mailer setToRecipients:toRecipients];
         [mailer setSubject:NSLocalizedString(@"Passcode Support", nil)];
 		
-		[mailer.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f green:52.0f/255.0f blue:154.0f/255.0f alpha:1.0f]];
-		
 		[mailer setModalPresentationStyle:UIModalPresentationPageSheet];
         [self presentModalViewController:mailer animated:YES];
     } else {
