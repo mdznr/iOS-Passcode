@@ -35,6 +35,8 @@
 
 @implementation PCDViewController
 
+#pragma mark Initialization and View Loading
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -82,7 +84,6 @@
 									| UIViewAutoresizingFlexibleRightMargin;
 	_copiedWindow.imageName = @"copied";
 	_copiedWindow.text = @"Copied";
-	_copiedWindow.textSize = 16;
 	
 	[self checkSecuritySetting];
 	
@@ -98,7 +99,7 @@
 			break;
 	}
 	
-	_copiedWindow.center = (CGPoint){_container.center.x,_container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
+	_copiedWindow.center = (CGPoint){_container.center.x, _container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
 	
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
@@ -121,6 +122,9 @@
 	
 	[self registerForKeyboardNotifications];
 }
+
+
+#pragma mark View Events
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -168,6 +172,9 @@
     }
 }
 
+
+#pragma mark Checks
+
 - (void)checkPasteboard
 {
 	if ( [[[UIPasteboard generalPasteboard] string] hasPrefix:@"http://"] ||
@@ -192,6 +199,9 @@
 		[_passwordField setText:@""];
 	}
 }
+
+
+#pragma mark Generate Button
 
 - (IBAction)generateAndCopy:(id)sender
 {
@@ -239,6 +249,9 @@
 	}
 }
 
+
+#pragma mark Navigation
+
 - (IBAction)viewAbout:(id)sender
 {
 	PCDAboutViewController *about;
@@ -246,10 +259,6 @@
 													 bundle:nil];
 	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
-	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
-																	 green:52.0f/255.0f
-																	  blue:154.0f/255.0f
-																	 alpha:1.0f]];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
 	
@@ -264,18 +273,14 @@
 {
 	PCDRestrictionsViewController *restrictions;
 	restrictions = [[PCDRestrictionsViewController alloc] init];
-//	[restrictions setDelegate:self];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:restrictions];
-	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
-																	 green:52.0f/255.0f
-																	  blue:154.0f/255.0f
-																	 alpha:1.0f]];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
 	
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
 		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 548);
 		navigationController.view.superview.center = self.view.center;
+//		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
 	}
 }
 
@@ -319,6 +324,7 @@
 	
 	return YES;
 }
+
 
 #pragma mark Handle Keyboard Notifications
 
