@@ -36,6 +36,7 @@
 	
 	self.mainViewController = mainViewController;
 	self.window.rootViewController = self.mainViewController;
+	self.window.tintColor = [PCDAppDelegate appKeyColor];
     [self.window makeKeyAndVisible];
 	
 #if RUN_KIF_TESTS
@@ -97,6 +98,14 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
++ (UIColor *)appKeyColor
+{
+	return [UIColor colorWithHue:151.0f/360.0f
+					  saturation:0.79f
+					  brightness:0.7f
+						   alpha:1.0f];
 }
 
 @end
