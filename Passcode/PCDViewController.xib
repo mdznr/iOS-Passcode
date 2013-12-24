@@ -67,7 +67,7 @@
                                     <color key="textColor" red="0.8079743385" green="0.8176548481" blue="0.83908283709999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" minimumFontSize="18" clearButtonMode="whileEditing" id="80">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80">
                                     <rect key="frame" x="110" y="58" width="170" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.14345695078372955" green="0.65469127893447876" blue="0.35773006081581116" alpha="1" colorSpace="calibratedRGB"/>
