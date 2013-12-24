@@ -9,6 +9,8 @@
 #import "MTZAppearWindow.h"
 #import "MTZAppearView.h"
 
+#define MOTION_EFFECT_DIST 20.0f
+
 @interface MTZAppearWindow ()
 
 @property (strong, nonatomic) MTZAppearView *mainView;
@@ -38,11 +40,11 @@
 	// Motion effects
 	if ( NSClassFromString(@"UIInterpolatingMotionEffect") ) {
 		UIInterpolatingMotionEffect *horizontal = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-		horizontal.minimumRelativeValue = @-10.0f;
-		horizontal.maximumRelativeValue = @10.0f;
+		horizontal.minimumRelativeValue = @-MOTION_EFFECT_DIST;
+		horizontal.maximumRelativeValue = @MOTION_EFFECT_DIST;
 		UIInterpolatingMotionEffect *vertical = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-		vertical.minimumRelativeValue = @-10.0f;
-		vertical.maximumRelativeValue = @10.0f;
+		vertical.minimumRelativeValue = @-MOTION_EFFECT_DIST;
+		vertical.maximumRelativeValue = @MOTION_EFFECT_DIST;
 		self.motionEffects = @[horizontal,vertical];
 	}
 	
