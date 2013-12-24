@@ -29,7 +29,6 @@
 #define NAV_BAR_HEIGHT 44
 
 @interface PCDViewController () {
-	BOOL isPresentingWalkthrough;
 }
 
 @end
@@ -75,26 +74,6 @@
 	
 	self.title = @"Passcode";
 	
-	// About button
-	UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"About", nil)
-																	style:UIBarButtonItemStyleBordered
-																   target:self
-																   action:@selector(viewAbout:)];
-	self.navigationItem.leftBarButtonItem = aboutButton;
-	
-	// Restrictions button
-	UIBarButtonItem *restrictionsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restrictions", nil)
-																		   style:UIBarButtonItemStyleBordered
-																		  target:self
-																		  action:@selector(viewRestrictions:)];
-	self.navigationItem.rightBarButtonItem = restrictionsButton;
-	
-	// Set Navigation Bar tint color
-	[self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
-																		  green:52.0f/255.0f
-																		   blue:154.0f/255.0f
-																		  alpha:1.0f]];
-	
 	// Set up popover
 	_copiedWindow = [[MTZAppearWindow alloc] init];
 	_copiedWindow.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
@@ -105,16 +84,18 @@
 	_copiedWindow.text = @"Copied";
 	_copiedWindow.textSize = 16;
 	
-	[_pagesView addPages:@[_page1, _page2, _page3, _page4, _page5]];
-	[_pagesView setPageControl:_pageControl];
-	
-	[_domainField becomeFirstResponder];
 	[self checkSecuritySetting];
 	
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		[self loadViewForiPhone];
-	} else {
-		[self loadViewForiPad];
+	// Load idiom-specific UI
+	switch ( [UIDevice currentDevice].userInterfaceIdiom ) {
+		case UIUserInterfaceIdiomPad:
+			[self loadViewForiPad];
+			break;
+		case UIUserInterfaceIdiomPhone:
+			[self loadViewForiPhone];
+			break;
+		default:
+			break;
 	}
 	
 	_copiedWindow.center = (CGPoint){_container.center.x,_container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
@@ -127,97 +108,33 @@
 	[_generateButton addGestureRecognizer:panGesture];
 	
 	[_reveal setHidden:YES];
-	
-	/*
-	// The beginnings of a cleaner, less distracting navigation bar
-	[_navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-											[UIColor colorWithRed:60.0f/255.0f green:67.0f/255.0f blue:69.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
-											[UIColor whiteColor], UITextAttributeTextShadowColor,
-											[NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset,
-											nil]];
-	*/
 }
 
 - (void)loadViewForiPhone
 {
-	// Set up Generate Button
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonDisabled"]
-							   forState:UIControlStateDisabled];
-	[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
-														   alpha:1.0f]
-								forState:UIControlStateDisabled];
-	
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenEnabled"]
-							   forState:UIControlStateNormal];
-	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-														 green:61.0f/255.0f
-														  blue:39.0f/255.0f
-														 alpha:1.0f]
-								forState:UIControlStateNormal];
-	
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"buttonGreenActive"]
-							   forState:UIControlStateHighlighted];
-	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-														 green:61.0f/255.0f
-														  blue:39.0f/255.0f
-														 alpha:1.0f]
-								forState:UIControlStateHighlighted];
-	
-	[_generateButton setTitleColor:[UIColor colorWithWhite:0.75f alpha:1.0f]
-						  forState:UIControlStateDisabled];
-	[_generateButton setTitleColor:[UIColor whiteColor]
-						  forState:UIControlStateNormal];
-	[_generateButton setTitleColor:[UIColor whiteColor]
-						  forState:UIControlStateHighlighted];
-	
-	// Should only be for disabled state
-	[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);
-	
-	
-	_copiedWindow.frame = (CGRect){0,0,128,128};
+	_copiedWindow.frame = (CGRect){0, 0, 128, 128};
 }
 
 - (void)loadViewForiPad
 {
-	// Set up Generate Button
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonEnabledGreen"]
-							   forState:UIControlStateNormal];
-	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-														 green:61.0f/255.0f
-														  blue:39.0f/255.0f
-														 alpha:1.0f]
-								forState:UIControlStateNormal];
-	
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonActiveGreen"]
-							   forState:UIControlStateHighlighted];
-	[_generateButton setTitleShadowColor:[UIColor colorWithRed:42.0f/255.0f
-														 green:61.0f/255.0f
-														  blue:39.0f/255.0f
-														 alpha:1.0f]
-								forState:UIControlStateHighlighted];
-	
-	[_generateButton setBackgroundImage:[UIImage imageNamed:@"iPadButtonDisabled"]
-							   forState:UIControlStateDisabled];
-	[_generateButton setTitleShadowColor:[UIColor colorWithWhite:.975f
-														   alpha:1.0f]
-								forState:UIControlStateDisabled];
-	
-	[_generateButton setTitleColor:[UIColor whiteColor]
-						  forState:UIControlStateNormal];
-	[_generateButton setTitleColor:[UIColor whiteColor]
-						  forState:UIControlStateHighlighted];
-	[_generateButton setTitleColor:[UIColor lightGrayColor]
-						  forState:UIControlStateDisabled];
-	[_generateButton titleLabel].shadowOffset = CGSizeMake(0,1);	// Should only be for disabled state
-	
-	
-	_copiedWindow.frame = (CGRect){0,0,192,192};
+	_copiedWindow.frame = (CGRect){0, 0, 192, 192};
 	
 	[self registerForKeyboardNotifications];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+#warning This won't work if _domainField was previously firstResponder before view did disappear
+	// Domain text field should be first responder
+	[_domainField becomeFirstResponder];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
+	[super viewDidAppear:animated];
+	
 	// Display About if app hasn't been launched before
 	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
@@ -319,7 +236,7 @@
 	PCDAboutViewController *about;
 	about = [[PCDAboutViewController alloc] initWithNibName:@"PCDAboutViewController"
 													 bundle:nil];
-	[about setDelegate:self];
+	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
 	[navigationController.navigationBar setTintColor:[UIColor colorWithRed:25.0f/255.0f
 																	 green:52.0f/255.0f
@@ -334,7 +251,7 @@
 	}
 }
 
-- (void)viewRestrictions:(id)sender
+- (IBAction)viewRestrictions:(id)sender
 {
 	PCDRestrictionsViewController *restrictions;
 	restrictions = [[PCDRestrictionsViewController alloc] init];
@@ -353,107 +270,44 @@
 	}
 }
 
-- (void)dismissingModalViewController:(id)sender
-{
-	[sender dismissViewControllerAnimated:YES completion:nil];
-	[_domainField becomeFirstResponder];
-}
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-	[_pagesView viewDidResize];
-}
-
-#pragma mark Walkthrough
-
-- (void)startWalkthrough:(id)sender
-{
-	[sender dismissViewControllerAnimated:YES completion:nil];
-	[_domainField resignFirstResponder];
-	[_passwordField resignFirstResponder];
 	
-	[_pagesView setHidden:NO];
-	[_pageControl setHidden:NO];
-	
-	isPresentingWalkthrough = YES;
-}
-
-- (void)endWalkthrough
-{
-	CFTimeInterval duration = 0.3f;
-	
-	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	[fadeOut setFromValue:@1.0f];
-	[fadeOut setToValue:@0.0f];
-	[fadeOut setDuration:duration];
-	
-	[[_pagesView layer] addAnimation:fadeOut forKey:@"alpha"];
-	[_pagesView performSelector:@selector(setHidden:) withObject:@YES afterDelay:duration];
-	[_pagesView setAlpha:1.0f];
-	
-	[[_pageControl layer] addAnimation:fadeOut forKey:@"alpha"];
-	[_pageControl performSelector:@selector(setHidden:) withObject:@YES afterDelay:duration];
-	[_pageControl setAlpha:1.0f];
-	
-	isPresentingWalkthrough = NO;
-}
-
-- (void)animateForMasterPassword
-{
-	NSLog(@"animateForMasterPassword");
-}
-
-- (void)animateForDomain
-{
-	NSLog(@"animateForDomain");
-}
-
-- (void)animateForGenerate
-{
-	NSLog(@"animateForGenerate");
 }
 
 #pragma mark Text Field Delegate Methods
 
 - (IBAction)textDidChange:(id)sender
 {
-	if ( (int) [[_domainField text] length] && (int) [[_passwordField text] length] ) {
-		[_generateButton setEnabled:YES];
-		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, -1);
+	if ( _domainField.text.length > 0 && _passwordField.text.length > 0 ) {
+		_generateButton.enabled = YES;
 	} else {
-		[_generateButton setEnabled:NO];
-		[_generateButton titleLabel].shadowOffset = CGSizeMake(0, 1);
+		_generateButton.enabled = NO;
 	}
 }
 
 - (BOOL)textFieldDidBeginEditing:(UITextField *)textField
 {
-	if ( (int) [[_passwordField text] length] )
-	{
-		[_domainField setReturnKeyType:UIReturnKeyGo];
-	}
-	else
-	{
-		[_domainField setReturnKeyType:UIReturnKeyNext];
+	if ( _passwordField.text.length > 0 ) {
+		_domainField.returnKeyType = UIReturnKeyGo;
+	} else {
+		_domainField.returnKeyType = UIReturnKeyNext;
 	}
 	
-	// End walkthrough if previously presenting it
-	if ( isPresentingWalkthrough ) {
-		[self endWalkthrough];
-	}
-	
-	return YES;		// What does the return value do?
+	return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	if ( (int) [[_domainField text] length] && (int) [[_passwordField text] length] ) {
+	if ( _domainField.text.length > 0 && _passwordField.text.length > 0 ) {
 		[self generateAndCopy:nil];
 		return NO;
-	} else if ( (int) [[_passwordField text] length] ) {
+	} else if ( _passwordField.text.length > 0 ) {
 		return NO;
 	}
+	
 	[_passwordField becomeFirstResponder];
+	
 	return YES;
 }
 

@@ -10,11 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-#import "PCDAboutViewControllerDelegate.h"
-
 @interface PCDAboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
-
-@property (strong, nonatomic) id<PCDAboutViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
 - (IBAction)howToUsePressed:(id)sender;

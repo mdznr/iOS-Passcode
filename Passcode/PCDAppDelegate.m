@@ -22,11 +22,9 @@
 																	  [NSNumber numberWithBool:NO]]
 															forKeys:@[@"save_password",
 								 									  @"hasLaunchedAppBefore"]];
-	
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
 	
 	PCDViewController *mainViewController;
 	
@@ -37,8 +35,7 @@
 	}
 	
 	self.mainViewController = mainViewController;
-	self.navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-	self.window.rootViewController = self.navigationController;
+	self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
 	
 #if RUN_KIF_TESTS

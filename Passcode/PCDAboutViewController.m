@@ -47,21 +47,12 @@
 
 - (IBAction)done:(id)sender
 {
-	if ( self.delegate ) {
-		[self.delegate dismissingModalViewController:self];
-	} else {
-		[self dismissViewControllerAnimated:YES completion:nil];
-	}
-	
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (IBAction)howToUsePressed:(id)sender
 {
-	if ( self.delegate ) {
-		[self.delegate startWalkthrough:self];
-	} else {
-		[self dismissViewControllerAnimated:YES completion:nil];
-	}
+
 }
 
 - (IBAction)faqPressed:(id)sender

@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "PCDAboutViewController.h"
 #import "PCDRestrictionsViewController.h"
 
 #import "MTZAppearWindow.h"
 #import "MTZSlideToReveal.h"
-#import "MTZWalkthroughPagesView.h"
-#import "PCDAboutViewControllerDelegate.h"
 
-@interface PCDViewController : UIViewController <PCDAboutViewControllerDelegate>
+@interface PCDViewController : UIViewController
 
 #pragma mark Domain
 
@@ -27,19 +26,10 @@
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) MTZAppearWindow *copiedWindow;
 
-// Walthrough
-@property (strong, nonatomic) IBOutlet MTZWalkthroughPagesView *pagesView;
-@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (strong, nonatomic) IBOutlet UIView *page1, *page2, *page3, *page4, *page5;
-
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;
 - (IBAction)generateAndCopy:(id)sender;
 - (IBAction)viewAbout:(id)sender;
 - (IBAction)textDidChange:(id)sender;
-
-- (void)animateForMasterPassword;
-- (void)animateForDomain;
-- (void)animateForGenerate;
 
 @end
