@@ -62,6 +62,9 @@
 	_imageView.image = image;
 	[self addSubview:_imageView];
 	
+	// Default text size
+	_textSize = 16;
+	
 	// Text
 	_textView = [[UILabel alloc] init];
 	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -70,8 +73,7 @@
 	_textView.textColor = [UIColor whiteColor];
 	_textView.numberOfLines = 1;
 	_textView.textAlignment = NSTextAlignmentCenter;
-	_textView.shadowColor = [UIColor blackColor];
-	_textView.shadowOffset = CGSizeMake(0, 1);
+	_textView.shadowColor = [UIColor clearColor];
 	_textView.font = [UIFont boldSystemFontOfSize:_textSize];
 	[self addSubview:_textView];
 }
