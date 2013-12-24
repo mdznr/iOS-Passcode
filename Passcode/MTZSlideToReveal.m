@@ -107,7 +107,6 @@ double squared(double x)
 	[_passwordLabel setAdjustsFontSizeToFitWidth:YES];
 	[_passwordLabel setTextColor:[UIColor blackColor]];
 	[_passwordLabel setBackgroundColor:[UIColor colorWithWhite:250.0f/255.0f alpha:1.0f]];
-#warning Change to gradient background?
 	[_passwordLabel setAlpha:0.0f];
 	[self addSubview:_passwordLabel];
 	

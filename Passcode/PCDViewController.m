@@ -148,8 +148,6 @@
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
 		[self viewAbout:self];
 	}
-	
-	//[_domainField becomeFirstResponder];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -222,7 +220,7 @@
 - (void)didGestureOnButton:(id)sender
 {
 	if ( [sender isKindOfClass:[UIGestureRecognizer class]] ) {
-		switch ( [sender state] ) {
+		switch ( ((UIGestureRecognizer *) sender).state ) {
 			case UIGestureRecognizerStateBegan:
 				[self generateAndSetReveal:sender];
 				[_reveal setHidden:NO];
@@ -230,7 +228,7 @@
 			case UIGestureRecognizerStateChanged:
 				break;
 			case UIGestureRecognizerStateEnded:
-			case UITouchPhaseCancelled:
+			case UIGestureRecognizerStateCancelled:
 				[_reveal setHidden:YES];
 				[_generateButton setHidden:NO];
 				break;
