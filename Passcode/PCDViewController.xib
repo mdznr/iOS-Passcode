@@ -36,7 +36,7 @@
                                     </accessibility>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Domain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
-                                    <rect key="frame" x="14" y="12" width="90" height="30"/>
+                                    <rect key="frame" x="14" y="5" width="90" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain">
                                         <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -46,7 +46,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="always" id="8">
-                                    <rect key="frame" x="110" y="12" width="170" height="30"/>
+                                    <rect key="frame" x="110" y="5" width="170" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.14345695078372955" green="0.65469127893447876" blue="0.35773006081581116" alpha="1" colorSpace="calibratedRGB"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain"/>
@@ -58,7 +58,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79">
-                                    <rect key="frame" x="14" y="58" width="90" height="30"/>
+                                    <rect key="frame" x="14" y="51" width="90" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password">
                                         <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -68,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80">
-                                    <rect key="frame" x="110" y="58" width="170" height="30"/>
+                                    <rect key="frame" x="110" y="51" width="170" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.14345695078372955" green="0.65469127893447876" blue="0.35773006081581116" alpha="1" colorSpace="calibratedRGB"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password"/>
