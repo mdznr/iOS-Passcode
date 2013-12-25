@@ -13,6 +13,7 @@
 
 #import "MTZAppearWindow.h"
 #import "MTZSlideToReveal.h"
+#import "MTZTextField.h"
 
 @interface PCDViewController : UIViewController
 
@@ -20,8 +21,8 @@
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
-@property (strong, nonatomic) IBOutlet UITextField *domainField;
-@property (strong, nonatomic) IBOutlet UITextField *passwordField;
+@property (strong, nonatomic) IBOutlet MTZTextField *domainField;
+@property (strong, nonatomic) IBOutlet MTZTextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) MTZAppearWindow *copiedWindow;

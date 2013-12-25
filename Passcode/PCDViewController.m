@@ -76,6 +76,12 @@
 	
 	self.title = @"Passcode";
 	
+	// Add insets to the text fields
+//	UIEdgeInsets textFieldInsets = (UIEdgeInsets) {0, 10, 0, 10};
+	UIEdgeInsets textFieldInsets = UIEdgeInsetsZero;
+	_domainField.contentInset = textFieldInsets;
+	_passwordField.contentInset = textFieldInsets;
+	
 	// Set up popover
 	_copiedWindow = [[MTZAppearWindow alloc] init];
 	_copiedWindow.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
