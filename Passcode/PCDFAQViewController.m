@@ -131,6 +131,45 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	return _questionsAndAnswers.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Total height to return
+	CGFloat totalHeight = 0;
+	
+	// Top padding
+	totalHeight += 8;
+	
+	// Get question and answer strings
+	NSDictionary *x = _questionsAndAnswers[indexPath.row];
+	
+	
+	// Question
+	NSString *question = [x objectForKey:@"Question"];
+	CGSize size;
+	size = [question sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]
+				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
+					lineBreakMode:NSLineBreakByWordWrapping];
+	totalHeight += size.height;
+	
+	
+	// Add padding between labels
+	totalHeight += 8;
+	
+	
+	// Answer
+	NSString *answer = [x objectForKey:@"Answer"];
+	size = [answer sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
+				  lineBreakMode:NSLineBreakByWordWrapping];
+	totalHeight += size.height;
+	
+	
+	// Bottom padding
+	totalHeight +=8;
+	
+	return totalHeight;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	PCDFAQCell *cell = (PCDFAQCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
