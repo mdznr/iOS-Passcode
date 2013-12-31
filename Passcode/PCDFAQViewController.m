@@ -137,8 +137,24 @@ static NSString *cellIdentifier = @"PCDFAQCell";
     
     // Configure the cell...
 	NSDictionary *x = _questionsAndAnswers[indexPath.row];
-	cell.questionLabel.text = [x objectForKey:@"Question"];
-	cell.answerLabel.text = [x objectForKey:@"Answer"];
+	
+	NSString *question = [x objectForKey:@"Question"];
+	CGSize size;
+	CGRect rect;
+	size = [question sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]
+				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
+					lineBreakMode:NSLineBreakByWordWrapping];
+	cell.questionLabel.text = question;
+	rect = cell.questionLabel.frame;
+	cell.questionLabel.frame = CGRectMake(rect.origin.x, rect.origin.y, 290, size.height);
+	
+	NSString *answer = [x objectForKey:@"Answer"];
+	size = [answer sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
+				  lineBreakMode:NSLineBreakByWordWrapping];
+	cell.answerLabel.text = answer;
+	rect = cell.answerLabel.frame;
+	cell.answerLabel.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(cell.questionLabel.frame) + 8, 290, size.height);
 	
     return cell;
 }
