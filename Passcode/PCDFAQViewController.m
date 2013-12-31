@@ -149,7 +149,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	CGFloat totalHeight = 0;
 	
 	// Top padding
-	totalHeight += 8;
+	totalHeight += 10;
 	
 	// Get question and answer strings
 	NSDictionary *x = _questionsAndAnswers[indexPath.row];
@@ -158,7 +158,8 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	// Question
 	NSString *question = [x objectForKey:@"Question"];
 	CGSize size;
-	size = [question sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]
+	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+	size = [question sizeWithFont:questionFont
 				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 					lineBreakMode:NSLineBreakByWordWrapping];
 	totalHeight += size.height;
@@ -170,14 +171,15 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	// Answer
 	NSString *answer = [x objectForKey:@"Answer"];
-	size = [answer sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+	size = [answer sizeWithFont:answerFont
 			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 				  lineBreakMode:NSLineBreakByWordWrapping];
 	totalHeight += size.height;
 	
 	
 	// Bottom padding
-	totalHeight +=8;
+	totalHeight += 10;
 	
 	return totalHeight;
 }
@@ -192,21 +194,21 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	NSString *question = [x objectForKey:@"Question"];
 	CGSize size;
 	CGRect rect;
-	UIFont *headline = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-	size = [question sizeWithFont:headline
+	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+	size = [question sizeWithFont:questionFont
 				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 					lineBreakMode:NSLineBreakByWordWrapping];
-	cell.questionLabel.font = headline;
+	cell.questionLabel.font = questionFont;
 	cell.questionLabel.text = question;
 	rect = cell.questionLabel.frame;
 	cell.questionLabel.frame = CGRectMake(rect.origin.x, rect.origin.y, 290, size.height);
 	
 	NSString *answer = [x objectForKey:@"Answer"];
-	UIFont *body = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-	size = [answer sizeWithFont:body
+	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+	size = [answer sizeWithFont:answerFont
 			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 				  lineBreakMode:NSLineBreakByWordWrapping];
-	cell.answerLabel.font = body;
+	cell.answerLabel.font = answerFont;
 	cell.answerLabel.text = answer;
 	rect = cell.answerLabel.frame;
 	cell.answerLabel.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(cell.questionLabel.frame) + 8, 290, size.height);
