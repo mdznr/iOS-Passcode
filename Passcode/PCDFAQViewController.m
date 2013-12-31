@@ -30,6 +30,12 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
+	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type)
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(preferredContentSizeDidChange:)
+												 name:UIContentSizeCategoryDidChangeNotification
+											   object:nil];
+	
 	self.title = NSLocalizedString(@"FAQs", @"FAQs");
 	
 	// Get the documents directory:
@@ -118,6 +124,12 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	});
 }
 
+// Dynamic type size changed
+- (void)preferredContentSizeDidChange:(id)sender
+{
+	[self.tableView reloadData];
+}
+
 
 #pragma mark - Table view data source
 
@@ -180,17 +192,21 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	NSString *question = [x objectForKey:@"Question"];
 	CGSize size;
 	CGRect rect;
-	size = [question sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]
+	UIFont *headline = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+	size = [question sizeWithFont:headline
 				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 					lineBreakMode:NSLineBreakByWordWrapping];
+	cell.questionLabel.font = headline;
 	cell.questionLabel.text = question;
 	rect = cell.questionLabel.frame;
 	cell.questionLabel.frame = CGRectMake(rect.origin.x, rect.origin.y, 290, size.height);
 	
 	NSString *answer = [x objectForKey:@"Answer"];
-	size = [answer sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+	UIFont *body = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+	size = [answer sizeWithFont:body
 			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
 				  lineBreakMode:NSLineBreakByWordWrapping];
+	cell.answerLabel.font = body;
 	cell.answerLabel.text = answer;
 	rect = cell.answerLabel.frame;
 	cell.answerLabel.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(cell.questionLabel.frame) + 8, 290, size.height);
