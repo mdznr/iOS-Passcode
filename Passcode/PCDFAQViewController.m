@@ -179,7 +179,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	
 	// Bottom padding
-	totalHeight += 10;
+	totalHeight += 12;
 	
 	return totalHeight;
 }
