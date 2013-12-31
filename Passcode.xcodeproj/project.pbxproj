@@ -40,16 +40,8 @@
 		C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
 		C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */; };
 		C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F70186AA4A0004EDC76 /* MTZTextField.m */; };
-		C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */; };
-		C98D263F17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */; };
 		C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */; };
 		C98D26611741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */; };
-		C98D26651741D0DB00ECBEF7 /* iPadSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D26621741D0DB00ECBEF7 /* iPadSlider.png */; };
-		C98D26671741D0DB00ECBEF7 /* iPadSlider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D26631741D0DB00ECBEF7 /* iPadSlider@2x.png */; };
-		C98D266B1741E72F00ECBEF7 /* iPadSlideToRevealBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D26681741E72F00ECBEF7 /* iPadSlideToRevealBackground.png */; };
-		C98D266D1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D26691741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png */; };
-		C98D26711741E73B00ECBEF7 /* Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D266E1741E73B00ECBEF7 /* Slider.png */; };
-		C98D26731741E73B00ECBEF7 /* Slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98D266F1741E73B00ECBEF7 /* Slider@2x.png */; };
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
@@ -76,11 +68,12 @@
 		C9C2696B16498D5100B35DFA /* EXTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696616498D5100B35DFA /* EXTestController.m */; };
 		C9C2696C16498D5100B35DFA /* KIFTestScenario+EXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696816498D5100B35DFA /* KIFTestScenario+EXAdditions.m */; };
 		C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */; };
-		C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */; };
-		C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */; };
 		C9D0F504173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D0F505173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
+		C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE4112187242DD006FD776 /* PCDFAQViewController.m */; };
+		C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE415718729D63006FD776 /* PCDFAQViewController.storyboard */; };
+		C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */; };
 		C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EED9E118692F17008973E2 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,16 +125,8 @@
 		C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDPasscodeGenerator.m; sourceTree = "<group>"; };
 		C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTextField.h; sourceTree = "<group>"; };
 		C98A5F70186AA4A0004EDC76 /* MTZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTextField.m; sourceTree = "<group>"; };
-		C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideToRevealBackground.png; path = resources/iPhone/SlideToRevealBackground.png; sourceTree = "<group>"; };
-		C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SlideToRevealBackground@2x.png"; path = "resources/iPhone/SlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
 		C98D265E1741852700ECBEF7 /* NSMutableArray+MTZRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MTZRemove.h"; path = "../NSMutableArray+MTZRemove.h"; sourceTree = "<group>"; };
 		C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MTZRemove.m"; path = "../NSMutableArray+MTZRemove.m"; sourceTree = "<group>"; };
-		C98D26621741D0DB00ECBEF7 /* iPadSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadSlider.png; path = resources/iPad/iPadSlider.png; sourceTree = "<group>"; };
-		C98D26631741D0DB00ECBEF7 /* iPadSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadSlider@2x.png"; path = "resources/iPad/iPadSlider@2x.png"; sourceTree = "<group>"; };
-		C98D26681741E72F00ECBEF7 /* iPadSlideToRevealBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadSlideToRevealBackground.png; path = resources/iPad/iPadSlideToRevealBackground.png; sourceTree = "<group>"; };
-		C98D26691741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadSlideToRevealBackground@2x.png"; path = "resources/iPad/iPadSlideToRevealBackground@2x.png"; sourceTree = "<group>"; };
-		C98D266E1741E73B00ECBEF7 /* Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slider.png; path = resources/iPhone/Slider.png; sourceTree = "<group>"; };
-		C98D266F1741E73B00ECBEF7 /* Slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Slider@2x.png"; path = "resources/iPhone/Slider@2x.png"; sourceTree = "<group>"; };
 		C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
 		C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
@@ -160,12 +145,13 @@
 		C9C2696816498D5100B35DFA /* KIFTestScenario+EXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+EXAdditions.m"; sourceTree = "<group>"; };
 		C9C2696916498D5100B35DFA /* KIFTestStep+EXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+EXAdditions.h"; sourceTree = "<group>"; };
 		C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+EXAdditions.m"; sourceTree = "<group>"; };
-		C9D0F4BF173AC25C00AC055D /* PCDFAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQViewController.h; sourceTree = "<group>"; };
-		C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQViewController.m; sourceTree = "<group>"; };
-		C9D0F4C6173ACCAF00AC055D /* PCDFAQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQView.h; sourceTree = "<group>"; };
-		C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQView.m; sourceTree = "<group>"; };
 		C9D0F503173C886800AC055D /* FAQs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FAQs.plist; sourceTree = SOURCE_ROOT; };
 		C9D1BA8F164885B9009A5DBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C9DE4111187242DD006FD776 /* PCDFAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQViewController.h; sourceTree = "<group>"; };
+		C9DE4112187242DD006FD776 /* PCDFAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQViewController.m; sourceTree = "<group>"; };
+		C9DE415718729D63006FD776 /* PCDFAQViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PCDFAQViewController.storyboard; sourceTree = "<group>"; };
+		C9DE419D1872A6E5006FD776 /* PCDFAQCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQCell.h; sourceTree = "<group>"; };
+		C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQCell.m; sourceTree = "<group>"; };
 		C9EED9E118692F17008973E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -216,14 +202,6 @@
 			children = (
 				C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */,
 				C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */,
-				C98D263A17417C8800ECBEF7 /* SlideToRevealBackground.png */,
-				C98D263B17417C8800ECBEF7 /* SlideToRevealBackground@2x.png */,
-				C98D26681741E72F00ECBEF7 /* iPadSlideToRevealBackground.png */,
-				C98D26691741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png */,
-				C98D266E1741E73B00ECBEF7 /* Slider.png */,
-				C98D266F1741E73B00ECBEF7 /* Slider@2x.png */,
-				C98D26621741D0DB00ECBEF7 /* iPadSlider.png */,
-				C98D26631741D0DB00ECBEF7 /* iPadSlider@2x.png */,
 				C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */,
 				C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */,
 			);
@@ -353,10 +331,11 @@
 			isa = PBXGroup;
 			children = (
 				C9D0F503173C886800AC055D /* FAQs.plist */,
-				C9D0F4BF173AC25C00AC055D /* PCDFAQViewController.h */,
-				C9D0F4C0173AC25C00AC055D /* PCDFAQViewController.m */,
-				C9D0F4C6173ACCAF00AC055D /* PCDFAQView.h */,
-				C9D0F4C7173ACCAF00AC055D /* PCDFAQView.m */,
+				C9DE4111187242DD006FD776 /* PCDFAQViewController.h */,
+				C9DE4112187242DD006FD776 /* PCDFAQViewController.m */,
+				C9DE415718729D63006FD776 /* PCDFAQViewController.storyboard */,
+				C9DE419D1872A6E5006FD776 /* PCDFAQCell.h */,
+				C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */,
 			);
 			name = FAQ;
 			sourceTree = "<group>";
@@ -453,6 +432,7 @@
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
 				C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
+				C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */,
 				C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
 				C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */,
 				C96BB62416A904DE00E5EEEC /* PCDAboutViewController.xib in Resources */,
@@ -476,14 +456,6 @@
 				C94C7CA6172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
 				C94C7CA8172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */,
 				C9D0F505173C886800AC055D /* FAQs.plist in Resources */,
-				C98D263D17417C8800ECBEF7 /* SlideToRevealBackground.png in Resources */,
-				C98D263F17417C8800ECBEF7 /* SlideToRevealBackground@2x.png in Resources */,
-				C98D26651741D0DB00ECBEF7 /* iPadSlider.png in Resources */,
-				C98D26671741D0DB00ECBEF7 /* iPadSlider@2x.png in Resources */,
-				C98D266B1741E72F00ECBEF7 /* iPadSlideToRevealBackground.png in Resources */,
-				C98D266D1741E72F00ECBEF7 /* iPadSlideToRevealBackground@2x.png in Resources */,
-				C98D26711741E73B00ECBEF7 /* Slider.png in Resources */,
-				C98D26731741E73B00ECBEF7 /* Slider@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +475,11 @@
 				C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */,
 				C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */,
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
+				C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
+				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
-				C9D0F4C1173AC25C00AC055D /* PCDFAQViewController.m in Sources */,
-				C9D0F4C8173ACCAF00AC055D /* PCDFAQView.m in Sources */,
 				C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */,
 				C96E7ADE1751E39700E65921 /* PCDRestrictionsViewController.m in Sources */,
 				C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,

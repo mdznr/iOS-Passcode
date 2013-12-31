@@ -7,7 +7,9 @@
 //
 
 #import "PCDAboutViewController.h"
+
 #import "PCDFAQViewController.h"
+
 #import <StoreKit/StoreKit.h>
 
 @interface PCDAboutViewController () <SKStoreProductViewControllerDelegate>
@@ -57,13 +59,14 @@
 
 - (IBAction)faqPressed:(id)sender
 {
-	PCDFAQViewController *faq = [[PCDFAQViewController alloc] init];
+	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDFAQViewController" bundle:nil];
+	PCDFAQViewController *faq = [sb instantiateViewControllerWithIdentifier:@"PCDFAQViewController"];
 #if DEBUG
-	[faq setRemoteURL:@"http://mdznr.com/FAQs.plist"];
+	faq.remoteURL = @"http://mdznr.com/FAQs.plist";
 #else
-	[faq setRemoteURL:@"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist"];
+	faq.remoteURL = @"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist";
 #endif
-	[faq setFileName:@"FAQs"];
+	faq.fileName = @"FAQs";
 	[self.navigationController pushViewController:faq animated:YES];
 }
 
