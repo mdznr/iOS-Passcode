@@ -178,6 +178,11 @@
     }
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	
+}
+
 
 #pragma mark Checks
 
@@ -261,8 +266,8 @@
 - (IBAction)viewAbout:(id)sender
 {
 	PCDAboutViewController *about;
-	about = [[PCDAboutViewController alloc] initWithNibName:@"PCDAboutViewController"
-													 bundle:nil];
+	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDAboutViewController" bundle:nil];
+	about = [sb instantiateViewControllerWithIdentifier:@"PCDAboutViewController"];
 	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
@@ -288,11 +293,6 @@
 		navigationController.view.superview.center = self.view.center;
 		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
 	}
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-	
 }
 
 #pragma mark Text Field Delegate Methods

@@ -7,15 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface PCDAboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
-
-- (IBAction)done:(id)sender;
-- (IBAction)howToUsePressed:(id)sender;
-- (IBAction)faqPressed:(id)sender;
-- (IBAction)supportPressed:(id)sender;
-- (IBAction)writeAReviewPressed:(id)sender;
+@interface PCDAboutViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
 @end

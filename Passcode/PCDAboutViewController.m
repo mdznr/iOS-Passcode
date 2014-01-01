@@ -14,9 +14,18 @@
 
 @interface PCDAboutViewController () <SKStoreProductViewControllerDelegate>
 
+- (IBAction)done:(id)sender;
+- (IBAction)howToUsePressed:(id)sender;
+- (IBAction)faqPressed:(id)sender;
+- (IBAction)supportPressed:(id)sender;
+- (IBAction)writeAReviewPressed:(id)sender;
+
 @end
 
 @implementation PCDAboutViewController
+
+#warning handle dynamic text for about and credits section cells
+#warning handle height of cells for dynamic text
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +61,33 @@
 	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{	
+	// Deselect cell
+	[[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+	
+	// Navigate accordingly
+	switch ( indexPath.row ) {
+		case 0:
+			[self howToUsePressed:self];
+			break;
+		case 1:
+			[self faqPressed:self];
+			break;
+		case 2:
+			[self supportPressed:self];
+			break;
+		case 3:
+			[self writeAReviewPressed:self];
+			break;
+		default:
+			break;
+	}
+}
+
 - (IBAction)howToUsePressed:(id)sender
 {
 #warning How to Use Passcode
@@ -69,6 +105,7 @@
 	faq.fileName = @"FAQs";
 	[self.navigationController pushViewController:faq animated:YES];
 }
+
 
 #pragma mark Support Email
 
@@ -133,7 +170,7 @@
 	[super viewDidUnload];
 }
 
-#pragma mark -
+
 #pragma mark SKStoreProductViewControllerDelegate
 
 -(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
