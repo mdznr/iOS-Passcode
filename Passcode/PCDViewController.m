@@ -271,12 +271,6 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
-	
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
-		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 480);
-		navigationController.view.superview.center = self.view.center;
-		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
-	}
 }
 
 - (IBAction)viewRestrictions:(id)sender
@@ -286,12 +280,6 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:restrictions];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
-	
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ) {
-		navigationController.view.superview.frame = CGRectMake(0, 0, 320, 548);
-		navigationController.view.superview.center = self.view.center;
-		navigationController.view.superview.autoresizingMask = UIViewAutoresizingNone;
-	}
 }
 
 #pragma mark Text Field Delegate Methods
