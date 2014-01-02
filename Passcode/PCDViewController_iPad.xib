@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5037" systemVersion="13C32" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -38,7 +37,7 @@
                                 <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
                             </accessibility>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
-                            <color key="textColor" red="0.76339995861053467" green="0.77501338720321655" blue="0.80296868085861206" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="always" id="15" customClass="MTZTextField">
@@ -59,7 +58,7 @@
                                 <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
                             </accessibility>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
-                            <color key="textColor" red="0.76339995861053467" green="0.77501338720321655" blue="0.80296868085861206" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="password" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="whileEditing" id="13" customClass="MTZTextField">
@@ -88,7 +87,7 @@
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="disabled" backgroundImage="ButtonDisabled">
-                                <color key="titleColor" red="0.69725722074508667" green="0.69723641872406006" blue="0.69724822044372559" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.62430816889999996" green="0.6237781644" blue="0.64006072280000004" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <state key="highlighted" backgroundImage="ButtonHighlight"/>
                             <connections>
@@ -119,7 +118,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="0.93000000000000005" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
