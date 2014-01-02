@@ -41,6 +41,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
+	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type)
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(preferredContentSizeDidChange:)
+												 name:UIContentSizeCategoryDidChangeNotification
+											   object:nil];
+	
 	self.title = NSLocalizedString(@"About", nil);
 	
 	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
@@ -50,10 +56,9 @@
 	self.navigationItem.leftBarButtonItem = doneButton;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)preferredContentSizeDidChange:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[self.tableView reloadData];
 }
 
 - (IBAction)done:(id)sender
@@ -63,6 +68,73 @@
 
 
 #pragma mark UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSUInteger indexes[indexPath.length];
+	[indexPath getIndexes:indexes];
+	NSUInteger section = indexes[0];
+	
+#warning Wish there was a better solution than hardcoding section 0,2
+	
+	UIFont *font;
+	switch ( section ) {
+#warning Wish there was a better solution than hardcoding text styles
+		case 0:
+			// About
+			font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+		case 2:
+			// Credits
+			font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
+			
+			// Calculate height
+		{
+			UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+			NSString *text = cell.textLabel.text;
+			CGFloat width = cell.textLabel.frame.size.width;
+			NSDictionary *attrs = @{NSFontAttributeName: font};
+			CGRect rect = [text boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
+											 options:NSStringDrawingUsesLineFragmentOrigin
+										  attributes:attrs
+											 context:nil];
+			return ceil(rect.size.height) + 24;
+		}
+		default:
+			break;
+	}
+	
+	return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSUInteger indexes[indexPath.length];
+	[indexPath getIndexes:indexes];
+	NSUInteger section = indexes[0];
+	
+#warning Wish there was a better solution than hardcoding section 0,2
+	UIFont *font;
+	switch ( section ) {
+#warning Wish there was a better solution than hardcoding text styles
+		case 0:
+			// About
+			font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+		case 2:
+			// Credits
+			font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
+			
+			// Change cell font
+		{
+			UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+			cell.textLabel.font = font;
+			return cell;
+		}
+		default:
+			break;
+	}
+	
+	return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {	
@@ -88,6 +160,9 @@
 	}
 }
 
+
+#pragma mark Actions
+
 - (IBAction)howToUsePressed:(id)sender
 {
 #warning How to Use Passcode
@@ -106,9 +181,6 @@
 	[self.navigationController pushViewController:faq animated:YES];
 }
 
-
-#pragma mark Support Email
-
 - (IBAction)supportPressed:(id)sender
 {
 	if ([MFMailComposeViewController canSendMail]) {
@@ -124,28 +196,6 @@
     } else {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://passcod.es/support"]];
     }
-}
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
-	switch ( result ) {
-		case MFMailComposeResultCancelled:
-//			NSLog(@"Support Email Cancelled");
-			break;
-		case MFMailComposeResultFailed:
-//			NSLog(@"Support Email Failed");
-			break;
-		case MFMailComposeResultSaved:
-//			NSLog(@"Support Email Saved");
-			break;
-		case MFMailComposeResultSent:
-//			NSLog(@"Support Email Sent");
-			break;
-		default:
-			break;
-	}
-	
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)writeAReviewPressed:(id)sender
@@ -165,9 +215,29 @@
 	}
 }
 
-- (void)viewDidUnload
+
+#pragma mark MFMailComposeViewControllerDelgate
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-	[super viewDidUnload];
+	switch ( result ) {
+		case MFMailComposeResultCancelled:
+			//			NSLog(@"Support Email Cancelled");
+			break;
+		case MFMailComposeResultFailed:
+			//			NSLog(@"Support Email Failed");
+			break;
+		case MFMailComposeResultSaved:
+			//			NSLog(@"Support Email Saved");
+			break;
+		case MFMailComposeResultSent:
+			//			NSLog(@"Support Email Sent");
+			break;
+		default:
+			break;
+	}
+	
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -176,6 +246,20 @@
 -(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
 {
     [viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark UIViewController misc.
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload
+{
+	[super viewDidUnload];
 }
 
 @end
