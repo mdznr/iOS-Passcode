@@ -78,29 +78,33 @@
 #warning Wish there was a better solution than hardcoding section 0,2
 	
 	UIFont *font;
+	BOOL calculateHeight = NO;
 	switch ( section ) {
 #warning Wish there was a better solution than hardcoding text styles
 		case 0:
 			// About
 			font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+			calculateHeight = YES;
+			break;
 		case 2:
 			// Credits
 			font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-			
-			// Calculate height
-		{
-			UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-			NSString *text = cell.textLabel.text;
-			CGFloat width = cell.textLabel.frame.size.width;
-			NSDictionary *attrs = @{NSFontAttributeName: font};
-			CGRect rect = [text boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
-											 options:NSStringDrawingUsesLineFragmentOrigin
-										  attributes:attrs
-											 context:nil];
-			return ceil(rect.size.height) + 24;
-		}
+			calculateHeight = YES;
 		default:
 			break;
+	}
+	
+	// Calculate height
+	if ( calculateHeight ) {
+		UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+		NSString *text = cell.textLabel.text;
+		CGFloat width = cell.textLabel.frame.size.width;
+		NSDictionary *attrs = @{NSFontAttributeName: font};
+		CGRect rect = [text boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
+										 options:NSStringDrawingUsesLineFragmentOrigin
+									  attributes:attrs
+										 context:nil];
+		return ceil(rect.size.height) + 24;
 	}
 	
 	return [super tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -114,23 +118,28 @@
 	
 #warning Wish there was a better solution than hardcoding section 0,2
 	UIFont *font;
+	BOOL updateFont = NO;
 	switch ( section ) {
 #warning Wish there was a better solution than hardcoding text styles
 		case 0:
 			// About
 			font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+			updateFont = YES;
+			break;
 		case 2:
 			// Credits
 			font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-			
-			// Change cell font
-		{
-			UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-			cell.textLabel.font = font;
-			return cell;
-		}
+			updateFont = YES;
+			break;
 		default:
 			break;
+	}
+	
+	// Update the cell's font
+	if ( updateFont ) {
+		UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+		cell.textLabel.font = font;
+		return cell;
 	}
 	
 	return [super tableView:tableView cellForRowAtIndexPath:indexPath];
