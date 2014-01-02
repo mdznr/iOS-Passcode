@@ -192,27 +192,26 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	// Find width of cell
 	CGFloat width = tableView.frame.size.width - 32;
-	NSLog(@"%f", width);
     
     // Configure the cell...
 	NSDictionary *x = _questionsAndAnswers[indexPath.row];
 	
 	NSString *question = [x objectForKey:@"Question"];
 	CGFloat height;
-	CGRect rect;
 	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 	CGRect r;
 	r = [question boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
 							   options:NSStringDrawingUsesLineFragmentOrigin
 							attributes:@{NSFontAttributeName: questionFont}
 							   context:nil];
-	NSLog(@"%@", NSStringFromCGRect(r));
 	
 	height = ceil(r.size.height);
 	cell.questionLabel.font = questionFont;
 	cell.questionLabel.text = question;
-	rect = cell.questionLabel.frame;
-	cell.questionLabel.frame = CGRectMake(rect.origin.x, rect.origin.y, width, height);
+	cell.questionLabel.frame = CGRectMake(cell.questionLabel.frame.origin.x,
+										  cell.questionLabel.frame.origin.y,
+										  width,
+										  height);
 	
 	NSString *answer = [x objectForKey:@"Answer"];
 	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
@@ -224,8 +223,10 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	cell.answerLabel.font = answerFont;
 	cell.answerLabel.text = answer;
-	rect = cell.answerLabel.frame;
-	cell.answerLabel.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(cell.questionLabel.frame) + 8, width, height);
+	cell.answerLabel.frame = CGRectMake(cell.answerLabel.frame.origin.x,
+										CGRectGetMaxY(cell.questionLabel.frame) + 8,
+										width,
+										height);
 	
     return cell;
 }
