@@ -46,11 +46,11 @@
 	
 	self.title = NSLocalizedString(@"About", nil);
 	
-	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
-																   style:UIBarButtonItemStyleDone
-																  target:self
-																  action:@selector(done:)];
-	self.navigationItem.leftBarButtonItem = doneButton;
+	UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
+															 style:UIBarButtonItemStyleDone
+															target:self
+															action:@selector(done:)];
+	self.navigationItem.leftBarButtonItem = done;
 }
 
 - (void)preferredContentSizeDidChange:(id)sender

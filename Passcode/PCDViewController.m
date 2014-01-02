@@ -268,16 +268,21 @@
 	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDAboutViewController" bundle:nil];
 	about = [sb instantiateViewControllerWithIdentifier:@"PCDAboutViewController"];
 	
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:about];
-	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
-	[self presentViewController:navigationController animated:YES completion:nil];
+	[self viewModalViewController:about];
 }
 
 - (IBAction)viewRestrictions:(id)sender
 {
-	PCDRestrictionsViewController *restrictions;
-	restrictions = [[PCDRestrictionsViewController alloc] init];
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:restrictions];
+	PCDRestrictionsViewController *requirements;
+	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDRestrictionsViewController" bundle:nil];
+	requirements = [sb instantiateViewControllerWithIdentifier:@"PCDRestrictionsViewController"];
+	
+	[self viewModalViewController:requirements];
+}
+
+- (void)viewModalViewController:(UIViewController *)vc
+{
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
 }

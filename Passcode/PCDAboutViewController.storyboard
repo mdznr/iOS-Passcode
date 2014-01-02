@@ -8,7 +8,6 @@
         <!--About View Controller-->
         <scene sceneID="3ew-fD-Ble">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="azc-7W-qG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="PCDAboutViewController" id="dme-hv-J06" customClass="PCDAboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Gjk-VF-IAe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -141,6 +140,7 @@ Special thanks to: Nick Pitt, Peter Hajas, Professor Moorthy, Dr. Goldschmidt, S
                     </tableView>
                     <nil key="simulatedStatusBarMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azc-7W-qG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="93"/>
         </scene>
