@@ -72,7 +72,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
 	
 	self.title = @"Passcode";
 	

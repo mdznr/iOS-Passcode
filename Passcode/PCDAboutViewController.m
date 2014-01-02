@@ -24,9 +24,6 @@
 
 @implementation PCDAboutViewController
 
-#warning handle dynamic text for about and credits section cells
-#warning handle height of cells for dynamic text
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -201,7 +198,7 @@
         [mailer setSubject:NSLocalizedString(@"Passcode Support", nil)];
 		
 		[mailer setModalPresentationStyle:UIModalPresentationPageSheet];
-        [self presentModalViewController:mailer animated:YES];
+		[self presentViewController:mailer animated:YES completion:^{}];
     } else {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://passcod.es/support"]];
     }
@@ -246,7 +243,7 @@
 			break;
 	}
 	
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 

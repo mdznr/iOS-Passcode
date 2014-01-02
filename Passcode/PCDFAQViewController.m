@@ -157,12 +157,13 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	// Question
 	NSString *question = [x objectForKey:@"Question"];
-	CGSize size;
 	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-	size = [question sizeWithFont:questionFont
-				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
-					lineBreakMode:NSLineBreakByWordWrapping];
-	totalHeight += size.height;
+	CGRect r;
+	r = [question boundingRectWithSize:(CGSize){290, CGFLOAT_MAX}
+							   options:NSStringDrawingUsesLineFragmentOrigin
+							attributes:@{NSFontAttributeName: questionFont}
+							   context:nil];
+	totalHeight += r.size.height;
 	
 	
 	// Add padding between labels
@@ -172,10 +173,11 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	// Answer
 	NSString *answer = [x objectForKey:@"Answer"];
 	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-	size = [answer sizeWithFont:answerFont
-			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
-				  lineBreakMode:NSLineBreakByWordWrapping];
-	totalHeight += size.height;
+	r = [answer boundingRectWithSize:(CGSize){290, CGFLOAT_MAX}
+							 options:NSStringDrawingUsesLineFragmentOrigin
+						  attributes:@{NSFontAttributeName: answerFont}
+							 context:nil];
+	totalHeight += r.size.height;
 	
 	
 	// Bottom padding
@@ -195,9 +197,12 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	CGSize size;
 	CGRect rect;
 	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-	size = [question sizeWithFont:questionFont
-				constrainedToSize:(CGSize){290, CGFLOAT_MAX}
-					lineBreakMode:NSLineBreakByWordWrapping];
+	CGRect r;
+	r = [question boundingRectWithSize:(CGSize){290, CGFLOAT_MAX}
+							   options:NSStringDrawingUsesLineFragmentOrigin
+							attributes:@{NSFontAttributeName: questionFont}
+							   context:nil];
+	size = r.size;
 	cell.questionLabel.font = questionFont;
 	cell.questionLabel.text = question;
 	rect = cell.questionLabel.frame;
@@ -205,9 +210,12 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	NSString *answer = [x objectForKey:@"Answer"];
 	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-	size = [answer sizeWithFont:answerFont
-			  constrainedToSize:(CGSize){290, CGFLOAT_MAX}
-				  lineBreakMode:NSLineBreakByWordWrapping];
+	r = [answer boundingRectWithSize:(CGSize){290, CGFLOAT_MAX}
+							 options:NSStringDrawingUsesLineFragmentOrigin
+						  attributes:@{NSFontAttributeName: answerFont}
+							 context:nil];
+	size = r.size;
+	
 	cell.answerLabel.font = answerFont;
 	cell.answerLabel.text = answer;
 	rect = cell.answerLabel.frame;
