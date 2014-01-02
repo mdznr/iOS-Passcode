@@ -39,4 +39,20 @@
 	return [self rectForBounds:bounds];
 }
 
+// Only show certain actions in text selection
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+	if ( (action == @selector(cut:)) ||
+		 (action == @selector(copy:)) ||
+		 (action == @selector(select:)) ||
+         (action == @selector(selectAll:)) ||
+		 (action == @selector(paste:)) ||
+		 (action == @selector(delete:)))
+	{
+        return [super canPerformAction:action withSender:sender];
+	}
+	
+    return NO;
+}
+
 @end
