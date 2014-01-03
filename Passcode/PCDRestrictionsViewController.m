@@ -10,6 +10,8 @@
 
 @interface PCDRestrictionsViewController ()
 
+@property (nonatomic) BOOL automatic;
+
 @end
 
 @implementation PCDRestrictionsViewController
@@ -70,36 +72,174 @@
 	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
+- (void)automaticSwitchChanged:(UISwitch *)sender
+{
+	// No changes made
+	if ( _automatic == sender.on ) return;
+	
+	_automatic = sender.on;
+	
+	NSMutableIndexSet *deleteIndexes = [[NSMutableIndexSet alloc] init];
+	NSMutableIndexSet *insertIndexes = [[NSMutableIndexSet alloc] init];
+	
+	if ( _automatic ) {
+		[deleteIndexes addIndex:1];
+		[deleteIndexes addIndex:2];
+		
+		[insertIndexes addIndex:1];
+	} else {
+		[deleteIndexes addIndex:1];
+		
+		[insertIndexes addIndex:1];
+		[insertIndexes addIndex:2];
+	}
+	
+	[self.tableView beginUpdates];
+	
+	[self.tableView deleteSections:deleteIndexes
+				  withRowAnimation:UITableViewRowAnimationFade];
+	
+	[self.tableView insertSections:insertIndexes
+				  withRowAnimation:UITableViewRowAnimationFade];
+	
+	[self.tableView endUpdates];
+}
+
 #pragma mark - Table view data source
 
-/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+{	
+	if ( _automatic ) {
+		return 2;
+	} else {
+		return 3;
+	}
 }
- */
 
-/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+	if ( _automatic ) {
+		switch ( section ) {
+			case 0: return 1; // Automatic Switch
+			case 1: return 1; // Definitions Selector
+			default: return 0;
+		}
+	} else {
+		switch ( section ) {
+			case 0: return 1; // Automatic Switch
+			case 1: return 1; // Length
+			case 2: return 4; // Character Restrictions
+			default: return 0;
+		}
+	}
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if ( _automatic ) {
+		return @"";
+	} else {
+		switch ( section ) {
+			case 0: return @"";
+			case 1: return @"Length";
+			case 2: return @"Character Restrictions";
+			default: return @"";
+		}
+	}
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+	if ( _automatic ) {
+		switch ( section ) {
+			case 0: return @"Automatically meet password requirements of the domain.";
+			case 1: return @"Using latest requirements for [domain]\nLast updated on [date]";
+			default: return @"";
+		}
+	} else {
+		switch ( section ) {
+			case 0: return @"Automatically meet password requirements of the domain.";
+			case 1: return @"";
+			case 2: return @"";
+			default: return @"";
+		}
+	}
+}
+
+/*
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+	
 }
  */
 
 /*
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+	
+}
+ */
+
+- (UITableViewCell *)automaticSwitch
+{
+	UITableViewCell *cell = [[UITableViewCell alloc] init];
+	
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	
+	cell.textLabel.text = NSLocalizedString(@"Automatic", nil);
+	
+	UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+	cell.accessoryView = mySwitch;
+	
+	[mySwitch addTarget:self
+				 action:@selector(automaticSwitchChanged:)
+	   forControlEvents:UIControlEventValueChanged];
+	
+	mySwitch.on = _automatic;
+	
+	return cell;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+	if ( _automatic ) {
+		if ( indexPath.section == 0 && indexPath.row == 0 ) {
+			// Automatic Switch
+			return [self automaticSwitch];
+		} else if ( indexPath.section == 1 && indexPath.row == 0 ) {
+			// Definitions Selector
+			UITableViewCell *cell = [[UITableViewCell alloc] init];
+			cell.textLabel.text = NSLocalizedString(@"Available Definitions", nil);
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			return cell;
+		}
+	} else {
+		if ( indexPath.section == 0 && indexPath.row == 0 ) {
+			// Automatic Switch
+			return [self automaticSwitch];
+		} else if ( indexPath.section == 1 && indexPath.row == 0 ) {
+			// Length Slider
+			UITableViewCell *cell = [[UITableViewCell alloc] init];
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+			cell.textLabel.text = @"LENGTH SLIDER GOES HERE";
+			return cell;
+		} else if ( indexPath.section == 2 ) {
+			// Character Restrictions
+			UITableViewCell *cell = [[UITableViewCell alloc] init];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			switch ( indexPath.row ) {
+				case 0: cell.textLabel.text = @"Symbols"; break;
+				case 1: cell.textLabel.text = @"Numbers"; break;
+				case 2: cell.textLabel.text = @"Uppercase"; break;
+				case 3: cell.textLabel.text = @"Lowercase"; break;
+				default: break;
+			}
+			return cell;
+		}
+	}
+	
+	return nil;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

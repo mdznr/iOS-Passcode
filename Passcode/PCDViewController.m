@@ -273,11 +273,15 @@
 
 - (IBAction)viewRestrictions:(id)sender
 {
-	PCDRestrictionsViewController *requirements;
-	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDRestrictionsViewController" bundle:nil];
-	requirements = [sb instantiateViewControllerWithIdentifier:@"PCDRestrictionsViewController"];
+	PCDRestrictionsViewController *requirements = [[PCDRestrictionsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	
 	[self viewModalViewController:requirements];
+	
+//	PCDRestrictionsViewController *requirements;
+//	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDRestrictionsViewController" bundle:nil];
+//	requirements = [sb instantiateViewControllerWithIdentifier:@"PCDRestrictionsViewController"];
+//	
+//	[self viewModalViewController:requirements];
 }
 
 - (void)viewModalViewController:(UIViewController *)vc
