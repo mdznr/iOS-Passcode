@@ -86,11 +86,36 @@ Last updated on [date]</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="Restrictions" maximumValueImage="Info" translatesAutoresizingMaskIntoConstraints="NO" id="XTm-Ev-lRp" userLabel="Slider">
-                                                    <rect key="frame" x="18" y="7" width="284" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="16" minValue="8" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="XTm-Ev-lRp" userLabel="Slider">
+                                                    <rect key="frame" x="50" y="7" width="220" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </slider>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-4X-lqM">
+                                                    <rect key="frame" x="20" y="11" width="24" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="fBT-mc-3hz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLX-jJ-mcH">
+                                                    <rect key="frame" x="276" y="11" width="24" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="XLX-jJ-mcH" secondAttribute="trailing" constant="20" id="07a-S3-TFD"/>
+                                                <constraint firstItem="XLX-jJ-mcH" firstAttribute="leading" secondItem="XTm-Ev-lRp" secondAttribute="trailing" constant="8" id="6Qx-TD-dEh"/>
+                                                <constraint firstItem="3yP-4X-lqM" firstAttribute="leading" secondItem="GUG-Vb-hD4" secondAttribute="leading" constant="20" id="Ti1-hc-bjr"/>
+                                                <constraint firstItem="XTm-Ev-lRp" firstAttribute="leading" secondItem="3yP-4X-lqM" secondAttribute="trailing" constant="8" id="XGS-hu-I3G"/>
+                                                <constraint firstItem="3yP-4X-lqM" firstAttribute="centerY" secondItem="XLX-jJ-mcH" secondAttribute="centerY" id="e2E-Dh-36p"/>
+                                                <constraint firstItem="XTm-Ev-lRp" firstAttribute="centerX" secondItem="GUG-Vb-hD4" secondAttribute="centerX" id="oaD-8F-02m"/>
+                                                <constraint firstItem="XTm-Ev-lRp" firstAttribute="top" secondItem="GUG-Vb-hD4" secondAttribute="top" constant="7" id="rnh-Os-d4s"/>
+                                                <constraint firstItem="3yP-4X-lqM" firstAttribute="centerY" secondItem="GUG-Vb-hD4" secondAttribute="centerY" id="sBT-cv-k0v"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -180,10 +205,6 @@ Last updated on [date]</string>
             <point key="canvasLocation" x="188" y="93"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Info" width="30" height="30"/>
-        <image name="Restrictions" width="30" height="30"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
