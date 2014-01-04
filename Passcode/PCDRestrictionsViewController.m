@@ -28,7 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view from its nib.
+	
+#warning TODO: Look for record of domain
+	
+	// Automatic is default
+	_automatic = YES;
 	
 	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type)
 	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -83,15 +87,17 @@
 	NSMutableIndexSet *insertIndexes = [[NSMutableIndexSet alloc] init];
 	
 	if ( _automatic ) {
-		[deleteIndexes addIndex:1];
-		[deleteIndexes addIndex:2];
+		// Moving to automatic mode
+		[deleteIndexes addIndex:1]; // Hide Length Slider
+		[deleteIndexes addIndex:2]; // Hide Character Restrictions
 		
-		[insertIndexes addIndex:1];
+		[insertIndexes addIndex:1]; // Show Definitions Selector
 	} else {
-		[deleteIndexes addIndex:1];
+		// Moving to manual mode
+		[deleteIndexes addIndex:1]; // Hide Definitions Selector
 		
-		[insertIndexes addIndex:1];
-		[insertIndexes addIndex:2];
+		[insertIndexes addIndex:1]; // Show Length Slider
+		[insertIndexes addIndex:2]; // Show Character Restrictions
 	}
 	
 	[self.tableView beginUpdates];
@@ -103,6 +109,12 @@
 				  withRowAnimation:UITableViewRowAnimationFade];
 	
 	[self.tableView endUpdates];
+}
+
+- (void)lengthSliderChanged:(UISlider *)sender
+{
+#warning handle length slider changed back-end
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
 }
 
 #pragma mark - Table view data source
@@ -221,7 +233,30 @@
 			// Length Slider
 			UITableViewCell *cell = [[UITableViewCell alloc] init];
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-			cell.textLabel.text = @"LENGTH SLIDER GOES HERE";
+			
+			// Min. Length
+			UILabel *minLength = [[UILabel alloc] initWithFrame:(CGRect){15, 0, 24, cell.contentView.frame.size.height}];
+			minLength.textAlignment = NSTextAlignmentLeft;
+			minLength.textColor = [UIColor darkGrayColor];
+			minLength.text = [NSString stringWithFormat:@"%d", 12];
+			[cell.contentView addSubview:minLength];
+
+			// Max. Length
+			UILabel *maxLength = [[UILabel alloc] initWithFrame:(CGRect){cell.contentView.frame.size.width - 15 - 24, 0, 24, cell.contentView.frame.size.height}];
+			maxLength.textAlignment = NSTextAlignmentRight;
+			maxLength.textColor = [UIColor darkGrayColor];
+			maxLength.text = [NSString stringWithFormat:@"%d", 24];
+			[cell.contentView addSubview:maxLength];
+			
+			// Slider
+			UISlider *lengthSlider = [[UISlider alloc] initWithFrame:(CGRect){15 + 24 + 4, 0, cell.contentView.frame.size.width - (2 * (15 + 24 + 4)), 44}];
+			[lengthSlider addTarget:self action:@selector(lengthSliderChanged:) forControlEvents:UIControlEventValueChanged];
+			lengthSlider.continuous = YES;
+			lengthSlider.minimumValue = 12;
+			lengthSlider.maximumValue = 24;
+			lengthSlider.value = 16;
+			[cell addSubview:lengthSlider];
+			
 			return cell;
 		} else if ( indexPath.section == 2 ) {
 			// Character Restrictions

@@ -72,7 +72,6 @@
 		C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE415718729D63006FD776 /* PCDFAQViewController.storyboard */; };
 		C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */; };
 		C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EED9E118692F17008973E2 /* StoreKit.framework */; };
-		C9F25B8018760A1800B84A4F /* PCDRestrictionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F25B7F18760A1800B84A4F /* PCDRestrictionsViewController.storyboard */; };
 		C9F25B8318760A3700B84A4F /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +149,6 @@
 		C9DE419D1872A6E5006FD776 /* PCDFAQCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQCell.h; sourceTree = "<group>"; };
 		C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDFAQCell.m; sourceTree = "<group>"; };
 		C9EED9E118692F17008973E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		C9F25B7F18760A1800B84A4F /* PCDRestrictionsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PCDRestrictionsViewController.storyboard; sourceTree = "<group>"; };
 		C9F25B8118760A3700B84A4F /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -344,7 +342,6 @@
 			children = (
 				C9F25B8118760A3700B84A4F /* PCDRestrictionsViewController.h */,
 				C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */,
-				C9F25B7F18760A1800B84A4F /* PCDRestrictionsViewController.storyboard */,
 			);
 			name = Restrictions;
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 			files = (
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
-				C9F25B8018760A1800B84A4F /* PCDRestrictionsViewController.storyboard in Resources */,
 				C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
 				C94BA7081874B7CF0075F84A /* PCDAboutViewController.storyboard in Resources */,
 				C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */,
