@@ -201,6 +201,7 @@
 	cell.textLabel.text = NSLocalizedString(@"Automatic", nil);
 	
 	UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+	mySwitch.onTintColor = [UIApplication sharedApplication].delegate.window.tintColor;
 	cell.accessoryView = mySwitch;
 	
 	[mySwitch addTarget:self
