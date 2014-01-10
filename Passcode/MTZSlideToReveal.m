@@ -7,14 +7,11 @@
 //
 
 #import "MTZSlideToReveal.h"
+
 #import <QuartzCore/QuartzCore.h>
 
-#define SQUARED(X) X*X
-
-double squared(double x)
-{
-	return x*x;
-}
+#import "MTZMacros.h"
+#import "NSString+Repeated.h"
 
 @interface MTZSlideToReveal ()
 
@@ -60,66 +57,64 @@ double squared(double x)
 
 - (void)setup
 {
-	[self setOpaque:NO];
-	[self setBackgroundColor:[UIColor clearColor]];
+	self.opaque = NO;
+	self.backgroundColor = [UIColor clearColor];
 	
-	UIImage *backgroundImage;
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		backgroundImage = [UIImage imageNamed:@"SlideToRevealBackground"];
-	} else {
-		backgroundImage = [UIImage imageNamed:@"iPadSlideToRevealBackground"];
-	}
-	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 9, 8)];
+	// Background
+	UIImage *backgroundImage = [UIImage imageNamed:@"RevealBackground"];
+	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)];
 	_background = [[UIImageView alloc] initWithImage:backgroundImage];
-	[_background setFrame:self.bounds];
-	[_background setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+	_background.frame = self.bounds;
+	_background.autoresizingMask = UIViewAutoresizingFlexibleSize;
 	[self addSubview:_background];
 	
-	_dotsLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,self.bounds.size.width,self.bounds.size.height}];
-	[_dotsLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+	// Dots
+	_dotsLabel = [[UILabel alloc] initWithFrame:self.bounds];
+	_dotsLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		[_dotsLabel setFont:[UIFont systemFontOfSize:30.0f]];
+		_dotsLabel.font = [UIFont systemFontOfSize:30.0f];
 	} else {
-		[_dotsLabel setFont:[UIFont systemFontOfSize:54.0f]];
+		_dotsLabel.font = [UIFont systemFontOfSize:54.0f];
 	}
-	[_dotsLabel setTextAlignment:NSTextAlignmentCenter];
-	[_dotsLabel setNumberOfLines:1];
-	[_dotsLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
-//	[_dotsLabel setAdjustsLetterSpacingToFitWidth:YES];
-	[_dotsLabel setAdjustsFontSizeToFitWidth:YES];
-	[_dotsLabel setTextColor:[UIColor blackColor]];
-	[_dotsLabel setOpaque:NO];
-	[_dotsLabel setBackgroundColor:[UIColor clearColor]];
+	_dotsLabel.textAlignment = NSTextAlignmentCenter;
+	_dotsLabel.numberOfLines = 1;
+	_dotsLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+	_dotsLabel.adjustsFontSizeToFitWidth = YES;
+	_dotsLabel.textColor = [UIColor blackColor];
+	_dotsLabel.opaque = NO;
+	_dotsLabel.backgroundColor = [UIColor clearColor];
 	[self addSubview:_dotsLabel];
 	
+	// Hidden Word
 	_passwordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	[_passwordLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-	[_passwordLabel setBounds:CGRectZero];
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		[_passwordLabel setFont:[UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f]];
+	_passwordLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
+	_passwordLabel.bounds = CGRectZero;
+	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
+		_passwordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f];
 	} else {
-		[_passwordLabel setFont:[UIFont fontWithName:@"SourceCodePro-Medium" size:42.0f]];
+		_passwordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:42.0f];
 	}
-	[_passwordLabel setTextAlignment:NSTextAlignmentCenter];
-	[_passwordLabel setNumberOfLines:1];
-	[_passwordLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
-//	[_passwordLabel setAdjustsLetterSpacingToFitWidth:YES];
-	[_passwordLabel setAdjustsFontSizeToFitWidth:YES];
-	[_passwordLabel setTextColor:[UIColor blackColor]];
-	[_passwordLabel setBackgroundColor:[UIColor colorWithWhite:250.0f/255.0f alpha:1.0f]];
-	[_passwordLabel setAlpha:0.0f];
+	_passwordLabel.textAlignment = NSTextAlignmentCenter;
+	_passwordLabel.numberOfLines = 1;
+	_passwordLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+	_passwordLabel.adjustsFontSizeToFitWidth = YES;
+	_passwordLabel.textColor = [UIColor blackColor];
+	
+//	_passwordLabel.opaque = NO;
+//	_passwordLabel.backgroundColor = [UIColor clearColor];
+#warning passwordLabel background color?
+	_passwordLabel.backgroundColor = [UIColor whiteColor];
+	
+	_passwordLabel.alpha = 0.0f;
 	[self addSubview:_passwordLabel];
 	
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Slider"]];
-	} else {
-		_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iPadSlider"]];
-	}
-	
-	[_sliderView setHidden:YES];
-	[_sliderView setAlpha:0.0f];
+	// Loupe
+	_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Loupe"]];
+	_sliderView.hidden = YES;
+	_sliderView.alpha = 0.0f;
 	[self addSubview:_sliderView];
 	
+#warning are these gestures still used?
 	UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGesture:)];
 	[self addGestureRecognizer:pan];
 	
@@ -129,30 +124,24 @@ double squared(double x)
 
 - (void)setWord:(NSString *)word
 {
-	NSString *newWord = @"";
-	float numberOfChunks = 1;
-	for ( NSUInteger i=0; i<word.length; ++i ) {
-		if ( i>0 && i%4 == 0 ) {
-			newWord = [newWord stringByAppendingString:@" "];
-			numberOfChunks++;
-		}
-		newWord = [newWord stringByAppendingFormat:@"%c", [word characterAtIndex:i]];
-	}
-	_numChunks = numberOfChunks;
-	_word = newWord;
+	if ( [_word isEqualToString:word] ) return;
+	
+	_word = word;
+	
+	NSUInteger chunkSize = 4;
+	NSString *chunkedWord = [word stringByInsertingString:@" " everyNumberOfCharacters:chunkSize];
+	_numChunks = word.length % chunkSize;
 	
 #warning changes frame when setting word multiple times because of changing frame while moving.
 #warning Fit text size for height of view then set width dynamically. Change bounds?
-	[_passwordLabel setText:newWord];
+	_passwordLabel.text = chunkedWord;
 	[_passwordLabel sizeToFit];
 	CGSize size = _passwordLabel.frame.size;
-	[_passwordLabel setFrame:CGRectMake(0, 0, size.width+20, self.bounds.size.height)];
+	[_passwordLabel setFrame:CGRectMake(0, -9, size.width + 20, self.bounds.size.height)];
 	
-	NSString *lotsOfDots = [[NSString alloc] init];
-	for ( NSUInteger i=0; i<word.length; ++i ) {
-		lotsOfDots = [lotsOfDots stringByAppendingString:@"•"];
-	}
-	[_dotsLabel setText:lotsOfDots];
+	// Update dots
+	NSString *dots = [NSString stringByRepeatingString:@"•" numberOfTimes:word.length];
+	[_dotsLabel setText:dots];
 }
 
 - (void)didGesture:(id)sender
@@ -181,38 +170,36 @@ double squared(double x)
 
 - (void)showPopover:(id)sender
 {
-	[_sliderView setHidden:NO];
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:0.2f];
-	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-	[_sliderView setAlpha:1.0f];
-	[_passwordLabel setAlpha:1.0f];
-	[UIView commitAnimations];
+	_sliderView.hidden = NO;
+	[UIView animateWithDuration:0.2f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
+					 animations:^{
+						 _sliderView.alpha = 1.0f;
+						 _passwordLabel.alpha = 1.0f;
+					 }
+					 completion:^(BOOL finished) {}];
 }
 
 - (void)hidePopover:(id)sender
 {
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:0.15f];
-	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-	[UIView setAnimationDidStopSelector:@selector(setPopoverHidden:)];
-	[_sliderView setAlpha:0.0f];
-	[_passwordLabel setAlpha:0.0f];
-	[UIView commitAnimations];
-}
-
-- (void)setPopoverHidden:(id)sender
-{
-	[_sliderView setHidden:YES];
+	[UIView animateWithDuration:0.15f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
+					 animations:^{
+						 _sliderView.alpha = 0.0f;
+						 _passwordLabel.alpha = 0.0f;
+					 }
+					 completion:^(BOOL finished) {
+						 _sliderView.hidden = YES;
+					 }];
 }
 
 - (void)setPopoverCenter:(CGPoint)center
 {
 	CGFloat min = _sliderView.bounds.size.width/2;
 	CGFloat max = _background.bounds.size.width - _sliderView.bounds.size.width/2;
-	CGFloat y = 1 + _sliderView.bounds.size.height/2;
+	CGFloat y = -12 + _sliderView.bounds.size.height/2;
 	CGPoint centre = CGPointMake(MAX(MIN(center.x, max), min), y);
 	[_sliderView setCenter:centre];
 	
@@ -239,16 +226,17 @@ double squared(double x)
 	} else {
 		moveLeft = -7 + p * (_passwordLabel.bounds.size.width - self.bounds.size.width + 14);
 	}
-	[_passwordLabel setTransform:CGAffineTransformMakeTranslation(-moveLeft, 0)];
+	_passwordLabel.transform = CGAffineTransformMakeTranslation(-moveLeft, 0);
 //	NSLog(@"left: %f\tframe %f", moveLeft, _passwordLabel.frame.origin.x);
 	
-	CGRect rect = CGRectMake(moveLeft + _sliderView.frame.origin.x + 6,
-							 _sliderView.frame.origin.y + 6,
-							 _sliderView.frame.size.width - 12,
-							 _sliderView.frame.size.height - 34);
+	CGFloat padding = 5;
+	CGRect rect = CGRectMake(moveLeft + _sliderView.frame.origin.x + padding,
+							 _sliderView.frame.origin.y + padding,
+							 _sliderView.frame.size.width - (2*padding),
+							 _sliderView.frame.size.height - (2*padding));
 	UIView *mask = [[UIView alloc] initWithFrame:rect];
-	[mask setBackgroundColor:[UIColor blackColor]];
-	[_passwordLabel layer].mask = [mask layer];
+	mask.backgroundColor = [UIColor blackColor];
+	_passwordLabel.layer.mask = mask.layer;
 }
 
 @end

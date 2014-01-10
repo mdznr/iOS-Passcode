@@ -40,7 +40,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	
 	// Get the documents directory:
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *documentsDirectory = [paths firstObject];
 	
 	// Path to FAQs plist
 	_localPath = [NSString stringWithFormat:@"%@/%@.plist", documentsDirectory, _fileName];
@@ -158,7 +158,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	NSDictionary *x = _questionsAndAnswers[indexPath.row];
 	
 	// Question
-	NSString *question = [x objectForKey:@"Question"];
+	NSString *question = x[@"Question"];
 	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 	CGRect r;
 	r = [question boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
@@ -172,7 +172,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 	totalHeight += 8;
 	
 	// Answer
-	NSString *answer = [x objectForKey:@"Answer"];
+	NSString *answer = x[@"Answer"];
 	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 	r = [answer boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
 							 options:NSStringDrawingUsesLineFragmentOrigin
@@ -196,7 +196,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
     // Configure the cell...
 	NSDictionary *x = _questionsAndAnswers[indexPath.row];
 	
-	NSString *question = [x objectForKey:@"Question"];
+	NSString *question = x[@"Question"];
 	CGFloat height;
 	UIFont *questionFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 	CGRect r;
@@ -213,7 +213,7 @@ static NSString *cellIdentifier = @"PCDFAQCell";
 										  width,
 										  height);
 	
-	NSString *answer = [x objectForKey:@"Answer"];
+	NSString *answer = x[@"Answer"];
 	UIFont *answerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 	r = [answer boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
 							 options:NSStringDrawingUsesLineFragmentOrigin

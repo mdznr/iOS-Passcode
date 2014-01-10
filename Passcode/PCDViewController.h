@@ -17,8 +17,6 @@
 
 @interface PCDViewController : UIViewController
 
-#pragma mark Domain
-
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet MTZTextField *domainField;

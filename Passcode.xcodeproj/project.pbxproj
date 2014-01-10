@@ -73,6 +73,7 @@
 		C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */; };
 		C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EED9E118692F17008973E2 /* StoreKit.framework */; };
 		C9F25B8318760A3700B84A4F /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */; };
+		C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,9 @@
 		C9EED9E118692F17008973E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C9F25B8118760A3700B84A4F /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
+		C9F5E95E187F9612005A7FEC /* MTZMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZMacros.h; sourceTree = "<group>"; };
+		C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Repeated.h"; sourceTree = "<group>"; };
+		C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Repeated.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,9 @@
 			children = (
 				C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */,
 				C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */,
+				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
+				C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */,
+				C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */,
 				C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */,
 				C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */,
 			);
@@ -482,6 +489,7 @@
 				C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */,
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
 				C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */,
+				C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,

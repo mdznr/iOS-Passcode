@@ -8,16 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-	MTZSlideToRevealSizeiPhone,
-	MTZSlideToRevealSizeiPad
-} MTZSlideToRevealSize;
-
 @interface MTZSlideToReveal : UIView
 
-@property MTZSlideToRevealSize size;
+/// The secret word to hide.
 @property (nonatomic, assign) NSString *word;
 
-- (void)didGesture:(id)sender;
+/// Pass along gesture recogzniers along to this view via this method.
+- (void)didGesture:(UIGestureRecognizer *)sender;
 
 @end

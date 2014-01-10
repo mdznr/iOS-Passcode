@@ -8,6 +8,10 @@
 
 #import "PCDRestrictionsViewController.h"
 
+#import "PCDAppDelegate.h"
+
+#define LENGTH_SLIDER_HEADER_VALUE_LABEL_VIEW_TAG 111
+
 @interface PCDRestrictionsViewController ()
 
 @property (nonatomic) BOOL automatic;
@@ -113,8 +117,40 @@
 
 - (void)lengthSliderChanged:(UISlider *)sender
 {
+	// Round the slider value to whole number for length
+	NSUInteger length = round(sender.value);
 #warning handle length slider changed back-end
-	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+	
+	UITableViewHeaderFooterView *lengthHeader = [self.tableView headerViewForSection:1];
+	
+//	UILabel *valueLabel = (UILabel *) [lengthHeader.contentView viewWithTag:LENGTH_SLIDER_HEADER_VALUE_LABEL_VIEW_TAG];
+//	valueLabel.text = [NSString stringWithFormat:@"%d", length];
+	
+	NSString *lengthString = NSLocalizedString(@"Length", nil);
+	NSString *stringLengthString = [NSString stringWithFormat:@"%d", length];
+	NSString *string = [NSString stringWithFormat:@"%@\t%@", lengthString, stringLengthString];
+	
+	// Paragraph Style
+	NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+	paragraphStyle.alignment = NSTextAlignmentLeft;
+	NSTextTab *t = [[NSTextTab alloc] initWithTextAlignment:NSTextAlignmentRight
+												   location:lengthHeader.textLabel.frame.size.width
+													options:nil];
+    paragraphStyle.tabStops = @[t];
+	
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragraphStyle
+							 range:NSMakeRange(0, string.length)];
+	
+	// Active text
+	[attributedString addAttribute:NSForegroundColorAttributeName
+							 value:[PCDAppDelegate appKeyColor]
+							 range:NSMakeRange(string.length - stringLengthString.length, stringLengthString.length)];
+	
+	
+	lengthHeader.textLabel.attributedText = attributedString;
+	lengthHeader.textLabel.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
 }
 
 #pragma mark - Table view data source
@@ -153,7 +189,7 @@
 	} else {
 		switch ( section ) {
 			case 0: return @"";
-			case 1: return @"Length";
+			case 1: return @"Length 88888888";
 			case 2: return @"Character Restrictions";
 			default: return @"";
 		}
@@ -178,12 +214,27 @@
 	}
 }
 
-/*
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+	UITableViewHeaderFooterView *header = [[UITableViewHeaderFooterView alloc] init];
+	header.textLabel.text = [self tableView:tableView titleForHeaderInSection:section];
 	
+	/*
+	if ( !_automatic && section == 1 ) {
+		// Length slider value
+		UILabel *valueLabel = [[UILabel alloc] init];
+		[header.contentView addSubview:valueLabel];
+		valueLabel.frame = header.bounds;
+		valueLabel.backgroundColor = [UIColor redColor];
+		valueLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+		valueLabel.textAlignment = NSTextAlignmentRight;
+		valueLabel.tag = LENGTH_SLIDER_HEADER_VALUE_LABEL_VIEW_TAG;
+		valueLabel.text = [NSString stringWithFormat:@"%d", 0];
+	}
+	 */
+	
+	return header;
 }
- */
 
 /*
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -201,7 +252,7 @@
 	cell.textLabel.text = NSLocalizedString(@"Automatic", nil);
 	
 	UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
-	mySwitch.onTintColor = [UIApplication sharedApplication].delegate.window.tintColor;
+	mySwitch.onTintColor = [PCDAppDelegate appKeyColor];
 	cell.accessoryView = mySwitch;
 	
 	[mySwitch addTarget:self
@@ -240,6 +291,7 @@
 			minLength.textAlignment = NSTextAlignmentLeft;
 			minLength.textColor = [UIColor darkGrayColor];
 			minLength.text = [NSString stringWithFormat:@"%d", 12];
+			minLength.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
 			[cell.contentView addSubview:minLength];
 
 			// Max. Length
@@ -247,6 +299,7 @@
 			maxLength.textAlignment = NSTextAlignmentRight;
 			maxLength.textColor = [UIColor darkGrayColor];
 			maxLength.text = [NSString stringWithFormat:@"%d", 24];
+			maxLength.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
 			[cell.contentView addSubview:maxLength];
 			
 			// Slider
@@ -256,6 +309,7 @@
 			lengthSlider.minimumValue = 12;
 			lengthSlider.maximumValue = 24;
 			lengthSlider.value = 16;
+			lengthSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 			[cell addSubview:lengthSlider];
 			
 			return cell;

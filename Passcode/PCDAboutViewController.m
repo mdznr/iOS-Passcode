@@ -193,7 +193,7 @@
         MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
 		
-        NSArray *toRecipients = [NSArray arrayWithObjects:@"passcode@mdznr.com", nil];
+        NSArray *toRecipients = @[@"passcode@mdznr.com"];
         [mailer setToRecipients:toRecipients];
         [mailer setSubject:NSLocalizedString(@"Passcode Support", nil)];
 		

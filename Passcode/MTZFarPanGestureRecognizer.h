@@ -8,11 +8,11 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIGestureRecognizerSubclass.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, MTZFarPanDistanceType) {
 	MTZFarPanDistanceTypeHorizontal,	// X
 	MTZFarPanDistanceTypeVertical,		// Y
 	MTZFarPanDistanceTypeTotal			// sqrt(X^2 + Y^2)
-} MTZFarPanDistanceType;
+};
 
 @interface MTZFarPanGestureRecognizer : UIPanGestureRecognizer
 

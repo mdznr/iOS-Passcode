@@ -18,10 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Register the preference defaults early.
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithBool:YES],
-																	  [NSNumber numberWithBool:NO]]
-															forKeys:@[@"save_password",
-								 									  @"hasLaunchedAppBefore"]];
+    NSDictionary *appDefaults = @{@"save_password": @YES,
+								 									  @"hasLaunchedAppBefore": @NO};
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

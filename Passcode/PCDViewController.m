@@ -106,14 +106,15 @@
 	
 	_copiedWindow.center = (CGPoint){_container.center.x, _container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
 	
+	// Gesture recognizers on generate button
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
 	
 	MTZFarPanGestureRecognizer *panGesture = [[MTZFarPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
-	[panGesture setMinimumRequiredPanningDistance:200.0f];
+	panGesture.minimumRequiredPanningDistance = 200.0f;
 	[_generateButton addGestureRecognizer:panGesture];
 	
-	[_reveal setHidden:YES];
+	_reveal.hidden = YES;
 }
 
 - (void)loadViewForiPhone
@@ -237,26 +238,24 @@
 	[_reveal setWord:password];
 }
 
-- (void)didGestureOnButton:(id)sender
+- (void)didGestureOnButton:(UIGestureRecognizer *)sender
 {
-	if ( [sender isKindOfClass:[UIGestureRecognizer class]] ) {
-		switch ( ((UIGestureRecognizer *) sender).state ) {
-			case UIGestureRecognizerStateBegan:
-				[self generateAndSetReveal:sender];
-				[_reveal setHidden:NO];
-				[_generateButton setHidden:YES];
-			case UIGestureRecognizerStateChanged:
-				break;
-			case UIGestureRecognizerStateEnded:
-			case UIGestureRecognizerStateCancelled:
-				[_reveal setHidden:YES];
-				[_generateButton setHidden:NO];
-				break;
-			default:
-				break;
-		}
-		[_reveal didGesture:sender];
+	switch ( sender.state ) {
+		case UIGestureRecognizerStateBegan:
+			[self generateAndSetReveal:sender];
+			_reveal.hidden = NO;
+			_generateButton.hidden = YES;
+		case UIGestureRecognizerStateChanged:
+			break;
+		case UIGestureRecognizerStateEnded:
+		case UIGestureRecognizerStateCancelled:
+			_reveal.hidden = YES;
+			_generateButton.hidden = NO;
+			break;
+		default:
+			break;
 	}
+	[_reveal didGesture:sender];
 }
 
 
@@ -276,12 +275,6 @@
 	PCDRestrictionsViewController *requirements = [[PCDRestrictionsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	
 	[self viewModalViewController:requirements];
-	
-//	PCDRestrictionsViewController *requirements;
-//	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDRestrictionsViewController" bundle:nil];
-//	requirements = [sb instantiateViewControllerWithIdentifier:@"PCDRestrictionsViewController"];
-//	
-//	[self viewModalViewController:requirements];
 }
 
 - (void)viewModalViewController:(UIViewController *)vc
