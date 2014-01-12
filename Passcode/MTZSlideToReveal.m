@@ -16,10 +16,10 @@
 @interface MTZSlideToReveal ()
 
 @property (strong, nonatomic) UIImageView *background;
-@property (strong, nonatomic) UIImageView *sliderView;
+@property (strong, nonatomic) UIImageView *loupe;
 @property (strong, nonatomic) UILabel *dotsLabel;
-@property (strong, nonatomic) UILabel *passwordLabel;
-@property (nonatomic) float numChunks;
+@property (strong, nonatomic) UILabel *hiddenWordLabel;
+@property (nonatomic) NSUInteger numChunks;
 
 @end
 
@@ -86,33 +86,31 @@
 	[self addSubview:_dotsLabel];
 	
 	// Hidden Word
-	_passwordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	_passwordLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
-	_passwordLabel.bounds = CGRectZero;
+	_hiddenWordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	_hiddenWordLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
+	_hiddenWordLabel.bounds = CGRectZero;
 	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
-		_passwordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f];
+		_hiddenWordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f];
 	} else {
-		_passwordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:42.0f];
+		_hiddenWordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:42.0f];
 	}
-	_passwordLabel.textAlignment = NSTextAlignmentCenter;
-	_passwordLabel.numberOfLines = 1;
-	_passwordLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-	_passwordLabel.adjustsFontSizeToFitWidth = YES;
-	_passwordLabel.textColor = [UIColor blackColor];
+	_hiddenWordLabel.textAlignment = NSTextAlignmentCenter;
+	_hiddenWordLabel.numberOfLines = 1;
+	_hiddenWordLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+	_hiddenWordLabel.adjustsFontSizeToFitWidth = YES;
+	_hiddenWordLabel.textColor = [UIColor blackColor];
 	
-//	_passwordLabel.opaque = NO;
-//	_passwordLabel.backgroundColor = [UIColor clearColor];
-#warning passwordLabel background color?
-	_passwordLabel.backgroundColor = [UIColor whiteColor];
+	_hiddenWordLabel.opaque = NO;
+	_hiddenWordLabel.backgroundColor = [UIColor clearColor];
 	
-	_passwordLabel.alpha = 0.0f;
-	[self addSubview:_passwordLabel];
+	_hiddenWordLabel.alpha = 0.0f;
+	[self addSubview:_hiddenWordLabel];
 	
 	// Loupe
-	_sliderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Loupe"]];
-	_sliderView.hidden = YES;
-	_sliderView.alpha = 0.0f;
-	[self addSubview:_sliderView];
+	_loupe = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Loupe"]];
+	_loupe.hidden = YES;
+	_loupe.alpha = 0.0f;
+	[self addSubview:_loupe];
 	
 #warning are these gestures still used?
 	UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGesture:)];
@@ -122,11 +120,9 @@
 	[self addGestureRecognizer:longPress];
 }
 
-- (void)setWord:(NSString *)word
+- (void)setHiddenWord:(NSString *)word
 {
-	if ( [_word isEqualToString:word] ) return;
-	
-	_word = word;
+	_hiddenWord = word;
 	
 	NSUInteger chunkSize = 4;
 	NSString *chunkedWord = [word stringByInsertingString:@" " everyNumberOfCharacters:chunkSize];
@@ -134,10 +130,10 @@
 	
 #warning changes frame when setting word multiple times because of changing frame while moving.
 #warning Fit text size for height of view then set width dynamically. Change bounds?
-	_passwordLabel.text = chunkedWord;
-	[_passwordLabel sizeToFit];
-	CGSize size = _passwordLabel.frame.size;
-	[_passwordLabel setFrame:CGRectMake(0, -9, size.width + 20, self.bounds.size.height)];
+	_hiddenWordLabel.text = chunkedWord;
+	[_hiddenWordLabel sizeToFit];
+	CGSize size = _hiddenWordLabel.frame.size;
+	[_hiddenWordLabel setFrame:CGRectMake(0, -9, size.width + 20, self.bounds.size.height)];
 	
 	// Update dots
 	NSString *dots = [NSString stringByRepeatingString:@"•" numberOfTimes:word.length];
@@ -151,15 +147,15 @@
 			case UIGestureRecognizerStateBegan:
 				[self showPopover:sender];
 			case UIGestureRecognizerStateChanged:
-				[self setPopoverCenter:[sender locationOfTouch:0 inView:self]];
+				[self setLoupeCenter:[sender locationOfTouch:0 inView:self]];
 				break;
 			case UIGestureRecognizerStateEnded:
 			case UITouchPhaseCancelled:
 				[self hidePopover:sender];
 				if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-					[self setPopoverCenter:(CGPoint){0,0}];
+					[self setLoupeCenter:(CGPoint){0,0}];
 				} else {
-					[self setPopoverCenter:(CGPoint){124,0}];
+					[self setLoupeCenter:(CGPoint){124,0}];
 				}
 				break;
 			default:
@@ -170,13 +166,13 @@
 
 - (void)showPopover:(id)sender
 {
-	_sliderView.hidden = NO;
+	_loupe.hidden = NO;
 	[UIView animateWithDuration:0.2f
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
 					 animations:^{
-						 _sliderView.alpha = 1.0f;
-						 _passwordLabel.alpha = 1.0f;
+						 _loupe.alpha = 1.0f;
+						 _hiddenWordLabel.alpha = 1.0f;
 					 }
 					 completion:^(BOOL finished) {}];
 }
@@ -187,56 +183,67 @@
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
 					 animations:^{
-						 _sliderView.alpha = 0.0f;
-						 _passwordLabel.alpha = 0.0f;
+						 _loupe.alpha = 0.0f;
+						 _hiddenWordLabel.alpha = 0.0f;
 					 }
 					 completion:^(BOOL finished) {
-						 _sliderView.hidden = YES;
+						 _loupe.hidden = YES;
 					 }];
 }
 
-- (void)setPopoverCenter:(CGPoint)center
+- (void)setLoupeCenter:(CGPoint)center
 {
-	CGFloat min = _sliderView.bounds.size.width/2;
-	CGFloat max = _background.bounds.size.width - _sliderView.bounds.size.width/2;
-	CGFloat y = -12 + _sliderView.bounds.size.height/2;
-	CGPoint centre = CGPointMake(MAX(MIN(center.x, max), min), y);
-	[_sliderView setCenter:centre];
+	// Insets for the loupe relative to the field
+	UIEdgeInsets loupeBoundaryInsets = UIEdgeInsetsMake(0, 0, -12, 0);
 	
-	CGFloat percent = MIN(MAX(((center.x - min) / (max - min)), 0), 1);
-//	NSLog(@"PERCENT: %f", percent);
-	float p = percent;
+	// Insets for the loupe graphic (shadow + border)
+	UIEdgeInsets loupeContentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+#warning should just use loupe mask image? instead of getting border radius and use at the bottom
 	
-//	NSLog(@"%f", _passwordLabel.frame.size.width);
-//	NSLog(@"%f", self.frame.size.width);
-	if ( _passwordLabel.frame.size.width > self.frame.size.width * 1.25 ) {
-		double numberOfSpaces = MAX(_numChunks-1,1);
-		double x = p + 1/(2*numberOfSpaces);
-		double flx = floor(2 * numberOfSpaces * x);
-		double flx1 = pow((double)-1, flx);
-		double a = (((2*numberOfSpaces*x) - (flx)) - ((flx1 + 1) / 2));
+	CGPoint	sliderCenter = (CGPoint) {_loupe.bounds.size.width/2, _loupe.bounds.size.height/2};
+	CGFloat xMin = loupeBoundaryInsets.left + sliderCenter.x;
+	CGFloat xMax = _background.bounds.size.width - loupeBoundaryInsets.right - sliderCenter.x;
+	
+	CGFloat y = loupeBoundaryInsets.top + sliderCenter.y;
+	
+	CGFloat x = BETWEEN(xMin, center.x, xMax);
+	CGPoint centre = (CGPoint){x, y};
+	_loupe.center = centre;
+	
+	// Find the percentage of x out of the possible range of x
+	CGFloat percent = (center.x - xMin) / (xMax - xMin);
+	percent = BETWEEN(0, percent, 1);
+	CGFloat p = percent;
+	
+	// Determine position in curve function for horizontal translation (smooth "snap" to chunks)
+	if ( _hiddenWordLabel.frame.size.width > self.frame.size.width * 1.25 ) {
+		NSUInteger numberOfSpaces = MAX(_numChunks-1,1);
+		CGFloat x = p + 1/(2*numberOfSpaces);
+		CGFloat flx = floor(2 * numberOfSpaces * x);
+		CGFloat flx1 = pow(-1.0f, flx);
+		CGFloat a = (((2*numberOfSpaces*x) - (flx)) - ((flx1 + 1) / 2));
 		p = (flx1 * sqrt(1 - pow(a,2)) + (flx1 - 1)/(-2) + (flx))/(2*numberOfSpaces);
 		p -= (1/(2*numberOfSpaces));
 	}
-//	NSLog(@"Percent: %f", p);
 	
-	CGFloat moveLeft;
+	// Translate the hidden word label horizontally
+	CGFloat shiftLeft;
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		moveLeft = p * (_passwordLabel.bounds.size.width - self.bounds.size.width);
+		shiftLeft = p * (_hiddenWordLabel.bounds.size.width - self.bounds.size.width);
 	} else {
-		moveLeft = -7 + p * (_passwordLabel.bounds.size.width - self.bounds.size.width + 14);
+#warning the difference in iPhone/iPad should be handled in the insets at the top of this method.
+		shiftLeft = -7 + p * (_hiddenWordLabel.bounds.size.width - self.bounds.size.width + 14);
 	}
-	_passwordLabel.transform = CGAffineTransformMakeTranslation(-moveLeft, 0);
-//	NSLog(@"left: %f\tframe %f", moveLeft, _passwordLabel.frame.origin.x);
+	_hiddenWordLabel.transform = CGAffineTransformMakeTranslation(-shiftLeft, 0);
 	
-	CGFloat padding = 5;
-	CGRect rect = CGRectMake(moveLeft + _sliderView.frame.origin.x + padding,
-							 _sliderView.frame.origin.y + padding,
-							 _sliderView.frame.size.width - (2*padding),
-							 _sliderView.frame.size.height - (2*padding));
+	// Mask the hidden word label
+	CGRect rect = CGRectMake(shiftLeft + _loupe.frame.origin.x + loupeContentInsets.left,
+							 _loupe.frame.origin.y + loupeContentInsets.top,
+							 _loupe.frame.size.width - (loupeContentInsets.left + loupeContentInsets.right),
+							 _loupe.frame.size.height - (loupeContentInsets.top + loupeContentInsets.bottom));
 	UIView *mask = [[UIView alloc] initWithFrame:rect];
 	mask.backgroundColor = [UIColor blackColor];
-	_passwordLabel.layer.mask = mask.layer;
+	_hiddenWordLabel.layer.mask = mask.layer;
 }
 
 @end

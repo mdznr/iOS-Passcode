@@ -235,7 +235,7 @@
 	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
 																andMasterPassword:_passwordField.text];
 	
-	[_reveal setWord:password];
+	_reveal.hiddenWord = password;
 }
 
 - (void)didGestureOnButton:(UIGestureRecognizer *)sender

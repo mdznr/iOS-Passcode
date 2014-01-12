@@ -11,7 +11,7 @@
 @interface MTZSlideToReveal : UIView
 
 /// The secret word to hide.
-@property (nonatomic, assign) NSString *word;
+@property (nonatomic, assign) NSString *hiddenWord;
 
 /// Pass along gesture recogzniers along to this view via this method.
 - (void)didGesture:(UIGestureRecognizer *)sender;
