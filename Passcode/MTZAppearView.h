@@ -11,7 +11,7 @@
 
 @interface MTZAppearView : UIView
 
-@property (strong, nonatomic) NSString *imageName;
+@property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) NSString *text;
 @property (nonatomic) CGFloat textSize;
 

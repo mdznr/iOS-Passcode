@@ -49,17 +49,16 @@
 	self.opaque = NO;
 	
 	// Image
-	UIImage *image = [UIImage imageNamed:_imageName];
 	_imageView = [[UIImageView alloc] initWithFrame:
-				  CGRectMake(floorf((self.frame.size.width  - image.size.width )/2),
-							 floorf((self.frame.size.height - image.size.height)/2) - 14,
-							 image.size.width,
-							 image.size.height)];
+				  CGRectMake(floorf((self.frame.size.width  - _image.size.width )/2),
+							 floorf((self.frame.size.height - _image.size.height)/2) - 14,
+							 _image.size.width,
+							 _image.size.height)];
 	_imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin
 								| UIViewAutoresizingFlexibleBottomMargin
 								| UIViewAutoresizingFlexibleLeftMargin
 								| UIViewAutoresizingFlexibleRightMargin;
-	_imageView.image = image;
+	_imageView.image = _image;
 	[self addSubview:_imageView];
 	
 	// Default text size
@@ -78,15 +77,14 @@
 	[self addSubview:_textView];
 }
 
-- (void)setImageName:(NSString *)imageName
+- (void)setImage:(UIImage *)image
 {
-	_imageName = imageName;
-	UIImage *image = [UIImage imageNamed:imageName];
-	_imageView.image = image;
-	_imageView.frame = CGRectMake(floorf((self.frame.size.width  - image.size.width )/2),
-								  floorf((self.frame.size.height - image.size.height)/2) + 14,
-								  image.size.width,
-								  image.size.height);
+	_image = image;
+	_imageView.image = _image;
+	_imageView.frame = CGRectMake(floorf((self.frame.size.width  - _image.size.width )/2),
+								  floorf((self.frame.size.height - _image.size.height)/2) + 14,
+								  _image.size.width,
+								  _image.size.height);
 }
 
 - (void)setText:(NSString *)text

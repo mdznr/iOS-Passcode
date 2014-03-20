@@ -20,7 +20,7 @@
 
 @implementation MTZAppearWindow
 
-@synthesize imageName = _imageName;
+@synthesize image = _image;
 @synthesize text = _text;
 @synthesize textSize = _textSize;
 
@@ -57,10 +57,10 @@
 	[self addSubview:_mainView];
 }
 
-- (void)setImageName:(NSString *)imageName
+- (void)setImage:(UIImage *)image
 {
-	_imageName = imageName;
-	_mainView.imageName = imageName;
+	_image = image;
+	_mainView.image = image;
 }
 
 - (void)setText:(NSString *)text

@@ -87,7 +87,7 @@
 									| UIViewAutoresizingFlexibleBottomMargin
 									| UIViewAutoresizingFlexibleLeftMargin
 									| UIViewAutoresizingFlexibleRightMargin;
-	_copiedWindow.imageName = @"copied";
+	_copiedWindow.image = [UIImage imageNamed:@"copied"];
 	_copiedWindow.text = @"Copied";
 	
 	[self checkSecuritySetting];
