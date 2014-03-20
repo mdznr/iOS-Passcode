@@ -13,6 +13,6 @@
 + (NSString *)base64StringFromData:(NSData *)theData;
 
 - (NSData *)sha256Data;
-- (NSString*)sha256;
+- (NSString *)sha256;
 
 @end
