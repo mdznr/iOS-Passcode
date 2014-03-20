@@ -20,10 +20,6 @@
 
 @implementation MTZAppearWindow
 
-@synthesize image = _image;
-@synthesize text = _text;
-@synthesize textSize = _textSize;
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

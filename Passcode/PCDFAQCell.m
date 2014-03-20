@@ -10,7 +10,4 @@
 
 @implementation PCDFAQCell
 
-@synthesize questionLabel;
-@synthesize answerLabel;
-
 @end
