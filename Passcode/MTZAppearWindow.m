@@ -30,6 +30,26 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		// Initialization code
+		[self setup];
+	}
+	return self;
+}
+
+- (id)init
+{
+	self = [super init];
+	if (self) {
+		// Initialization code
+		[self setup];
+	}
+	return self;
+}
+
 - (void)setup
 {
 	self.windowLevel = UIWindowLevelAlert;
