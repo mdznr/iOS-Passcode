@@ -14,11 +14,15 @@
 
 @interface MTZAppearWindow ()
 
+///	The main view for the content.
 @property (strong, nonatomic) MTZAppearView *mainView;
 
 @end
 
 @implementation MTZAppearWindow
+
+
+#pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -68,28 +72,48 @@
 	self.userInteractionEnabled = NO;
 	self.backgroundColor = [UIColor clearColor];
 	self.opaque = NO;
+	
+	// Add main view for content.
 	_mainView = [[MTZAppearView alloc] initWithFrame:self.bounds];
 	_mainView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self addSubview:_mainView];
 }
 
+
+#pragma mark - Properties
+
 - (void)setImage:(UIImage *)image
 {
-	_image = image;
 	_mainView.image = image;
+}
+
+- (UIImage *)image
+{
+	return _mainView.image;
 }
 
 - (void)setText:(NSString *)text
 {
-	_text = text;
 	_mainView.text = text;
+}
+
+- (NSString *)text
+{
+	return _mainView.text;
 }
 
 - (void)setTextSize:(CGFloat)textSize
 {
-	_textSize = textSize;
 	_mainView.textSize = textSize;
 }
+
+- (CGFloat)textSize
+{
+	return _mainView.textSize;
+}
+
+
+#pragma mark - Methods
 
 - (void)display
 {
