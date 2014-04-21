@@ -54,10 +54,7 @@
 							 floorf((self.frame.size.height - _image.size.height)/2) - 14,
 							 _image.size.width,
 							 _image.size.height)];
-	_imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin
-								| UIViewAutoresizingFlexibleBottomMargin
-								| UIViewAutoresizingFlexibleLeftMargin
-								| UIViewAutoresizingFlexibleRightMargin;
+	_imageView.autoresizingMask = UIViewAutoresizingFlexibleMargins;
 	_imageView.image = _image;
 	[self addSubview:_imageView];
 	
@@ -104,26 +101,26 @@
 {
 	UIBezierPath *bp = [UIBezierPath bezierPathWithRoundedRect:self.bounds
 												  cornerRadius:DEFAULT_CORNER_RADIUS];
-	[[UIColor colorWithWhite:0.0f alpha:0.7f] setFill];
+	[[UIColor colorWithWhite:0.0f alpha:0.77f] setFill];
 	[bp fill];
 }
 
 - (void)display
 {
-	[[self layer] removeAllAnimations];
+	[self.layer removeAllAnimations];
 	[[self class] cancelPreviousPerformRequestsWithTarget:self];
-	[self setAlpha:1.0f];
+	self.alpha = 1.0f;
 	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.0f];
 }
 
 - (void)fadeOut
 {
 	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	[fadeOut setFromValue:@1.0f];
-	[fadeOut setToValue:@0.0f];
-	[fadeOut setDuration:0.75f];
-	[[self layer] addAnimation:fadeOut forKey:@"alpha"];
-	[self setAlpha:0.0f];
+	fadeOut.fromValue = @1.0f;
+	fadeOut.toValue = @0.0f;
+	fadeOut.duration = 0.75f;
+	[self.layer addAnimation:fadeOut forKey:@"alpha"];
+	self.alpha = 0.0f;
 }
 
 @end
