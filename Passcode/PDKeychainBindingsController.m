@@ -34,29 +34,29 @@ static PDKeychainBindingsController *sharedInstance = nil;
 {
 	OSStatus status;
 #if TARGET_OS_IPHONE
-    NSDictionary *query = @{(id)kSecReturnData: (id)kCFBooleanTrue,
-                           (id)(id)kSecClass: (id)kSecClassGenericPassword,
-                           (id)kSecAttrAccount: key,
-                           (id)kSecAttrService: [self serviceName]};
+    NSDictionary *query = @{(id)CFBridgingRelease(kSecReturnData): (id)kCFBooleanTrue,
+                            (id)CFBridgingRelease(kSecClass): (id)CFBridgingRelease(kSecClassGenericPassword),
+                            (id)CFBridgingRelease(kSecAttrAccount): key,
+                            (id)CFBridgingRelease(kSecAttrService): [self serviceName]};
 	
     CFDataRef stringData = NULL;
     status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef*)&stringData);
-#else //OSX
-    //SecKeychainItemRef item = NULL;
-    UInt32 stringLength;
-    void *stringBuffer;
-    status = SecKeychainFindGenericPassword(NULL, (uint) [[self serviceName] lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [[self serviceName] UTF8String],
+#else // OS X
+//	SecKeychainItemRef item = NULL;
+	UInt32 stringLength;
+	void *stringBuffer;
+	status = SecKeychainFindGenericPassword(NULL, (uint) [[self serviceName] lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [[self serviceName] UTF8String],
                                             (uint) [key lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [key UTF8String],
                                             &stringLength, &stringBuffer, NULL);
-    #endif
+	#endif
 	if ( status ) {
 		return nil;
 	}
-
+	
 #if TARGET_OS_IPHONE
-    NSString *string = [[NSString alloc] initWithData:(__bridge id)stringData encoding:NSUTF8StringEncoding];
-    CFRelease(stringData);
-#else //OSX
+	NSString *string = [[NSString alloc] initWithData:(__bridge id)stringData encoding:NSUTF8StringEncoding];
+	CFRelease(stringData);
+#else // OS X
     NSString *string = [[NSString alloc] initWithBytes:stringBuffer length:stringLength encoding:NSUTF8StringEncoding];
     SecKeychainItemFreeAttributesAndData(NULL, stringBuffer);
 #endif
@@ -67,38 +67,42 @@ static PDKeychainBindingsController *sharedInstance = nil;
 - (BOOL)storeString:(NSString*)string forKey:(NSString*)key
 {
 	if ( !string ) {
-		//Need to delete the Key 
+		// Need to delete the Key.
 #if TARGET_OS_IPHONE
-        NSDictionary *spec = @{(id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                              (id)kSecAttrAccount: key,(id)kSecAttrService: [self serviceName]};
+        NSDictionary *spec = @{(id)CFBridgingRelease(kSecClass): (__bridge id)kSecClassGenericPassword,
+                              (id)CFBridgingRelease(kSecAttrAccount): key,(id)CFBridgingRelease(kSecAttrService): [self serviceName]};
         
         return !SecItemDelete((__bridge CFDictionaryRef)spec);
-#else //OSX
+#else // OS X
         SecKeychainItemRef item = NULL;
         OSStatus status = SecKeychainFindGenericPassword(NULL, (uint) [[self serviceName] lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [[self serviceName] UTF8String],
                                                          (uint) [key lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [key UTF8String],
                                                          NULL, NULL, &item);
-        if(status) return YES;
-        if(!item) return YES;
+        if ( status ) {
+			return YES;
+		}
+        if ( !item ) {
+			return YES;
+		}
         return !SecKeychainItemDelete(item);
 #endif
     } else {
 #if TARGET_OS_IPHONE
         NSData *stringData = [string dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *spec = @{(id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                              (id)kSecAttrAccount: key,(id)kSecAttrService: [self serviceName]};
+        NSDictionary *spec = @{(id)CFBridgingRelease(kSecClass): (__bridge id)kSecClassGenericPassword,
+                              (id)CFBridgingRelease(kSecAttrAccount): key,(id)CFBridgingRelease(kSecAttrService): [self serviceName]};
         
-        if(!string) {
+        if ( !string ) {
             return !SecItemDelete((__bridge CFDictionaryRef)spec);
-        }else if([self stringForKey:key]) {
+        } else if ( [self stringForKey:key] ) {
             NSDictionary *update = @{(__bridge id)kSecValueData: stringData};
             return !SecItemUpdate((__bridge CFDictionaryRef)spec, (__bridge CFDictionaryRef)update);
-        }else{
+        } else {
             NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:spec];
             data[(__bridge id)kSecValueData] = stringData;
             return !SecItemAdd((__bridge CFDictionaryRef)data, NULL);
         }
-#else //OSX
+#else // OS X
         SecKeychainItemRef item = NULL;
         OSStatus status = SecKeychainFindGenericPassword(NULL, (uint) [[self serviceName] lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [[self serviceName] UTF8String],
                                                          (uint) [key lengthOfBytesUsingEncoding:NSUTF8StringEncoding], [key UTF8String],
@@ -167,7 +171,7 @@ static PDKeychainBindingsController *sharedInstance = nil;
         NSString *subKeyPath = [keyPath stringByReplacingCharactersInRange:firstSeven withString:@""];
         NSString *retrievedString = [self stringForKey:subKeyPath];
         if ( retrievedString ) {
-            if (!_valueBuffer[subKeyPath] || ![_valueBuffer[subKeyPath] isEqualToString:retrievedString]) {
+            if ( !_valueBuffer[subKeyPath] || ![_valueBuffer[subKeyPath] isEqualToString:retrievedString] ) {
                 //buffer has wrong value, need to update it
                 [_valueBuffer setValue:retrievedString forKey:subKeyPath];
             }
