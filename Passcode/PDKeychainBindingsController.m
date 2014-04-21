@@ -34,11 +34,10 @@ static PDKeychainBindingsController *sharedInstance = nil;
 {
 	OSStatus status;
 #if TARGET_OS_IPHONE
-    NSDictionary *query = [NSDictionary dictionaryWithObjectsAndKeys:(id)kCFBooleanTrue, kSecReturnData,
-                           kSecClassGenericPassword, kSecClass,
-                           key, kSecAttrAccount,
-                           [self serviceName], kSecAttrService,
-                           nil];
+    NSDictionary *query = @{(id)kSecReturnData: (id)kCFBooleanTrue,
+                           (id)(id)kSecClass: (id)kSecClassGenericPassword,
+                           (id)kSecAttrAccount: key,
+                           (id)kSecAttrService: [self serviceName]};
 	
     CFDataRef stringData = NULL;
     status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef*)&stringData);
@@ -70,8 +69,8 @@ static PDKeychainBindingsController *sharedInstance = nil;
 	if ( !string ) {
 		//Need to delete the Key 
 #if TARGET_OS_IPHONE
-        NSDictionary *spec = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)kSecClassGenericPassword, kSecClass,
-                              key, kSecAttrAccount,[self serviceName], kSecAttrService, nil];
+        NSDictionary *spec = @{(id)kSecClass: (__bridge id)kSecClassGenericPassword,
+                              (id)kSecAttrAccount: key,(id)kSecAttrService: [self serviceName]};
         
         return !SecItemDelete((__bridge CFDictionaryRef)spec);
 #else //OSX
@@ -86,17 +85,17 @@ static PDKeychainBindingsController *sharedInstance = nil;
     } else {
 #if TARGET_OS_IPHONE
         NSData *stringData = [string dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *spec = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)kSecClassGenericPassword, kSecClass,
-                              key, kSecAttrAccount,[self serviceName], kSecAttrService, nil];
+        NSDictionary *spec = @{(id)kSecClass: (__bridge id)kSecClassGenericPassword,
+                              (id)kSecAttrAccount: key,(id)kSecAttrService: [self serviceName]};
         
         if(!string) {
             return !SecItemDelete((__bridge CFDictionaryRef)spec);
         }else if([self stringForKey:key]) {
-            NSDictionary *update = [NSDictionary dictionaryWithObject:stringData forKey:(__bridge id)kSecValueData];
+            NSDictionary *update = @{(__bridge id)kSecValueData: stringData};
             return !SecItemUpdate((__bridge CFDictionaryRef)spec, (__bridge CFDictionaryRef)update);
         }else{
             NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:spec];
-            [data setObject:stringData forKey:(__bridge id)kSecValueData];
+            data[(__bridge id)kSecValueData] = stringData;
             return !SecItemAdd((__bridge CFDictionaryRef)data, NULL);
         }
 #else //OSX
@@ -168,7 +167,7 @@ static PDKeychainBindingsController *sharedInstance = nil;
         NSString *subKeyPath = [keyPath stringByReplacingCharactersInRange:firstSeven withString:@""];
         NSString *retrievedString = [self stringForKey:subKeyPath];
         if ( retrievedString ) {
-            if (![_valueBuffer objectForKey:subKeyPath] || ![[_valueBuffer objectForKey:subKeyPath] isEqualToString:retrievedString]) {
+            if (!_valueBuffer[subKeyPath] || ![_valueBuffer[subKeyPath] isEqualToString:retrievedString]) {
                 //buffer has wrong value, need to update it
                 [_valueBuffer setValue:retrievedString forKey:subKeyPath];
             }
@@ -190,7 +189,7 @@ static PDKeychainBindingsController *sharedInstance = nil;
             if ( ![value isEqualToString:retrievedString] ) {
                 [self storeString:value forKey:subKeyPath];
             }
-            if ( ![_valueBuffer objectForKey:subKeyPath] || ![[_valueBuffer objectForKey:subKeyPath] isEqualToString:value] ) {
+            if ( !_valueBuffer[subKeyPath] || ![_valueBuffer[subKeyPath] isEqualToString:value] ) {
                 //buffer has wrong value, need to update it
                 [_valueBuffer setValue:value forKey:subKeyPath];
             }

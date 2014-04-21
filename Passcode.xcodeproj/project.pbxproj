@@ -25,6 +25,7 @@
 		C95FDEF015D232D5006FE035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEEF15D232D5006FE035 /* main.m */; };
 		C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */; };
 		C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCDViewController.m */; };
+		C95FF932190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FF931190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m */; };
 		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C96165B316A169F200532B61 /* NSString+sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165B216A169F100532B61 /* NSString+sha256.m */; };
 		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
@@ -101,6 +102,8 @@
 		C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDAppDelegate.m; sourceTree = "<group>"; };
 		C95FDEF515D232D5006FE035 /* PCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDViewController.h; sourceTree = "<group>"; };
 		C95FDEF615D232D5006FE035 /* PCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDViewController.m; sourceTree = "<group>"; };
+		C95FF930190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UIViewAutoresizingAdditions.h"; path = "../UIView+UIViewAutoresizingAdditions.h"; sourceTree = "<group>"; };
+		C95FF931190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UIViewAutoresizingAdditions.m"; path = "../UIView+UIViewAutoresizingAdditions.m"; sourceTree = "<group>"; };
 		C96165AE16A1298600532B61 /* UITextField+Selections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Selections.h"; sourceTree = "<group>"; };
 		C96165AF16A1298600532B61 /* UITextField+Selections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Selections.m"; sourceTree = "<group>"; };
 		C96165B116A169F100532B61 /* NSString+sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sha256.h"; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */,
 				C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */,
 				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
+				C95FF930190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.h */,
+				C95FF931190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
@@ -490,6 +495,7 @@
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
 				C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */,
 				C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */,
+				C95FF932190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
