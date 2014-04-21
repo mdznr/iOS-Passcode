@@ -81,18 +81,13 @@
 	_domainField.contentInset = textFieldInsets;
 	_passwordField.contentInset = textFieldInsets;
 	
-	// Set up popover
+	// Set up popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
-	_copiedWindow.autoresizingMask =  UIViewAutoresizingFlexibleTopMargin
-									| UIViewAutoresizingFlexibleBottomMargin
-									| UIViewAutoresizingFlexibleLeftMargin
-									| UIViewAutoresizingFlexibleRightMargin;
+	_copiedWindow.autoresizingMask = UIViewAutoresizingFlexibleMargins;
 	_copiedWindow.image = [UIImage imageNamed:@"copied"];
 	_copiedWindow.text = @"Copied";
 	
-	[self checkSecuritySetting];
-	
-	// Load idiom-specific UI
+	// Load idiom-specific UI.
 	switch ( [UIDevice currentDevice].userInterfaceIdiom ) {
 		case UIUserInterfaceIdiomPad:
 			[self loadViewForiPad];
@@ -100,10 +95,9 @@
 		case UIUserInterfaceIdiomPhone:
 			[self loadViewForiPhone];
 			break;
-		default:
-			break;
 	}
 	
+	// Center the appear window to the container (plus offset of the status and navigation bars).
 	_copiedWindow.center = (CGPoint){_container.center.x, _container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
 	
 	// Gesture recognizers on generate button
@@ -115,6 +109,8 @@
 	[_generateButton addGestureRecognizer:panGesture];
 	
 	_reveal.hidden = YES;
+	
+	[self checkSecuritySetting];
 }
 
 - (void)loadViewForiPhone
@@ -130,13 +126,13 @@
 }
 
 
-#pragma mark View Events
+#pragma mark - View Controller Events
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
 	
-	// This is such a hack, but it was the only way to get it to work properly
+	// This is such a hack, but it was the only way to get it to work properly.
 	[self performSelector:@selector(makeDomainFieldBecomeFirstResponder)
 			   withObject:nil
 			   afterDelay:DBL_MIN];
@@ -153,7 +149,7 @@
 {
 	[super viewDidAppear:animated];
 	
-	// Display About if app hasn't been launched before
+	// Display About if app hasn't been launched before.
 	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
 		[self viewAbout:self];
@@ -184,7 +180,7 @@
 }
 
 
-#pragma mark Checks
+#pragma mark - Checks
 
 - (void)checkPasteboard
 {
@@ -192,6 +188,7 @@
 		 [[[UIPasteboard generalPasteboard] string] hasPrefix:@"https://"] ) {
 		NSURL *url = [[NSURL alloc] initWithString:[[UIPasteboard generalPasteboard] string]];
 		NSArray *components = [[url host] componentsSeparatedByString:@"."];
+#warning Will this always be the actual domain?
 		_domainField.text = components[[components count]-2];
 		[self textDidChange:self];
 	}
@@ -202,17 +199,17 @@
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == YES ) {
-		if ( [bindings objectForKey:@"passwordString"] )
-			[_passwordField setText:[bindings objectForKey:@"passwordString"]];
-	}
-	else if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == NO ) {
+		if ( [bindings objectForKey:@"passwordString"] ) {
+			_passwordField.text = [bindings objectForKey:@"passwordString"];
+		}
+	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == NO ) {
 		[bindings setObject:@"" forKey:@"passwordString"];
-		[_passwordField setText:@""];
+		_passwordField.text = @"";
 	}
 }
 
 
-#pragma mark Generate Button
+#pragma mark - Generate Button
 
 - (IBAction)generateAndCopy:(id)sender
 {
@@ -259,7 +256,7 @@
 }
 
 
-#pragma mark Navigation
+#pragma mark - Navigation
 
 - (IBAction)viewAbout:(id)sender
 {
@@ -284,7 +281,7 @@
 	[self presentViewController:navigationController animated:YES completion:nil];
 }
 
-#pragma mark Text Field Delegate Methods
+#pragma mark - Text Field Delegate Methods
 
 - (IBAction)textDidChange:(id)sender
 {
@@ -321,7 +318,7 @@
 }
 
 
-#pragma mark Handle Keyboard Notifications
+#pragma mark - Handle Keyboard Notifications
 
 - (void)keyboardChanged:(id)object
 {
@@ -364,7 +361,7 @@
 											   object:nil];
 }
 
-#pragma mark Unload
+#pragma mark - Unload
 
 - (void)didReceiveMemoryWarning
 {
