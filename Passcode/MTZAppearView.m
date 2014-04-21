@@ -121,21 +121,20 @@
 - (void)display
 {
 	[self.layer removeAllAnimations];
-	[[self class] cancelPreviousPerformRequestsWithTarget:self];
+	[[self class] cancelPreviousPerformRequestsWithTarget:self selector:@selector(fadeOut) object:nil];
 	self.alpha = 1.0f;
 	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.0f];
 }
 
 - (void)fadeOut
-{	
+{
 	[UIView animateWithDuration:0.75f
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
 					 animations:^{
 						 self.alpha = 0.0f;
 					 }
-					 completion:^(BOOL finished) {
-					 }];
+					 completion:nil];
 }
 
 @end
