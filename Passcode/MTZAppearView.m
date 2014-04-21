@@ -8,7 +8,7 @@
 
 #import "MTZAppearView.h"
 
-#define DEFAULT_CORNER_RADIUS 8
+#define DEFAULT_CORNER_RADIUS 10
 
 @interface MTZAppearView ()
 
