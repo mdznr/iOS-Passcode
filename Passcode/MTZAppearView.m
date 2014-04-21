@@ -8,7 +8,9 @@
 
 #import "MTZAppearView.h"
 
+#define DEFAULT_FRAME CGRectMake(0, 0, 128, 128)
 #define DEFAULT_CORNER_RADIUS 10
+#define DEFAULT_TEXT_SIZE 16
 
 @interface MTZAppearView ()
 
@@ -18,6 +20,9 @@
 @end
 
 @implementation MTZAppearView
+
+
+#pragma mark - Initialization
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -39,16 +44,14 @@
 
 - (id)init
 {
-	CGRect frame = CGRectMake(0, 0, 128, 128);
-	self = [self initWithFrame:frame];
-	return self;
+	return [self initWithFrame:DEFAULT_FRAME];
 }
 
 - (void)setup
 {
 	self.opaque = NO;
 	
-	// Image
+	// Image.
 	_imageView = [[UIImageView alloc] initWithFrame:
 				  CGRectMake(floorf((self.frame.size.width  - _image.size.width )/2),
 							 floorf((self.frame.size.height - _image.size.height)/2) - 14,
@@ -58,10 +61,10 @@
 	_imageView.image = _image;
 	[self addSubview:_imageView];
 	
-	// Default text size
-	_textSize = 16;
+	// Default text size.
+	_textSize = DEFAULT_TEXT_SIZE;
 	
-	// Text
+	// The text label.
 	_textView = [[UILabel alloc] init];
 	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_textView.text = _text;
@@ -74,12 +77,17 @@
 	[self addSubview:_textView];
 }
 
+
+#pragma mark - Properties
+
 - (void)setImage:(UIImage *)image
 {
 	_image = image;
 	_imageView.image = _image;
+	
+	// Update the position of the image view.
 	_imageView.frame = CGRectMake(floorf((self.frame.size.width  - _image.size.width )/2),
-								  floorf((self.frame.size.height - _image.size.height)/2) + 14,
+								  floorf((self.frame.size.height - _image.size.height)/2) - 14,
 								  _image.size.width,
 								  _image.size.height);
 }
@@ -88,6 +96,8 @@
 {
 	_text = text;
 	_textView.text = text;
+	
+	// Update the position of the text label.
 	_textView.frame = CGRectMake(0, 86, self.frame.size.width, 32);
 }
 
@@ -96,6 +106,9 @@
 	_textSize = textSize;
 	_textView.font = [UIFont boldSystemFontOfSize:textSize];
 }
+
+
+#pragma mark - Drawing and Displaying
 
 - (void)drawRect:(CGRect)rect
 {
@@ -114,13 +127,15 @@
 }
 
 - (void)fadeOut
-{
-	CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	fadeOut.fromValue = @1.0f;
-	fadeOut.toValue = @0.0f;
-	fadeOut.duration = 0.75f;
-	[self.layer addAnimation:fadeOut forKey:@"alpha"];
-	self.alpha = 0.0f;
+{	
+	[UIView animateWithDuration:0.75f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 self.alpha = 0.0f;
+					 }
+					 completion:^(BOOL finished) {
+					 }];
 }
 
 @end
