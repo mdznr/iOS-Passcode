@@ -18,7 +18,7 @@
 @interface MTZAppearView ()
 
 @property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *textView;
+@property (strong, nonatomic) UILabel *label;
 
 @end
 
@@ -55,29 +55,29 @@
 	self.opaque = NO;
 	
 	// Image.
-	_imageView = [[UIImageView alloc] initWithFrame:
-				  CGRectMake(floorf((self.frame.size.width  - _image.size.width )/2),
-							 floorf((self.frame.size.height - _image.size.height)/2) - 14,
-							 _image.size.width,
-							 _image.size.height)];
-	_imageView.autoresizingMask = UIViewAutoresizingFlexibleMargins;
-	_imageView.image = _image;
-	[self addSubview:_imageView];
+	self.imageView = [[UIImageView alloc] initWithFrame:
+				  CGRectMake(floorf((self.frame.size.width  - self.image.size.width )/2),
+							 floorf((self.frame.size.height - self.image.size.height)/2) - 14,
+							 self.image.size.width,
+							 self.image.size.height)];
+	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleMargins;
+	self.imageView.image = _image;
+	[self addSubview:self.imageView];
 	
 	// Default text size.
 	_textSize = DEFAULT_TEXT_SIZE;
 	
 	// The text label.
-	_textView = [[UILabel alloc] init];
-	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-	_textView.text = _text;
-	_textView.backgroundColor = [UIColor clearColor];
-	_textView.textColor = [UIColor whiteColor];
-	_textView.numberOfLines = 1;
-	_textView.textAlignment = NSTextAlignmentCenter;
-	_textView.shadowColor = [UIColor clearColor];
-	_textView.font = [UIFont boldSystemFontOfSize:_textSize];
-	[self addSubview:_textView];
+	self.label = [[UILabel alloc] init];
+	self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+	self.label.text = self.text;
+	self.label.backgroundColor = [UIColor clearColor];
+	self.label.textColor = [UIColor whiteColor];
+	self.label.numberOfLines = 1;
+	self.label.textAlignment = NSTextAlignmentCenter;
+	self.label.shadowColor = [UIColor clearColor];
+	self.label.font = [UIFont boldSystemFontOfSize:self.textSize];
+	[self addSubview:self.label];
 }
 
 
@@ -98,16 +98,16 @@
 - (void)setText:(NSString *)text
 {
 	_text = text;
-	_textView.text = text;
+	self.label.text = text;
 	
 	// Update the position of the text label.
-	_textView.frame = CGRectMake(0, self.frame.size.height - 42, self.frame.size.width, 32);
+	self.label.frame = CGRectMake(0, self.frame.size.height - 42, self.frame.size.width, 32);
 }
 
 - (void)setTextSize:(CGFloat)textSize
 {
 	_textSize = textSize;
-	_textView.font = [UIFont boldSystemFontOfSize:textSize];
+	self.label.font = [UIFont boldSystemFontOfSize:textSize];
 }
 
 
