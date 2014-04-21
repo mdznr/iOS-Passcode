@@ -12,6 +12,8 @@
 #define MOTION_EFFECT_DIST 20.0f
 #define APPEARANCE_DURATION 2.0f
 
+#define DEFAULT_FRAME CGRectMake(0, 0, 128, 128)
+
 @interface MTZAppearWindow ()
 
 ///	The main view for the content.
@@ -36,36 +38,28 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-	self = [super initWithCoder:aDecoder];
-	if (self) {
-		// Initialization code
-		[self setup];
-	}
-	return self;
+	return [self initWithFrame:DEFAULT_FRAME];
 }
 
 - (id)init
 {
-	self = [super init];
-	if (self) {
-		// Initialization code
-		[self setup];
-	}
-	return self;
+	return [self initWithFrame:DEFAULT_FRAME];
 }
 
 - (void)setup
 {
 	self.windowLevel = UIWindowLevelAlert;
 	
-	// Motion effects
+	// Add motion effects.
 	if ( NSClassFromString(@"UIInterpolatingMotionEffect") ) {
 		UIInterpolatingMotionEffect *horizontal = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
 		horizontal.minimumRelativeValue = @-MOTION_EFFECT_DIST;
 		horizontal.maximumRelativeValue = @MOTION_EFFECT_DIST;
+		
 		UIInterpolatingMotionEffect *vertical = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
 		vertical.minimumRelativeValue = @-MOTION_EFFECT_DIST;
 		vertical.maximumRelativeValue = @MOTION_EFFECT_DIST;
+		
 		self.motionEffects = @[horizontal,vertical];
 	}
 	
@@ -124,7 +118,7 @@
 	
 	[_mainView display];
 	
-	// Hide window when done
+	// Hide the window when done.
 	[self performSelector:@selector(hide) withObject:nil afterDelay:APPEARANCE_DURATION];
 }
 
