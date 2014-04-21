@@ -12,6 +12,9 @@
 #define DEFAULT_CORNER_RADIUS 10
 #define DEFAULT_TEXT_SIZE 16
 
+#define DISPLAY_DURATION 1.0f
+#define FADE_OUT_DURATION 0.75f
+
 @interface MTZAppearView ()
 
 @property (strong, nonatomic) UIImageView *imageView;
@@ -120,15 +123,19 @@
 
 - (void)display
 {
-	[self.layer removeAllAnimations];
+	// Cancel any prevoius requests to fade out.
 	[[self class] cancelPreviousPerformRequestsWithTarget:self selector:@selector(fadeOut) object:nil];
+	
+	// Set the alpha to 100%.
 	self.alpha = 1.0f;
-	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:1.0f];
+	
+	// Request a fade out (after a duration).
+	[self performSelector:@selector(fadeOut) withObject:nil afterDelay:DISPLAY_DURATION];
 }
 
 - (void)fadeOut
 {
-	[UIView animateWithDuration:0.75f
+	[UIView animateWithDuration:FADE_OUT_DURATION
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
 					 animations:^{
