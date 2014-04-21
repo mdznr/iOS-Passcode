@@ -69,7 +69,7 @@
 	
 	// The text label.
 	_textView = [[UILabel alloc] init];
-	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	_textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	_textView.text = _text;
 	_textView.backgroundColor = [UIColor clearColor];
 	_textView.textColor = [UIColor whiteColor];
@@ -101,7 +101,7 @@
 	_textView.text = text;
 	
 	// Update the position of the text label.
-	_textView.frame = CGRectMake(0, 86, self.frame.size.width, 32);
+	_textView.frame = CGRectMake(0, self.frame.size.height - 42, self.frame.size.width, 32);
 }
 
 - (void)setTextSize:(CGFloat)textSize
