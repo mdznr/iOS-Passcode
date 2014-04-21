@@ -11,16 +11,16 @@
 
 @interface MTZAppearWindow : UIWindow
 
-///	The image to display in the view.
+///	The image to display in the appear view.
 @property (strong, nonatomic) UIImage *image;
 
-///	The text to display below the image.
+///	The text to have in the appear view's label.
 @property (strong, nonatomic) NSString *text;
 
-///	The size of the text.
+///	The size of the text in the appear view's label.
 @property (nonatomic) CGFloat textSize;
 
-///	Display the view.
+///	Display the appear view. It will automatically hide after a duration.
 - (void)display;
 
 @end
