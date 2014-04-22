@@ -35,10 +35,10 @@
 	
 #warning TODO: Look for record of domain
 	
-	// Automatic is default
+	// Automatic is default.
 	_automatic = YES;
 	
-	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type)
+	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type).
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(preferredContentSizeDidChange:)
 												 name:UIContentSizeCategoryDidChangeNotification
@@ -46,7 +46,7 @@
 	
 	self.title = NSLocalizedString(@"Requirements", nil);
     
-    // Done button to dismiss view controller
+    // Done button to dismiss view controller.
 	UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
 															 style:UIBarButtonItemStyleDone
 															target:self
@@ -54,7 +54,7 @@
 	self.navigationItem.leftBarButtonItem = done;
 	
 #warning remove right bar button item after time/other touch activity
-	// Invisible right bar button to also dismiss view controller
+	// Invisible right bar button to also dismiss view controller.
 	// Only use on iPhone/iPod touch:
 	if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
 		UIButton *invisible = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -82,8 +82,10 @@
 
 - (void)automaticSwitchChanged:(UISwitch *)sender
 {
-	// No changes made
-	if ( _automatic == sender.on ) return;
+	// No changes made.
+	if ( _automatic == sender.on ) {
+		return;
+	}
 	
 	_automatic = sender.on;
 	
@@ -127,10 +129,10 @@
 //	valueLabel.text = [NSString stringWithFormat:@"%d", length];
 	
 	NSString *lengthString = NSLocalizedString(@"Length", nil);
-	NSString *stringLengthString = [NSString stringWithFormat:@"%d", length];
+	NSString *stringLengthString = [NSString stringWithFormat:@"%lu", (unsigned long)length];
 	NSString *string = [NSString stringWithFormat:@"%@\t%@", lengthString, stringLengthString];
 	
-	// Paragraph Style
+	// Paragraph Style.
 	NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
 	paragraphStyle.alignment = NSTextAlignmentLeft;
 	NSTextTab *t = [[NSTextTab alloc] initWithTextAlignment:NSTextAlignmentRight
@@ -143,7 +145,7 @@
 							 value:paragraphStyle
 							 range:NSMakeRange(0, string.length)];
 	
-	// Active text
+	// Active text.
 	[attributedString addAttribute:NSForegroundColorAttributeName
 							 value:[PCDAppDelegate appKeyColor]
 							 range:NSMakeRange(string.length - stringLengthString.length, stringLengthString.length)];
