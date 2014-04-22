@@ -36,6 +36,7 @@
 		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
 		C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
 		C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
+		C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C98347561906FCEA00892080 /* NSURL+DomainName.m */; };
 		C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */; };
 		C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F70186AA4A0004EDC76 /* MTZTextField.m */; };
 		C98D26601741852700ECBEF7 /* NSMutableArray+MTZRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = C98D265F1741852700ECBEF7 /* NSMutableArray+MTZRemove.m */; };
@@ -121,6 +122,8 @@
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
 		C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZFarPanGestureRecognizer.h; sourceTree = "<group>"; };
 		C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZFarPanGestureRecognizer.m; sourceTree = "<group>"; };
+		C98347551906FCEA00892080 /* NSURL+DomainName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DomainName.h"; sourceTree = "<group>"; };
+		C98347561906FCEA00892080 /* NSURL+DomainName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DomainName.m"; sourceTree = "<group>"; };
 		C984F4E517542EA200172F9F /* PCDPasscodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDPasscodeGenerator.h; sourceTree = "<group>"; };
 		C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDPasscodeGenerator.m; sourceTree = "<group>"; };
 		C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTextField.h; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
 				C95FF930190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.h */,
 				C95FF931190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m */,
+				C98347551906FCEA00892080 /* NSURL+DomainName.h */,
+				C98347561906FCEA00892080 /* NSURL+DomainName.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
@@ -495,6 +500,7 @@
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
 				C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */,
 				C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */,
+				C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */,
 				C95FF932190494DD001F00D7 /* UIView+UIViewAutoresizingAdditions.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,

@@ -24,6 +24,7 @@
 #import "PCDPasscodeGenerator.h"
 #import "PDKeychainBindings.h"
 #import "MTZFarPanGestureRecognizer.h"
+#import "NSURL+DomainName.h"
 
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
@@ -174,23 +175,27 @@
     }
 }
 
+/*
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-	
+	[super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
+ */
 
 
 #pragma mark - Checks
 
 - (void)checkPasteboard
 {
-	if ( [[[UIPasteboard generalPasteboard] string] hasPrefix:@"http://"] ||
-		 [[[UIPasteboard generalPasteboard] string] hasPrefix:@"https://"] ) {
-		NSURL *url = [[NSURL alloc] initWithString:[[UIPasteboard generalPasteboard] string]];
-		NSArray *components = [[url host] componentsSeparatedByString:@"."];
-#warning Will this always be the actual domain?
-		_domainField.text = components[[components count]-2];
+	NSURL *url = [NSURL URLWithString:[[UIPasteboard generalPasteboard] string]];
+	if ( !url ) {
+		return;
+	}
+	
+	NSString *domainName = [url domainName];
+	if ( domainName ) {
 		[self textDidChange:self];
+		_domainField.text = domainName;
 	}
 }
 
