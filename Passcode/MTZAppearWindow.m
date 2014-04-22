@@ -10,7 +10,7 @@
 #import "MTZAppearView.h"
 
 #define MOTION_EFFECT_DIST 20.0f
-#define APPEARANCE_DURATION 2.0f
+#define DISPLAY_DURATION 2.0f
 
 #define DEFAULT_FRAME CGRectMake(0, 0, 128, 128)
 
@@ -60,7 +60,7 @@
 		vertical.minimumRelativeValue = @-MOTION_EFFECT_DIST;
 		vertical.maximumRelativeValue = @MOTION_EFFECT_DIST;
 		
-		self.motionEffects = @[horizontal,vertical];
+		self.motionEffects = @[horizontal, vertical];
 	}
 	
 	self.userInteractionEnabled = NO;
@@ -114,17 +114,17 @@
 	[[self class] cancelPreviousPerformRequestsWithTarget:self
 												 selector:@selector(hide)
 												   object:nil];
-	[self setHidden:NO];
+	self.hidden = NO;
 	
 	[_mainView display];
 	
 	// Hide the window when done.
-	[self performSelector:@selector(hide) withObject:nil afterDelay:APPEARANCE_DURATION];
+	[self performSelector:@selector(hide) withObject:nil afterDelay:DISPLAY_DURATION];
 }
 
 - (void)hide
 {
-	[self setHidden:YES];
+	self.hidden = YES;
 }
 
 @end
