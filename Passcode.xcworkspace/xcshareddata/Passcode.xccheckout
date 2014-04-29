@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CA69183A-7389-43FE-AD50-00CB0CDC0AD4</string>
+	<string>A3558AEC-862B-4009-9D70-1BA3294FD1FB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Passcode</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/mdznr/iOS-Passcode.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Passcode.xcodeproj/project.xcworkspace</string>
+	<string>Passcode.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5D603580-4A23-4BF5-BD07-1820E91BF596</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mdznr/iOS-Passcode.git</string>
