@@ -9,13 +9,15 @@
 #import "NSString+sha256.h"
 #import <CommonCrypto/CommonDigest.h>
 
-#define CC_SHA256_DIGEST_LENGTH	32	/* digest length in bytes */
+///	Digest length in bytes
+#define CC_SHA256_DIGEST_LENGTH	32
 
 @implementation NSString (sha256)
 
-// Returns a Base-64 NSString given NSData
-// Method from: http://www.cocoadev.com/index.pl?BaseSixtyFour
-// via http://stackoverflow.com/questions/2197362/converting-nsdata-to-base64/9537527#9537527
+///	Create a Base64 string representation of @c NSData.
+///	@param theData The data to turn into a Base64 string.
+///	@return An @c NSString representing @c theData as a Base64 string.
+/// @discussion Method from: http://www.cocoadev.com/index.pl?BaseSixtyFour via http://stackoverflow.com/questions/2197362/converting-nsdata-to-base64/9537527#9537527
 + (NSString *)base64StringFromData:(NSData *)theData
 {
     const uint8_t *input = (const uint8_t *)[theData bytes];
@@ -45,16 +47,19 @@
 	return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 }
 
-// Returns a NSData byte array directly from sha256
+///	Get an @c NSData byte array directly from sha256.
+///	@return An @c NSData byte array.
 - (NSData *)sha256Data
 {
     const char *str = [self UTF8String];
     unsigned char result[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(str, (CC_LONG) strlen(str), result);
-	return [NSData dataWithBytes:(const void *)result length:sizeof(unsigned char)*CC_SHA256_DIGEST_LENGTH];
+	return [NSData dataWithBytes:(const void *)result
+						  length:sizeof(unsigned char)*CC_SHA256_DIGEST_LENGTH];
 }
 
-// Returns a NSString with hex data from sha256
+///	An @c NSString with hex data from sha256.
+///	@return An @c NSString with hex data from sha256.
 - (NSString *)sha256
 {
     const char *str = [self UTF8String];
