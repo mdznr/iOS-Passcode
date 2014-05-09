@@ -12,6 +12,9 @@
 #define DEFAULT_CORNER_RADIUS 10
 #define DEFAULT_TEXT_SIZE 16
 
+#define FONT_NAME @"HelveticaNeue-Medium"
+#define HUD_ALPHA 0.77f
+
 #define DISPLAY_DURATION 1.0f
 #define FADE_OUT_DURATION 0.75f
 
@@ -76,7 +79,7 @@
 	self.label.numberOfLines = 1;
 	self.label.textAlignment = NSTextAlignmentCenter;
 	self.label.shadowColor = [UIColor clearColor];
-	self.label.font = [UIFont fontWithName:@"Helvetica Neue Medium" size:self.textSize];
+	self.label.font = [UIFont fontWithName:FONT_NAME size:self.textSize];
 	[self addSubview:self.label];
 }
 
@@ -101,13 +104,13 @@
 	self.label.text = text;
 	
 	// Update the position of the text label.
-	self.label.frame = CGRectMake(0, self.frame.size.height - 42, self.frame.size.width, 32);
+	self.label.frame = CGRectMake(0, self.frame.size.height - 39, self.frame.size.width, 32);
 }
 
 - (void)setTextSize:(CGFloat)textSize
 {
 	_textSize = textSize;
-	self.label.font = [UIFont fontWithName:@"Helvetica Neue Medium" size:textSize];
+	self.label.font = [UIFont fontWithName:FONT_NAME size:textSize];
 }
 
 
@@ -117,7 +120,7 @@
 {
 	UIBezierPath *bp = [UIBezierPath bezierPathWithRoundedRect:self.bounds
 												  cornerRadius:DEFAULT_CORNER_RADIUS];
-	[[UIColor colorWithWhite:0.0f alpha:0.77f] setFill];
+	[[UIColor colorWithWhite:0.0f alpha:HUD_ALPHA] setFill];
 	[bp fill];
 }
 
