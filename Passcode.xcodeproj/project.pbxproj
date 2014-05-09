@@ -348,6 +348,7 @@
 			buildPhases = (
 				C95FDEDB15D232D5006FE035 /* Sources */,
 				C95FDEDC15D232D5006FE035 /* Frameworks */,
+				C9BAC3DA191D7DD200EA7728 /* Export Sketch Assets */,
 				C95FDEDD15D232D5006FE035 /* Resources */,
 			);
 			buildRules = (
@@ -458,6 +459,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9BAC3DA191D7DD200EA7728 /* Export Sketch Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Export Sketch Assets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AppIcon.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AppIcon.appiconset --formats=\"png\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C95FDEDB15D232D5006FE035 /* Sources */ = {
