@@ -76,7 +76,7 @@
 	self.label.numberOfLines = 1;
 	self.label.textAlignment = NSTextAlignmentCenter;
 	self.label.shadowColor = [UIColor clearColor];
-	self.label.font = [UIFont boldSystemFontOfSize:self.textSize];
+	self.label.font = [UIFont fontWithName:@"Helvetica Neue Medium" size:self.textSize];
 	[self addSubview:self.label];
 }
 
@@ -107,7 +107,7 @@
 - (void)setTextSize:(CGFloat)textSize
 {
 	_textSize = textSize;
-	self.label.font = [UIFont boldSystemFontOfSize:textSize];
+	self.label.font = [UIFont fontWithName:@"Helvetica Neue Medium" size:textSize];
 }
 
 
