@@ -85,7 +85,7 @@
 	// Set up popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
 	_copiedWindow.autoresizingMask = UIViewAutoresizingFlexibleMargins;
-	_copiedWindow.image = [UIImage imageNamed:@"copied"];
+	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
 	_copiedWindow.text = @"Copied";
 	
 	// Load idiom-specific UI.
@@ -116,13 +116,10 @@
 
 - (void)loadViewForiPhone
 {
-	_copiedWindow.frame = (CGRect){0, 0, 128, 128};
 }
 
 - (void)loadViewForiPad
 {
-	_copiedWindow.frame = (CGRect){0, 0, 192, 192};
-	
 	[self registerForKeyboardNotifications];
 }
 
