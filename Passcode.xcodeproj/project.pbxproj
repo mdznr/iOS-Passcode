@@ -63,9 +63,6 @@
 		C9C269201649896D00B35DFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
 		C9C269241649896D00B35DFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
 		C9C26964164989CB00B35DFA /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C26963164989CB00B35DFA /* libKIF.a */; };
-		C9C2696B16498D5100B35DFA /* EXTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696616498D5100B35DFA /* EXTestController.m */; };
-		C9C2696C16498D5100B35DFA /* KIFTestScenario+EXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696816498D5100B35DFA /* KIFTestScenario+EXAdditions.m */; };
-		C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */; };
 		C9D0F504173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D0F505173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
@@ -141,12 +138,6 @@
 		C9C182E817F0B5DD005AF9A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passcode (Integration Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C26963164989CB00B35DFA /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Frameworks/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
-		C9C2696516498D5100B35DFA /* EXTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTestController.h; sourceTree = "<group>"; };
-		C9C2696616498D5100B35DFA /* EXTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTestController.m; sourceTree = "<group>"; };
-		C9C2696716498D5100B35DFA /* KIFTestScenario+EXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+EXAdditions.h"; sourceTree = "<group>"; };
-		C9C2696816498D5100B35DFA /* KIFTestScenario+EXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+EXAdditions.m"; sourceTree = "<group>"; };
-		C9C2696916498D5100B35DFA /* KIFTestStep+EXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+EXAdditions.h"; sourceTree = "<group>"; };
-		C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+EXAdditions.m"; sourceTree = "<group>"; };
 		C9D0F503173C886800AC055D /* FAQs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FAQs.plist; sourceTree = SOURCE_ROOT; };
 		C9D1BA8F164885B9009A5DBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C9DE4111187242DD006FD776 /* PCDFAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDFAQViewController.h; sourceTree = "<group>"; };
@@ -284,7 +275,6 @@
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C9D0F4C2173AC26600AC055D /* FAQ */,
 				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
-				C9C2696E16498D5500B35DFA /* Testing */,
 				C9C182E817F0B5DD005AF9A3 /* Images.xcassets */,
 				C95FDEEA15D232D5006FE035 /* Supporting Files */,
 			);
@@ -325,19 +315,6 @@
 			);
 			name = "Appear View";
 			path = ..;
-			sourceTree = "<group>";
-		};
-		C9C2696E16498D5500B35DFA /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				C9C2696516498D5100B35DFA /* EXTestController.h */,
-				C9C2696616498D5100B35DFA /* EXTestController.m */,
-				C9C2696716498D5100B35DFA /* KIFTestScenario+EXAdditions.h */,
-				C9C2696816498D5100B35DFA /* KIFTestScenario+EXAdditions.m */,
-				C9C2696916498D5100B35DFA /* KIFTestStep+EXAdditions.h */,
-				C9C2696A16498D5100B35DFA /* KIFTestStep+EXAdditions.m */,
-			);
-			name = Testing;
 			sourceTree = "<group>";
 		};
 		C9D0F4C2173AC26600AC055D /* FAQ */ = {
@@ -523,9 +500,6 @@
 				C9C2690D1649896D00B35DFA /* PCDAboutViewController.m in Sources */,
 				C9C2690E1649896D00B35DFA /* PDKeychainBindings.m in Sources */,
 				C9C2690F1649896D00B35DFA /* PDKeychainBindingsController.m in Sources */,
-				C9C2696B16498D5100B35DFA /* EXTestController.m in Sources */,
-				C9C2696C16498D5100B35DFA /* KIFTestScenario+EXAdditions.m in Sources */,
-				C9C2696D16498D5100B35DFA /* KIFTestStep+EXAdditions.m in Sources */,
 				C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
