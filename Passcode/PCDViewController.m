@@ -76,13 +76,13 @@
 	
 	self.title = @"Passcode";
 	
-	// Add insets to the text fields
+	// Add insets to the text fields.
 //	UIEdgeInsets textFieldInsets = (UIEdgeInsets) {0, 10, 0, 10};
 	UIEdgeInsets textFieldInsets = UIEdgeInsetsZero;
 	_domainField.contentInset = textFieldInsets;
 	_passwordField.contentInset = textFieldInsets;
 	
-	// Set up popover.
+	// Set up the popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
 	_copiedWindow.autoresizingMask = UIViewAutoresizingFlexibleMargins;
 	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
@@ -98,10 +98,7 @@
 			break;
 	}
 	
-	// Center the appear window to the container (plus offset of the status and navigation bars).
-	_copiedWindow.center = (CGPoint){_container.center.x, _container.center.y + STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT};
-	
-	// Gesture recognizers on generate button
+	// Add gesture recognizers on the generate button.
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
 	
@@ -224,6 +221,9 @@
 	
 	// Copy it to pasteboard
 	[[UIPasteboard generalPasteboard] setString:password];
+	
+	// Center the appear window to the container.
+	_copiedWindow.center = CGPointMake(CGRectGetMidX(_container.frame), CGRectGetMidY(_container.frame));
 	
 	// Animation to show password has been copied
 	[_copiedWindow display];
