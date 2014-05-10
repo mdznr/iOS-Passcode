@@ -129,9 +129,9 @@
 													alpha:1.0f]
 						   forState:UIControlStateHighlighted];
 	
-	[_generateButton setTopColor:[UIColor colorWithWhite:1.0f alpha:0.3f]
+	[_generateButton setTopColor:[UIColor colorWithWhite:1.0f alpha:0.12f]
 						forState:UIControlStateDisabled];
-	[_generateButton setBottomColor:[UIColor colorWithWhite:1.0f alpha:0.2f]
+	[_generateButton setBottomColor:[UIColor colorWithWhite:1.0f alpha:0.05f]
 						   forState:UIControlStateDisabled];
 	
 	_reveal.hidden = YES;
@@ -251,7 +251,7 @@
 	[[UIPasteboard generalPasteboard] setString:password];
 	
 	// Center the appear window to the container.
-	UIView *centeringView = _verticalCenteringView ? _verticalCenteringView : _container;
+	UIView *centeringView = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? _verticalCenteringView : _container;
 	_copiedWindow.center = centeringView.center;
 	
 	// Animation to show password has been copied
