@@ -97,7 +97,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ae4-7M-4cf" userLabel="Info Button">
-                    <rect key="frame" x="16" y="32" width="49" height="49"/>
+                    <rect key="frame" x="16" y="32" width="38" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="Info">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,7 +107,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lM4-np-lsR" userLabel="Restrictions Button">
-                    <rect key="frame" x="703" y="32" width="49" height="49"/>
+                    <rect key="frame" x="714" y="32" width="38" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="Restrictions">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,7 +123,7 @@
     </objects>
     <resources>
         <image name="Forms" width="476" height="162"/>
-        <image name="Info" width="49" height="49"/>
-        <image name="Restrictions" width="49" height="49"/>
+        <image name="Info" width="38" height="38"/>
+        <image name="Restrictions" width="38" height="38"/>
     </resources>
 </document>
