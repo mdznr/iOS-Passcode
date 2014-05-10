@@ -222,10 +222,12 @@
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == YES ) {
 		if ( [bindings objectForKey:@"passwordString"] ) {
 			_passwordField.text = [bindings objectForKey:@"passwordString"];
+			[self textDidChange:_passwordField];
 		}
 	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == NO ) {
 		[bindings setObject:@"" forKey:@"passwordString"];
 		_passwordField.text = @"";
+		[self textDidChange:_passwordField];
 	}
 }
 
@@ -234,21 +236,21 @@
 
 - (IBAction)generateAndCopy:(id)sender
 {
-	// Store the password in keychain
+	// Store the password in keychain.
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
 	
 	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
 																andMasterPassword:_passwordField.text];
 	
-	// Copy it to pasteboard
+	// Copy it to pasteboard.
 	[[UIPasteboard generalPasteboard] setString:password];
 	
 	// Center the appear window to the container.
 	UIView *centeringView = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? _verticalCenteringView : _container;
 	_copiedWindow.center = centeringView.center;
 	
-	// Animation to show password has been copied
+	// Tell the user that the generated passcode has been copied.
 	[_copiedWindow display];
 }
 
@@ -306,6 +308,7 @@
 	[self presentViewController:navigationController animated:YES completion:nil];
 }
 
+
 #pragma mark - Text Field Delegate Methods
 
 - (IBAction)textDidChange:(id)sender
@@ -347,7 +350,7 @@
 
 - (void)keyboardChanged:(id)object
 {
-	// Based on implentation in Genensis.
+	// Based on implentation in Genesis.
 	// See License: https://raw.github.com/peterhajas/Genesis/master/License
 	
     // Grab the dictionary out of the object
@@ -386,13 +389,8 @@
 											   object:nil];
 }
 
-#pragma mark - Unload
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Unload
 
 - (void)viewDidUnload
 {
