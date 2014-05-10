@@ -8,6 +8,8 @@
 
 #import "MTZButton.h"
 
+#define DEFAULT_CORNER_RADIUS 8
+
 @interface MTZButton ()
 
 @property (strong, nonatomic) NSMutableDictionary *topColorsForStates;
@@ -17,24 +19,50 @@
 
 @implementation MTZButton
 
+
+#pragma mark - Initialization
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
+    if ( !self ) { return self; }
+	
+	[self _setUpMTZButton];
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if ( !self ) { return self; }
+	
+	[self _setUpMTZButton];
+    return self;
+}
+
+- (id)init
+{
+    self = [super init];
+    if ( !self ) { return self; }
+	
+	[self _setUpMTZButton];
     return self;
 }
 
 - (void)_setUpMTZButton
 {
+	_cornerRadius = DEFAULT_CORNER_RADIUS;
 	_topColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
 	_bottomColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
 }
 
-NSString *keyForControlState(UIControlState state)
+
+#pragma mark - Properties
+
+- (void)setCornerRadius:(CGFloat)cornerRadius
 {
-	return [[NSNumber numberWithUnsignedInteger:state] stringValue];
+	_cornerRadius = cornerRadius;
+	[self setNeedsDisplay];
 }
 
 ///	Returns the color of the top of the button associated with the specified state.
@@ -51,6 +79,7 @@ NSString *keyForControlState(UIControlState state)
 - (void)setTopColor:(UIColor *)color forState:(UIControlState)state
 {
 	_topColorsForStates[keyForControlState(state)] = color;
+	[self updateBackgroundImageForControlState:state];
 }
 
 ///	Returns the color of the bottom of the button associated with the specified state.
@@ -67,6 +96,69 @@ NSString *keyForControlState(UIControlState state)
 - (void)setBottomColor:(UIColor *)color forState:(UIControlState)state
 {
 	_bottomColorsForStates[keyForControlState(state)] = color;
+	[self updateBackgroundImageForControlState:state];
 }
+
+
+#pragma mark - Helpers
+
+NSString *keyForControlState(UIControlState state)
+{
+	return [[NSNumber numberWithUnsignedInteger:state] stringValue];
+}
+
+- (void)updateBackgroundImageForControlState:(UIControlState)state
+{
+	NSString *controlStateKey = keyForControlState(state);
+	UIColor *topColor = _topColorsForStates[controlStateKey];
+	UIColor *bottomColor = _bottomColorsForStates[controlStateKey];
+	
+	if ( !topColor && !bottomColor ) {
+		[self setBackgroundImage:nil forState:state];
+		return;
+	}
+	
+	if ( !bottomColor ) {
+		bottomColor = topColor;
+	} else if ( !topColor ) {
+		topColor = bottomColor;
+	}
+	
+	NSArray *gradientColors = @[(id)topColor.CGColor, (id)bottomColor.CGColor];
+	CGFloat gradientLocations[2] = {0.0f, 1.0f};
+	CGColorSpaceRef colorSpace = CGColorGetColorSpace((CGColorRef) gradientColors[0]);
+	CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocations);
+	
+	UIGraphicsBeginImageContext(CGSizeMake(1, self.frame.size.height));
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextDrawLinearGradient(context, gradient, CGPointZero, CGPointMake(0.0f, self.frame.size.height), kNilOptions);
+	
+	UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
+	
+	UIGraphicsEndImageContext();
+	
+	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
+	[self setBackgroundImage:backgroundImage forState:state];
+}
+
+
+#pragma mark - Drawing
+
+/*
+-(void)drawRect:(CGRect)rect
+{
+	UIBezierPath *bp = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+												  cornerRadius:self.cornerRadius];
+	
+	NSString *controlStateKey = keyForControlState(self.state);
+	
+	UIColor *topColor = _topColorsForStates[controlStateKey];
+	[topColor setFill];
+	
+	UIColor *bottomColor = _bottomColorsForStates[controlStateKey];
+	
+	[bp fill];
+}
+ */
 
 @end
