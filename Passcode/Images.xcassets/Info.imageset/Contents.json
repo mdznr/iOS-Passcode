@@ -3,12 +3,12 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "Info.png"
+      "filename" : "Info~iPhone.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "Info@2x.png"
+      "filename" : "Info~iPhone@2x.png"
     },
     {
       "idiom" : "ipad",
@@ -18,7 +18,7 @@
     {
       "idiom" : "ipad",
       "scale" : "2x",
-      "filename" : "Info@2x~iPad.png"
+      "filename" : "Info~iPad@2x.png"
     }
   ],
   "info" : {
