@@ -131,7 +131,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Forms" width="288" height="100"/>
+        <image name="Forms" width="296" height="100"/>
         <image name="Info" width="30" height="30"/>
         <image name="Restrictions" width="30" height="30"/>
     </resources>
