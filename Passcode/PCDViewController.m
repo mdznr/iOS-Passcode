@@ -210,8 +210,8 @@
 	
 	NSString *domainName = [url domainName];
 	if ( domainName ) {
-		[self textDidChange:self];
 		_domainField.text = domainName;
+		[self textDidChange:_domainField];
 	}
 }
 
