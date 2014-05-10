@@ -10,21 +10,45 @@
 
 @implementation MTZTextField
 
-- (id)init
+- (id)initWithFrame:(CGRect)frame
 {
-	self = [super init];
-	if ( self ) {
-		_contentInset = UIEdgeInsetsZero;
-	}
+	self = [super initWithFrame:frame];
+	if ( !self ) { return self; }
+	
+	[self _setUpMTZTextField];
 	return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	if ( !self ) { return self; }
+	
+	[self _setUpMTZTextField];
+	return self;
+}
+
+- (id)init
+{
+	self = [super init];
+	if ( !self ) { return self; }
+	
+	[self _setUpMTZTextField];
+	return self;
+}
+
+- (void)_setUpMTZTextField
+{
+	_contentInset = UIEdgeInsetsZero;
+}
+
+/*
 - (CGRect)rectForBounds:(CGRect)bounds
 {
-	return (CGRect) {bounds.origin.x + _contentInset.left,
-	                 bounds.origin.y + _contentInset.top,
-	                 bounds.size.width - _contentInset.left - _contentInset.right,
-	                 bounds.size.height - _contentInset.top - _contentInset.bottom};
+	return CGRectMake(bounds.origin.x + _contentInset.left,
+					  bounds.origin.y + _contentInset.top,
+					  bounds.size.width - _contentInset.left - _contentInset.right,
+					  bounds.size.height - _contentInset.top - _contentInset.bottom);
 }
 
 // Placeholder text position
@@ -38,6 +62,7 @@
 {
 	return [self rectForBounds:bounds];
 }
+ */
 
 // Only show certain actions in text selection
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender
