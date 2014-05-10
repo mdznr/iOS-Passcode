@@ -83,13 +83,12 @@
                             <accessibility key="accessibilityConfiguration" label="Generate Passcode and Copy"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                            <state key="normal" title="Generate &amp; Copy Passcode" backgroundImage="Button">
+                            <state key="normal" title="Generate &amp; Copy Passcode">
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="disabled" backgroundImage="ButtonDisabled">
+                            <state key="disabled">
                                 <color key="titleColor" red="0.62430816889999996" green="0.6237781644" blue="0.64006072280000004" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
-                            <state key="highlighted" backgroundImage="ButtonHighlight"/>
                             <connections>
                                 <action selector="generateAndCopy:" destination="-1" eventType="touchUpInside" id="21"/>
                             </connections>
@@ -123,9 +122,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Button" width="476" height="82"/>
-        <image name="ButtonDisabled" width="476" height="82"/>
-        <image name="ButtonHighlight" width="476" height="82"/>
         <image name="Forms" width="476" height="162"/>
         <image name="Info" width="49" height="49"/>
         <image name="Restrictions" width="49" height="49"/>
