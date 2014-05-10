@@ -12,6 +12,7 @@
 #import "PCDRestrictionsViewController.h"
 
 #import "MTZAppearWindow.h"
+#import "MTZButton.h"
 #import "MTZSlideToReveal.h"
 #import "MTZTextField.h"
 
@@ -21,7 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet MTZTextField *domainField;
 @property (strong, nonatomic) IBOutlet MTZTextField *passwordField;
-@property (strong, nonatomic) IBOutlet UIButton *generateButton;
+@property (strong, nonatomic) IBOutlet MTZButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) MTZAppearWindow *copiedWindow;
 
