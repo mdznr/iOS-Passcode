@@ -19,6 +19,7 @@
 @interface PCDViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
 @property (strong, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet MTZTextField *domainField;
 @property (strong, nonatomic) IBOutlet MTZTextField *passwordField;

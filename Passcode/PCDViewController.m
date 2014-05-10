@@ -251,7 +251,7 @@
 	[[UIPasteboard generalPasteboard] setString:password];
 	
 	// Center the appear window to the container.
-	_copiedWindow.center = CGPointMake(CGRectGetMidX(_container.frame), CGRectGetMidY(_container.frame));
+	_copiedWindow.center = _verticalCenteringView.center;
 	
 	// Animation to show password has been copied
 	[_copiedWindow display];

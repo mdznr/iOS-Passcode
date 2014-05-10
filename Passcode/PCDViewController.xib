@@ -11,6 +11,7 @@
                 <outlet property="generateButton" destination="84" id="103"/>
                 <outlet property="passwordField" destination="80" id="97"/>
                 <outlet property="reveal" destination="352" id="353"/>
+                <outlet property="verticalCenteringView" destination="191" id="onW-t7-V5t"/>
                 <outlet property="view" destination="6" id="351"/>
             </connections>
         </placeholder>
