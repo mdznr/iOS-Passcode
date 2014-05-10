@@ -54,6 +54,8 @@
 	_cornerRadius = DEFAULT_CORNER_RADIUS;
 	_topColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
 	_bottomColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
+	
+	[self addTarget:self action:@selector(updateBorder) forControlEvents:UIControlEventAllEvents];
 }
 
 
@@ -141,24 +143,27 @@ NSString *keyForControlState(UIControlState state)
 	[self setBackgroundImage:backgroundImage forState:state];
 }
 
-
-#pragma mark - Drawing
-
-/*
--(void)drawRect:(CGRect)rect
+- (void)updateBorder
 {
-	UIBezierPath *bp = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-												  cornerRadius:self.cornerRadius];
-	
-	NSString *controlStateKey = keyForControlState(self.state);
-	
-	UIColor *topColor = _topColorsForStates[controlStateKey];
-	[topColor setFill];
-	
-	UIColor *bottomColor = _bottomColorsForStates[controlStateKey];
-	
-	[bp fill];
+	[self setNeedsDisplay];
 }
- */
+
+- (void)drawRect:(CGRect)rect
+{
+	self.layer.cornerRadius = self.cornerRadius;
+	self.layer.masksToBounds = YES;
+	
+	switch ( self.state ) {
+		case UIControlStateDisabled:
+			self.layer.borderWidth = 0.75f;
+			self.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;
+			break;
+		default:
+			self.layer.borderWidth = 0.0f;
+			self.layer.borderColor = [UIColor clearColor].CGColor;
+			break;
+	}
+}
+
 
 @end
