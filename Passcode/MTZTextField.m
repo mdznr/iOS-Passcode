@@ -39,30 +39,8 @@
 
 - (void)_setUpMTZTextField
 {
-	_contentInset = UIEdgeInsetsZero;
-}
 
-/*
-- (CGRect)rectForBounds:(CGRect)bounds
-{
-	return CGRectMake(bounds.origin.x + _contentInset.left,
-					  bounds.origin.y + _contentInset.top,
-					  bounds.size.width - _contentInset.left - _contentInset.right,
-					  bounds.size.height - _contentInset.top - _contentInset.bottom);
 }
-
-// Placeholder text position
-- (CGRect)textRectForBounds:(CGRect)bounds
-{
-	return [self rectForBounds:bounds];
-}
-
-// Text position
-- (CGRect)editingRectForBounds:(CGRect)bounds
-{
-	return [self rectForBounds:bounds];
-}
- */
 
 // Only show certain actions in text selection
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender

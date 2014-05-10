@@ -10,6 +10,4 @@
 
 @interface MTZTextField : UITextField
 
-@property (nonatomic) UIEdgeInsets contentInset;
-
 @end
