@@ -106,6 +106,34 @@
 	panGesture.minimumRequiredPanningDistance = 200.0f;
 	[_generateButton addGestureRecognizer:panGesture];
 	
+	// Color the button.
+	[_generateButton setTopColor:[UIColor colorWithRed: 52.0f/255.0f
+												 green:196.0f/255.0f
+												  blue:126.0f/255.0f
+												 alpha:1.0f]
+						forState:UIControlStateNormal];
+	[_generateButton setBottomColor:[UIColor colorWithRed: 12.0f/255.0f
+													green:150.0f/255.0f
+													 blue: 86.0f/255.0f
+													alpha:1.0f]
+						forState:UIControlStateNormal];
+	
+	[_generateButton setTopColor:[UIColor colorWithRed: 45.0f/255.0f
+												 green:171.0f/255.0f
+												  blue:110.0f/255.0f
+												 alpha:1.0f]
+						forState:UIControlStateHighlighted];
+	[_generateButton setBottomColor:[UIColor colorWithRed: 10.0f/255.0f
+													green:125.0f/255.0f
+													 blue: 71.0f/255.0f
+													alpha:1.0f]
+						   forState:UIControlStateHighlighted];
+	
+	[_generateButton setTopColor:[UIColor colorWithWhite:1.0f alpha:0.3f]
+						forState:UIControlStateDisabled];
+	[_generateButton setBottomColor:[UIColor colorWithWhite:1.0f alpha:0.2f]
+						   forState:UIControlStateDisabled];
+	
 	_reveal.hidden = YES;
 	
 	[self checkSecuritySetting];
