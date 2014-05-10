@@ -34,7 +34,7 @@
 
 NSString *keyForControlState(UIControlState state)
 {
-	return [NSString stringWithFormat:@"%lu", state];
+	return [[NSNumber numberWithUnsignedInteger:state] stringValue];
 }
 
 ///	Returns the color of the top of the button associated with the specified state.
