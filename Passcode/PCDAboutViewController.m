@@ -38,7 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type)
+	// Listen to UIContentSizeCategoryDidChangeNotification (Dynamic Type).
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(preferredContentSizeDidChange:)
 												 name:UIContentSizeCategoryDidChangeNotification
@@ -91,7 +91,7 @@
 			break;
 	}
 	
-	// Calculate height
+	// Calculate height.
 	if ( calculateHeight ) {
 		UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
 		NSString *text = cell.textLabel.text;
@@ -132,7 +132,7 @@
 			break;
 	}
 	
-	// Update the cell's font
+	// Update the cell's font.
 	if ( updateFont ) {
 		UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
 		cell.textLabel.font = font;
@@ -144,10 +144,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {	
-	// Deselect cell
+	// Deselect cell.
 	[[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
 	
-	// Navigate accordingly
+	// Navigate accordingly.
 	switch ( indexPath.row ) {
 		case 0:
 			[self howToUsePressed:self];
@@ -190,7 +190,7 @@
 - (IBAction)supportPressed:(id)sender
 {
 	if ([MFMailComposeViewController canSendMail]) {
-        MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
+        MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
 		
         NSArray *toRecipients = @[@"passcode@mdznr.com"];
@@ -206,7 +206,7 @@
 
 - (IBAction)writeAReviewPressed:(id)sender
 {
-	// Check if SKStoreProductViewController is available (iOS 6 and later)
+	// Check if SKStoreProductViewController is available (iOS 6 and later).
 	if ( NSStringFromClass([SKStoreProductViewController class]) != nil ) {
 		SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
         storeViewController.delegate = self;
@@ -224,20 +224,22 @@
 
 #pragma mark MFMailComposeViewControllerDelgate
 
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+		  didFinishWithResult:(MFMailComposeResult)result
+						error:(NSError*)error
 {
 	switch ( result ) {
 		case MFMailComposeResultCancelled:
-//			NSLog(@"Support Email Cancelled");
+			// Support Email Cancelled
 			break;
 		case MFMailComposeResultFailed:
-//			NSLog(@"Support Email Failed");
+			// Support Email Failed
 			break;
 		case MFMailComposeResultSaved:
-//			NSLog(@"Support Email Saved");
+			// Support Email Saved
 			break;
 		case MFMailComposeResultSent:
-//			NSLog(@"Support Email Sent");
+			// Support Email Sent
 			break;
 		default:
 			break;
@@ -249,23 +251,9 @@
 
 #pragma mark SKStoreProductViewControllerDelegate
 
--(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
 {
     [viewController dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-#pragma mark UIViewController misc.
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
 }
 
 @end
