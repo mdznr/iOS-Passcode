@@ -10,7 +10,8 @@
 #import "MTZAppearView.h"
 
 #define MOTION_EFFECT_DIST 20.0f
-#define DISPLAY_DURATION 2.0f
+// TODO: (Slightly) decrease this value over time.
+#define DISPLAY_DURATION 2.5f
 
 #define DEFAULT_FRAME CGRectMake(0, 0, 128, 128)
 
