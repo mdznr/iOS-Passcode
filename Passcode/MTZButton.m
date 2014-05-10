@@ -156,7 +156,7 @@ NSString *keyForControlState(UIControlState state)
 	switch ( self.state ) {
 		case UIControlStateDisabled:
 			self.layer.borderWidth = 0.75f;
-			self.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;
+			self.layer.borderColor = [UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f].CGColor;
 			break;
 		default:
 			self.layer.borderWidth = 0.0f;
