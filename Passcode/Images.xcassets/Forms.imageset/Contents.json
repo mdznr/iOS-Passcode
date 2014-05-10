@@ -1,24 +1,68 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "fill",
+          "width" : 1
+        },
+        "capInsets" : {
+          "right" : 18,
+          "left" : 18
+        }
+      },
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "Forms.png"
+      "filename" : "Forms.png",
+      "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "fill",
+          "width" : 1
+        },
+        "capInsets" : {
+          "right" : 18,
+          "left" : 18
+        }
+      },
       "idiom" : "iphone",
-      "scale" : "2x",
-      "filename" : "Forms@2x.png"
+      "filename" : "Forms@2x.png",
+      "scale" : "2x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "fill",
+          "width" : 1
+        },
+        "capInsets" : {
+          "right" : 18,
+          "left" : 18
+        }
+      },
       "idiom" : "ipad",
-      "scale" : "1x",
-      "filename" : "Forms~iPad.png"
+      "filename" : "Forms~iPad.png",
+      "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "fill",
+          "width" : 1
+        },
+        "capInsets" : {
+          "right" : 18,
+          "left" : 18
+        }
+      },
       "idiom" : "ipad",
-      "scale" : "2x",
-      "filename" : "Forms@2x~iPad.png"
+      "filename" : "Forms@2x~iPad.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
