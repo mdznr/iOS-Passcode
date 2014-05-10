@@ -67,7 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C91E07ED191E0E560027981C /* PCDDomainName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCDDomainName.m; path = Passcode/PCDDomainName.m; sourceTree = "<group>"; };
+		C91E07ED191E0E560027981C /* PCDDomainName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCDDomainName.m; path = ../Passcode/PCDDomainName.m; sourceTree = "<group>"; };
 		C91E07F4191E0EB80027981C /* Passcode Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Passcode Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91E07F5191E0EB80027981C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C91E07FB191E0EB80027981C /* Passcode Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Passcode Tests-Info.plist"; sourceTree = "<group>"; };
@@ -191,18 +191,11 @@
 			name = About;
 			sourceTree = "<group>";
 		};
-		C91E07EF191E0E5E0027981C /* Passcode Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C91E07ED191E0E560027981C /* PCDDomainName.m */,
-			);
-			name = "Passcode Tests";
-			sourceTree = "<group>";
-		};
 		C91E07F9191E0EB80027981C /* Passcode Tests */ = {
 			isa = PBXGroup;
 			children = (
 				C91E07FF191E0EB80027981C /* Passcode_Tests.m */,
+				C91E07ED191E0E560027981C /* PCDDomainName.m */,
 				C91E07FA191E0EB80027981C /* Supporting Files */,
 			);
 			path = "Passcode Tests";
@@ -236,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				C95FDEE915D232D5006FE035 /* Passcode */,
-				C91E07EF191E0E5E0027981C /* Passcode Tests */,
 				C91E07F9191E0EB80027981C /* Passcode Tests */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
