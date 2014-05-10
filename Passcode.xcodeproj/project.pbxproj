@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91E07F6191E0EB80027981C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91E07F5191E0EB80027981C /* XCTest.framework */; };
+		C91E07F7191E0EB80027981C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
+		C91E07F8191E0EB80027981C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
+		C91E07FE191E0EB80027981C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91E07FC191E0EB80027981C /* InfoPlist.strings */; };
+		C91E0800191E0EB80027981C /* Passcode_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E07FF191E0EB80027981C /* Passcode_Tests.m */; };
+		C91E0807191E0EBF0027981C /* PCDDomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E07ED191E0E560027981C /* PCDDomainName.m */; };
 		C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */; };
 		C94BA7081874B7CF0075F84A /* PCDAboutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */; };
 		C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
-		C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
 		C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */; };
-		C94C7CA6172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */; };
 		C94C7CA7172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */; };
-		C94C7CA8172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */; };
 		C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */; };
-		C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */; };
 		C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
@@ -28,13 +30,9 @@
 		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C96165B316A169F200532B61 /* NSString+sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165B216A169F100532B61 /* NSString+sha256.m */; };
 		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
-		C96BB5A916A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
 		C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */; };
-		C96BB61F16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */; };
 		C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
-		C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
 		C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
-		C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
 		C978AE2B190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE2A190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m */; };
 		C978AE2E190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */; };
 		C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C98347561906FCEA00892080 /* NSURL+DomainName.m */; };
@@ -43,28 +41,12 @@
 		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
 		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
+		C9BAC3DD191DBB3E00EA7728 /* MTZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */; };
 		C9BBC1F515DA10B600E16FBB /* MTZAppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* MTZAppearView.m */; };
 		C9BBC1F815DA4E4000E16FBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
 		C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
 		C9C182E917F0B5DD005AF9A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C182E817F0B5DD005AF9A3 /* Images.xcassets */; };
-		C9C269081649896D00B35DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEEF15D232D5006FE035 /* main.m */; };
-		C9C269091649896D00B35DFA /* PCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */; };
-		C9C2690A1649896D00B35DFA /* PCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCDViewController.m */; };
-		C9C2690B1649896D00B35DFA /* MTZAppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* MTZAppearView.m */; };
-		C9C2690D1649896D00B35DFA /* PCDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */; };
-		C9C2690E1649896D00B35DFA /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
-		C9C2690F1649896D00B35DFA /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
-		C9C269111649896D00B35DFA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
-		C9C269121649896D00B35DFA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
-		C9C269131649896D00B35DFA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */; };
-		C9C269141649896D00B35DFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
-		C9C269151649896D00B35DFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
-		C9C269161649896D00B35DFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
-		C9C269201649896D00B35DFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BBC21115DEE81C00E16FBB /* Settings.bundle */; };
-		C9C269241649896D00B35DFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
-		C9C26964164989CB00B35DFA /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C26963164989CB00B35DFA /* libKIF.a */; };
 		C9D0F504173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
-		C9D0F505173C886800AC055D /* FAQs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D0F503173C886800AC055D /* FAQs.plist */; };
 		C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D1BA8F164885B9009A5DBA /* MessageUI.framework */; };
 		C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE4112187242DD006FD776 /* PCDFAQViewController.m */; };
 		C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE415718729D63006FD776 /* PCDFAQViewController.storyboard */; };
@@ -74,7 +56,24 @@
 		C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C91E0802191E0EB80027981C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C95FDED615D232D5006FE035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C95FDEDE15D232D5006FE035;
+			remoteInfo = Passcode;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C91E07ED191E0E560027981C /* PCDDomainName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCDDomainName.m; path = Passcode/PCDDomainName.m; sourceTree = "<group>"; };
+		C91E07F4191E0EB80027981C /* Passcode Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Passcode Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91E07F5191E0EB80027981C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C91E07FB191E0EB80027981C /* Passcode Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Passcode Tests-Info.plist"; sourceTree = "<group>"; };
+		C91E07FD191E0EB80027981C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C91E07FF191E0EB80027981C /* Passcode_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Passcode_Tests.m; sourceTree = "<group>"; };
+		C91E0801191E0EB80027981C /* Passcode Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passcode Tests-Prefix.pch"; sourceTree = "<group>"; };
 		C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppearWindow.h; path = Passcode/MTZAppearWindow.h; sourceTree = "<group>"; };
 		C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppearWindow.m; path = Passcode/MTZAppearWindow.m; sourceTree = "<group>"; };
 		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
@@ -131,12 +130,13 @@
 		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
 		C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
 		C9AC9A46163109BF00EFFD43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZButton.h; sourceTree = "<group>"; };
+		C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZButton.m; sourceTree = "<group>"; };
 		C9BBC1F315DA10B600E16FBB /* MTZAppearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppearView.h; path = Passcode/MTZAppearView.h; sourceTree = "<group>"; };
 		C9BBC1F415DA10B600E16FBB /* MTZAppearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppearView.m; path = Passcode/MTZAppearView.m; sourceTree = "<group>"; };
 		C9BBC1F715DA4E4000E16FBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9BBC21115DEE81C00E16FBB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C9C182E817F0B5DD005AF9A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passcode (Integration Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C26963164989CB00B35DFA /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Frameworks/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		C9D0F503173C886800AC055D /* FAQs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FAQs.plist; sourceTree = SOURCE_ROOT; };
 		C9D1BA8F164885B9009A5DBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -154,6 +154,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C91E07F1191E0EB80027981C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91E07F6191E0EB80027981C /* XCTest.framework in Frameworks */,
+				C91E07F8191E0EB80027981C /* UIKit.framework in Frameworks */,
+				C91E07F7191E0EB80027981C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C95FDEDC15D232D5006FE035 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,20 +178,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C269101649896D00B35DFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9C26964164989CB00B35DFA /* libKIF.a in Frameworks */,
-				C9C269111649896D00B35DFA /* MessageUI.framework in Frameworks */,
-				C9C269121649896D00B35DFA /* Security.framework in Frameworks */,
-				C9C269131649896D00B35DFA /* QuartzCore.framework in Frameworks */,
-				C9C269141649896D00B35DFA /* UIKit.framework in Frameworks */,
-				C9C269151649896D00B35DFA /* Foundation.framework in Frameworks */,
-				C9C269161649896D00B35DFA /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,6 +189,33 @@
 				C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		C91E07EF191E0E5E0027981C /* Passcode Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C91E07ED191E0E560027981C /* PCDDomainName.m */,
+			);
+			name = "Passcode Tests";
+			sourceTree = "<group>";
+		};
+		C91E07F9191E0EB80027981C /* Passcode Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C91E07FF191E0EB80027981C /* Passcode_Tests.m */,
+				C91E07FA191E0EB80027981C /* Supporting Files */,
+			);
+			path = "Passcode Tests";
+			sourceTree = "<group>";
+		};
+		C91E07FA191E0EB80027981C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C91E07FB191E0EB80027981C /* Passcode Tests-Info.plist */,
+				C91E07FC191E0EB80027981C /* InfoPlist.strings */,
+				C91E0801191E0EB80027981C /* Passcode Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C94C7C96172D7D6500A3D19E /* Slide to Reveal */ = {
@@ -213,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				C95FDEE915D232D5006FE035 /* Passcode */,
+				C91E07EF191E0E5E0027981C /* Passcode Tests */,
+				C91E07F9191E0EB80027981C /* Passcode Tests */,
 				C95FDEE215D232D5006FE035 /* Frameworks */,
 				C95FDEE015D232D5006FE035 /* Products */,
 			);
@@ -222,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				C95FDEDF15D232D5006FE035 /* Passcode.app */,
-				C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */,
+				C91E07F4191E0EB80027981C /* Passcode Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +263,7 @@
 				C95FDEE315D232D5006FE035 /* UIKit.framework */,
 				C95FDEE515D232D5006FE035 /* Foundation.framework */,
 				C95FDEE715D232D5006FE035 /* CoreGraphics.framework */,
+				C91E07F5191E0EB80027981C /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,6 +295,8 @@
 				C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */,
 				C98347551906FCEA00892080 /* NSURL+DomainName.h */,
 				C98347561906FCEA00892080 /* NSURL+DomainName.m */,
+				C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */,
+				C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
@@ -342,6 +370,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C91E07F3191E0EB80027981C /* Passcode Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C91E0804191E0EB80027981C /* Build configuration list for PBXNativeTarget "Passcode Tests" */;
+			buildPhases = (
+				C91E07F0191E0EB80027981C /* Sources */,
+				C91E07F1191E0EB80027981C /* Frameworks */,
+				C91E07F2191E0EB80027981C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C91E0803191E0EB80027981C /* PBXTargetDependency */,
+			);
+			name = "Passcode Tests";
+			productName = "Passcode Tests";
+			productReference = C91E07F4191E0EB80027981C /* Passcode Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C95FDEDE15D232D5006FE035 /* Passcode */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C95FDEFD15D232D5006FE035 /* Build configuration list for PBXNativeTarget "Passcode" */;
@@ -360,23 +406,6 @@
 			productReference = C95FDEDF15D232D5006FE035 /* Passcode.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9C269061649896D00B35DFA /* Integration Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9C2695E1649896D00B35DFA /* Build configuration list for PBXNativeTarget "Integration Tests" */;
-			buildPhases = (
-				C9C269071649896D00B35DFA /* Sources */,
-				C9C269101649896D00B35DFA /* Frameworks */,
-				C9C269171649896D00B35DFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Integration Tests";
-			productName = Passcode;
-			productReference = C9C269611649896D00B35DFA /* Passcode (Integration Tests).app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -387,6 +416,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matt Zanchelli";
 				TargetAttributes = {
+					C91E07F3191E0EB80027981C = {
+						TestTargetID = C95FDEDE15D232D5006FE035;
+					};
 					C95FDEDE15D232D5006FE035 = {
 						DevelopmentTeam = 3SZ7MS7NXC;
 						SystemCapabilities = {
@@ -419,12 +451,20 @@
 			projectRoot = "";
 			targets = (
 				C95FDEDE15D232D5006FE035 /* Passcode */,
-				C9C269061649896D00B35DFA /* Integration Tests */,
+				C91E07F3191E0EB80027981C /* Passcode Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C91E07F2191E0EB80027981C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91E07FE191E0EB80027981C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C95FDEDD15D232D5006FE035 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,21 +480,6 @@
 				C94C7CA7172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */,
 				C9C182E917F0B5DD005AF9A3 /* Images.xcassets in Resources */,
 				C9D0F504173C886800AC055D /* FAQs.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9C269171649896D00B35DFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9C269201649896D00B35DFA /* Settings.bundle in Resources */,
-				C9C269241649896D00B35DFA /* Localizable.strings in Resources */,
-				C96BB5A916A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
-				C96BB61F16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
-				C96BB62216A904CF00E5EEEC /* PCDViewController.xib in Resources */,
-				C94C7CA6172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
-				C94C7CA8172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */,
-				C9D0F505173C886800AC055D /* FAQs.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +503,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C91E07F0191E0EB80027981C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91E0807191E0EBF0027981C /* PCDDomainName.m in Sources */,
+				C91E0800191E0EB80027981C /* Passcode_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C95FDEDB15D232D5006FE035 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,31 +536,31 @@
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
+				C9BAC3DD191DBB3E00EA7728 /* MTZButton.m in Sources */,
 				C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */,
 				C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C269071649896D00B35DFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9C269081649896D00B35DFA /* main.m in Sources */,
-				C9C269091649896D00B35DFA /* PCDAppDelegate.m in Sources */,
-				C9C2690A1649896D00B35DFA /* PCDViewController.m in Sources */,
-				C9C2690B1649896D00B35DFA /* MTZAppearView.m in Sources */,
-				C9C2690D1649896D00B35DFA /* PCDAboutViewController.m in Sources */,
-				C9C2690E1649896D00B35DFA /* PDKeychainBindings.m in Sources */,
-				C9C2690F1649896D00B35DFA /* PDKeychainBindingsController.m in Sources */,
-				C94D338516BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
-				C94C7C95172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
-				C96E7AE5175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C91E0803191E0EB80027981C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C95FDEDE15D232D5006FE035 /* Passcode */;
+			targetProxy = C91E0802191E0EB80027981C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C91E07FC191E0EB80027981C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C91E07FD191E0EB80027981C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		C94DFD33162BAC59002AD5CD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -547,6 +581,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C91E0805191E0EB80027981C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passcode.app/Passcode";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passcode Tests/Passcode Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Passcode Tests/Passcode Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C91E0806191E0EB80027981C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passcode.app/Passcode";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passcode Tests/Passcode Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Passcode Tests/Passcode Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		C95FDEFB15D232D5006FE035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,61 +738,17 @@
 			};
 			name = Release;
 		};
-		C9C2695F1649896D00B35DFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"RUN_KIF_TESTS=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Frameworks/KIF/**",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "Passcode (Integration Tests)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		C9C269601649896D00B35DFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"RUN_KIF_TESTS=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Frameworks/KIF/**",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "Passcode (Integration Tests)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C91E0804191E0EB80027981C /* Build configuration list for PBXNativeTarget "Passcode Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91E0805191E0EB80027981C /* Debug */,
+				C91E0806191E0EB80027981C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C95FDED915D232D5006FE035 /* Build configuration list for PBXProject "Passcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -704,15 +763,6 @@
 			buildConfigurations = (
 				C95FDEFE15D232D5006FE035 /* Debug */,
 				C95FDEFF15D232D5006FE035 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9C2695E1649896D00B35DFA /* Build configuration list for PBXNativeTarget "Integration Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9C2695F1649896D00B35DFA /* Debug */,
-				C9C269601649896D00B35DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
