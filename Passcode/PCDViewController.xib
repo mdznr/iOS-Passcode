@@ -78,7 +78,7 @@
                                     </connections>
                                 </textField>
                                 <view opaque="NO" contentMode="scaleToFill" id="352" userLabel="Reveal View" customClass="MTZSlideToReveal">
-                                    <rect key="frame" x="0.0" y="111" width="296" height="49"/>
+                                    <rect key="frame" x="0.0" y="110" width="296" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
