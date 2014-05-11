@@ -79,5 +79,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SourceCodePro-Medium.ttf</string>
+		<string>SourceCodePro-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
