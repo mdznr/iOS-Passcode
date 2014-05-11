@@ -15,7 +15,6 @@
 
 @interface MTZSlideToReveal ()
 
-@property (strong, nonatomic) UIImageView *background;
 @property (strong, nonatomic) UIImageView *loupe;
 @property (strong, nonatomic) UILabel *dotsLabel;
 @property (strong, nonatomic) UILabel *hiddenWordLabel;
@@ -149,9 +148,9 @@
 			case UITouchPhaseCancelled:
 				[self hidePopover:sender];
 				if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-					[self setLoupeCenter:(CGPoint){0,0}];
+					[self setLoupeCenter:CGPointZero];
 				} else {
-					[self setLoupeCenter:(CGPoint){124,0}];
+					[self setLoupeCenter:CGPointMake(124, 0)];
 				}
 				break;
 			default:
