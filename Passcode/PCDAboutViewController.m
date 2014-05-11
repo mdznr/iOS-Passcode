@@ -24,15 +24,6 @@
 
 @implementation PCDAboutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if ( self ) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,13 +49,8 @@
 	[self.tableView reloadData];
 }
 
-- (IBAction)done:(id)sender
-{
-	[self dismissViewControllerAnimated:YES completion:^{}];
-}
 
-
-#pragma mark UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -167,7 +153,12 @@
 }
 
 
-#pragma mark Actions
+#pragma mark - Actions
+
+- (IBAction)done:(id)sender
+{
+	[self dismissViewControllerAnimated:YES completion:^{}];
+}
 
 - (IBAction)howToUsePressed:(id)sender
 {
@@ -178,7 +169,7 @@
 {
 	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"PCDFAQViewController" bundle:nil];
 	PCDFAQViewController *faq = [sb instantiateViewControllerWithIdentifier:@"PCDFAQViewController"];
-#if DEBUG
+#ifdef DEBUG
 	faq.remoteURL = @"http://mdznr.com/FAQs.plist";
 #else
 	faq.remoteURL = @"https://raw.github.com/mdznr/iOS-Passcode/master/FAQs.plist";
@@ -222,7 +213,7 @@
 }
 
 
-#pragma mark MFMailComposeViewControllerDelgate
+#pragma mark - MFMailComposeViewControllerDelgate
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
 		  didFinishWithResult:(MFMailComposeResult)result
@@ -249,7 +240,7 @@
 }
 
 
-#pragma mark SKStoreProductViewControllerDelegate
+#pragma mark - SKStoreProductViewControllerDelegate
 
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
 {
