@@ -57,16 +57,12 @@
 
 - (void)setup
 {
-	self.opaque = NO;
-	self.backgroundColor = [UIColor clearColor];
-	
-	// Background
-	UIImage *backgroundImage = [UIImage imageNamed:@"RevealBackground"];
-	backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)];
-	_background = [[UIImageView alloc] initWithImage:backgroundImage];
-	_background.frame = self.bounds;
-	_background.autoresizingMask = UIViewAutoresizingFlexibleSize;
-	[self addSubview:_background];
+	self.opaque = YES;
+	self.backgroundColor = [UIColor whiteColor];
+	self.layer.cornerRadius = 8;
+	self.layer.masksToBounds = YES;
+	self.layer.borderWidth = 0.75f;
+	self.layer.borderColor = [UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f].CGColor;
 	
 	// Dots
 	_dotsLabel = [[UILabel alloc] initWithFrame:self.bounds];
@@ -193,16 +189,16 @@
 
 - (void)setLoupeCenter:(CGPoint)center
 {
-	// Insets for the loupe relative to the field
+	// Insets for the loupe relative to the field.
 	UIEdgeInsets loupeBoundaryInsets = UIEdgeInsetsMake(0, 0, -12, 0);
 	
-	// Insets for the loupe graphic (shadow + border)
+	// Insets for the loupe graphic (shadow + border).
 	UIEdgeInsets loupeContentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
 #warning should just use loupe mask image? instead of getting border radius and use at the bottom
 	
 	CGPoint	sliderCenter = (CGPoint) {_loupe.bounds.size.width/2, _loupe.bounds.size.height/2};
 	CGFloat xMin = loupeBoundaryInsets.left + sliderCenter.x;
-	CGFloat xMax = _background.bounds.size.width - loupeBoundaryInsets.right - sliderCenter.x;
+	CGFloat xMax = self.bounds.size.width - loupeBoundaryInsets.right - sliderCenter.x;
 	
 	CGFloat y = loupeBoundaryInsets.top + sliderCenter.y;
 	
@@ -210,12 +206,12 @@
 	CGPoint centre = (CGPoint){x, y};
 	_loupe.center = centre;
 	
-	// Find the percentage of x out of the possible range of x
+	// Find the percentage of x out of the possible range of x.
 	CGFloat percent = (center.x - xMin) / (xMax - xMin);
 	percent = BETWEEN(0, percent, 1);
 	CGFloat p = percent;
 	
-	// Determine position in curve function for horizontal translation (smooth "snap" to chunks)
+	// Determine position in curve function for horizontal translation (smooth "snap" to chunks).
 	if ( _hiddenWordLabel.frame.size.width > self.frame.size.width * 1.25 ) {
 		NSUInteger numberOfSpaces = MAX(_numChunks-1,1);
 		CGFloat x = p + 1/(2*numberOfSpaces);
@@ -226,7 +222,7 @@
 		p -= (1/(2*numberOfSpaces));
 	}
 	
-	// Translate the hidden word label horizontally
+	// Translate the hidden word label horizontally.
 	CGFloat shiftLeft;
 	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
 		shiftLeft = p * (_hiddenWordLabel.bounds.size.width - self.bounds.size.width);
