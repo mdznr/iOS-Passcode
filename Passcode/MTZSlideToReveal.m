@@ -94,10 +94,8 @@
 	_hiddenWordLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
 	_hiddenWordLabel.adjustsFontSizeToFitWidth = YES;
 	_hiddenWordLabel.textColor = [UIColor blackColor];
-	
-	_hiddenWordLabel.opaque = NO;
-	_hiddenWordLabel.backgroundColor = [UIColor clearColor];
-	
+	_hiddenWordLabel.opaque = YES;
+	_hiddenWordLabel.backgroundColor = [UIColor whiteColor];
 	_hiddenWordLabel.alpha = 0.0f;
 	[self addSubview:_hiddenWordLabel];
 	
