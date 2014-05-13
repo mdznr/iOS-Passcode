@@ -82,6 +82,9 @@
 	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
 	_copiedWindow.text = @"Copied";
 	
+	_domainField.tintColor = [UIColor appColor];
+	_passwordField.tintColor = [UIColor appColor];
+	
 	// Load idiom-specific UI.
 	switch ( [UIDevice currentDevice].userInterfaceIdiom ) {
 		case UIUserInterfaceIdiomPad:
