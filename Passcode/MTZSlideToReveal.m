@@ -126,7 +126,7 @@
 	_hiddenWordLabel.text = chunkedWord;
 	[_hiddenWordLabel sizeToFit];
 	CGSize size = _hiddenWordLabel.frame.size;
-	[_hiddenWordLabel setFrame:CGRectMake(0, -9, size.width + 20, self.bounds.size.height)];
+	[_hiddenWordLabel setFrame:CGRectMake(0, 0, size.width + 20, self.bounds.size.height)];
 	
 	// Update dots
 	NSString *dots = [NSString stringByRepeatingString:@"•" numberOfTimes:word.length];
@@ -187,10 +187,10 @@
 - (void)setLoupeCenter:(CGPoint)center
 {
 	// Insets for the loupe relative to the field.
-	UIEdgeInsets loupeBoundaryInsets = UIEdgeInsetsMake(0, 0, -12, 0);
+	UIEdgeInsets loupeBoundaryInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 	
 	// Insets for the loupe graphic (shadow + border).
-	UIEdgeInsets loupeContentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+	UIEdgeInsets loupeContentInsets = UIEdgeInsetsMake(3, 5, 7, 5);
 #warning should just use loupe mask image? instead of getting border radius and use at the bottom
 	
 	CGPoint	sliderCenter = (CGPoint) {_loupe.bounds.size.width/2, _loupe.bounds.size.height/2};
