@@ -53,7 +53,7 @@
 	
 	// Repeatedly insert the string every numberOfCharacters.
 	for ( NSUInteger i=0; i<self.length; ++i ) {
-		if ( i % numberOfCharacters == 0 ) {
+		if ( i > 0 && i % numberOfCharacters == 0 ) {
 			newString = [newString stringByAppendingString:string];
 		}
 		newString = [newString stringByAppendingFormat:@"%c", [self characterAtIndex:i]];
