@@ -17,6 +17,12 @@
 @property (strong, nonatomic) UILabel *hiddenWordLabel;
 @property (nonatomic) NSUInteger numChunks;
 
+///	Insets for the loupe relative to the field.
+@property (nonatomic) UIEdgeInsets loupeBoundaryInsets;
+
+/// Insets for the loupe graphic (shadow + border).
+@property (nonatomic) UIEdgeInsets loupeContentInsets;
+
 @end
 
 @implementation MTZSlideToReveal
@@ -53,16 +59,23 @@
 
 - (void)setup
 {
-	self.opaque = YES;
-	self.backgroundColor = [UIColor whiteColor];
-	self.layer.cornerRadius = 8;
-	self.layer.masksToBounds = YES;
-	self.layer.borderWidth = 0.75f;
-	self.layer.borderColor = [UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f].CGColor;
+	self.loupeBoundaryInsets = UIEdgeInsetsMake(-8, 2, 2, 2);
+	self.loupeContentInsets = UIEdgeInsetsMake(3, 5, 7, 5);
+	
+	// Background view
+	UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+	backgroundView.autoresizingMask = UIViewAutoresizingFlexibleDimensions;
+	backgroundView.opaque = YES;
+	backgroundView.backgroundColor = [UIColor whiteColor];
+	backgroundView.layer.cornerRadius = 8;
+	backgroundView.layer.masksToBounds = YES;
+	backgroundView.layer.borderWidth = 0.75f;
+	backgroundView.layer.borderColor = [UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f].CGColor;
+	[self addSubview:backgroundView];
 	
 	// Dots
 	_dotsLabel = [[UILabel alloc] initWithFrame:self.bounds];
-	_dotsLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
+	_dotsLabel.autoresizingMask = UIViewAutoresizingFlexibleDimensions;
 	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
 		_dotsLabel.font = [UIFont systemFontOfSize:32.0f];
 	} else {
@@ -79,7 +92,7 @@
 	
 	// Hidden Word
 	_hiddenWordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	_hiddenWordLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
+	_hiddenWordLabel.autoresizingMask = UIViewAutoresizingFlexibleDimensions;
 	_hiddenWordLabel.bounds = CGRectZero;
 	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
 		_hiddenWordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f];
@@ -116,9 +129,9 @@
 	_hiddenWordLabel.text = chunkedWord;
 	[_hiddenWordLabel sizeToFit];
 	CGSize size = _hiddenWordLabel.frame.size;
-	[_hiddenWordLabel setFrame:CGRectMake(0, 0, size.width + 20, self.bounds.size.height)];
+	[_hiddenWordLabel setFrame:CGRectMake(0, 0, size.width + 25, self.bounds.size.height)];
 	
-	// Update number of dots.
+	// Update the number of dots.
 	[_dotsLabel setText:[NSString stringByRepeatingString:@"•" numberOfTimes:word.length]];
 }
 
@@ -173,22 +186,15 @@
 
 - (void)setLoupeCenter:(CGPoint)center
 {
-	// Insets for the loupe relative to the field.
-	UIEdgeInsets loupeBoundaryInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+	CGPoint	sliderCenter = CGPointMake(self.loupe.bounds.size.width/2, self.loupe.bounds.size.height/2);
+	CGFloat xMin = self.loupeBoundaryInsets.left - self.loupeContentInsets.left + sliderCenter.x;
+	CGFloat xMax = self.bounds.size.width - self.loupeBoundaryInsets.right + self.loupeContentInsets.right - sliderCenter.x;
 	
-	// Insets for the loupe graphic (shadow + border).
-	UIEdgeInsets loupeContentInsets = UIEdgeInsetsMake(3, 5, 7, 5);
-#warning should just use loupe mask image? instead of getting border radius and use at the bottom
-	
-	CGPoint	sliderCenter = (CGPoint) {_loupe.bounds.size.width/2, _loupe.bounds.size.height/2};
-	CGFloat xMin = loupeBoundaryInsets.left + sliderCenter.x;
-	CGFloat xMax = self.bounds.size.width - loupeBoundaryInsets.right - sliderCenter.x;
-	
-	CGFloat y = loupeBoundaryInsets.top + sliderCenter.y;
+	CGFloat y = self.loupeBoundaryInsets.top - self.loupeContentInsets.top + sliderCenter.y;
 	
 	CGFloat x = BETWEEN(xMin, center.x, xMax);
-	CGPoint centre = (CGPoint){x, y};
-	_loupe.center = centre;
+	CGPoint centre = CGPointMake(x, y);
+	self.loupe.center = centre;
 	
 	// Find the percentage of x out of the possible range of x.
 	CGFloat percent = (center.x - xMin) / (xMax - xMin);
@@ -196,8 +202,8 @@
 	CGFloat p = percent;
 	
 	// Determine position in curve function for horizontal translation (smooth "snap" to chunks).
-	if ( _hiddenWordLabel.frame.size.width > self.frame.size.width * 1.25 ) {
-		NSUInteger numberOfSpaces = MAX(_numChunks-1,1);
+	if ( self.hiddenWordLabel.frame.size.width > self.frame.size.width * 1.25 ) {
+		NSUInteger numberOfSpaces = MAX(self.numChunks-1,1);
 		CGFloat x = p + 1/(2*numberOfSpaces);
 		CGFloat flx = floor(2 * numberOfSpaces * x);
 		CGFloat flx1 = pow(-1.0f, flx);
@@ -208,22 +214,22 @@
 	
 	// Translate the hidden word label horizontally.
 	CGFloat shiftLeft;
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		shiftLeft = p * (_hiddenWordLabel.bounds.size.width - self.bounds.size.width);
+	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
+		shiftLeft = p * (self.hiddenWordLabel.bounds.size.width - self.bounds.size.width);
 	} else {
 #warning the difference in iPhone/iPad should be handled in the insets at the top of this method.
-		shiftLeft = -7 + p * (_hiddenWordLabel.bounds.size.width - self.bounds.size.width + 14);
+		shiftLeft = -7 + p * (self.hiddenWordLabel.bounds.size.width - self.bounds.size.width + 14);
 	}
-	_hiddenWordLabel.transform = CGAffineTransformMakeTranslation(-shiftLeft, 0);
+	self.hiddenWordLabel.transform = CGAffineTransformMakeTranslation(-shiftLeft, 0);
 	
-	// Mask the hidden word label
-	CGRect rect = CGRectMake(shiftLeft + _loupe.frame.origin.x + loupeContentInsets.left,
-							 _loupe.frame.origin.y + loupeContentInsets.top,
-							 _loupe.frame.size.width - (loupeContentInsets.left + loupeContentInsets.right),
-							 _loupe.frame.size.height - (loupeContentInsets.top + loupeContentInsets.bottom));
+	// Mask the hidden word label.
+	CGRect rect = CGRectMake(shiftLeft + self.loupe.frame.origin.x + self.loupeContentInsets.left,
+							 self.loupe.frame.origin.y + self.loupeContentInsets.top,
+							 self.loupe.frame.size.width - (self.loupeContentInsets.left + self.loupeContentInsets.right),
+							 self.loupe.frame.size.height - (self.loupeContentInsets.top + self.loupeContentInsets.bottom));
 	UIView *mask = [[UIView alloc] initWithFrame:rect];
 	mask.backgroundColor = [UIColor blackColor];
-	_hiddenWordLabel.layer.mask = mask.layer;
+	self.hiddenWordLabel.layer.mask = mask.layer;
 }
 
 @end
