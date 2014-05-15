@@ -10,9 +10,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "MTZMacros.h"
-#import "NSString+Repeated.h"
-
 @interface MTZSlideToReveal ()
 
 @property (strong, nonatomic) UIImageView *loupe;
@@ -66,8 +63,8 @@
 	// Dots
 	_dotsLabel = [[UILabel alloc] initWithFrame:self.bounds];
 	_dotsLabel.autoresizingMask = UIViewAutoresizingFlexibleSize;
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-		_dotsLabel.font = [UIFont systemFontOfSize:30.0f];
+	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
+		_dotsLabel.font = [UIFont systemFontOfSize:32.0f];
 	} else {
 		_dotsLabel.font = [UIFont systemFontOfSize:54.0f];
 	}
@@ -104,13 +101,6 @@
 	_loupe.hidden = YES;
 	_loupe.alpha = 0.0f;
 	[self addSubview:_loupe];
-	
-#warning are these gestures still used?
-	UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGesture:)];
-	[self addGestureRecognizer:pan];
-	
-	UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGesture:)];
-	[self addGestureRecognizer:longPress];
 }
 
 - (void)setHiddenWord:(NSString *)word
@@ -128,32 +118,29 @@
 	CGSize size = _hiddenWordLabel.frame.size;
 	[_hiddenWordLabel setFrame:CGRectMake(0, 0, size.width + 20, self.bounds.size.height)];
 	
-	// Update dots
-	NSString *dots = [NSString stringByRepeatingString:@"•" numberOfTimes:word.length];
-	[_dotsLabel setText:dots];
+	// Update number of dots.
+	[_dotsLabel setText:[NSString stringByRepeatingString:@"•" numberOfTimes:word.length]];
 }
 
-- (void)didGesture:(id)sender
+- (void)didGesture:(UIGestureRecognizer *)sender
 {
-	if ( [sender isKindOfClass:[UIGestureRecognizer class]] ) {
-		switch ( ((UIGestureRecognizer *) sender).state ) {
-			case UIGestureRecognizerStateBegan:
-				[self showPopover:sender];
-			case UIGestureRecognizerStateChanged:
-				[self setLoupeCenter:[sender locationOfTouch:0 inView:self]];
-				break;
-			case UIGestureRecognizerStateEnded:
-			case UITouchPhaseCancelled:
-				[self hidePopover:sender];
-				if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
-					[self setLoupeCenter:CGPointZero];
-				} else {
-					[self setLoupeCenter:CGPointMake(124, 0)];
-				}
-				break;
-			default:
-				break;
-		}
+	switch ( sender.state ) {
+		case UIGestureRecognizerStateBegan:
+			[self showPopover:sender];
+		case UIGestureRecognizerStateChanged:
+			[self setLoupeCenter:[sender locationOfTouch:0 inView:self]];
+			break;
+		case UIGestureRecognizerStateEnded:
+		case UITouchPhaseCancelled:
+			[self hidePopover:sender];
+			if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+				[self setLoupeCenter:CGPointZero];
+			} else {
+				[self setLoupeCenter:CGPointMake(124, 0)];
+			}
+			break;
+		default:
+			break;
 	}
 }
 

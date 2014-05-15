@@ -258,7 +258,6 @@
 			children = (
 				C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */,
 				C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */,
-				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
 				C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */,
 				C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */,
 			);
@@ -311,6 +310,7 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
+				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
 				C9D0F4C2173AC26600AC055D /* FAQ */,

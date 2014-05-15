@@ -12,5 +12,7 @@
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
 	#import "UIView+UIViewAutoresizingAdditions.h"
+	#import "MTZMacros.h"
+	#import "NSString+Repeated.h"
 	#import "UIColor+AppColor.h"
 #endif
