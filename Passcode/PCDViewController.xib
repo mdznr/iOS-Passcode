@@ -79,7 +79,7 @@
                                 </textField>
                                 <view opaque="NO" contentMode="scaleToFill" id="352" userLabel="Reveal View" customClass="MTZSlideToReveal">
                                     <rect key="frame" x="0.0" y="110" width="296" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="84" customClass="MTZButton">
