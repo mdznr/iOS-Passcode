@@ -33,4 +33,14 @@
 ///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
 - (void)setBottomColor:(UIColor *)color forState:(UIControlState)state;
 
+///	Returns the color of the border associated with the specified state.
+///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
+///	@return The color of the border of the button for the specified state.
+- (UIColor *)borderColorForState:(UIControlState)state;
+
+///	Sets the color of the border of the button to use for the specified state.
+///	@param color The color of the border of the button to use for the specified state.
+///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
+- (void)setBorderColor:(UIColor *)color forState:(UIControlState)state;
+
 @end

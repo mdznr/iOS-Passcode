@@ -131,6 +131,9 @@
 	[_generateButton setBottomColor:[UIColor colorWithWhite:1.0f alpha:0.05f]
 						   forState:UIControlStateDisabled];
 	
+	[_generateButton setBorderColor:[UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f]
+						   forState:UIControlStateDisabled];
+	
 	_reveal.hidden = YES;
 	
 	[self checkSecuritySetting];

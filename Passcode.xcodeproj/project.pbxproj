@@ -214,14 +214,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C91E0899192451190027981C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C978AE29190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.h */,
+				C978AE2A190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m */,
+				C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */,
+				C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */,
+				C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */,
+				C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */,
+				C96165B116A169F100532B61 /* NSString+sha256.h */,
+				C96165B216A169F100532B61 /* NSString+sha256.m */,
+				C98347551906FCEA00892080 /* NSURL+DomainName.h */,
+				C98347561906FCEA00892080 /* NSURL+DomainName.m */,
+				C91E08931922BA710027981C /* UIColor+AppColor.h */,
+				C91E08941922BA710027981C /* UIColor+AppColor.m */,
+				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
+				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
+				C978AE2C190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.h */,
+				C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		C91E089A1924517A0027981C /* Misc. Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C9BBC1F615DA10B900E16FBB /* Appear View */,
+				C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */,
+				C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */,
+				C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */,
+				C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */,
+				C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */,
+				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
+				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
+				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
+			);
+			name = "Misc. Classes";
+			sourceTree = "<group>";
+		};
 		C94C7C96172D7D6500A3D19E /* Slide to Reveal */ = {
 			isa = PBXGroup;
 			children = (
 				C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */,
 				C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
-				C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */,
-				C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */,
 				C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */,
 				C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */,
 			);
@@ -274,32 +311,11 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
-				C96165B116A169F100532B61 /* NSString+sha256.h */,
-				C96165B216A169F100532B61 /* NSString+sha256.m */,
-				C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */,
-				C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */,
-				C96165AE16A1298600532B61 /* UITextField+Selections.h */,
-				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
-				C978AE29190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.h */,
-				C978AE2A190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m */,
-				C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */,
-				C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */,
-				C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */,
-				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
-				C978AE2C190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.h */,
-				C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */,
-				C98347551906FCEA00892080 /* NSURL+DomainName.h */,
-				C98347561906FCEA00892080 /* NSURL+DomainName.m */,
-				C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */,
-				C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */,
-				C91E08931922BA710027981C /* UIColor+AppColor.h */,
-				C91E08941922BA710027981C /* UIColor+AppColor.m */,
-				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
-				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C9D0F4C2173AC26600AC055D /* FAQ */,
-				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
+				C91E0899192451190027981C /* Categories */,
+				C91E089A1924517A0027981C /* Misc. Classes */,
 				C9C182E817F0B5DD005AF9A3 /* Images.xcassets */,
 				C95FDEEA15D232D5006FE035 /* Supporting Files */,
 			);

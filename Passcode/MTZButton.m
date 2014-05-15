@@ -9,11 +9,13 @@
 #import "MTZButton.h"
 
 #define DEFAULT_CORNER_RADIUS 8
+#define DEFAULT_BORDER_WIDTH 0.75f
 
 @interface MTZButton ()
 
 @property (strong, nonatomic) NSMutableDictionary *topColorsForStates;
 @property (strong, nonatomic) NSMutableDictionary *bottomColorsForStates;
+@property (strong, nonatomic) NSMutableDictionary *borderColorsForStates;
 
 @end
 
@@ -52,8 +54,11 @@
 - (void)_setUpMTZButton
 {
 	_cornerRadius = DEFAULT_CORNER_RADIUS;
-	_topColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
-	_bottomColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:6];
+	
+	NSUInteger capacity = 6;
+	_topColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:capacity];
+	_bottomColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:capacity];
+	_borderColorsForStates = [[NSMutableDictionary alloc] initWithCapacity:capacity];
 	
 	[self addTarget:self action:@selector(updateBorder) forControlEvents:UIControlEventAllEvents];
 }
@@ -67,38 +72,37 @@
 	[self setNeedsDisplay];
 }
 
-///	Returns the color of the top of the button associated with the specified state.
-///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
-///	@return The color on the top of the button for the specified state. If no color has been set for the specific state, this method returns the top color associated with the @c UIControlStateNormal state.
 - (UIColor *)topColorForState:(UIControlState)state
 {
 	return _topColorsForStates[keyForControlState(state)];
 }
 
-///	Sets the color of the top of the button to use for the specified state.
-///	@param color The color of the top of the button to use for the specified state.
-///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
 - (void)setTopColor:(UIColor *)color forState:(UIControlState)state
 {
 	_topColorsForStates[keyForControlState(state)] = color;
 	[self updateBackgroundImageForControlState:state];
 }
 
-///	Returns the color of the bottom of the button associated with the specified state.
-///	@param state The state that uses the title. The possible values are described in @c UIControlState.
-///	@return The color on the bottom of the button for the specified state. If no color has been set for the specific state, this method returns the bottom color associated with the @c UIControlStateNormal state.
 - (UIColor *)bottomColorForState:(UIControlState)state
 {
 	return _bottomColorsForStates[keyForControlState(state)];
 }
 
-///	Sets the color of the bottom of the button to use for the specified state.
-///	@param color The color of the bottom of the button to use for the specified state.
-///	@param state The state that uses the specified color. The possible values are described in @c UIControlState.
 - (void)setBottomColor:(UIColor *)color forState:(UIControlState)state
 {
 	_bottomColorsForStates[keyForControlState(state)] = color;
 	[self updateBackgroundImageForControlState:state];
+}
+
+- (UIColor *)borderColorForState:(UIControlState)state
+{
+	return _borderColorsForStates[keyForControlState(state)];
+}
+
+- (void)setBorderColor:(UIColor *)color forState:(UIControlState)state
+{
+	_borderColorsForStates[keyForControlState(state)] = color;
+	[self updateBorder];
 }
 
 
@@ -152,17 +156,11 @@ NSString *keyForControlState(UIControlState state)
 {
 	self.layer.cornerRadius = self.cornerRadius;
 	self.layer.masksToBounds = YES;
+	self.layer.borderWidth = DEFAULT_BORDER_WIDTH;
 	
-	switch ( self.state ) {
-		case UIControlStateDisabled:
-			self.layer.borderWidth = 0.75f;
-			self.layer.borderColor = [UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f].CGColor;
-			break;
-		default:
-			self.layer.borderWidth = 0.0f;
-			self.layer.borderColor = [UIColor clearColor].CGColor;
-			break;
-	}
+	UIColor *borderColor = [self borderColorForState:self.state];
+	if ( !borderColor ) borderColor = [UIColor clearColor];
+	self.layer.borderColor = borderColor.CGColor;
 }
 
 
