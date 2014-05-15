@@ -8,6 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-#define UIViewAutoresizingFlexibleSize (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)
-
 #define BETWEEN(MINX, X, MAXX) MAX(MIN(MAXX, X), MINX)
