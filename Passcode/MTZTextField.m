@@ -39,7 +39,10 @@
 
 - (void)_setUpMTZTextField
 {
-
+	UIButton *clearButton = [self valueForKey:@"_clearButton"];
+	UIImage *clearButtonImage = [clearButton imageForState:UIControlStateHighlighted];
+	[clearButton setImage:[clearButtonImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
+				 forState:UIControlStateHighlighted];
 }
 
 // Only show certain actions in text selection
