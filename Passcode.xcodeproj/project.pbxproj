@@ -33,7 +33,6 @@
 		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
 		C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */; };
 		C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BB62016A904CF00E5EEEC /* PCDViewController.xib */; };
-		C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */; };
 		C978AE2B190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE2A190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m */; };
 		C978AE2E190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */; };
 		C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C98347561906FCEA00892080 /* NSURL+DomainName.m */; };
@@ -116,8 +115,6 @@
 		C96BB5B016A7CB8C00E5EEEC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController_iPad.xib; sourceTree = "<group>"; };
 		C96BB62016A904CF00E5EEEC /* PCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDViewController.xib; sourceTree = "<group>"; };
-		C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZFarPanGestureRecognizer.h; sourceTree = "<group>"; };
-		C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZFarPanGestureRecognizer.m; sourceTree = "<group>"; };
 		C978AE29190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MTZRemove.h"; sourceTree = "<group>"; };
 		C978AE2A190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MTZRemove.m"; sourceTree = "<group>"; };
 		C978AE2C190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewAutoresizingAdditions.h"; sourceTree = "<group>"; };
@@ -243,8 +240,6 @@
 				C9BBC1F615DA10B900E16FBB /* Appear View */,
 				C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */,
 				C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */,
-				C96E7AE2175287C900E65921 /* MTZFarPanGestureRecognizer.h */,
-				C96E7AE3175287C900E65921 /* MTZFarPanGestureRecognizer.m */,
 				C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */,
 				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
 				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
@@ -549,7 +544,6 @@
 				C978AE2B190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
-				C96E7AE4175287C900E65921 /* MTZFarPanGestureRecognizer.m in Sources */,
 				C9BAC3DD191DBB3E00EA7728 /* MTZButton.m in Sources */,
 				C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */,
 				C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */,

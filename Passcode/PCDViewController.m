@@ -22,8 +22,6 @@
 
 #import "PCDViewController.h"
 #import "PCDPasscodeGenerator.h"
-#import "PDKeychainBindings.h"
-#import "MTZFarPanGestureRecognizer.h"
 #import "NSURL+DomainName.h"
 
 #define STATUS_BAR_HEIGHT 20
@@ -99,8 +97,7 @@
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:longPressGesture];
 	
-	MTZFarPanGestureRecognizer *panGesture = [[MTZFarPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
-	panGesture.minimumRequiredPanningDistance = 200.0f;
+	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
 	[_generateButton addGestureRecognizer:panGesture];
 	
 	// Color the button.
