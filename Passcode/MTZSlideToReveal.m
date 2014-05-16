@@ -129,7 +129,11 @@
 	_hiddenWordLabel.text = chunkedWord;
 	[_hiddenWordLabel sizeToFit];
 	CGSize size = _hiddenWordLabel.frame.size;
-	[_hiddenWordLabel setFrame:CGRectMake(0, 0, size.width + 25, self.bounds.size.height)];
+	CGRect frame = CGRectMake(0,
+							  _loupeBoundaryInsets.top,
+							  size.width + 20,
+							  _loupe.image.size.height - _loupeContentInsets.top - _loupeContentInsets.bottom);
+	[_hiddenWordLabel setFrame:frame];
 	
 	// Update the number of dots.
 	[_dotsLabel setText:[NSString stringByRepeatingString:@"•" numberOfTimes:word.length]];
