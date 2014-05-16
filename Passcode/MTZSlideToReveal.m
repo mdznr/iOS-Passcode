@@ -93,7 +93,6 @@
 	// Hidden Word
 	_hiddenWordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 	_hiddenWordLabel.autoresizingMask = UIViewAutoresizingFlexibleDimensions;
-	_hiddenWordLabel.bounds = CGRectZero;
 	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
 		_hiddenWordLabel.font = [UIFont fontWithName:@"SourceCodePro-Medium" size:24.0f];
 	} else {
@@ -228,10 +227,12 @@
 	
 	// Mask the hidden word label.
 	CGRect rect = CGRectMake(shiftLeft + self.loupe.frame.origin.x + self.loupeContentInsets.left,
-							 self.loupe.frame.origin.y + self.loupeContentInsets.top,
+							 0,
 							 self.loupe.frame.size.width - (self.loupeContentInsets.left + self.loupeContentInsets.right),
 							 self.loupe.frame.size.height - (self.loupeContentInsets.top + self.loupeContentInsets.bottom));
 	UIView *mask = [[UIView alloc] initWithFrame:rect];
+	mask.layer.cornerRadius = 6;
+	mask.layer.masksToBounds = YES;
 	mask.backgroundColor = [UIColor blackColor];
 	self.hiddenWordLabel.layer.mask = mask.layer;
 }
