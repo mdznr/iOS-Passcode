@@ -91,6 +91,8 @@
 		case UIUserInterfaceIdiomPhone:
 			[self loadViewForiPhone];
 			break;
+		default:
+			break;
 	}
 	
 	// Add gesture recognizers on the generate button.
@@ -155,7 +157,7 @@
 	// This is such a hack, but it was the only way to get it to work properly.
 	[self performSelector:@selector(makeDomainFieldBecomeFirstResponder)
 			   withObject:nil
-			   afterDelay:DBL_MIN];
+			   afterDelay:0];
 }
 
 - (void)makeDomainFieldBecomeFirstResponder
