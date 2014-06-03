@@ -27,11 +27,6 @@
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
 
-@interface PCDViewController () {
-}
-
-@end
-
 @implementation PCDViewController
 
 #pragma mark Initialization and View Loading
@@ -172,8 +167,8 @@
 	[super viewDidAppear:animated];
 	
 	// Display About if app hasn't been launched before.
-	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedAppBefore"] ) {
-		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedAppBefore"];
+	if ( ![[NSUserDefaults standardUserDefaults] boolForKey:kPCDHasLaunchedApp] ) {
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kPCDHasLaunchedApp];
 		[self viewAbout:self];
 	}
 }
@@ -224,13 +219,16 @@
 {
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
 	
-	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == YES ) {
-		if ( [bindings objectForKey:@"passwordString"] ) {
-			_passwordField.text = [bindings objectForKey:@"passwordString"];
+	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
+		
+		NSString *passwordString = [bindings objectForKey:kPCDPasswordString];
+		if ( passwordString ) {
+			_passwordField.text = passwordString;
 			[self textDidChange:_passwordField];
 		}
-	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"save_password"] == NO ) {
-		[bindings setObject:@"" forKey:@"passwordString"];
+		
+	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == NO ) {
+		[bindings setObject:@"" forKey:kPCDPasswordString];
 		_passwordField.text = @"";
 		[self textDidChange:_passwordField];
 	}
@@ -243,16 +241,16 @@
 {
 	// Store the password in keychain.
 	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-	[bindings setObject:[_passwordField text] forKey:@"passwordString"];
+	[bindings setObject:_passwordField.text forKey:kPCDPasswordString];
 	
 	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
 																andMasterPassword:_passwordField.text];
 	
 	// Copy it to pasteboard.
-	[[UIPasteboard generalPasteboard] setString:password];
+	[UIPasteboard generalPasteboard].string = password;
 	
 	// Center the appear window to the container.
-	UIView *centeringView = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? _verticalCenteringView : _container;
+	UIView *centeringView = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ? _verticalCenteringView : _container;
 	_copiedWindow.center = centeringView.center;
 	
 	// Tell the user that the generated passcode has been copied.
