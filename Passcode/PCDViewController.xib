@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D45a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCDViewController">
@@ -46,7 +46,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="always" id="8" customClass="MTZTextField">
-                                    <rect key="frame" x="99.999999970197649" y="5" width="192" height="44"/>
+                                    <rect key="frame" x="100" y="5" width="192" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -67,7 +67,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
-                                    <rect key="frame" x="99.999999970197649" y="51" width="192" height="44"/>
+                                    <rect key="frame" x="100" y="51" width="192" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -131,7 +131,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Forms" width="296" height="100"/>
+        <image name="Forms" width="37" height="100"/>
         <image name="Info" width="30" height="30"/>
         <image name="Restrictions" width="30" height="30"/>
     </resources>

@@ -86,6 +86,7 @@
 		C94C7CA4172DBAC800A3D19E /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = "<group>"; };
 		C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+characterSwaps.h"; sourceTree = "<group>"; };
 		C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+characterSwaps.m"; sourceTree = "<group>"; };
+		C94D843E193DA0750083619F /* PCDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDConstants.h; sourceTree = "<group>"; };
 		C94DFC5816288D0B002AD5CD /* PCDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDAboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDAboutViewController.m; sourceTree = "<group>"; };
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -306,6 +307,7 @@
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
+				C94D843E193DA0750083619F /* PCDConstants.h */,
 				C91542C115D9C535000EE537 /* About */,
 				C9F25B8418760CE000B84A4F /* Restrictions */,
 				C9D0F4C2173AC26600AC055D /* FAQ */,
@@ -756,6 +758,7 @@
 				C91E0806191E0EB80027981C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C95FDED915D232D5006FE035 /* Build configuration list for PBXProject "Passcode" */ = {
 			isa = XCConfigurationList;
