@@ -24,21 +24,15 @@
 #import "PCDPasscodeGenerator.h"
 #import "NSURL+DomainName.h"
 
+NSString *const kPCDServiceName = @"Passcode";
+NSString *const kPCDAccountName = @"me";
+
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
 
 @implementation PCDViewController
 
-#pragma mark Initialization and View Loading
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-	if (self) {
-		[self setup];
-	}
-	return self;
-}
+#pragma mark - Initialization and View Loading
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -217,20 +211,38 @@
 
 - (void)checkSecuritySetting
 {
-	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-	
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
 		
-		NSString *passwordString = [bindings objectForKey:kPCDPasswordString];
+		NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 		if ( passwordString ) {
 			_passwordField.text = passwordString;
 			[self textDidChange:_passwordField];
 		}
 		
+		/*
+		LAContext *myContext = [[LAContext alloc] init];
+		NSError *authError = nil;
+		NSString *myLocalizedReasonString = @"To retrieve secret master password.";
+		
+		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+					  localizedReason:myLocalizedReasonString
+								reply:^(BOOL succes, NSError *error) {
+									if (success) {
+										// User authenticated successfully, take appropriate action
+									} else {
+										// User did not authenticate successfully, look at error and take appropriate action
+									}
+			}];
+		} else {
+			// Could not evaluate policy; look at authError and present an appropriate message to user
+		}
+		*/
+		
 	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == NO ) {
-		[bindings setObject:@"" forKey:kPCDPasswordString];
 		_passwordField.text = @"";
 		[self textDidChange:_passwordField];
+		[SSKeychain setPassword:_passwordField.text forService:kPCDServiceName account:kPCDAccountName];
 	}
 }
 
@@ -240,8 +252,7 @@
 - (IBAction)generateAndCopy:(id)sender
 {
 	// Store the password in keychain.
-	PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-	[bindings setObject:_passwordField.text forKey:kPCDPasswordString];
+	[SSKeychain setPassword:_passwordField.text forService:@"Passcode" account:@"me"];
 	
 	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
 																andMasterPassword:_passwordField.text];

@@ -14,7 +14,7 @@
 	#import "MTZMacros.h"
 	#import "PCDConstants.h"
 	#import "NSString+Repeated.h"
-	#import "PDKeychainBindings.h"
+	#import "SSKeychain.h"
 	#import "UIColor+AppColor.h"
 	#import "UIView+UIViewAutoresizingAdditions.h"
 #endif

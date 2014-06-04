@@ -28,6 +28,9 @@
 		C95FDEF015D232D5006FE035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEEF15D232D5006FE035 /* main.m */; };
 		C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */; };
 		C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95FDEF615D232D5006FE035 /* PCDViewController.m */; };
+		C9613AE8193F7F7500D53D12 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9613AE2193F7F7500D53D12 /* SSKeychain.strings */; };
+		C9613AE9193F7F7500D53D12 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C9613AE5193F7F7500D53D12 /* SSKeychain.m */; };
+		C9613AEA193F7F7500D53D12 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C9613AE7193F7F7500D53D12 /* SSKeychainQuery.m */; };
 		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C96165B316A169F200532B61 /* NSString+sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165B216A169F100532B61 /* NSString+sha256.m */; };
 		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
@@ -38,8 +41,6 @@
 		C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C98347561906FCEA00892080 /* NSURL+DomainName.m */; };
 		C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */; };
 		C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F70186AA4A0004EDC76 /* MTZTextField.m */; };
-		C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */; };
-		C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */; };
 		C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC9A46163109BF00EFFD43 /* Security.framework */; };
 		C9BAC3DD191DBB3E00EA7728 /* MTZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */; };
 		C9BBC1F515DA10B600E16FBB /* MTZAppearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BBC1F415DA10B600E16FBB /* MTZAppearView.m */; };
@@ -58,6 +59,20 @@
 
 /* Begin PBXContainerItemProxy section */
 		C91E0802191E0EB80027981C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C95FDED615D232D5006FE035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C95FDEDE15D232D5006FE035;
+			remoteInfo = Passcode;
+		};
+		C94D843F193DA53B0083619F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C95FDED615D232D5006FE035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C95FDEDE15D232D5006FE035;
+			remoteInfo = Passcode;
+		};
+		C94D8441193DA53B0083619F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C95FDED615D232D5006FE035 /* Project object */;
 			proxyType = 1;
@@ -87,6 +102,7 @@
 		C94D338216BF3A5300E6D34B /* NSString+characterSwaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+characterSwaps.h"; sourceTree = "<group>"; };
 		C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+characterSwaps.m"; sourceTree = "<group>"; };
 		C94D843E193DA0750083619F /* PCDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDConstants.h; sourceTree = "<group>"; };
+		C94D8443193DA54F0083619F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		C94DFC5816288D0B002AD5CD /* PCDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDAboutViewController.h; sourceTree = "<group>"; };
 		C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDAboutViewController.m; sourceTree = "<group>"; };
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -101,6 +117,11 @@
 		C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDAppDelegate.m; sourceTree = "<group>"; };
 		C95FDEF515D232D5006FE035 /* PCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDViewController.h; sourceTree = "<group>"; };
 		C95FDEF615D232D5006FE035 /* PCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCDViewController.m; sourceTree = "<group>"; };
+		C9613AE3193F7F7500D53D12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		C9613AE4193F7F7500D53D12 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		C9613AE5193F7F7500D53D12 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		C9613AE6193F7F7500D53D12 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		C9613AE7193F7F7500D53D12 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 		C96165AE16A1298600532B61 /* UITextField+Selections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Selections.h"; sourceTree = "<group>"; };
 		C96165AF16A1298600532B61 /* UITextField+Selections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Selections.m"; sourceTree = "<group>"; };
 		C96165B116A169F100532B61 /* NSString+sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sha256.h"; sourceTree = "<group>"; };
@@ -126,10 +147,6 @@
 		C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDPasscodeGenerator.m; sourceTree = "<group>"; };
 		C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTextField.h; sourceTree = "<group>"; };
 		C98A5F70186AA4A0004EDC76 /* MTZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTextField.m; sourceTree = "<group>"; };
-		C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
-		C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
-		C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
-		C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
 		C9AC9A46163109BF00EFFD43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C9BAC3DB191DBB3E00EA7728 /* MTZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZButton.h; sourceTree = "<group>"; };
 		C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZButton.m; sourceTree = "<group>"; };
@@ -243,7 +260,7 @@
 				C9BAC3DC191DBB3E00EA7728 /* MTZButton.m */,
 				C98A5F6F186AA4A0004EDC76 /* MTZTextField.h */,
 				C98A5F70186AA4A0004EDC76 /* MTZTextField.m */,
-				C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */,
+				C9613AE1193F7F7500D53D12 /* SSKeychain */,
 				C94C7C96172D7D6500A3D19E /* Slide to Reveal */,
 			);
 			name = "Misc. Classes";
@@ -282,6 +299,7 @@
 		C95FDEE215D232D5006FE035 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C94D8443193DA54F0083619F /* LocalAuthentication.framework */,
 				C9EED9E118692F17008973E2 /* StoreKit.framework */,
 				C9C26963164989CB00B35DFA /* libKIF.a */,
 				C9D1BA8F164885B9009A5DBA /* MessageUI.framework */,
@@ -332,15 +350,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C9AC9A4E16310FC500EFFD43 /* PDKeychainBindingsController */ = {
+		C9613AE1193F7F7500D53D12 /* SSKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				C9AC9A401631096000EFFD43 /* PDKeychainBindings.h */,
-				C9AC9A411631096000EFFD43 /* PDKeychainBindings.m */,
-				C9AC9A421631096000EFFD43 /* PDKeychainBindingsController.h */,
-				C9AC9A431631096000EFFD43 /* PDKeychainBindingsController.m */,
+				C9613AE2193F7F7500D53D12 /* SSKeychain.strings */,
+				C9613AE4193F7F7500D53D12 /* SSKeychain.h */,
+				C9613AE5193F7F7500D53D12 /* SSKeychain.m */,
+				C9613AE6193F7F7500D53D12 /* SSKeychainQuery.h */,
+				C9613AE7193F7F7500D53D12 /* SSKeychainQuery.m */,
 			);
-			name = PDKeychainBindingsController;
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 		C9BBC1F615DA10B900E16FBB /* Appear View */ = {
@@ -392,6 +411,8 @@
 			);
 			dependencies = (
 				C91E0803191E0EB80027981C /* PBXTargetDependency */,
+				C94D8440193DA53B0083619F /* PBXTargetDependency */,
+				C94D8442193DA53B0083619F /* PBXTargetDependency */,
 			);
 			name = "Passcode Tests";
 			productName = "Passcode Tests";
@@ -487,6 +508,7 @@
 				C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
 				C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */,
 				C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
+				C9613AE8193F7F7500D53D12 /* SSKeychain.strings in Resources */,
 				C94C7CA7172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */,
 				C9C182E917F0B5DD005AF9A3 /* Images.xcassets in Resources */,
 				C9D0F504173C886800AC055D /* FAQs.plist in Resources */,
@@ -534,15 +556,15 @@
 				C9BBC1F515DA10B600E16FBB /* MTZAppearView.m in Sources */,
 				C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */,
 				C978AE2E190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m in Sources */,
-				C9AC9A441631096000EFFD43 /* PDKeychainBindings.m in Sources */,
-				C9AC9A451631096000EFFD43 /* PDKeychainBindingsController.m in Sources */,
 				C96165B316A169F200532B61 /* NSString+sha256.m in Sources */,
 				C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */,
 				C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */,
 				C91E08951922BA710027981C /* UIColor+AppColor.m in Sources */,
 				C98347571906FCEA00892080 /* NSURL+DomainName.m in Sources */,
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
+				C9613AEA193F7F7500D53D12 /* SSKeychainQuery.m in Sources */,
 				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,
+				C9613AE9193F7F7500D53D12 /* SSKeychain.m in Sources */,
 				C978AE2B190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
@@ -559,6 +581,16 @@
 			isa = PBXTargetDependency;
 			target = C95FDEDE15D232D5006FE035 /* Passcode */;
 			targetProxy = C91E0802191E0EB80027981C /* PBXContainerItemProxy */;
+		};
+		C94D8440193DA53B0083619F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C95FDEDE15D232D5006FE035 /* Passcode */;
+			targetProxy = C94D843F193DA53B0083619F /* PBXContainerItemProxy */;
+		};
+		C94D8442193DA53B0083619F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C95FDEDE15D232D5006FE035 /* Passcode */;
+			targetProxy = C94D8441193DA53B0083619F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -586,6 +618,14 @@
 				C96BB5B016A7CB8C00E5EEEC /* pl */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C9613AE2193F7F7500D53D12 /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9613AE3193F7F7500D53D12 /* en */,
+			);
+			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -715,12 +755,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -734,12 +775,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
