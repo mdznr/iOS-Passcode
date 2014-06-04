@@ -31,6 +31,7 @@
 		C9613AE8193F7F7500D53D12 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9613AE2193F7F7500D53D12 /* SSKeychain.strings */; };
 		C9613AE9193F7F7500D53D12 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C9613AE5193F7F7500D53D12 /* SSKeychain.m */; };
 		C9613AEA193F7F7500D53D12 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C9613AE7193F7F7500D53D12 /* SSKeychainQuery.m */; };
+		C9613AEB193F918D00D53D12 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94D8443193DA54F0083619F /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165AF16A1298600532B61 /* UITextField+Selections.m */; };
 		C96165B316A169F200532B61 /* NSString+sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = C96165B216A169F100532B61 /* NSString+sha256.m */; };
 		C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96BB5A716A7CB2000E5EEEC /* InfoPlist.strings */; };
@@ -186,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9613AEB193F918D00D53D12 /* LocalAuthentication.framework in Frameworks */,
 				C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */,
 				C9D1BA90164885B9009A5DBA /* MessageUI.framework in Frameworks */,
 				C9AC9A47163109BF00EFFD43 /* Security.framework in Frameworks */,
@@ -761,7 +763,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -781,7 +783,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Passcode/Passcode-Prefix.pch";
 				INFOPLIST_FILE = "Passcode/Passcode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

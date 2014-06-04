@@ -23,6 +23,9 @@
 #import "PCDViewController.h"
 #import "PCDPasscodeGenerator.h"
 #import "NSURL+DomainName.h"
+@import LocalAuthentication;
+
+//#define USE_LOCAL_AUTHENTICATION
 
 NSString *const kPCDServiceName = @"Passcode";
 NSString *const kPCDAccountName = @"me";
@@ -213,31 +216,40 @@ NSString *const kPCDAccountName = @"me";
 {
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
 		
+#ifdef USE_LOCAL_AUTHENTICATION
+		LAContext *myContext = [[LAContext alloc] init];
+		NSError *authError = nil;
+		NSString *myLocalizedReasonString = @"to retrieve the secret master password.";
+		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+					  localizedReason:myLocalizedReasonString
+								reply:^(BOOL success, NSError *error) {
+									if (success) {
+										// User authenticated successfully, take appropriate action.
+										NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
+										if ( passwordString ) {
+											_passwordField.text = passwordString;
+											[self textDidChange:_passwordField];
+										}
+									} else {
+										// User did not authenticate successfully, look at error and take appropriate action.
+									}
+								}];
+		} else {
+			// Could not evaluate policy; look at authError and present an appropriate message to user
+			NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
+			if ( passwordString ) {
+				_passwordField.text = passwordString;
+				[self textDidChange:_passwordField];
+			}
+		}
+#else
 		NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 		if ( passwordString ) {
 			_passwordField.text = passwordString;
 			[self textDidChange:_passwordField];
 		}
-		
-		/*
-		LAContext *myContext = [[LAContext alloc] init];
-		NSError *authError = nil;
-		NSString *myLocalizedReasonString = @"To retrieve secret master password.";
-		
-		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
-			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-					  localizedReason:myLocalizedReasonString
-								reply:^(BOOL succes, NSError *error) {
-									if (success) {
-										// User authenticated successfully, take appropriate action
-									} else {
-										// User did not authenticate successfully, look at error and take appropriate action
-									}
-			}];
-		} else {
-			// Could not evaluate policy; look at authError and present an appropriate message to user
-		}
-		*/
+#endif
 		
 	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == NO ) {
 		_passwordField.text = @"";
