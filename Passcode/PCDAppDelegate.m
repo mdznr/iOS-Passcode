@@ -59,7 +59,6 @@
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	
 	[self.mainViewController checkPasteboard];
-	[self.mainViewController checkSecuritySetting];
 	[self.mainViewController.domainField becomeFirstResponder];
 	if ( self.mainViewController.domainField.text.length > 0 ) {
 		[self.mainViewController.domainField selectAll:self];

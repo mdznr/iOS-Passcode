@@ -25,7 +25,7 @@
 #import "NSURL+DomainName.h"
 @import LocalAuthentication;
 
-#define USE_LOCAL_AUTHENTICATION NO
+#define USE_LOCAL_AUTHENTICATION YES
 
 NSString *const kPCDServiceName = @"Passcode";
 NSString *const kPCDAccountName = @"me";
@@ -215,7 +215,6 @@ NSString *const kPCDAccountName = @"me";
 - (void)checkSecuritySetting
 {
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
-		
 		if ( [LAContext class] && USE_LOCAL_AUTHENTICATION ) {
 			LAContext *myContext = [[LAContext alloc] init];
 			NSError *authError = nil;
@@ -226,11 +225,15 @@ NSString *const kPCDAccountName = @"me";
 									reply:^(BOOL success, NSError *error) {
 										if (success) {
 											// User authenticated successfully, take appropriate action.
+											// Get the password.
 											NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-											if ( passwordString ) {
-												_passwordField.text = passwordString;
-												[self textDidChange:_passwordField];
-											}
+											// Update the UI.
+											dispatch_async(dispatch_get_main_queue(), ^{
+												if (passwordString) {
+													_passwordField.text = passwordString;
+													[self textDidChange:_passwordField];
+												}
+											});
 										} else {
 											// User did not authenticate successfully, look at error and take appropriate action.
 										}
