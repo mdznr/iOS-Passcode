@@ -354,10 +354,10 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)textFieldDidBeginEditing:(UITextField *)textField
 {
-	if ( _passwordField.text.length > 0 ) {
-		_domainField.returnKeyType = UIReturnKeyGo;
+	if ( _domainField.text.length > 0 ) {
+		_passwordField.returnKeyType = UIReturnKeyGo;
 	} else {
-		_domainField.returnKeyType = UIReturnKeyNext;
+		_passwordField.returnKeyType = UIReturnKeyNext;
 	}
 	
 	return YES;
@@ -372,7 +372,7 @@ NSString *const kPCDAccountName = @"me";
 		return NO;
 	}
 	
-	[_passwordField becomeFirstResponder];
+	[_domainField becomeFirstResponder];
 	
 	return YES;
 }
