@@ -25,7 +25,6 @@
 #import "NSURL+DomainName.h"
 @import LocalAuthentication;
 
-#define USE_LOCAL_AUTHENTICATION YES
 
 NSString *const kPCDServiceName = @"Passcode";
 NSString *const kPCDAccountName = @"me";
@@ -126,6 +125,8 @@ NSString *const kPCDAccountName = @"me";
 						   forState:UIControlStateDisabled];
 	
 	_reveal.hidden = YES;
+	
+	[self checkSecuritySetting];
 }
 
 - (void)loadViewForiPhone
@@ -213,7 +214,7 @@ NSString *const kPCDAccountName = @"me";
 - (void)checkSecuritySetting
 {
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
-		if ( [LAContext class] && USE_LOCAL_AUTHENTICATION ) {
+		if ( [LAContext class] ) {
 			LAContext *myContext = [[LAContext alloc] init];
 			NSError *authError = nil;
 			NSString *myLocalizedReasonString = NSLocalizedString(@"Unlock Master Password", nil);
@@ -251,7 +252,6 @@ NSString *const kPCDAccountName = @"me";
 				[self textDidChange:_passwordField];
 			}
 		}
-		
 	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == NO ) {
 		_passwordField.text = @"";
 		[self textDidChange:_passwordField];
@@ -319,6 +319,11 @@ NSString *const kPCDAccountName = @"me";
 	about = [sb instantiateViewControllerWithIdentifier:@"PCDAboutViewController"];
 	
 	[self viewModalViewController:about];
+}
+
+- (IBAction)viewSettings:(id)sender
+{
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
 - (IBAction)viewRestrictions:(id)sender
