@@ -18,10 +18,7 @@
 
 @interface PCDViewController : UIViewController
 
-///
-- (void)setDomain:(NSString *)domain;
-
-- (void)checkPasteboard;
-- (void)checkSecuritySetting;
+/// Set the name of the service.
+- (void)setServiceName:(NSString *)serviceName;
 
 @end

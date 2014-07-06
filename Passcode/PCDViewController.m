@@ -38,8 +38,8 @@ NSString *const kPCDAccountName = @"me";
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
 @property (strong, nonatomic) IBOutlet UIView *container;
-@property (strong, nonatomic) IBOutlet MTZTextField *domainField;
-@property (strong, nonatomic) IBOutlet MTZTextField *passwordField;
+@property (strong, nonatomic) IBOutlet MTZTextField *serviceNameField;
+@property (strong, nonatomic) IBOutlet MTZTextField *secretCodeField;
 @property (strong, nonatomic) IBOutlet MTZButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) MTZAppearWindow *copiedWindow;
@@ -211,9 +211,9 @@ NSString *const kPCDAccountName = @"me";
 
 #pragma mark - Public API
 
-- (void)setDomain:(NSString *)domain
+- (void)setServiceName:(NSString *)serviceName
 {
-	_domainField.text = domain;
+	_domainField.text = serviceName;
 	[self textDidChange:self];
 	[_domainField moveCursorToEnd];
 }
