@@ -13,6 +13,8 @@
 #import "EXTestController.h"
 #endif
 
+static NSString *kURLSchemePrefix = @"passcode://";
+
 @implementation PCDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -41,9 +43,10 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-	if ( [url.absoluteString hasPrefix:@"passcode://"] ) {
-		NSArray *components = [url.host componentsSeparatedByString:@"."];
-		[self.mainViewController setServiceName:components[components.count-2]];
+	NSString *urlString = url.absoluteString;
+	if ( [urlString hasPrefix:kURLSchemePrefix] ) {
+		urlString = [urlString substringFromIndex:kURLSchemePrefix.length];
+		[self.mainViewController setServiceName:urlString];
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
 		return YES;
