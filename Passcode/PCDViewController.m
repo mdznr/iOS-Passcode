@@ -85,8 +85,8 @@ NSString *const kPCDAccountName = @"me";
 	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
 	_copiedWindow.text = NSLocalizedString(@"Copied", nil);
 	
-	_domainField.tintColor = [UIColor appColor];
-	_passwordField.tintColor = [UIColor appColor];
+	_serviceNameField.tintColor = [UIColor appColor];
+	_secretCodeField.tintColor = [UIColor appColor];
 	
 	// Load idiom-specific UI.
 	switch ( [UIDevice currentDevice].userInterfaceIdiom ) {
@@ -167,8 +167,8 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)makeDomainFieldBecomeFirstResponder
 {
-	if ( !_domainField.isFirstResponder ) {
-		[_domainField becomeFirstResponder];
+	if ( !_serviceNameField.isFirstResponder ) {
+		[_serviceNameField becomeFirstResponder];
 	}
 }
 
@@ -213,9 +213,9 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)setServiceName:(NSString *)serviceName
 {
-	_domainField.text = serviceName;
+	_serviceNameField.text = serviceName;
 	[self textDidChange:self];
-	[_domainField moveCursorToEnd];
+	[_serviceNameField moveCursorToEnd];
 }
 
 - (void)viewControllerDidBecomeActive
@@ -239,8 +239,8 @@ NSString *const kPCDAccountName = @"me";
 	
 	NSString *domainName = [url domainName];
 	if (domainName) {
-		_domainField.text = domainName;
-		[self textDidChange:_domainField];
+		_serviceNameField.text = domainName;
+		[self textDidChange:_serviceNameField];
 	}
 }
 
@@ -262,8 +262,8 @@ NSString *const kPCDAccountName = @"me";
 											// Update the UI.
 											dispatch_async(dispatch_get_main_queue(), ^{
 												if (passwordString) {
-													_passwordField.text = passwordString;
-													[self textDidChange:_passwordField];
+													_secretCodeField.text = passwordString;
+													[self textDidChange:_secretCodeField];
 												}
 											});
 										} else {
@@ -274,21 +274,21 @@ NSString *const kPCDAccountName = @"me";
 				// Could not evaluate policy; look at authError and present an appropriate message to user
 				NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 				if (passwordString) {
-					_passwordField.text = passwordString;
-					[self textDidChange:_passwordField];
+					_secretCodeField.text = passwordString;
+					[self textDidChange:_secretCodeField];
 				}
 			}
 		} else {
 			NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 			if (passwordString) {
-				_passwordField.text = passwordString;
-				[self textDidChange:_passwordField];
+				_secretCodeField.text = passwordString;
+				[self textDidChange:_secretCodeField];
 			}
 		}
 	} else {
-		_passwordField.text = @"";
-		[self textDidChange:_passwordField];
-		[SSKeychain setPassword:_passwordField.text forService:kPCDServiceName account:kPCDAccountName];
+		_secretCodeField.text = @"";
+		[self textDidChange:_secretCodeField];
+		[SSKeychain setPassword:_secretCodeField.text forService:kPCDServiceName account:kPCDAccountName];
 	}
 }
 
@@ -298,10 +298,10 @@ NSString *const kPCDAccountName = @"me";
 - (IBAction)generateAndCopy:(id)sender
 {
 	// Store the password in keychain.
-	[SSKeychain setPassword:_passwordField.text forService:@"Passcode" account:@"me"];
+	[SSKeychain setPassword:_secretCodeField.text forService:@"Passcode" account:@"me"];
 	
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
-																andMasterPassword:_passwordField.text];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.text
+																andMasterPassword:_secretCodeField.text];
 	
 	// Copy it to pasteboard.
 	[UIPasteboard generalPasteboard].string = password;
@@ -316,8 +316,8 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)generateAndSetReveal:(id)sender
 {
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_domainField.text
-																andMasterPassword:_passwordField.text];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.text
+																andMasterPassword:_secretCodeField.text];
 	
 	_reveal.hiddenWord = password;
 }
@@ -378,7 +378,7 @@ NSString *const kPCDAccountName = @"me";
 
 - (IBAction)textDidChange:(id)sender
 {
-	if ( _domainField.text.length > 0 && _passwordField.text.length > 0 ) {
+	if ( _serviceNameField.text.length > 0 && _secretCodeField.text.length > 0 ) {
 		_generateButton.enabled = YES;
 	} else {
 		_generateButton.enabled = NO;
@@ -387,10 +387,10 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)textFieldDidBeginEditing:(UITextField *)textField
 {
-	if ( _domainField.text.length > 0 ) {
-		_passwordField.returnKeyType = UIReturnKeyGo;
+	if ( _serviceNameField.text.length > 0 ) {
+		_secretCodeField.returnKeyType = UIReturnKeyGo;
 	} else {
-		_passwordField.returnKeyType = UIReturnKeyNext;
+		_secretCodeField.returnKeyType = UIReturnKeyNext;
 	}
 	
 	return YES;
@@ -398,14 +398,14 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	if ( _domainField.text.length > 0 && _passwordField.text.length > 0 ) {
+	if ( _serviceNameField.text.length > 0 && _secretCodeField.text.length > 0 ) {
 		[self generateAndCopy:nil];
 		return NO;
-	} else if ( _passwordField.text.length > 0 ) {
+	} else if ( _secretCodeField.text.length > 0 ) {
 		return NO;
 	}
 	
-	[_domainField becomeFirstResponder];
+	[_serviceNameField becomeFirstResponder];
 	
 	return YES;
 }
@@ -455,17 +455,11 @@ NSString *const kPCDAccountName = @"me";
 }
 
 
-#pragma mark - Unload
+#pragma mark - Dealloc
 
-- (void)viewDidUnload
+- (void)dealloc
 {
-	[self setPasswordField:nil];
-	[self setGenerateButton:nil];
-	[self setCopiedWindow:nil];
-	[self setContainer:nil];
-	[self setView:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[super viewDidUnload];
 }
 
 @end
