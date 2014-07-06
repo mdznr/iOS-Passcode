@@ -70,7 +70,7 @@ NSString *const kPCDAccountName = @"me";
 	_copiedWindow = [[MTZAppearWindow alloc] init];
 	_copiedWindow.autoresizingMask = UIViewAutoresizingFlexibleMargins;
 	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
-	_copiedWindow.text = @"Copied";
+	_copiedWindow.text = NSLocalizedString(@"Copied", nil);
 	
 	_domainField.tintColor = [UIColor appColor];
 	_passwordField.tintColor = [UIColor appColor];
@@ -126,8 +126,6 @@ NSString *const kPCDAccountName = @"me";
 						   forState:UIControlStateDisabled];
 	
 	_reveal.hidden = YES;
-	
-	[self checkSecuritySetting];
 }
 
 - (void)loadViewForiPhone
@@ -201,12 +199,12 @@ NSString *const kPCDAccountName = @"me";
 - (void)checkPasteboard
 {
 	NSURL *url = [NSURL URLWithString:[[UIPasteboard generalPasteboard] string]];
-	if ( !url ) {
+	if (!url) {
 		return;
 	}
 	
 	NSString *domainName = [url domainName];
-	if ( domainName ) {
+	if (domainName) {
 		_domainField.text = domainName;
 		[self textDidChange:_domainField];
 	}
@@ -218,7 +216,7 @@ NSString *const kPCDAccountName = @"me";
 		if ( [LAContext class] && USE_LOCAL_AUTHENTICATION ) {
 			LAContext *myContext = [[LAContext alloc] init];
 			NSError *authError = nil;
-			NSString *myLocalizedReasonString = @"to retrieve the secret master password.";
+			NSString *myLocalizedReasonString = NSLocalizedString(@"Unlock Master Password", nil);
 			if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
 				[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
 						  localizedReason:myLocalizedReasonString
@@ -241,14 +239,14 @@ NSString *const kPCDAccountName = @"me";
 			} else {
 				// Could not evaluate policy; look at authError and present an appropriate message to user
 				NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-				if ( passwordString ) {
+				if (passwordString) {
 					_passwordField.text = passwordString;
 					[self textDidChange:_passwordField];
 				}
 			}
 		} else {
 			NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-			if ( passwordString ) {
+			if (passwordString) {
 				_passwordField.text = passwordString;
 				[self textDidChange:_passwordField];
 			}
@@ -293,7 +291,7 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)didGestureOnButton:(UIGestureRecognizer *)sender
 {
-	switch ( sender.state ) {
+	switch (sender.state) {
 		case UIGestureRecognizerStateBegan:
 			[self generateAndSetReveal:sender];
 			_reveal.hidden = NO;

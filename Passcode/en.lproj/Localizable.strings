@@ -15,6 +15,9 @@
 "Generate Passcode & Copy" = "Generate Passcode & Copy";
 "Copied" = "Copied";
 
+// Local Authentication
+"Unlock Master Password" = "Unlock Master Password";
+
 // About View
 "Done" = "Done";
 "Description" = "Passcode makes it easy to keep all your online accounts safe. Passcode is also available as a Safari extension and in your web browser.";
