@@ -97,24 +97,24 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ae4-7M-4cf" userLabel="Info Button">
-                    <rect key="frame" x="16" y="32" width="38" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Info">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="gVK-hz-M5j"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lM4-np-lsR" userLabel="Settings Button">
-                    <rect key="frame" x="714" y="32" width="38" height="38"/>
+                    <rect key="frame" x="20" y="25" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Restrictions">
+                    <state key="normal" image="Settings">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="viewSettings:" destination="-1" eventType="touchUpInside" id="Hbv-BV-Sif"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ae4-7M-4cf" userLabel="Help Button">
+                    <rect key="frame" x="700" y="25" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Help">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="gVK-hz-M5j"/>
                     </connections>
                 </button>
             </subviews>
@@ -125,7 +125,7 @@
     </objects>
     <resources>
         <image name="Forms" width="37" height="162"/>
-        <image name="Info" width="38" height="38"/>
-        <image name="Restrictions" width="38" height="38"/>
+        <image name="Help" width="97" height="97"/>
+        <image name="Settings" width="96" height="97"/>
     </resources>
 </document>
