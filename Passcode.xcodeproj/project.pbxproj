@@ -55,6 +55,7 @@
 		C9DE419F1872A6E5006FD776 /* PCDFAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE419E1872A6E5006FD776 /* PCDFAQCell.m */; };
 		C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EED9E118692F17008973E2 /* StoreKit.framework */; };
 		C9F25B8318760A3700B84A4F /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */; };
+		C9F43AC7196A020500C01692 /* UIViewController+Active.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F43AC6196A020500C01692 /* UIViewController+Active.m */; };
 		C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,7 @@
 		C9EED9E118692F17008973E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C9F25B8118760A3700B84A4F /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
+		C9F43AC6196A020500C01692 /* UIViewController+Active.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Active.m"; sourceTree = "<group>"; };
 		C9F5E95E187F9612005A7FEC /* MTZMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZMacros.h; sourceTree = "<group>"; };
 		C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Repeated.h"; sourceTree = "<group>"; };
 		C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Repeated.m"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				C95FDEF215D232D5006FE035 /* PCDAppDelegate.h */,
 				C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */,
+				C9F43AC6196A020500C01692 /* UIViewController+Active.m */,
 				C984F4E517542EA200172F9F /* PCDPasscodeGenerator.h */,
 				C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */,
 				C95FDEF515D232D5006FE035 /* PCDViewController.h */,
@@ -566,6 +569,7 @@
 				C96165B016A1298600532B61 /* UITextField+Selections.m in Sources */,
 				C9613AEA193F7F7500D53D12 /* SSKeychainQuery.m in Sources */,
 				C9DE4114187242DD006FD776 /* PCDFAQViewController.m in Sources */,
+				C9F43AC7196A020500C01692 /* UIViewController+Active.m in Sources */,
 				C9613AE9193F7F7500D53D12 /* SSKeychain.m in Sources */,
 				C978AE2B190FF92A00E4ECF8 /* NSMutableArray+MTZRemove.m in Sources */,
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,

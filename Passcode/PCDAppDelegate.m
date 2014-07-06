@@ -7,7 +7,7 @@
 //
 
 #import "PCDAppDelegate.h"
-#import "UITextField+Selections.h"
+#import "UIViewController+Active.m"
 
 #if RUN_KIF_TESTS
 #import "EXTestController.h"
@@ -43,9 +43,7 @@
 {
 	if ( [url.absoluteString hasPrefix:@"passcode://"] ) {
 		NSArray *components = [url.host componentsSeparatedByString:@"."];
-		[self.mainViewController.domainField setText:components[components.count-2]];
-		[self.mainViewController textDidChange:self];
-		[self.mainViewController.domainField moveCursorToEnd];
+		[self.mainViewController setDomain:components[components.count-2]];
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
 		return YES;
@@ -58,11 +56,7 @@
 {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	
-	[self.mainViewController checkPasteboard];
-	[self.mainViewController.domainField becomeFirstResponder];
-	if ( self.mainViewController.domainField.text.length > 0 ) {
-		[self.mainViewController.domainField selectAll:self];
-	}
+	[self.mainViewController viewControllerDidBecomeActive];
 }
 
 + (UIColor *)appKeyColor

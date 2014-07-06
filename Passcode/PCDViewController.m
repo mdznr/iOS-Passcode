@@ -23,6 +23,7 @@
 #import "PCDViewController.h"
 #import "PCDPasscodeGenerator.h"
 #import "NSURL+DomainName.h"
+#import "UITextField+Selections.h"
 @import LocalAuthentication;
 
 
@@ -31,6 +32,19 @@ NSString *const kPCDAccountName = @"me";
 
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
+
+@interface PCDViewController ()
+
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
+@property (strong, nonatomic) IBOutlet UIView *container;
+@property (strong, nonatomic) IBOutlet MTZTextField *domainField;
+@property (strong, nonatomic) IBOutlet MTZTextField *passwordField;
+@property (strong, nonatomic) IBOutlet MTZButton *generateButton;
+@property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
+@property (strong, nonatomic) MTZAppearWindow *copiedWindow;
+
+@end
 
 @implementation PCDViewController
 
@@ -193,6 +207,25 @@ NSString *const kPCDAccountName = @"me";
 	[super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
  */
+
+
+#pragma mark - Public API
+
+- (void)setDomain:(NSString *)domain
+{
+	_domainField.text = domain;
+	[self textDidChange:self];
+	[_domainField moveCursorToEnd];
+}
+
+- (void)viewControllerDidBecomeActive
+{
+	[self checkPasteboard];
+	[self.domainField becomeFirstResponder];
+	if ( self.domainField.text.length > 0 ) {
+		[self.domainField selectAll:self];
+	}
+}
 
 
 #pragma mark - Checks

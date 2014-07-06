@@ -18,19 +18,10 @@
 
 @interface PCDViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
-@property (strong, nonatomic) IBOutlet UIView *container;
-@property (strong, nonatomic) IBOutlet MTZTextField *domainField;
-@property (strong, nonatomic) IBOutlet MTZTextField *passwordField;
-@property (strong, nonatomic) IBOutlet MTZButton *generateButton;
-@property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
-@property (strong, nonatomic) MTZAppearWindow *copiedWindow;
+///
+- (void)setDomain:(NSString *)domain;
 
 - (void)checkPasteboard;
 - (void)checkSecuritySetting;
-- (IBAction)generateAndCopy:(id)sender;
-- (IBAction)viewAbout:(id)sender;
-- (IBAction)textDidChange:(id)sender;
 
 @end
