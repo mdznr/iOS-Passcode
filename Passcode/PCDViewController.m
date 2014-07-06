@@ -171,7 +171,7 @@ NSString *const kPCDAccountName = @"me";
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
 		return UIInterfaceOrientationMaskPortrait;
     } else {
 		return UIInterfaceOrientationMaskAll;
@@ -180,7 +180,7 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-	if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ) {
+	if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ) {
 		return toInterfaceOrientation == UIInterfaceOrientationPortrait;
     } else {
 		return YES;
@@ -252,7 +252,7 @@ NSString *const kPCDAccountName = @"me";
 				[self textDidChange:_passwordField];
 			}
 		}
-	} else if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == NO ) {
+	} else {
 		_passwordField.text = @"";
 		[self textDidChange:_passwordField];
 		[SSKeychain setPassword:_passwordField.text forService:kPCDServiceName account:kPCDAccountName];

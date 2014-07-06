@@ -47,7 +47,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="always" id="8" customClass="MTZTextField">
-                                    <rect key="frame" x="99.999999970197649" y="5" width="192" height="44"/>
+                                    <rect key="frame" x="100" y="5" width="192" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -68,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
-                                    <rect key="frame" x="99.999999970197649" y="51" width="192" height="44"/>
+                                    <rect key="frame" x="100" y="51" width="192" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -110,17 +110,17 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="F5y-za-b0V" userLabel="Info Button">
-                    <rect key="frame" x="12" y="32" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="Info"/>
+                    <rect key="frame" x="278" y="25" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Help"/>
                     <connections>
                         <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="rap-Yb-k0u"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="VFQ-ys-OGn" userLabel="Settings Button">
-                    <rect key="frame" x="278" y="32" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="Restrictions"/>
+                    <rect key="frame" x="10" y="25" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Settings"/>
                     <connections>
                         <action selector="viewSettings:" destination="-1" eventType="touchUpInside" id="Uat-Eo-8H6"/>
                     </connections>
@@ -133,7 +133,7 @@
     </objects>
     <resources>
         <image name="Forms" width="37" height="100"/>
-        <image name="Info" width="30" height="30"/>
-        <image name="Restrictions" width="30" height="30"/>
+        <image name="Help" width="64" height="64"/>
+        <image name="Settings" width="64" height="64"/>
     </resources>
 </document>
