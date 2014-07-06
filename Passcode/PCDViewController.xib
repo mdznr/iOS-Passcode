@@ -36,8 +36,8 @@
                                         <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                     </accessibility>
                                 </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Domain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
-                                    <rect key="frame" x="15" y="5" width="78" height="44"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Service Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
+                                    <rect key="frame" x="15" y="51" width="103" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain">
                                         <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -47,7 +47,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="always" id="8" customClass="MTZTextField">
-                                    <rect key="frame" x="100" y="5" width="192" height="44"/>
+                                    <rect key="frame" x="126" y="51" width="156" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Domain"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -57,8 +57,8 @@
                                         <outlet property="delegate" destination="-1" id="70"/>
                                     </connections>
                                 </textField>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79">
-                                    <rect key="frame" x="15" y="51" width="78" height="44"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79">
+                                    <rect key="frame" x="15" y="5" width="92" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password">
                                         <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -67,8 +67,8 @@
                                     <color key="textColor" red="0.83529411764705885" green="0.85098039215686272" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="master password" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
-                                    <rect key="frame" x="100" y="51" width="192" height="44"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="a secret code" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
+                                    <rect key="frame" x="126" y="5" width="156" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Master Password"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
