@@ -8,10 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCDViewController">
             <connections>
                 <outlet property="container" destination="17" id="74"/>
-                <outlet property="domainField" destination="15" id="20"/>
                 <outlet property="generateButton" destination="12" id="25"/>
-                <outlet property="passwordField" destination="13" id="24"/>
                 <outlet property="reveal" destination="72" id="73"/>
+                <outlet property="secretCodeField" destination="13" id="JaP-8Q-v3V"/>
+                <outlet property="serviceNameField" destination="15" id="HfA-5o-3ys"/>
                 <outlet property="view" destination="2" id="44"/>
             </connections>
         </placeholder>
@@ -41,7 +41,7 @@
                             <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
                             <rect key="frame" x="22" y="14" width="138" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="password">
@@ -51,7 +51,7 @@
                             <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="a secret word" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="whileEditing" id="13" customClass="MTZTextField">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="a secret code" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="whileEditing" id="13" customClass="MTZTextField">
                             <rect key="frame" x="195" y="14" width="256" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Master Password"/>
