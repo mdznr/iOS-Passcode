@@ -221,9 +221,9 @@ NSString *const kPCDAccountName = @"me";
 - (void)viewControllerDidBecomeActive
 {
 	[self checkPasteboard];
-	[self.domainField becomeFirstResponder];
-	if ( self.domainField.text.length > 0 ) {
-		[self.domainField selectAll:self];
+	[_serviceNameField becomeFirstResponder];
+	if ( _serviceNameField.text.length > 0 ) {
+		[_serviceNameField selectAll:self];
 	}
 }
 

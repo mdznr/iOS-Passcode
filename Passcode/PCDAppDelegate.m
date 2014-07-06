@@ -43,7 +43,7 @@
 {
 	if ( [url.absoluteString hasPrefix:@"passcode://"] ) {
 		NSArray *components = [url.host componentsSeparatedByString:@"."];
-		[self.mainViewController setDomain:components[components.count-2]];
+		[self.mainViewController setServiceName:components[components.count-2]];
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
 		return YES;
