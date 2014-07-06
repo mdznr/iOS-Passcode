@@ -36,6 +36,27 @@
                                         <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                     </accessibility>
                                 </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79">
+                                    <rect key="frame" x="15" y="5" width="92" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Master Password">
+                                        <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="0.83529411764705885" green="0.85098039215686272" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="your secret code" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
+                                    <rect key="frame" x="125" y="5" width="156" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Master Password"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    <connections>
+                                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="105"/>
+                                        <outlet property="delegate" destination="-1" id="129"/>
+                                    </connections>
+                                </textField>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Service Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
                                     <rect key="frame" x="15" y="51" width="103" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,27 +76,6 @@
                                     <connections>
                                         <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="104"/>
                                         <outlet property="delegate" destination="-1" id="70"/>
-                                    </connections>
-                                </textField>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79">
-                                    <rect key="frame" x="15" y="5" width="92" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <accessibility key="accessibilityConfiguration" label="Master Password">
-                                        <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                                    </accessibility>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                    <color key="textColor" red="0.83529411764705885" green="0.85098039215686272" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="a secret code" adjustsFontSizeToFit="NO" minimumFontSize="16" clearButtonMode="whileEditing" id="80" customClass="MTZTextField">
-                                    <rect key="frame" x="126" y="5" width="156" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
-                                    <accessibility key="accessibilityConfiguration" label="Master Password"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                    <connections>
-                                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="105"/>
-                                        <outlet property="delegate" destination="-1" id="129"/>
                                     </connections>
                                 </textField>
                                 <view opaque="NO" contentMode="scaleToFill" id="352" userLabel="Reveal View" customClass="MTZSlideToReveal">
