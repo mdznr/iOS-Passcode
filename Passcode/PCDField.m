@@ -38,6 +38,10 @@
 
 - (void)setup
 {
+	self.layer.cornerRadius = 16.180339887498948482/2.0f;
+	self.layer.borderWidth = 0.5f;
+	self.layer.borderColor = [UIColor colorWithHue:220.0f/360.0f saturation:0.03f brightness:0.87f alpha:1.0f].CGColor;
+	
 	// Label
 	self.titleLabel = [[UILabel alloc] init];
 	self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
