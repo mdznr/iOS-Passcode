@@ -24,6 +24,7 @@
 #import "PCDPasscodeGenerator.h"
 #import "NSURL+DomainName.h"
 #import "UITextField+Selections.h"
+#import "PCDField.h"
 @import LocalAuthentication;
 
 
@@ -33,13 +34,13 @@ NSString *const kPCDAccountName = @"me";
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
 
-@interface PCDViewController ()
+@interface PCDViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
 @property (strong, nonatomic) IBOutlet UIView *container;
-@property (strong, nonatomic) IBOutlet MTZTextField *serviceNameField;
-@property (strong, nonatomic) IBOutlet MTZTextField *secretCodeField;
+@property (weak, nonatomic) IBOutlet PCDField *secretCodeField;
+@property (weak, nonatomic) IBOutlet PCDField *serviceNameField;
 @property (strong, nonatomic) IBOutlet MTZButton *generateButton;
 @property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
 @property (strong, nonatomic) MTZAppearWindow *copiedWindow;
@@ -78,6 +79,23 @@ NSString *const kPCDAccountName = @"me";
     [super viewDidLoad];
 	
 	self.title = @"Passcode";
+	
+	self.secretCodeField.titleLabel.text = NSLocalizedString(@"Secret Code", nil);
+	self.secretCodeField.textField.placeholder = NSLocalizedString(@"your secret code", nil);
+	self.secretCodeField.textField.secureTextEntry = YES;
+	self.secretCodeField.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	self.secretCodeField.textField.returnKeyType = UIReturnKeyNext;
+	self.secretCodeField.textField.delegate = self;
+	[self.secretCodeField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
+	self.secretCodeField.titleLabelWidth = 103;
+	
+	self.serviceNameField.titleLabel.text = NSLocalizedString(@"Service Name", nil);
+	self.serviceNameField.textField.placeholder = NSLocalizedString(@"e.g. apple", nil);
+	self.serviceNameField.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	self.serviceNameField.textField.returnKeyType = UIReturnKeyGo;
+	self.serviceNameField.textField.delegate = self;
+	[self.serviceNameField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
+	self.serviceNameField.titleLabelWidth = 103;
 	
 	// Set up the popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
@@ -167,8 +185,8 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)makeDomainFieldBecomeFirstResponder
 {
-	if ( !_serviceNameField.isFirstResponder ) {
-		[_serviceNameField becomeFirstResponder];
+	if ( !_serviceNameField.textField.isFirstResponder ) {
+		[_serviceNameField.textField becomeFirstResponder];
 	}
 }
 
@@ -213,17 +231,17 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)setServiceName:(NSString *)serviceName
 {
-	_serviceNameField.text = serviceName;
+	_serviceNameField.textField.text = serviceName;
 	[self textDidChange:self];
-	[_serviceNameField moveCursorToEnd];
+	[_serviceNameField.textField moveCursorToEnd];
 }
 
 - (void)viewControllerDidBecomeActive
 {
 	[self checkPasteboard];
-	[_serviceNameField becomeFirstResponder];
-	if ( _serviceNameField.text.length > 0 ) {
-		[_serviceNameField selectAll:self];
+	[_serviceNameField.textField becomeFirstResponder];
+	if ( _serviceNameField.textField.text.length > 0 ) {
+		[_serviceNameField.textField selectAll:self];
 	}
 }
 
@@ -239,7 +257,7 @@ NSString *const kPCDAccountName = @"me";
 	
 	NSString *domainName = [url domainName];
 	if (domainName) {
-		_serviceNameField.text = domainName;
+		_serviceNameField.textField.text = domainName;
 		[self textDidChange:_serviceNameField];
 	}
 }
@@ -262,7 +280,7 @@ NSString *const kPCDAccountName = @"me";
 											// Update the UI.
 											dispatch_async(dispatch_get_main_queue(), ^{
 												if (passwordString) {
-													_secretCodeField.text = passwordString;
+													_secretCodeField.textField.text = passwordString;
 													[self textDidChange:_secretCodeField];
 												}
 											});
@@ -274,21 +292,21 @@ NSString *const kPCDAccountName = @"me";
 				// Could not evaluate policy; look at authError and present an appropriate message to user
 				NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 				if (passwordString) {
-					_secretCodeField.text = passwordString;
+					_secretCodeField.textField.text = passwordString;
 					[self textDidChange:_secretCodeField];
 				}
 			}
 		} else {
 			NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
 			if (passwordString) {
-				_secretCodeField.text = passwordString;
+				_secretCodeField.textField.text = passwordString;
 				[self textDidChange:_secretCodeField];
 			}
 		}
 	} else {
-		_secretCodeField.text = @"";
+		_secretCodeField.textField.text = @"";
 		[self textDidChange:_secretCodeField];
-		[SSKeychain setPassword:_secretCodeField.text forService:kPCDServiceName account:kPCDAccountName];
+		[SSKeychain setPassword:_secretCodeField.textField.text forService:kPCDServiceName account:kPCDAccountName];
 	}
 }
 
@@ -298,10 +316,10 @@ NSString *const kPCDAccountName = @"me";
 - (IBAction)generateAndCopy:(id)sender
 {
 	// Store the password in keychain.
-	[SSKeychain setPassword:_secretCodeField.text forService:@"Passcode" account:@"me"];
+	[SSKeychain setPassword:_secretCodeField.textField.text forService:@"Passcode" account:@"me"];
 	
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.text
-																andMasterPassword:_secretCodeField.text];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.textField.text
+																andMasterPassword:_secretCodeField.textField.text];
 	
 	// Copy it to pasteboard.
 	[UIPasteboard generalPasteboard].string = password;
@@ -316,8 +334,8 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)generateAndSetReveal:(id)sender
 {
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.text
-																andMasterPassword:_secretCodeField.text];
+	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.textField.text
+																andMasterPassword:_secretCodeField.textField.text];
 	
 	_reveal.hiddenWord = password;
 }
@@ -378,7 +396,7 @@ NSString *const kPCDAccountName = @"me";
 
 - (IBAction)textDidChange:(id)sender
 {
-	if ( _serviceNameField.text.length > 0 && _secretCodeField.text.length > 0 ) {
+	if ( _serviceNameField.textField.text.length > 0 && _secretCodeField.textField.text.length > 0 ) {
 		_generateButton.enabled = YES;
 	} else {
 		_generateButton.enabled = NO;
@@ -387,10 +405,10 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)textFieldDidBeginEditing:(UITextField *)textField
 {
-	if ( _serviceNameField.text.length > 0 ) {
-		_secretCodeField.returnKeyType = UIReturnKeyGo;
+	if ( _serviceNameField.textField.text.length > 0 ) {
+		_secretCodeField.textField.returnKeyType = UIReturnKeyGo;
 	} else {
-		_secretCodeField.returnKeyType = UIReturnKeyNext;
+		_secretCodeField.textField.returnKeyType = UIReturnKeyNext;
 	}
 	
 	return YES;
@@ -398,14 +416,12 @@ NSString *const kPCDAccountName = @"me";
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	if ( _serviceNameField.text.length > 0 && _secretCodeField.text.length > 0 ) {
+	if ( _serviceNameField.textField.text.length > 0 && _secretCodeField.textField.text.length > 0 ) {
 		[self generateAndCopy:nil];
-		return NO;
-	} else if ( _secretCodeField.text.length > 0 ) {
 		return NO;
 	}
 	
-	[_serviceNameField becomeFirstResponder];
+	[_serviceNameField.textField becomeFirstResponder];
 	
 	return YES;
 }

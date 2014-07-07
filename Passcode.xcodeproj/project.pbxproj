@@ -56,6 +56,7 @@
 		C9EED9E218692F17008973E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EED9E118692F17008973E2 /* StoreKit.framework */; };
 		C9F25B8318760A3700B84A4F /* PCDRestrictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */; };
 		C9F43AC7196A020500C01692 /* UIViewController+Active.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F43AC6196A020500C01692 /* UIViewController+Active.m */; };
+		C9F43ACA196A081B00C01692 /* PCDField.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F43AC9196A081B00C01692 /* PCDField.m */; };
 		C9F5E963187F98EB005A7FEC /* NSString+Repeated.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,8 @@
 		C9F25B8118760A3700B84A4F /* PCDRestrictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDRestrictionsViewController.h; sourceTree = "<group>"; };
 		C9F25B8218760A3700B84A4F /* PCDRestrictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDRestrictionsViewController.m; sourceTree = "<group>"; };
 		C9F43AC6196A020500C01692 /* UIViewController+Active.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Active.m"; sourceTree = "<group>"; };
+		C9F43AC8196A081B00C01692 /* PCDField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDField.h; sourceTree = "<group>"; };
+		C9F43AC9196A081B00C01692 /* PCDField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDField.m; sourceTree = "<group>"; };
 		C9F5E95E187F9612005A7FEC /* MTZMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZMacros.h; sourceTree = "<group>"; };
 		C9F5E961187F98EB005A7FEC /* NSString+Repeated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Repeated.h"; sourceTree = "<group>"; };
 		C9F5E962187F98EB005A7FEC /* NSString+Repeated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Repeated.m"; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 				C96165AF16A1298600532B61 /* UITextField+Selections.m */,
 				C978AE2C190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.h */,
 				C978AE2D190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m */,
+				C9F43AC6196A020500C01692 /* UIViewController+Active.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -322,13 +326,14 @@
 			children = (
 				C95FDEF215D232D5006FE035 /* PCDAppDelegate.h */,
 				C95FDEF315D232D5006FE035 /* PCDAppDelegate.m */,
-				C9F43AC6196A020500C01692 /* UIViewController+Active.m */,
 				C984F4E517542EA200172F9F /* PCDPasscodeGenerator.h */,
 				C984F4E617542EA200172F9F /* PCDPasscodeGenerator.m */,
 				C95FDEF515D232D5006FE035 /* PCDViewController.h */,
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
+				C9F43AC8196A081B00C01692 /* PCDField.h */,
+				C9F43AC9196A081B00C01692 /* PCDField.m */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
 				C94D843E193DA0750083619F /* PCDConstants.h */,
 				C91542C115D9C535000EE537 /* About */,
@@ -555,6 +560,7 @@
 			files = (
 				C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */,
 				C9F25B8318760A3700B84A4F /* PCDRestrictionsViewController.m in Sources */,
+				C9F43ACA196A081B00C01692 /* PCDField.m in Sources */,
 				C95FDEF015D232D5006FE035 /* main.m in Sources */,
 				C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */,
 				C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */,
