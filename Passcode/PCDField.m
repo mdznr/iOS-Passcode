@@ -59,9 +59,9 @@
 	
 	// Metrics
 	NSDictionary *metrics = @{
-							  @"left": @15,
-							  @"right": @15,
-							  @"center": @12
+							  @"left": @12,
+							  @"right": @8,
+							  @"center": @8
 							  };
 	
 	NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _textField);
