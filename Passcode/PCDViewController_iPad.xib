@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <objects>
@@ -9,8 +10,8 @@
                 <outlet property="container" destination="17" id="74"/>
                 <outlet property="generateButton" destination="12" id="25"/>
                 <outlet property="reveal" destination="72" id="73"/>
-                <outlet property="secretCodeField" destination="13" id="JaP-8Q-v3V"/>
-                <outlet property="serviceNameField" destination="15" id="HfA-5o-3ys"/>
+                <outlet property="secretCodeField" destination="bi9-FT-7gZ" id="Crx-zN-QUE"/>
+                <outlet property="serviceNameField" destination="5wt-fe-5zh" id="lBm-hl-Lvl"/>
                 <outlet property="view" destination="2" id="44"/>
             </connections>
         </placeholder>
@@ -20,66 +21,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Forms">
-                    <rect key="frame" x="146" y="202" width="476" height="268"/>
+                    <rect key="frame" x="146" y="202" width="476" height="310"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Forms" id="11" userLabel="Forms Background">
-                            <rect key="frame" x="0.0" y="0.0" width="476" height="165"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <accessibility key="accessibilityConfiguration">
-                                <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                            </accessibility>
-                        </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secret Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
-                            <rect key="frame" x="22" y="14" width="138" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <accessibility key="accessibilityConfiguration" label="password">
-                                <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                            </accessibility>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
-                            <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="your secret code" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="whileEditing" id="13" customClass="MTZTextField">
-                            <rect key="frame" x="195" y="14" width="256" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <accessibility key="accessibilityConfiguration" label="Master Password"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                            <connections>
-                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="29"/>
-                                <outlet property="delegate" destination="-1" id="28"/>
-                            </connections>
-                        </textField>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Service Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14">
-                            <rect key="frame" x="22" y="88" width="154" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <accessibility key="accessibilityConfiguration" label="Domain">
-                                <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                            </accessibility>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
-                            <color key="textColor" red="0.78300702570000003" green="0.78233414889999997" blue="0.80301231149999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. apple" adjustsFontSizeToFit="NO" minimumFontSize="24" clearButtonMode="always" id="15" customClass="MTZTextField">
-                            <rect key="frame" x="195" y="88" width="256" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <accessibility key="accessibilityConfiguration" label="Domain"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
-                            <connections>
-                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="27"/>
-                                <outlet property="delegate" destination="-1" id="26"/>
-                            </connections>
-                        </textField>
+                        <view contentMode="scaleToFill" id="bi9-FT-7gZ" userLabel="Secret Code Field" customClass="PCDField">
+                            <rect key="frame" x="0.0" y="0.0" width="476" height="82"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="5wt-fe-5zh" userLabel="Service Name Field" customClass="PCDField">
+                            <rect key="frame" x="0.0" y="114" width="476" height="82"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <view opaque="NO" contentMode="scaleToFill" id="72" userLabel="Reveal View" customClass="MTZSlideToReveal">
-                            <rect key="frame" x="0.0" y="185" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="0.0" y="228" width="476" height="82"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="12" customClass="MTZButton">
-                            <rect key="frame" x="0.0" y="185" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <rect key="frame" x="0.0" y="228" width="476" height="82"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <accessibility key="accessibilityConfiguration" label="Generate Passcode and Copy"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                             <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -123,7 +85,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Forms" width="37" height="162"/>
         <image name="Help" width="97" height="97"/>
         <image name="Settings" width="96" height="97"/>
     </resources>
