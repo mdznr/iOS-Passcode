@@ -90,7 +90,6 @@ NSString *const kPCDAccountName = @"me";
 	self.secretCodeField.textField.enablesReturnKeyAutomatically = YES;
 	self.secretCodeField.textField.delegate = self;
 	[self.secretCodeField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-	CGSize secretCodeFieldTitleSize = [self.secretCodeField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.secretCodeField.titleLabel.font}];
 	
 	self.serviceNameField.titleLabel.text = NSLocalizedString(@"Service Name", nil);
 	self.serviceNameField.textField.placeholder = NSLocalizedString(@"e.g. apple", nil);
@@ -101,18 +100,13 @@ NSString *const kPCDAccountName = @"me";
 	self.serviceNameField.textField.enablesReturnKeyAutomatically = YES;
 	self.serviceNameField.textField.delegate = self;
 	[self.serviceNameField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
+	
+	// Find the larger of the two widths (to fully fit text in label) and set it for both.
+	CGSize secretCodeFieldTitleSize = [self.secretCodeField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.secretCodeField.titleLabel.font}];
 	CGSize serviceNameFieldTitleSize = [self.serviceNameField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.serviceNameField.titleLabel.font}];
-	
 	CGFloat largerWidth = ceil(MAX(secretCodeFieldTitleSize.width, serviceNameFieldTitleSize.width));
-	
 	self.secretCodeField.titleLabelWidth = largerWidth;
 	self.serviceNameField.titleLabelWidth = largerWidth;
-	
-	// Find maximum width of two field titles.
-	
-	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.secretCodeField.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.serviceNameField.titleLabel attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
-	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.serviceNameField.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.secretCodeField.titleLabel attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
-//	self.secretCodeField.titleLabelWidth = self.serviceNameField.titleLabelWidth = MAX(self.serviceNameField.titleLabelWidth, self.secretCodeField.titleLabelWidth);
 	
 	// Set up the popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
