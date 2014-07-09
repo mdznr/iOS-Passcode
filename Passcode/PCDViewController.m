@@ -90,7 +90,7 @@ NSString *const kPCDAccountName = @"me";
 	self.secretCodeField.textField.enablesReturnKeyAutomatically = YES;
 	self.secretCodeField.textField.delegate = self;
 	[self.secretCodeField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-//	self.secretCodeField.titleLabelWidth = 103;
+	CGSize secretCodeFieldTitleSize = [self.secretCodeField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.secretCodeField.titleLabel.font}];
 	
 	self.serviceNameField.titleLabel.text = NSLocalizedString(@"Service Name", nil);
 	self.serviceNameField.textField.placeholder = NSLocalizedString(@"e.g. apple", nil);
@@ -101,7 +101,12 @@ NSString *const kPCDAccountName = @"me";
 	self.serviceNameField.textField.enablesReturnKeyAutomatically = YES;
 	self.serviceNameField.textField.delegate = self;
 	[self.serviceNameField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-//	self.serviceNameField.titleLabelWidth = 103;
+	CGSize serviceNameFieldTitleSize = [self.serviceNameField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.serviceNameField.titleLabel.font}];
+	
+	CGFloat largerWidth = ceil(MAX(secretCodeFieldTitleSize.width, serviceNameFieldTitleSize.width));
+	
+	self.secretCodeField.titleLabelWidth = largerWidth;
+	self.serviceNameField.titleLabelWidth = largerWidth;
 	
 	// Find maximum width of two field titles.
 	
