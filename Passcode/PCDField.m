@@ -78,19 +78,21 @@
 	
 	self.textField.font = [self.textField.font fontWithSize:self.titleLabel.font.pointSize];
 	
-	// Metrics
+	// Views & Metrics
+	NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _textField);
 	NSDictionary *metrics = @{
-							  @"left": @(left),
+							  @"left":   @(left),
 							  @"center": @(center),
-							  @"right": @(right)
+							  @"right":  @(right)
 							  };
 	
-	NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _textField);
-	
 	// Constraints
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_titleLabel]|" options:0 metrics:metrics views:views]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_textField]|" options:0 metrics:metrics views:views]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(left)-[_titleLabel]-(center)-[_textField]-(right)-|" options:0 metrics:metrics views:views]];
+	NSArray *formats = @[
+						 @"V:|[_titleLabel]|",
+						 @"V:|[_textField]|",
+						 @"H:|-(left)-[_titleLabel]-(center)-[_textField]-(right)-|"
+						 ];
+	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormats:formats options:0 metrics:metrics views:views]];
 	self.titleLabelWidthConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f];
 	[self addConstraint:self.titleLabelWidthConstraint];
 }
