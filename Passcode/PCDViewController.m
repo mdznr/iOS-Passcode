@@ -427,15 +427,13 @@ NSString *const kPCDAccountName = @"me";
 	}
 }
 
-- (BOOL)textFieldDidBeginEditing:(UITextField *)textField
+- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
 	if ( _serviceNameField.textField.text.length > 0 ) {
 		_secretCodeField.textField.returnKeyType = UIReturnKeyGo;
 	} else {
 		_secretCodeField.textField.returnKeyType = UIReturnKeyNext;
 	}
-	
-	return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
