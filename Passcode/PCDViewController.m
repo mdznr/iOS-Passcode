@@ -275,50 +275,63 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)checkSecuritySetting
 {
-	if ( [[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES ) {
-		if ( [LAContext class] ) {
-			LAContext *myContext = [[LAContext alloc] init];
-			NSError *authError = nil;
-			NSString *myLocalizedReasonString = NSLocalizedString(@"Unlock Master Password", nil);
-			if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
-				[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-						  localizedReason:myLocalizedReasonString
-									reply:^(BOOL success, NSError *error) {
-										if (success) {
-											// User authenticated successfully, take appropriate action.
-											// Get the password.
-											NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-											// Update the UI.
-											dispatch_async(dispatch_get_main_queue(), ^{
-												if (passwordString) {
-													_secretCodeField.textField.text = passwordString;
-													[self textDidChange:_secretCodeField];
-												}
-											});
-										} else {
-											// User did not authenticate successfully, look at error and take appropriate action.
-										}
-									}];
-			} else {
-				// Could not evaluate policy; look at authError and present an appropriate message to user
-				NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-				if (passwordString) {
-					_secretCodeField.textField.text = passwordString;
-					[self textDidChange:_secretCodeField];
-				}
-			}
-		} else {
-			NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-			if (passwordString) {
-				_secretCodeField.textField.text = passwordString;
-				[self textDidChange:_secretCodeField];
-			}
-		}
-	} else {
+	// If preference says to save password, authenticate.
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:kPCDSavePassword] == YES) {
+		[self authenticateWithLocalAuthentication];
+	}
+	// Otherwise, clear any saved password.
+	else {
 		_secretCodeField.textField.text = @"";
 		[self textDidChange:_secretCodeField];
-		[SSKeychain setPassword:_secretCodeField.textField.text forService:kPCDServiceName account:kPCDAccountName];
+		[self updateSavedPassword];
 	}
+}
+
+/// Try to authenticate with local authentication, otherwise authenticate normally.
+- (void)authenticateWithLocalAuthentication
+{
+	if ([LAContext class]) {
+		LAContext *myContext = [[LAContext alloc] init];
+		NSError *authError = nil;
+		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+					  localizedReason:NSLocalizedString(@"Unlock Master Password", nil)
+								reply:^(BOOL success, NSError *error) {
+									if (success) {
+										// User authenticated successfully, take appropriate action.
+										[self authenticate];
+									} else {
+										// User did not authenticate successfully, look at error and take appropriate action.
+									}
+								}];
+		} else {
+			// Could not evaluate policy; look at authError and present an appropriate message to user
+			[self authenticate];
+		}
+	} else {
+		[self authenticate];
+	}
+}
+
+/// Authenticate normally.
+- (void)authenticate
+{
+	NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
+	if (passwordString) {
+		// Update the UI.
+		dispatch_async(dispatch_get_main_queue(), ^{
+			_secretCodeField.textField.text = passwordString;
+			[self textDidChange:_secretCodeField];
+		});
+	}
+}
+
+/// Update the saved password using the current password in the secret code field.
+- (void)updateSavedPassword
+{
+	[SSKeychain setPassword:_secretCodeField.textField.text
+				 forService:kPCDServiceName
+					account:kPCDAccountName];
 }
 
 
