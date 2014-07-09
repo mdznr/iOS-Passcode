@@ -44,14 +44,14 @@
 	
 	UITraitCollection *traitCollection = [UIScreen mainScreen].traitCollection;
 	if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
-		cornerRadius = 16.180339887498948482/2.0f;
-		fontSize = 21.0f;
+		cornerRadius = 8;
+		fontSize = 21;
 		left = 19;
 		center = 14;
 		right = 14;
 	} else {
-		cornerRadius = 16.180339887498948482/2.0f;
-		fontSize = 16.0f;
+		cornerRadius = 8;
+		fontSize = 16;
 		left = 12;
 		center = 8;
 		right = 8;
@@ -76,7 +76,7 @@
 	self.textField.translatesAutoresizingMaskIntoConstraints = NO;
 	[self addSubview:self.textField];
 	
-	self.textField.font = self.titleLabel.font;
+	self.textField.font = [self.textField.font fontWithSize:self.titleLabel.font.pointSize];
 	
 	// Metrics
 	NSDictionary *metrics = @{
