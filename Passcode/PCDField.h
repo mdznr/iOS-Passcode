@@ -10,7 +10,7 @@
 
 #import "MTZTextField.h"
 
-@interface PCDField : UIView
+@interface PCDField IB_DESIGNABLE : UIView
 
 /// The label to display on the left side of the field.
 @property (strong, nonatomic) UILabel *titleLabel;
@@ -19,6 +19,6 @@
 @property (strong, nonatomic) MTZTextField *textField;
 
 /// The width for the title label.
-@property (nonatomic) CGFloat titleLabelWidth IB_DESIGNABLE;
+@property (nonatomic) IBInspectable CGFloat titleLabelWidth;
 
 @end
