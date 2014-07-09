@@ -90,7 +90,7 @@ NSString *const kPCDAccountName = @"me";
 	self.secretCodeField.textField.enablesReturnKeyAutomatically = YES;
 	self.secretCodeField.textField.delegate = self;
 	[self.secretCodeField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-	self.secretCodeField.titleLabelWidth = 103;
+//	self.secretCodeField.titleLabelWidth = 103;
 	
 	self.serviceNameField.titleLabel.text = NSLocalizedString(@"Service Name", nil);
 	self.serviceNameField.textField.placeholder = NSLocalizedString(@"e.g. apple", nil);
@@ -101,7 +101,13 @@ NSString *const kPCDAccountName = @"me";
 	self.serviceNameField.textField.enablesReturnKeyAutomatically = YES;
 	self.serviceNameField.textField.delegate = self;
 	[self.serviceNameField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-	self.serviceNameField.titleLabelWidth = 103;
+//	self.serviceNameField.titleLabelWidth = 103;
+	
+	// Find maximum width of two field titles.
+	
+	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.secretCodeField.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.serviceNameField.titleLabel attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
+	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.serviceNameField.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.secretCodeField.titleLabel attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
+//	self.secretCodeField.titleLabelWidth = self.serviceNameField.titleLabelWidth = MAX(self.serviceNameField.titleLabelWidth, self.secretCodeField.titleLabelWidth);
 	
 	// Set up the popover.
 	_copiedWindow = [[MTZAppearWindow alloc] init];
