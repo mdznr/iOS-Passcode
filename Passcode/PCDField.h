@@ -10,7 +10,8 @@
 
 #import "MTZTextField.h"
 
-@interface PCDField IB_DESIGNABLE : UIView
+IB_DESIGNABLE
+@interface PCDField : UIView
 
 /// The label to display on the left side of the field.
 @property (strong, nonatomic) UILabel *titleLabel;
