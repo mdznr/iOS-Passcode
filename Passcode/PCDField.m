@@ -38,7 +38,26 @@
 
 - (void)setup
 {
-	self.layer.cornerRadius = 16.180339887498948482/2.0f;
+	CGFloat cornerRadius;
+	CGFloat fontSize;
+	CGFloat left, right, center;
+	
+	UITraitCollection *traitCollection = [UIScreen mainScreen].traitCollection;
+	if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+		cornerRadius = 16.180339887498948482/2.0f;
+		fontSize = 21.0f;
+		left = 19;
+		center = 14;
+		right = 14;
+	} else {
+		cornerRadius = 16.180339887498948482/2.0f;
+		fontSize = 16.0f;
+		left = 12;
+		center = 8;
+		right = 8;
+	}
+	
+	self.layer.cornerRadius = cornerRadius;
 	self.layer.borderWidth = 0.5f;
 	self.layer.borderColor = [UIColor colorWithHue:220.0f/360.0f saturation:0.03f brightness:0.87f alpha:1.0f].CGColor;
 	
@@ -48,7 +67,7 @@
 	[self addSubview:self.titleLabel];
 	
 	self.titleLabel.textColor = [UIColor colorWithHue:0.6 saturation:0.04 brightness:0.87 alpha:1.0f];
-	self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16];
+	self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:fontSize];
 	self.titleLabel.textAlignment = NSTextAlignmentLeft;
 	self.titleLabel.numberOfLines = 1;
 	
@@ -57,11 +76,13 @@
 	self.textField.translatesAutoresizingMaskIntoConstraints = NO;
 	[self addSubview:self.textField];
 	
+	self.textField.font = self.titleLabel.font;
+	
 	// Metrics
 	NSDictionary *metrics = @{
-							  @"left": @12,
-							  @"right": @8,
-							  @"center": @8
+							  @"left": @(left),
+							  @"center": @(center),
+							  @"right": @(right)
 							  };
 	
 	NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _textField);
