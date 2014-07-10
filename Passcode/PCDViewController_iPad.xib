@@ -84,8 +84,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Help" width="97" height="97"/>
-        <image name="Settings" width="96" height="97"/>
+        <image name="Help" width="96" height="96"/>
+        <image name="Settings" width="96" height="96"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
