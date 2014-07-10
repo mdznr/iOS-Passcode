@@ -10,8 +10,14 @@
 
 @interface PCDField ()
 
+/// Whether or not the label is shown.
+@property (nonatomic) BOOL showsLabel;
+
 /// The constraint setting the width of @c titleLabel.
 @property (strong, nonatomic) NSLayoutConstraint *titleLabelWidthConstraint;
+
+@property (strong, nonatomic) NSArray *horizontalConstraintsShowingLabel;
+@property (strong, nonatomic) NSArray *horizontalConstraintsHidingLabel;
 
 @end
 
@@ -89,12 +95,18 @@
 	// Constraints
 	NSArray *formats = @[
 						 @"V:|[_titleLabel]|",
-						 @"V:|[_textField]|",
-						 @"H:|-(left)-[_titleLabel]-(center)-[_textField]-(right)-|"
+						 @"V:|[_textField]|"
 						 ];
 	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormats:formats options:0 metrics:metrics views:views]];
 	self.titleLabelWidthConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f];
 	[self addConstraint:self.titleLabelWidthConstraint];
+	
+	self.horizontalConstraintsShowingLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(left)-[_titleLabel]-(center)-[_textField]-(right)-|" options:0 metrics:metrics views:views];
+	self.horizontalConstraintsHidingLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(left)-[_titleLabel(0)]-[_textField]-(right)-|" options:0 metrics:metrics views:views];
+	
+	// Shows label by default. Set ivar value to NO to force update.
+	_showsLabel = NO;
+	self.showsLabel = YES;
 }
 
 
@@ -103,11 +115,42 @@
 - (void)setTitleLabelWidth:(CGFloat)titleLabelWidth
 {
 	self.titleLabelWidthConstraint.constant = titleLabelWidth;
+	
+	// Show the label if the width is non-zero.
+	self.showsLabel = titleLabelWidth > 0;
 }
 
 - (CGFloat)titleLabelWidth
 {
 	return self.titleLabel.frame.size.width;
+}
+
+
+#pragma mark - Label/No Label
+
+- (void)setShowsLabel:(BOOL)showsLabel
+{
+	if (_showsLabel == showsLabel) {
+		return;
+	}
+	
+	showsLabel ? [self showLabel] : [self hideLabel];
+}
+
+- (void)hideLabel
+{
+	[self removeConstraints:self.horizontalConstraintsShowingLabel];
+	[self addConstraints:self.horizontalConstraintsHidingLabel];
+	
+	_showsLabel = NO;
+}
+
+- (void)showLabel
+{
+	[self removeConstraints:self.horizontalConstraintsHidingLabel];
+	[self addConstraints:self.horizontalConstraintsShowingLabel];
+	
+	_showsLabel = YES;
 }
 
 @end
