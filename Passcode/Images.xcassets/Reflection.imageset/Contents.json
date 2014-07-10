@@ -1,6 +1,9 @@
 {
   "images" : [
     {
+      "idiom" : "iphone"
+    },
+    {
       "idiom" : "iphone",
       "scale" : "1x"
     },
@@ -8,6 +11,9 @@
       "idiom" : "iphone",
       "scale" : "2x",
       "filename" : "Reflection.png"
+    },
+    {
+      "idiom" : "ipad"
     },
     {
       "idiom" : "ipad",

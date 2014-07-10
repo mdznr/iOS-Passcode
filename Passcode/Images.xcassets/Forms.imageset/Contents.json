@@ -1,6 +1,9 @@
 {
   "images" : [
     {
+      "idiom" : "iphone"
+    },
+    {
       "resizing" : {
         "mode" : "3-part-horizontal",
         "center" : {
@@ -31,6 +34,9 @@
       "idiom" : "iphone",
       "filename" : "Forms@2x.png",
       "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad"
     },
     {
       "resizing" : {

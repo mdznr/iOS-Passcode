@@ -17,7 +17,7 @@ static PCDPasscodeGenerator *sharedSingleton;
 + (void)initialize
 {
     static BOOL initialized = NO;
-    if( !initialized ) {
+    if (!initialized) {
         initialized = YES;
         sharedSingleton = [[PCDPasscodeGenerator alloc] init];
     }
