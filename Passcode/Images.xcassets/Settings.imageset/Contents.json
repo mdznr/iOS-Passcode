@@ -1,30 +1,12 @@
 {
   "images" : [
     {
-      "idiom" : "iphone"
-    },
-    {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "Settings.png"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "2x",
-      "filename" : "Settings@2x.png"
-    },
-    {
-      "idiom" : "ipad"
+      "filename" : "Settings.pdf"
     },
     {
       "idiom" : "ipad",
-      "scale" : "1x",
-      "filename" : "Settings~iPad.png"
-    },
-    {
-      "idiom" : "ipad",
-      "scale" : "2x",
-      "filename" : "Settings~iPad@2x.png"
+      "filename" : "Settings~iPad.pdf"
     }
   ],
   "info" : {

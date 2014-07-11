@@ -1,30 +1,12 @@
 {
   "images" : [
     {
-      "idiom" : "iphone"
-    },
-    {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "Help.png"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "2x",
-      "filename" : "Help@2x.png"
-    },
-    {
-      "idiom" : "ipad"
+      "filename" : "Help.pdf"
     },
     {
       "idiom" : "ipad",
-      "scale" : "1x",
-      "filename" : "Help~iPad.png"
-    },
-    {
-      "idiom" : "ipad",
-      "scale" : "2x",
-      "filename" : "Help~iPad@2x.png"
+      "filename" : "Help~iPad.pdf"
     }
   ],
   "info" : {
