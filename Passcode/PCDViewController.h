@@ -8,17 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PCDAboutViewController.h"
-#import "PCDRestrictionsViewController.h"
-
-#import "MTZAppearWindow.h"
-#import "MTZButton.h"
-#import "MTZSlideToReveal.h"
-#import "MTZTextField.h"
+#import "PCDPasscodeGeneratorViewControllerProtocol.h"
 
 @interface PCDViewController : UIViewController
 
-/// Set the name of the service.
-- (void)setServiceName:(NSString *)serviceName;
+/// A child view controller shown to generate passcodes.
+@property (strong, nonatomic) UIViewController<PCDPasscodeGeneratorViewControllerProtocol> *generatorViewController;
 
 @end

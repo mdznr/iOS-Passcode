@@ -2,7 +2,7 @@
 //  PCDViewController.m
 //  Passcode
 //
-//  Created by Matt on 8/7/12.
+//  Created by Matt Zanchelli on 8/7/12.
 //  Copyright (c) 2012 Matt Zanchelli. All rights reserved.
 //
 
@@ -21,29 +21,22 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 #import "PCDViewController.h"
-#import "PCDPasscodeGenerator.h"
+
+#import "PCDAboutViewController.h"
+#import "PCDRestrictionsViewController.h"
+
 #import "NSURL+DomainName.h"
-#import "UITextField+Selections.h"
-#import "PCDField.h"
-@import LocalAuthentication;
 
-
-NSString *const kPCDServiceName = @"Passcode";
-NSString *const kPCDAccountName = @"me";
+#import "PCDUnifiedGeneratorViewController.h"
 
 #define STATUS_BAR_HEIGHT 20
 #define NAV_BAR_HEIGHT 44
 
-@interface PCDViewController () <UITextFieldDelegate>
+@interface PCDViewController ()
 
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIView *verticalCenteringView;
-@property (strong, nonatomic) IBOutlet UIView *container;
-@property (weak, nonatomic) IBOutlet PCDField *secretCodeField;
-@property (weak, nonatomic) IBOutlet PCDField *serviceNameField;
-@property (strong, nonatomic) IBOutlet MTZButton *generateButton;
-@property (strong, nonatomic) IBOutlet MTZSlideToReveal *reveal;
-@property (strong, nonatomic) MTZAppearWindow *copiedWindow;
+@property (nonatomic, strong) IBOutlet UIView *view;
+@property (nonatomic, weak)   IBOutlet UIView *verticalCenteringView;
+@property (nonatomic, strong) IBOutlet UIView *container;
 
 @end
 
@@ -80,100 +73,25 @@ NSString *const kPCDAccountName = @"me";
 	
 	self.title = @"Passcode";
 	
-	self.secretCodeField.titleLabel.text = NSLocalizedString(@"Secret Code", nil);
-	self.secretCodeField.textField.placeholder = NSLocalizedString(@"your secret code", nil);
-	self.secretCodeField.textField.secureTextEntry = YES;
-	self.secretCodeField.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-	self.secretCodeField.textField.returnKeyType = UIReturnKeyNext;
-	self.secretCodeField.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-	self.secretCodeField.textField.autocorrectionType = UITextAutocorrectionTypeNo;
-	self.secretCodeField.textField.enablesReturnKeyAutomatically = YES;
-	self.secretCodeField.textField.delegate = self;
-	[self.secretCodeField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-	
-	self.serviceNameField.titleLabel.text = NSLocalizedString(@"Service Name", nil);
-	self.serviceNameField.textField.placeholder = NSLocalizedString(@"e.g. apple", nil);
-	self.serviceNameField.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-	self.serviceNameField.textField.returnKeyType = UIReturnKeyGo;
-	self.serviceNameField.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-	self.serviceNameField.textField.autocorrectionType = UITextAutocorrectionTypeNo;
-	self.serviceNameField.textField.enablesReturnKeyAutomatically = YES;
-	self.serviceNameField.textField.delegate = self;
-	[self.serviceNameField.textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-	
-	// Find the larger of the two widths (to fully fit text in label) and set it for both.
-	CGSize secretCodeFieldTitleSize = [self.secretCodeField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.secretCodeField.titleLabel.font}];
-	CGSize serviceNameFieldTitleSize = [self.serviceNameField.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.serviceNameField.titleLabel.font}];
-	CGFloat largerWidth = ceil(MAX(secretCodeFieldTitleSize.width, serviceNameFieldTitleSize.width));
-	self.secretCodeField.titleLabelWidth = largerWidth;
-	self.serviceNameField.titleLabelWidth = largerWidth;
-	
-	// Set up the popover.
-	_copiedWindow = [[MTZAppearWindow alloc] init];
-	_copiedWindow.autoresizingMask = UIViewAutoresizingFlexibleMargins;
-	_copiedWindow.image = [UIImage imageNamed:@"Copied"];
-	_copiedWindow.text = NSLocalizedString(@"Copied", nil);
-	
-	_serviceNameField.tintColor = [UIColor appColor];
-	_secretCodeField.tintColor = [UIColor appColor];
-	
 	// Load idiom-specific UI.
-	switch ( [UIDevice currentDevice].userInterfaceIdiom ) {
-		case UIUserInterfaceIdiomPad:
+	switch ([UIDevice currentDevice].userInterfaceIdiom) {
+		case UIUserInterfaceIdiomPad: {
 			[self loadViewForiPad];
-			break;
-		case UIUserInterfaceIdiomPhone:
+		} break;
+		case UIUserInterfaceIdiomPhone: {
 			[self loadViewForiPhone];
-			break;
+		} break;
 		default:
 			break;
 	}
 	
-	// Add gesture recognizers on the generate button.
-	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
-	[_generateButton addGestureRecognizer:longPressGesture];
-	
-	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didGestureOnButton:)];
-	[_generateButton addGestureRecognizer:panGesture];
-	
-	// Color the button.
-	[_generateButton setTopColor:[UIColor colorWithRed: 52.0f/255.0f
-												 green:196.0f/255.0f
-												  blue:126.0f/255.0f
-												 alpha:1.0f]
-						forState:UIControlStateNormal];
-	[_generateButton setBottomColor:[UIColor colorWithRed: 12.0f/255.0f
-													green:150.0f/255.0f
-													 blue: 86.0f/255.0f
-													alpha:1.0f]
-						forState:UIControlStateNormal];
-	
-	[_generateButton setTopColor:[UIColor colorWithRed: 45.0f/255.0f
-												 green:171.0f/255.0f
-												  blue:110.0f/255.0f
-												 alpha:1.0f]
-						forState:UIControlStateHighlighted];
-	[_generateButton setBottomColor:[UIColor colorWithRed: 10.0f/255.0f
-													green:125.0f/255.0f
-													 blue: 71.0f/255.0f
-													alpha:1.0f]
-						   forState:UIControlStateHighlighted];
-	
-	[_generateButton setTopColor:[UIColor colorWithWhite:1.0f alpha:0.12f]
-						forState:UIControlStateDisabled];
-	[_generateButton setBottomColor:[UIColor colorWithWhite:1.0f alpha:0.05f]
-						   forState:UIControlStateDisabled];
-	
-	[_generateButton setBorderColor:[UIColor colorWithRed:213.0f/255.0f green:217.0f/255.0f blue:223.0f/255.0f alpha:1.0f]
-						   forState:UIControlStateDisabled];
-	
-	_reveal.hidden = YES;
-	
-	[self checkSecuritySetting];
+	UIViewController<PCDPasscodeGeneratorViewControllerProtocol> *generatorViewController = [[PCDUnifiedGeneratorViewController alloc] initWithNibName:@"PCDUnifiedGeneratorViewController" bundle:nil];
+	self.generatorViewController = generatorViewController;
 }
 
 - (void)loadViewForiPhone
 {
+	
 }
 
 - (void)loadViewForiPad
@@ -196,9 +114,9 @@ NSString *const kPCDAccountName = @"me";
 
 - (void)makeDomainFieldBecomeFirstResponder
 {
-	if ( !_serviceNameField.textField.isFirstResponder ) {
-		[_serviceNameField.textField becomeFirstResponder];
-	}
+//	if ( !_serviceNameField.textField.isFirstResponder ) {
+//		[_serviceNameField.textField becomeFirstResponder];
+//	}
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -230,30 +148,36 @@ NSString *const kPCDAccountName = @"me";
     }
 }
 
-/*
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)viewControllerDidBecomeActive
 {
-	[super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+	[self checkPasteboard];
+	//	[_serviceNameField.textField becomeFirstResponder];
+	//	if ( _serviceNameField.textField.text.length > 0 ) {
+	//		[_serviceNameField.textField selectAll:self];
+	//	}
 }
- */
 
 
 #pragma mark - Public API
 
-- (void)setServiceName:(NSString *)serviceName
+- (void)setGeneratorViewController:(UIViewController<PCDPasscodeGeneratorViewControllerProtocol> *)generatorViewController
 {
-	_serviceNameField.textField.text = serviceName;
-	[self textDidChange:self];
-	[_serviceNameField.textField moveCursorToEnd];
+	[_generatorViewController removeFromParentViewController];
+	
+	_generatorViewController = generatorViewController;
+	[self addChildViewController:_generatorViewController];
 }
 
-- (void)viewControllerDidBecomeActive
+
+#pragma mark - Child View Controller
+
+- (void)addChildViewController:(UIViewController *)childController
 {
-	[self checkPasteboard];
-	[_serviceNameField.textField becomeFirstResponder];
-	if ( _serviceNameField.textField.text.length > 0 ) {
-		[_serviceNameField.textField selectAll:self];
-	}
+	[super addChildViewController:childController];
+	
+	childController.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+	
+	[self.verticalCenteringView addSubview:childController.view];
 }
 
 
@@ -268,8 +192,7 @@ NSString *const kPCDAccountName = @"me";
 	
 	NSString *domainName = [url domainName];
 	if (domainName) {
-		_serviceNameField.textField.text = domainName;
-		[self textDidChange:_serviceNameField];
+		[self.generatorViewController setServiceName:domainName];
 	}
 }
 
@@ -281,8 +204,7 @@ NSString *const kPCDAccountName = @"me";
 	}
 	// Otherwise, clear any saved password.
 	else {
-		_secretCodeField.textField.text = @"";
-		[self textDidChange:_secretCodeField];
+		[self.generatorViewController setServiceName:@""];
 		[self updateSavedPassword];
 	}
 }
@@ -290,98 +212,48 @@ NSString *const kPCDAccountName = @"me";
 /// Try to authenticate with local authentication, otherwise authenticate normally.
 - (void)authenticateWithLocalAuthentication
 {
-	if ([LAContext class]) {
-		LAContext *myContext = [[LAContext alloc] init];
-		NSError *authError = nil;
-		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
-			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-					  localizedReason:NSLocalizedString(@"Unlock Master Password", nil)
-								reply:^(BOOL success, NSError *error) {
-									if (success) {
-										// User authenticated successfully, take appropriate action.
-										[self authenticate];
-									} else {
-										// User did not authenticate successfully, look at error and take appropriate action.
-									}
-								}];
-		} else {
-			// Could not evaluate policy; look at authError and present an appropriate message to user
-			[self authenticate];
-		}
-	} else {
-		[self authenticate];
-	}
+//	if ([LAContext class]) {
+//		LAContext *myContext = [[LAContext alloc] init];
+//		NSError *authError = nil;
+//		if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+//			[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+//					  localizedReason:NSLocalizedString(@"Unlock Master Password", nil)
+//								reply:^(BOOL success, NSError *error) {
+//									if (success) {
+//										// User authenticated successfully, take appropriate action.
+//										[self authenticate];
+//									} else {
+//										// User did not authenticate successfully, look at error and take appropriate action.
+//									}
+//								}];
+//		} else {
+//			// Could not evaluate policy; look at authError and present an appropriate message to user
+//			[self authenticate];
+//		}
+//	} else {
+//		[self authenticate];
+//	}
 }
 
 /// Authenticate normally.
 - (void)authenticate
 {
-	NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
-	if (passwordString) {
-		// Update the UI.
-		dispatch_async(dispatch_get_main_queue(), ^{
-			_secretCodeField.textField.text = passwordString;
-			[self textDidChange:_secretCodeField];
-		});
-	}
+//	NSString *passwordString = [SSKeychain passwordForService:kPCDServiceName account:kPCDAccountName];
+//	if (passwordString) {
+//		// Update the UI.
+//		dispatch_async(dispatch_get_main_queue(), ^{
+//			_secretCodeField.textField.text = passwordString;
+//			[self textDidChange:_secretCodeField];
+//		});
+//	}
 }
 
 /// Update the saved password using the current password in the secret code field.
 - (void)updateSavedPassword
 {
-	[SSKeychain setPassword:_secretCodeField.textField.text
-				 forService:kPCDServiceName
-					account:kPCDAccountName];
-}
-
-
-#pragma mark - Generate Button
-
-- (IBAction)generateAndCopy:(id)sender
-{
-	// Store the password in keychain.
-	[SSKeychain setPassword:_secretCodeField.textField.text forService:@"Passcode" account:@"me"];
-	
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.textField.text
-																andMasterPassword:_secretCodeField.textField.text];
-	
-	// Copy it to pasteboard.
-	[UIPasteboard generalPasteboard].string = password;
-	
-	// Center the appear window to the container.
-	UIView *centeringView = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone ? _verticalCenteringView : _container;
-	_copiedWindow.center = centeringView.center;
-	
-	// Tell the user that the generated passcode has been copied.
-	[_copiedWindow display];
-}
-
-- (void)generateAndSetReveal:(id)sender
-{
-	NSString *password = [[PCDPasscodeGenerator sharedInstance] passcodeForDomain:_serviceNameField.textField.text
-																andMasterPassword:_secretCodeField.textField.text];
-	
-	_reveal.hiddenWord = password;
-}
-
-- (void)didGestureOnButton:(UIGestureRecognizer *)sender
-{
-	switch (sender.state) {
-		case UIGestureRecognizerStateBegan:
-			[self generateAndSetReveal:sender];
-			_reveal.hidden = NO;
-			_generateButton.hidden = YES;
-		case UIGestureRecognizerStateChanged:
-			break;
-		case UIGestureRecognizerStateEnded:
-		case UIGestureRecognizerStateCancelled:
-			_reveal.hidden = YES;
-			_generateButton.hidden = NO;
-			break;
-		default:
-			break;
-	}
-	[_reveal didGesture:sender];
+//	[SSKeychain setPassword:_secretCodeField.textField.text
+//				 forService:kPCDServiceName
+//					account:kPCDAccountName];
 }
 
 
@@ -413,39 +285,6 @@ NSString *const kPCDAccountName = @"me";
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
 	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[self presentViewController:navigationController animated:YES completion:nil];
-}
-
-
-#pragma mark - Text Field Delegate Methods
-
-- (IBAction)textDidChange:(id)sender
-{
-	if ( _serviceNameField.textField.text.length > 0 && _secretCodeField.textField.text.length > 0 ) {
-		_generateButton.enabled = YES;
-	} else {
-		_generateButton.enabled = NO;
-	}
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-	if ( _serviceNameField.textField.text.length > 0 ) {
-		_secretCodeField.textField.returnKeyType = UIReturnKeyGo;
-	} else {
-		_secretCodeField.textField.returnKeyType = UIReturnKeyNext;
-	}
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-	if ( _serviceNameField.textField.text.length > 0 && _secretCodeField.textField.text.length > 0 ) {
-		[self generateAndCopy:nil];
-		return NO;
-	}
-	
-	[_serviceNameField.textField becomeFirstResponder];
-	
-	return YES;
 }
 
 

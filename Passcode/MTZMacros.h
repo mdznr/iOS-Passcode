@@ -6,6 +6,4 @@
 //  Copyright (c) 2014 Matt Zanchelli. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #define BETWEEN(MINX, X, MAXX) MAX(MIN(MAXX, X), MINX)

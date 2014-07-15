@@ -46,7 +46,7 @@ static NSString *kURLSchemePrefix = @"passcode://";
 	NSString *urlString = url.absoluteString;
 	if ( [urlString hasPrefix:kURLSchemePrefix] ) {
 		urlString = [urlString substringFromIndex:kURLSchemePrefix.length];
-		[self.mainViewController setServiceName:urlString];
+		[self.mainViewController.generatorViewController setServiceName:urlString];
 		//	Automatically copy to clipboard and return to Safari?
 		//	Perhaps this can be done in Safari javascript anyways?
 		return YES;

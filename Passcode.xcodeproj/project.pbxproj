@@ -15,6 +15,8 @@
 		C91E0807191E0EBF0027981C /* PCDDomainName.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E07ED191E0E560027981C /* PCDDomainName.m */; };
 		C91E08951922BA710027981C /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E08941922BA710027981C /* UIColor+AppColor.m */; };
 		C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */; };
+		C94B78AB1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */; };
+		C94B78AE1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */; };
 		C94BA7081874B7CF0075F84A /* PCDAboutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */; };
 		C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
 		C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */; };
@@ -98,6 +100,10 @@
 		C926216B17D29B5A0095AE1C /* MTZAppearWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppearWindow.h; path = Passcode/MTZAppearWindow.h; sourceTree = "<group>"; };
 		C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppearWindow.m; path = Passcode/MTZAppearWindow.m; sourceTree = "<group>"; };
 		C9286B0E16B6E552008E6652 /* Passcode-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Passcode-Info.plist"; sourceTree = "<group>"; };
+		C94B78A91975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDUnifiedGeneratorViewController.h; sourceTree = "<group>"; };
+		C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDUnifiedGeneratorViewController.m; sourceTree = "<group>"; };
+		C94B78AC1975BADB00BB7F06 /* PCDPasscodeGeneratorViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDPasscodeGeneratorViewControllerProtocol.h; sourceTree = "<group>"; };
+		C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDUnifiedGeneratorViewController.xib; sourceTree = "<group>"; };
 		C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PCDAboutViewController.storyboard; sourceTree = "<group>"; };
 		C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlideToReveal.h; sourceTree = "<group>"; };
 		C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlideToReveal.m; sourceTree = "<group>"; };
@@ -337,6 +343,10 @@
 				C95FDEF615D232D5006FE035 /* PCDViewController.m */,
 				C96BB62016A904CF00E5EEEC /* PCDViewController.xib */,
 				C96BB61D16A9047B00E5EEEC /* PCDViewController_iPad.xib */,
+				C94B78AC1975BADB00BB7F06 /* PCDPasscodeGeneratorViewControllerProtocol.h */,
+				C94B78A91975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.h */,
+				C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */,
+				C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */,
 				C9F43AC8196A081B00C01692 /* PCDField.h */,
 				C9F43AC9196A081B00C01692 /* PCDField.m */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
@@ -515,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94B78AE1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib in Resources */,
 				C9BBC21215DEE81C00E16FBB /* Settings.bundle in Resources */,
 				C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */,
 				C96BB5A816A7CB2000E5EEEC /* InfoPlist.strings in Resources */,
@@ -570,6 +581,7 @@
 				C95FDEF415D232D5006FE035 /* PCDAppDelegate.m in Sources */,
 				C986E910196D9F4C0079EF34 /* NSLayoutConstraints+Multiple.m in Sources */,
 				C95FDEF715D232D5006FE035 /* PCDViewController.m in Sources */,
+				C94B78AB1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m in Sources */,
 				C9BBC1F515DA10B600E16FBB /* MTZAppearView.m in Sources */,
 				C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */,
 				C978AE2E190FF93500E4ECF8 /* UIView+UIViewAutoresizingAdditions.m in Sources */,
