@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCDViewController">
             <connections>
-                <outlet property="container" destination="17" id="74"/>
-                <outlet property="generateButton" destination="12" id="25"/>
-                <outlet property="reveal" destination="72" id="73"/>
-                <outlet property="secretCodeField" destination="bi9-FT-7gZ" id="Crx-zN-QUE"/>
-                <outlet property="serviceNameField" destination="5wt-fe-5zh" id="lBm-hl-Lvl"/>
+                <outlet property="verticalCenteringView" destination="17" id="evd-vJ-eMZ"/>
                 <outlet property="view" destination="2" id="44"/>
             </connections>
         </placeholder>
@@ -19,44 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Forms">
-                    <rect key="frame" x="146" y="202" width="476" height="310"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" id="bi9-FT-7gZ" userLabel="Secret Code Field" customClass="PCDField">
-                            <rect key="frame" x="0.0" y="0.0" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="5wt-fe-5zh" userLabel="Service Name Field" customClass="PCDField">
-                            <rect key="frame" x="0.0" y="114" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view opaque="NO" contentMode="scaleToFill" id="72" userLabel="Reveal View" customClass="MTZSlideToReveal">
-                            <rect key="frame" x="0.0" y="228" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="12" customClass="MTZButton">
-                            <rect key="frame" x="0.0" y="228" width="476" height="82"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <accessibility key="accessibilityConfiguration" label="Generate Passcode and Copy"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
-                            <size key="titleShadowOffset" width="0.0" height="1"/>
-                            <state key="normal" title="Generate &amp; Copy Passcode">
-                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="disabled">
-                                <color key="titleColor" red="0.62430816889999996" green="0.6237781644" blue="0.64006072280000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="generateAndCopy:" destination="-1" eventType="touchUpInside" id="21"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lM4-np-lsR" userLabel="Settings Button">
                     <rect key="frame" x="20" y="25" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -77,6 +36,11 @@
                         <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="gVK-hz-M5j"/>
                     </connections>
                 </button>
+                <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Vertically Centering View">
+                    <rect key="frame" x="146" y="202" width="476" height="310"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

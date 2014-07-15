@@ -36,7 +36,6 @@
 
 @property (nonatomic, strong) IBOutlet UIView *view;
 @property (nonatomic, weak)   IBOutlet UIView *verticalCenteringView;
-@property (nonatomic, strong) IBOutlet UIView *container;
 
 @end
 
@@ -85,7 +84,16 @@
 			break;
 	}
 	
-	UIViewController<PCDPasscodeGeneratorViewControllerProtocol> *generatorViewController = [[PCDUnifiedGeneratorViewController alloc] initWithNibName:@"PCDUnifiedGeneratorViewController" bundle:nil];
+	UIViewController<PCDPasscodeGeneratorViewControllerProtocol> *generatorViewController;
+	switch ([UIDevice currentDevice].userInterfaceIdiom) {
+		case UIUserInterfaceIdiomPad:
+			generatorViewController = [[PCDUnifiedGeneratorViewController alloc] initWithNibName:@"PCDUnifiedGeneratorViewController_iPad" bundle:nil];
+			break;
+		case UIUserInterfaceIdiomPhone:
+		case UIUserInterfaceIdiomUnspecified:
+			generatorViewController = [[PCDUnifiedGeneratorViewController alloc] initWithNibName:@"PCDUnifiedGeneratorViewController" bundle:nil];
+			break;
+	}
 	self.generatorViewController = generatorViewController;
 }
 
@@ -303,23 +311,23 @@
     CGRect endFrame = [endFrameValue CGRectValue];
     
     // Convert the rect into view coordinates from the window, this accounts for rotation
-    UIWindow* appWindow = [[[UIApplication sharedApplication] delegate] window];
-    CGRect keyboardFrame = [[self view] convertRect:endFrame fromView:appWindow];
+    UIWindow* appWindow = [UIApplication sharedApplication].delegate.window;
+    CGRect keyboardFrame = [self.view convertRect:endFrame fromView:appWindow];
     
 	// Our new frame will be centered within the width of the keyboard
 	// and a height that is centered between the navBarHeight and the top of the keyboard (it's y origin)
 	CGFloat keyboardWidth  = keyboardFrame.size.width;
 	CGFloat keyboardHeight = keyboardFrame.origin.y;
 	
-	CGFloat width  = _container.frame.size.width;
-	CGFloat height = _container.frame.size.height;
+	CGFloat width  = self.verticalCenteringView.frame.size.width;
+	CGFloat height = self.verticalCenteringView.frame.size.height;
 	
 	CGRect newFrame = CGRectMake(floorl(ABS(keyboardWidth - width)/2),
 								 floorl(ABS(keyboardHeight - height)/2),
 								 width,
 								 height);
 	
-	[_container setFrame:newFrame];
+	self.verticalCenteringView.frame = newFrame;
 }
 
 // Subscribe to keyboard notifications

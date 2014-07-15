@@ -11,23 +11,10 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6" userLabel="Domain View">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view opaque="NO" contentMode="scaleToFill" id="191" userLabel="Form Vertical Centering Container">
-                    <rect key="frame" x="0.0" y="64" width="320" height="182"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="F5y-za-b0V" userLabel="Info Button">
-                    <rect key="frame" x="278" y="25" width="32" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="Help"/>
-                    <connections>
-                        <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="rap-Yb-k0u"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="VFQ-ys-OGn" userLabel="Settings Button">
                     <rect key="frame" x="10" y="25" width="32" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,6 +23,19 @@
                         <action selector="viewSettings:" destination="-1" eventType="touchUpInside" id="Uat-Eo-8H6"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="F5y-za-b0V" userLabel="Help Button">
+                    <rect key="frame" x="278" y="25" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Help"/>
+                    <connections>
+                        <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="rap-Yb-k0u"/>
+                    </connections>
+                </button>
+                <view opaque="NO" contentMode="scaleToFill" id="191" userLabel="Vertical Centering view">
+                    <rect key="frame" x="0.0" y="64" width="320" height="182"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics">

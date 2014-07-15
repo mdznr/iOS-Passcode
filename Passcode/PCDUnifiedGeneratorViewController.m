@@ -133,7 +133,7 @@ NSString *const kPCDAccountName = @"me";
 	[UIPasteboard generalPasteboard].string = password;
 	
 	// Center the appear window to the container.
-	_copiedWindow.center = self.view.center;
+	_copiedWindow.center = [self.view.superview convertPoint:self.view.center fromView:self.view];
 	
 	// Tell the user that the generated passcode has been copied.
 	[_copiedWindow display];

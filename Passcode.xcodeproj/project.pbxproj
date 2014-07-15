@@ -17,6 +17,7 @@
 		C926216D17D29B5A0095AE1C /* MTZAppearWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C926216C17D29B5A0095AE1C /* MTZAppearWindow.m */; };
 		C94B78AB1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */; };
 		C94B78AE1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */; };
+		C94B78B01975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94B78AF1975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib */; };
 		C94BA7081874B7CF0075F84A /* PCDAboutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */; };
 		C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */; };
 		C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94C7CA3172DBAC800A3D19E /* SourceCodePro-Medium.ttf */; };
@@ -104,6 +105,7 @@
 		C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDUnifiedGeneratorViewController.m; sourceTree = "<group>"; };
 		C94B78AC1975BADB00BB7F06 /* PCDPasscodeGeneratorViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDPasscodeGeneratorViewControllerProtocol.h; sourceTree = "<group>"; };
 		C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDUnifiedGeneratorViewController.xib; sourceTree = "<group>"; };
+		C94B78AF1975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDUnifiedGeneratorViewController_iPad.xib; sourceTree = "<group>"; };
 		C94BA7071874B7CF0075F84A /* PCDAboutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PCDAboutViewController.storyboard; sourceTree = "<group>"; };
 		C94C7C92172D7D6200A3D19E /* MTZSlideToReveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlideToReveal.h; sourceTree = "<group>"; };
 		C94C7C93172D7D6200A3D19E /* MTZSlideToReveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlideToReveal.m; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				C94B78A91975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.h */,
 				C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */,
 				C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */,
+				C94B78AF1975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib */,
 				C9F43AC8196A081B00C01692 /* PCDField.h */,
 				C9F43AC9196A081B00C01692 /* PCDField.m */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
@@ -532,6 +535,7 @@
 				C94BA7081874B7CF0075F84A /* PCDAboutViewController.storyboard in Resources */,
 				C9DE415818729D63006FD776 /* PCDFAQViewController.storyboard in Resources */,
 				C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
+				C94B78B01975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib in Resources */,
 				C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */,
 				C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
 				C9613AE8193F7F7500D53D12 /* SSKeychain.strings in Resources */,
