@@ -25,6 +25,8 @@
 		C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D338316BF3A5300E6D34B /* NSString+characterSwaps.m */; };
 		C94DFC5B16288D0B002AD5CD /* PCDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */; };
 		C94DFD35162BAC59002AD5CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94DFD33162BAC59002AD5CD /* Localizable.strings */; };
+		C950172C1979B91A00AA6A48 /* PCDStandardGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C950172A1979B91A00AA6A48 /* PCDStandardGeneratorViewController.m */; };
+		C950172D1979B91A00AA6A48 /* PCDStandardGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C950172B1979B91A00AA6A48 /* PCDStandardGeneratorViewController.xib */; };
 		C95FDEE415D232D5006FE035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE315D232D5006FE035 /* UIKit.framework */; };
 		C95FDEE615D232D5006FE035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE515D232D5006FE035 /* Foundation.framework */; };
 		C95FDEE815D232D5006FE035 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FDEE715D232D5006FE035 /* CoreGraphics.framework */; };
@@ -119,6 +121,9 @@
 		C94DFC5916288D0B002AD5CD /* PCDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDAboutViewController.m; sourceTree = "<group>"; };
 		C94DFD34162BAC59002AD5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C94DFD37162BAC5E002AD5CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C95017291979B91A00AA6A48 /* PCDStandardGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDStandardGeneratorViewController.h; sourceTree = "<group>"; };
+		C950172A1979B91A00AA6A48 /* PCDStandardGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDStandardGeneratorViewController.m; sourceTree = "<group>"; };
+		C950172B1979B91A00AA6A48 /* PCDStandardGeneratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDStandardGeneratorViewController.xib; sourceTree = "<group>"; };
 		C95FDEDF15D232D5006FE035 /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FDEE315D232D5006FE035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95FDEE515D232D5006FE035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -350,6 +355,9 @@
 				C94B78AA1975BAC700BB7F06 /* PCDUnifiedGeneratorViewController.m */,
 				C94B78AD1975C3D500BB7F06 /* PCDUnifiedGeneratorViewController.xib */,
 				C94B78AF1975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib */,
+				C95017291979B91A00AA6A48 /* PCDStandardGeneratorViewController.h */,
+				C950172A1979B91A00AA6A48 /* PCDStandardGeneratorViewController.m */,
+				C950172B1979B91A00AA6A48 /* PCDStandardGeneratorViewController.xib */,
 				C9F43AC8196A081B00C01692 /* PCDField.h */,
 				C9F43AC9196A081B00C01692 /* PCDField.m */,
 				C9F5E95E187F9612005A7FEC /* MTZMacros.h */,
@@ -537,6 +545,7 @@
 				C96BB61E16A9047B00E5EEEC /* PCDViewController_iPad.xib in Resources */,
 				C94B78B01975D75D00BB7F06 /* PCDUnifiedGeneratorViewController_iPad.xib in Resources */,
 				C96BB62116A904CF00E5EEEC /* PCDViewController.xib in Resources */,
+				C950172D1979B91A00AA6A48 /* PCDStandardGeneratorViewController.xib in Resources */,
 				C94C7CA5172DBAC800A3D19E /* SourceCodePro-Medium.ttf in Resources */,
 				C9613AE8193F7F7500D53D12 /* SSKeychain.strings in Resources */,
 				C94C7CA7172DBAC800A3D19E /* SourceCodePro-Regular.ttf in Resources */,
@@ -603,6 +612,7 @@
 				C94D338416BF3A5300E6D34B /* NSString+characterSwaps.m in Sources */,
 				C94C7C94172D7D6200A3D19E /* MTZSlideToReveal.m in Sources */,
 				C9BAC3DD191DBB3E00EA7728 /* MTZButton.m in Sources */,
+				C950172C1979B91A00AA6A48 /* PCDStandardGeneratorViewController.m in Sources */,
 				C98A5F71186AA4A0004EDC76 /* MTZTextField.m in Sources */,
 				C984F4E717542EA200172F9F /* PCDPasscodeGenerator.m in Sources */,
 			);

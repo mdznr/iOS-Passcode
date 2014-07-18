@@ -18,7 +18,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lM4-np-lsR" userLabel="Settings Button">
                     <rect key="frame" x="20" y="25" width="48" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="Settings">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,7 +36,7 @@
                         <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="gVK-hz-M5j"/>
                     </connections>
                 </button>
-                <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Vertically Centering View">
+                <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="17" userLabel="Vertically Centered View">
                     <rect key="frame" x="146" y="202" width="476" height="310"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

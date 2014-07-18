@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <objects>
@@ -31,7 +32,7 @@
                         <action selector="viewAbout:" destination="-1" eventType="touchUpInside" id="rap-Yb-k0u"/>
                     </connections>
                 </button>
-                <view opaque="NO" contentMode="scaleToFill" id="191" userLabel="Vertical Centering view">
+                <view opaque="NO" contentMode="scaleToFill" id="191" userLabel="Vertically Centered View">
                     <rect key="frame" x="0.0" y="64" width="320" height="182"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
