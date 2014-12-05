@@ -2,6 +2,8 @@
 
 Generate secure, site-specific passwords from a secret master password. Since no database is used, passwords are available offline everywhere and anywhere.
 
+![Screenshot](Screenshot.png)
+
 ---
 
 ### How to Use
